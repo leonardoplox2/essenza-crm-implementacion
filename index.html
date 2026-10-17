@@ -63,6 +63,7 @@ code{font-family:var(--mono);font-size:.86em;background:#efe9de;padding:1px 6px;
 .hero h2{position:relative;z-index:1}
 .hero .lead{position:relative;z-index:1}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-top:28px;position:relative;z-index:1}
+.facts.c3{grid-template-columns:repeat(3,1fr)}
 .fact{background:var(--paper);padding:14px 16px}
 .fact .k{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .fact .v{font-weight:700;font-size:15px;color:var(--ink);line-height:1.35;margin-top:2px}
@@ -162,6 +163,13 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .dot.ej{background:var(--sage-2)}.dot.mc{background:#c98a2e}.dot.ci{background:var(--plum)}
 .mx tr.grp td{background:#f1ece2;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .riskbar{display:flex;height:34px;border-radius:8px;overflow:hidden;gap:2px}.riskbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.btn.pri{background:var(--sage);border-color:var(--sage);color:#fff}.btn.pri:hover{background:#255846;color:#fff}
+a.btn{text-decoration:none;display:inline-block}
+.viewer{background:var(--paper);border:1px solid var(--rule);border-radius:14px;overflow:hidden;margin:18px 0}
+.viewer iframe{display:block;width:100%;height:80vh;min-height:560px;border:0;background:#e9e4da}
+.viewer .vbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--rule);font-size:13px;color:var(--muted);flex-wrap:wrap}
+@media (max-width:760px){.viewer iframe{height:70vh;min-height:420px}}
 .refs li{margin-bottom:10px;padding-left:2.2em;text-indent:-2.2em;font-size:14.5px;color:var(--ink-2);list-style:none}
 footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .page{display:none}.page.on{display:block;animation:fade .35s ease}
@@ -178,7 +186,7 @@ footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-si
 }
 @media (max-width:760px){
 .hero{padding:28px 20px 22px}
-.facts{grid-template-columns:1fr 1fr}
+.facts,.facts.c3{grid-template-columns:1fr 1fr}
 .grid2,.grid3,.plist,.detail .cols,.legend{grid-template-columns:1fr}
 .flow5{grid-template-columns:1fr}
 h3{font-size:22px}
@@ -206,16 +214,17 @@ h3{font-size:22px}
 <a href="#inicio/ciclo">Ciclo de vida e hitos</a>
 <a href="#inicio/enfoque">Enfoque PMBOK® 8</a>
 </div>
-<a href="#mapa" data-p="mapa"><span class="n">02</span>Mapa de procesos</a>
+<a href="#acta" data-p="acta"><span class="n">02</span>Acta de constitución</a>
+<a href="#mapa" data-p="mapa"><span class="n">03</span>Mapa de procesos</a>
 <div class="sub">
 <a href="#mapa/flujo">Flujo de procesos</a>
 <a href="#mapa/catalogo">Catálogo por área de enfoque</a>
 <a href="#mapa/matriz">Procesos por fase</a>
 </div>
 <div class="nav-t" style="margin-top:14px">Próximas entregas</div>
-<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">03</span>Ejecución del proyecto</div>
-<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">04</span>Monitoreo y control</div>
-<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">05</span>Cierre</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">04</span>Ejecución del proyecto</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">05</span>Monitoreo y control</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">06</span>Cierre</div>
 </nav>
 <div class="meta">
 <div><b>Docente:</b> Mg. Antonio Arqque Pantigozo</div>
@@ -263,7 +272,7 @@ h3{font-size:22px}
 <div class="card" style="margin:22px 0">
 <div class="eyebrow" style="margin-bottom:10px">Línea de partida del modelo · 420 clientes</div>
 <div class="riskbar" role="img" aria-label="Riesgo alto 118, medio 98, bajo 204"><span style="flex:118;background:#b9443a">118 alto</span><span style="flex:98;background:#c98a2e">98 medio</span><span style="flex:204;background:#3f8a6e">204 bajo</span></div>
-<div class="facts" style="grid-template-columns:repeat(4,1fr);margin-top:16px"><div class="fact"><div class="k">ROC-AUC</div><div class="v">0,821</div></div><div class="fact"><div class="k">Recall</div><div class="v">0,64</div></div><div class="fact"><div class="k">Precisión</div><div class="v">0,57</div></div><div class="fact"><div class="k">Abandono real</div><div class="v">29,8 %</div></div></div>
+<div class="facts" style="margin-top:16px"><div class="fact"><div class="k">ROC-AUC</div><div class="v">0,821</div></div><div class="fact"><div class="k">Recall</div><div class="v">0,64</div></div><div class="fact"><div class="k">Precisión</div><div class="v">0,57</div></div><div class="fact"><div class="k">Abandono real</div><div class="v">29,8 %</div></div></div>
 <p class="small" style="margin:12px 0 0">Variables más influyentes (SHAP): score RFM, gasto total, % de compra de productos, días desde la última visita y frecuencia mensual. Fuente: informe de resultados del CRM.</p></div>
 <h3 id="inicio/brechas"><span class="num">1.3</span>Brechas de preparación para producción</h3>
 <p>Antes de iniciar se revisó el paquete del sistema tal como está en el repositorio del equipo. Funciona, pero está configurado para demostración y desarrollo. Estas brechas no son defectos del proyecto anterior: son exactamente el trabajo que justifica un proyecto de implementación.</p>
@@ -361,7 +370,7 @@ h3{font-size:22px}
 <div class="card"><h4>7 dominios de desempeño</h4><ul class="clean">
 <li>Gobernanza</li><li>Alcance</li><li>Cronograma</li><li>Finanzas</li><li>Interesados</li><li>Recursos</li><li>Riesgo</li>
 </ul>
-<p class="small" style="margin-top:12px">Los dominios son las filas del mapa de procesos de la sección 02.</p></div>
+<p class="small" style="margin-top:12px">Los dominios son las filas del mapa de procesos de la sección 03.</p></div>
 </div>
 <h4>5 áreas de enfoque y foco de este proyecto</h4>
 <div class="flow5">
@@ -372,14 +381,47 @@ h3{font-size:22px}
 <div class="f5 ci">Cierre<small>1 proceso</small></div>
 </div>
 <p>Como el producto ya fue concebido, planificado y construido en el proyecto anterior, el peso de este proyecto está en las tres áreas resaltadas: <strong>Ejecución, Monitoreo y Control, y Cierre</strong> (19 de los 40 procesos). Inicio y Planificación se realizan de forma ligera para formalizar el arranque y las líneas base de la implementación.</p>
-<p style="margin-top:22px"><a class="btn" href="#mapa" style="text-decoration:none">Ver el mapa de procesos →</a></p>
+<p style="margin-top:22px"><a class="btn" href="#acta" style="text-decoration:none">Ver el acta de constitución →</a></p>
 </section>
 <!-- ======================= MAPA ======================= -->
+<section class="page" id="p-acta">
+<div class="eyebrow">02 · Acta de constitución</div>
+<h2 class="sec">Acta de constitución del proyecto</h2>
+<p class="lead">Documento que autoriza formalmente el proyecto, designa al director del proyecto y fija los objetivos, el alcance de alto nivel, los hitos y el presupuesto con los que se inicia la planificación.</p>
+<div class="facts c3">
+<div class="fact"><div class="k">Código</div><div class="v">ESSENZA-FID-2026-001</div></div>
+<div class="fact"><div class="k">Patrocinador</div><div class="v">Gerencia General de Essenza SPA S.A.C.</div></div>
+<div class="fact"><div class="k">Fecha de elaboración</div><div class="v">12 de septiembre de 2026</div></div>
+<div class="fact"><div class="k">Plazo máximo</div><div class="v">6 meses (tolerancia +10 %)</div></div>
+<div class="fact"><div class="k">Presupuesto estimado</div><div class="v">S/ 22 000 (incluye reserva ≈10 %)</div></div>
+<div class="fact"><div class="k">Prioridad</div><div class="v">Alta</div></div>
+</div>
+<div class="btns">
+<a class="btn pri" href="docs/Acta_Constitucion_Essenza_SPA_v2.pdf" target="_blank" rel="noopener">Abrir el acta en una pestaña nueva</a>
+<a class="btn" href="docs/Acta_Constitucion_Essenza_SPA_v2.docx" download>Descargar en Word (.docx)</a>
+<a class="btn" href="docs/Acta_Constitucion_Essenza_SPA_v2.pdf" download>Descargar en PDF</a>
+</div>
+<div class="viewer">
+<div class="vbar"><span>Acta_Constitucion_Essenza_SPA_v2 · 5 páginas</span><a href="docs/Acta_Constitucion_Essenza_SPA_v2.pdf" target="_blank" rel="noopener">Pantalla completa ↗</a></div>
+<iframe src="docs/Acta_Constitucion_Essenza_SPA_v2.pdf#view=FitH" title="Acta de constitución del proyecto Essenza SPA" loading="lazy"></iframe>
+</div>
+<p class="small">Si el visor no carga en tu celular, usa el botón «Abrir el acta en una pestaña nueva» o descarga el archivo.</p>
+<h3><span class="num">2.1</span>Contenido del acta</h3>
+<div class="grid2">
+<div class="card"><ul class="clean">
+<li>Información general del proyecto</li><li>Propósito y justificación</li><li>Descripción y principales entregables</li><li>Objetivos SMART y criterios de éxito</li><li>Requisitos de alto nivel</li><li>Alcance de alto nivel y exclusiones</li><li>Supuestos y restricciones</li>
+</ul></div>
+<div class="card"><ul class="clean">
+<li>Riesgos de alto nivel</li><li>Cronograma resumido de hitos</li><li>Resumen del presupuesto estimado</li><li>Interesados clave</li><li>Asignación y autoridad del director del proyecto</li><li>Requisitos de aprobación y criterios de cierre</li><li>Aprobación y firmas</li>
+</ul></div>
+</div>
+<p style="margin-top:22px"><a class="btn" href="#mapa">Ver el mapa de procesos →</a></p>
+</section>
 <section class="page" id="p-mapa">
-<div class="eyebrow">02 · Mapa de procesos</div>
+<div class="eyebrow">03 · Mapa de procesos</div>
 <h2 class="sec">Ejecución, Monitoreo y Control, y Cierre</h2>
 <p class="lead">El mapa agrupa los 19 procesos que gobiernan la implementación del CRM tal como lo hace el flujo de procesos de la Guía PMBOK® 8: por <strong>área de enfoque</strong> en columnas y por <strong>dominio de desempeño</strong> en filas.</p>
-<h3 id="mapa/flujo"><span class="num">2.1</span>Flujo de procesos</h3>
+<h3 id="mapa/flujo"><span class="num">3.1</span>Flujo de procesos</h3>
 <p>La lectura es de izquierda a derecha. La Ejecución produce entregables y datos de desempeño; Monitoreo y Control los compara con el plan, genera solicitudes de cambio y valida lo construido; los cambios aprobados regresan a la Ejecución; y solo los entregables aceptados pasan al Cierre.</p>
 <div class="mapbox">
 <div class="mapscroll">
@@ -465,10 +507,10 @@ h3{font-size:22px}
 </div>
 <div id="detail" class="detail" aria-live="polite"></div>
 <p class="small">Nota: la Guía PMBOK® 8 se publicó en inglés; los nombres de los procesos en español son una traducción del equipo y pueden diferir de la edición oficial en español.</p>
-<h3 id="mapa/catalogo"><span class="num">2.2</span>Catálogo por área de enfoque</h3>
+<h3 id="mapa/catalogo"><span class="num">3.2</span>Catálogo por área de enfoque</h3>
 <p>La misma información en formato de lista, útil en pantallas pequeñas. Cada proceso abre su ficha.</p>
 <div class="plist" id="plist"></div>
-<h3 id="mapa/matriz"><span class="num">2.3</span>Procesos activos por fase de la implementación</h3>
+<h3 id="mapa/matriz"><span class="num">3.3</span>Procesos activos por fase de la implementación</h3>
 <p>El flujo no se ejecuta una sola vez: los procesos se repiten en cada fase. La matriz muestra dónde tiene más peso cada uno.</p>
 <div class="tblwrap"><table class="tbl mx" id="matrix"></table></div>
 <div class="callout warn"><p><strong>Lectura de gestión.</strong> Los procesos de Monitoreo y Control de desempeño, cambios y riesgos atraviesan las siete fases: son el “sistema nervioso” del proyecto. Las fases F5 (piloto) y F6 (estabilización) concentran la mayor cantidad de procesos activos, por lo que el equipo refuerza ahí las reuniones de control y la presencia en el spa.</p></div>
