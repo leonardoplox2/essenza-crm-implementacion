@@ -207,8 +207,8 @@ h3{font-size:22px}
 <a href="#inicio" data-p="inicio"><span class="n">01</span>Inicio</a>
 <div class="sub">
 <a href="#inicio/negocio">El negocio</a>
-<a href="#inicio/producto">El producto a implementar</a>
-<a href="#inicio/brechas">Brechas de preparación</a>
+<a href="#inicio/producto">La solución a implementar</a>
+<a href="#inicio/brechas">Requisitos de alto nivel</a>
 <a href="#inicio/objetivos">Objetivos y alcance</a>
 <a href="#inicio/interesados">Interesados y roles</a>
 <a href="#inicio/ciclo">Ciclo de vida e hitos</a>
@@ -239,140 +239,143 @@ h3{font-size:22px}
 <section class="page" id="p-inicio">
 <div class="hero">
 <div class="eyebrow">01 · Inicio del proyecto de implementación</div>
-<h2 class="sec">Del prototipo a la operación: implementación del CRM Predictivo en Essenza SPA</h2>
-<p class="lead">El sistema ya existe y funciona en un entorno de desarrollo. Este nuevo proyecto se encarga de lo que viene después: instalarlo en el spa, migrar los datos reales, preparar a las personas que lo usarán, ponerlo en producción y entregarlo formalmente a la operación del negocio.</p>
+<h2 class="sec">Implementación de un CRM predictivo de retención para Essenza SPA</h2>
+<p class="lead">Este proyecto planifica, construye y pone en marcha desde cero un CRM que anticipa qué clientes están por dejar de venir al spa y guía al equipo para recuperarlos. Aquí se define cómo se ejecutará, se controlará y se cerrará esa implementación.</p>
 <div class="facts">
 <div class="fact"><div class="k">Cliente</div><div class="v">Essenza SPA · Santiago de Surco</div></div>
 <div class="fact"><div class="k">Producto</div><div class="v">CRM Predictivo y Retención Postventa</div></div>
 <div class="fact"><div class="k">Marco de referencia</div><div class="v">Guía PMBOK® 8.ª ed. (PMI)</div></div>
-<div class="fact"><div class="k">Ventana propuesta</div><div class="v">26/10/2026 – 18/12/2026</div></div>
+<div class="fact"><div class="k">Ventana propuesta</div><div class="v">02/11/2026 – 26/03/2027</div></div>
 </div>
 </div>
 <h3 id="inicio/negocio"><span class="num">1.1</span>El negocio: Essenza SPA</h3>
 <p><strong>Essenza SPA</strong> es un centro estético y de bienestar ubicado en el distrito de Santiago de Surco, Lima, Perú, en operación desde el año 2023. El establecimiento se especializa en ofrecer tratamientos de belleza y cuidado personal de alto estándar, combinando técnicas modernas con un enfoque personalizado para cada cliente. Su equipo está conformado por cosmiatras altamente calificadas que garantizan calidad, profesionalismo y una experiencia de relajación superior.</p>
 <p>Los servicios principales que ofrece Essenza SPA comprenden: <strong>tratamientos faciales</strong> (hidratación, limpieza profunda, antiedad), <strong>masajes terapéuticos y de relajación</strong>, <strong>depilación especializada</strong> y <strong>cuidados corporales integrales</strong>. Esta oferta posiciona al SPA como un referente de excelencia estética en su zona de influencia.</p>
 <div class="grid3" style="margin-top:18px">
-<div class="card"><span class="tag">Hoy</span><h4 style="margin-top:10px">Registro en Excel</h4><p class="small">Las atenciones se registran en <code>spa_registro_operacional.xlsx</code>. No hay alertas de abandono ni seguimiento postventa sistemático.</p></div>
-<div class="card"><span class="tag amber">El problema</span><h4 style="margin-top:10px">Clientes que se van sin aviso</h4><p class="small">El análisis de 420 clientes mostró una tasa de abandono real de <strong>29,8 %</strong> (125 clientes sin visita en más de 120 días), pese a una calificación promedio de 4,35/5.</p></div>
-<div class="card"><span class="tag plum">La respuesta</span><h4 style="margin-top:10px">Retención guiada por datos</h4><p class="small">Un CRM que conserva el Excel como fuente, predice el riesgo de abandono y convierte cada alerta en un caso de retención con una acción concreta.</p></div>
+<div class="card"><span class="tag">Hoy</span><h4 style="margin-top:10px">Registro en Excel</h4><p class="small">Las atenciones se registran en una hoja de Excel. No hay alertas de abandono ni un seguimiento postventa sistemático.</p></div>
+<div class="card"><span class="tag amber">El problema</span><h4 style="margin-top:10px">Clientes que se van sin aviso</h4><p class="small">En el registro histórico, cerca de <strong>3 de cada 10 clientes</strong> (125 de 420) llevan más de 120 días sin volver, aunque califican el servicio con 4,35/5.</p></div>
+<div class="card"><span class="tag plum">La propuesta</span><h4 style="margin-top:10px">Retención guiada por datos</h4><p class="small">Un CRM que use el Excel como fuente, prediga el riesgo de abandono y convierta cada alerta en un caso de retención con una acción concreta.</p></div>
 </div>
-<div class="quote">El abandono en Essenza no se explica por mala calidad del servicio, sino por un desenganche gradual que nadie estaba midiendo.</div>
-<h3 id="inicio/producto"><span class="num">1.2</span>El producto que se va a implementar</h3>
-<p>El proyecto anterior del curso entregó el <strong>CRM Predictivo y Retención Postventa — Spa ESSENZA</strong>: una aplicación web local que lee el Excel operacional, consolida las atenciones por cliente, calcula la probabilidad de abandono con un modelo XGBoost y organiza la respuesta del equipo en un Centro de Retención. Ese producto es la <strong>entrada</strong> de este proyecto; aquí no se vuelve a desarrollar, se pone en operación.</p>
+<div class="quote">El abandono en Essenza no se explica por mala calidad del servicio, sino por un desenganche gradual que nadie está midiendo.</div>
+<h3 id="inicio/producto"><span class="num">1.2</span>La solución que se va a implementar</h3>
+<p>El producto del proyecto es el <strong>CRM Predictivo y Retención Postventa — Spa ESSENZA</strong>: una aplicación web de uso local que leerá el Excel operacional, consolidará las atenciones por cliente, calculará la probabilidad de abandono con un modelo de machine learning y organizará la respuesta del equipo en un Centro de Retención. La arquitectura prevista es la siguiente:</p>
 <div class="tblwrap"><table class="tbl">
-<thead><tr><th>Componente</th><th>Tecnología</th><th>Qué hace en el spa</th></tr></thead>
+<thead><tr><th>Componente</th><th>Tecnología prevista</th><th>Qué hará en el spa</th></tr></thead>
 <tbody>
-<tr><td>Backend / API</td><td>FastAPI, SQLAlchemy, SQLite, JWT</td><td>Autenticación, clientes, alertas, dashboard, retención y modelo vía API REST.</td></tr>
-<tr><td>Sincronización</td><td>Pandas, openpyxl, watchdog, hash MD5</td><td>Revisa el Excel cada 30 s, valida las 25 columnas y actualiza sin duplicar <code>ID_Atención</code>.</td></tr>
-<tr><td>Modelo predictivo</td><td>XGBoost + SHAP (113 variables)</td><td>Probabilidad de abandono por cliente; riesgo Bajo (&lt;30 %), Medio (30–60 %), Alto (&gt;60 %).</td></tr>
-<tr><td>Aplicación web</td><td>React 19, TypeScript, Vite, Recharts</td><td>Dashboard, clientes, ficha 360°, Centro de Alertas, Sincronización y Rendimiento del modelo.</td></tr>
-<tr><td>Centro de Retención</td><td>Casos, acciones, plantillas, beneficios</td><td>Prioriza (Urgente/Alta/Media/Baja), sugiere la siguiente acción y abre WhatsApp con mensaje editable.</td></tr>
+<tr><td>Datos y modelo predictivo</td><td>Python, pandas, XGBoost, SHAP</td><td>Construir el historial por cliente y estimar su probabilidad de abandono, explicando los factores que la provocan.</td></tr>
+<tr><td>Backend / API</td><td>FastAPI, SQLAlchemy, SQLite</td><td>Autenticación por rol y servicios de clientes, alertas, dashboard, retención y modelo.</td></tr>
+<tr><td>Sincronización con Excel</td><td>openpyxl, vigilancia del archivo, control por hash</td><td>Leer el Excel cada pocos segundos, validarlo y actualizar sin duplicar atenciones.</td></tr>
+<tr><td>Aplicación web</td><td>React, TypeScript, Vite</td><td>Dashboard, listado de clientes, ficha 360°, centro de alertas y rendimiento del modelo.</td></tr>
+<tr><td>Centro de Retención</td><td>Casos, acciones, plantillas y beneficios</td><td>Priorizar clientes, sugerir la siguiente acción y abrir WhatsApp con un mensaje editable.</td></tr>
 </tbody>
 </table></div>
 <div class="card" style="margin:22px 0">
-<div class="eyebrow" style="margin-bottom:10px">Línea de partida del modelo · 420 clientes</div>
-<div class="riskbar" role="img" aria-label="Riesgo alto 118, medio 98, bajo 204"><span style="flex:118;background:#b9443a">118 alto</span><span style="flex:98;background:#c98a2e">98 medio</span><span style="flex:204;background:#3f8a6e">204 bajo</span></div>
-<div class="facts" style="margin-top:16px"><div class="fact"><div class="k">ROC-AUC</div><div class="v">0,821</div></div><div class="fact"><div class="k">Recall</div><div class="v">0,64</div></div><div class="fact"><div class="k">Precisión</div><div class="v">0,57</div></div><div class="fact"><div class="k">Abandono real</div><div class="v">29,8 %</div></div></div>
-<p class="small" style="margin:12px 0 0">Variables más influyentes (SHAP): score RFM, gasto total, % de compra de productos, días desde la última visita y frecuencia mensual. Fuente: informe de resultados del CRM.</p></div>
-<h3 id="inicio/brechas"><span class="num">1.3</span>Brechas de preparación para producción</h3>
-<p>Antes de iniciar se revisó el paquete del sistema tal como está en el repositorio del equipo. Funciona, pero está configurado para demostración y desarrollo. Estas brechas no son defectos del proyecto anterior: son exactamente el trabajo que justifica un proyecto de implementación.</p>
+<div class="eyebrow" style="margin-bottom:10px">Situación de partida · registro histórico del spa</div>
+<div class="facts" style="margin-top:6px"><div class="fact"><div class="k">Clientes</div><div class="v">420</div></div><div class="fact"><div class="k">Atenciones registradas</div><div class="v">2 500</div></div><div class="fact"><div class="k">Sin visita &gt; 120 días</div><div class="v">29,8 %</div></div><div class="fact"><div class="k">Satisfacción promedio</div><div class="v">4,35 / 5</div></div></div>
+<p class="small" style="margin:12px 0 0">Estos datos son la base para entrenar el modelo y para medir, al final del proyecto, si el CRM ayuda a recuperar clientes.</p></div>
+<h3 id="inicio/brechas"><span class="num">1.3</span>Requisitos de alto nivel</h3>
+<p>Requisitos que la solución debe cumplir para ser aceptada por la patrocinadora. Se detallarán y trazarán en la documentación de requisitos.</p>
 <div class="tblwrap"><table class="tbl">
-<thead><tr><th>Hallazgo en el sistema</th><th>Riesgo si se pasa a producción así</th><th>Tratamiento en la implementación</th></tr></thead>
+<thead><tr><th>Código</th><th>Requisito</th><th>Cómo se verificará</th></tr></thead>
 <tbody>
-<tr><td>Credenciales por defecto documentadas (<code>admin / admin123</code>)</td><td>Acceso no autorizado a datos personales de clientes.</td><td>Usuarios por rol, contraseñas propias y clave JWT nueva en <code>.env</code>.</td></tr>
-<tr><td>Fecha de corte fija de demostración (<code>FECHA_CORTE_DEMO = 2026-06-30</code>)</td><td>El riesgo y la inactividad se calculan contra una fecha pasada.</td><td>Parametrizar la fecha de corte a la fecha real de operación y revalidar las predicciones.</td></tr>
-<tr><td>Arranque en modo desarrollo (<code>uvicorn --reload</code>, <code>npm run dev</code>)</td><td>Menor estabilidad y dependencia de consolas abiertas.</td><td>Compilar el frontend y dejar un arranque de operación estable.</td></tr>
-<tr><td>El script de inicio levanta el backend en el puerto 8001, pero anuncia el 8000</td><td>Confusión en soporte y documentación.</td><td>Unificar puerto, script y manual.</td></tr>
-<tr><td>Bases SQLite sin datos en el paquete y sin respaldo programado</td><td>Pérdida del historial de casos y acciones de retención.</td><td>Inicialización controlada y respaldo diario de la base y del Excel.</td></tr>
-<tr><td>Contacto con clientes por WhatsApp desde el CRM</td><td>Incumplir la Ley N.° 29733 de Protección de Datos Personales.</td><td>Validar consentimiento y finalidad antes de habilitar las plantillas.</td></tr>
+<tr><td>RQ-01</td><td>Usar el Excel del spa como única fuente de registro, sin obligar a registrar dos veces.</td><td>Agregar una atención en el Excel y verla en el CRM sin duplicados.</td></tr>
+<tr><td>RQ-02</td><td>Calcular para cada cliente la probabilidad de abandono y su nivel de riesgo (bajo, medio, alto).</td><td>Predicción para el 100 % de clientes y métricas del modelo dentro de la meta.</td></tr>
+<tr><td>RQ-03</td><td>Mostrar dashboard, clientes, ficha 360° y alertas en lenguaje comprensible para el personal.</td><td>Recorrido de pruebas de aceptación con la administradora.</td></tr>
+<tr><td>RQ-04</td><td>Gestionar casos de retención con prioridad, motivo, acción sugerida y seguimiento.</td><td>Crear, actualizar y cerrar un caso; detectar la recuperación tras una nueva visita.</td></tr>
+<tr><td>RQ-05</td><td>Contactar por WhatsApp con mensaje editable y confirmación humana, nunca de forma masiva automática.</td><td>Abrir WhatsApp desde un caso y registrar la respuesta.</td></tr>
+<tr><td>RQ-06</td><td>Acceso por usuario y rol, contraseñas propias y respaldo diario de la información.</td><td>Revisión de seguridad y restauración de un respaldo.</td></tr>
+<tr><td>RQ-07</td><td>Cumplir la Ley N.° 29733 de Protección de Datos Personales.</td><td>Consentimiento registrado antes de habilitar el contacto.</td></tr>
 </tbody>
 </table></div>
 <h3 id="inicio/objetivos"><span class="num">1.4</span>Objetivos y alcance de la implementación</h3>
-<div class="callout"><p><strong>Objetivo general.</strong> Implementar y transferir a la operación de Essenza SPA el CRM Predictivo y de Retención Postventa, con datos reales, usuarias capacitadas y aceptación formal de la patrocinadora, entre el 26 de octubre y el 18 de diciembre de 2026.</p></div>
+<div class="callout"><p><strong>Objetivo general.</strong> Desarrollar e implementar en Essenza SPA un CRM web que prediga el riesgo de abandono de los clientes y apoye su retención postventa, con usuarias capacitadas y aceptación formal de la patrocinadora, entre noviembre de 2026 y marzo de 2027.</p></div>
 <h4>Objetivos específicos y criterios de éxito</h4>
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Objetivo</th><th>Indicador</th><th>Meta</th></tr></thead>
 <tbody>
-<tr><td>Migrar y sincronizar los datos reales</td><td>Atenciones del Excel cargadas sin duplicados ni errores de validación</td><td>100 % (referencia: 2 500 atenciones / 420 clientes)</td></tr>
-<tr><td>Asegurar el entorno de producción</td><td>Brechas de preparación cerradas y respaldo diario verificado</td><td>6 de 6 brechas cerradas antes del go-live</td></tr>
-<tr><td>Capacitar a las usuarias</td><td>Usuarias clave que aprueban una evaluación práctica</td><td>100 % de las usuarias clave, con nota ≥ 80 %</td></tr>
+<tr><td>Construir el modelo predictivo</td><td>ROC-AUC y recall sobre datos de prueba</td><td>ROC-AUC ≥ 0,80 y recall ≥ 0,60</td></tr>
+<tr><td>Integrar el Excel operacional</td><td>Atenciones sincronizadas sin duplicados ni errores de validación</td><td>100 %</td></tr>
+<tr><td>Entregar los módulos del CRM</td><td>Módulos aprobados en pruebas de aceptación</td><td>7 de 7 (dashboard, clientes, ficha 360°, alertas, sincronización, modelo, retención)</td></tr>
+<tr><td>Capacitar a las usuarias</td><td>Usuarias clave que aprueban una evaluación práctica</td><td>100 %, con nota ≥ 80 %</td></tr>
 <tr><td>Lograr la adopción</td><td>Alertas de riesgo alto revisadas dentro de 48 h durante la estabilización</td><td>≥ 90 %</td></tr>
-<tr><td>Cerrar formalmente</td><td>Acta de aceptación firmada y 0 incidentes críticos abiertos</td><td>Al 18/12/2026</td></tr>
+<tr><td>Cerrar formalmente</td><td>Acta de aceptación firmada y 0 incidentes críticos abiertos</td><td>Al 26/03/2027</td></tr>
 </tbody>
 </table></div>
-<p class="small">Indicador de beneficio que la operación seguirá midiendo después del cierre: tasa de recuperación de clientes en riesgo (casos “Recuperado” sobre casos gestionados). El informe del modelo estima una recuperación posible de 10–15 % de los clientes perdidos.</p>
+<p class="small">Indicador de beneficio que la operación seguirá midiendo después del cierre: tasa de recuperación de clientes en riesgo (casos “Recuperado” sobre casos gestionados).</p>
 <div class="grid2" style="margin-top:18px">
 <div class="card"><span class="tag">Dentro del alcance</span>
 <ul class="clean" style="margin-top:12px">
-<li>Instalación y configuración segura en el equipo del spa.</li>
-<li>Migración, validación y sincronización del Excel operacional.</li>
-<li>Recalibración de la fecha de corte y validación de predicciones.</li>
-<li>Configuración de reglas de prioridad, plantillas y beneficios con la patrocinadora.</li>
-<li>Capacitación por rol, manuales y guía rápida.</li>
-<li>Piloto controlado, puesta en producción y estabilización asistida.</li>
-<li>Transición a operación, respaldo y cierre formal.</li>
+<li>Levantamiento de requisitos y diseño de la solución.</li>
+<li>Preparación de datos, entrenamiento y validación del modelo.</li>
+<li>Desarrollo del backend, la sincronización con Excel y la aplicación web.</li>
+<li>Desarrollo del Centro de Retención y del contacto por WhatsApp.</li>
+<li>Pruebas, despliegue local en el spa y respaldo.</li>
+<li>Capacitación por rol, manuales y estabilización asistida.</li>
+<li>Transición a la operación y cierre formal.</li>
 </ul></div>
 <div class="card"><span class="tag amber">Fuera del alcance</span>
 <ul class="clean" style="margin-top:12px">
-<li>Nuevas funcionalidades del CRM (se tratan como solicitudes de cambio).</li>
 <li>Envío automático con la API oficial de WhatsApp Business.</li>
 <li>Reservas, pagos en línea, facturación electrónica o integración con POS.</li>
 <li>Despliegue en la nube multiempresa o aplicación móvil nativa.</li>
 <li>Reentrenamiento automático del modelo en producción.</li>
+<li>Cambios al proceso de atención que no estén ligados al CRM.</li>
 </ul></div>
 </div>
 <h4>Supuestos y restricciones</h4>
 <div class="grid2">
 <div class="card"><p class="small" style="margin-bottom:6px"><strong>Supuestos</strong></p>
-<ul class="clean"><li>El Excel seguirá siendo la herramienta de registro diario.</li><li>El spa dispone de una PC con Windows en recepción.</li><li>La dueña participa en el comité de cambios y en la aceptación.</li></ul></div>
+<ul class="clean"><li>El Excel seguirá siendo la herramienta de registro diario.</li><li>El historial de atenciones está disponible para entrenar el modelo.</li><li>El spa dispone de una PC con Windows en recepción.</li><li>La dueña participa en las revisiones y en la aceptación.</li></ul></div>
 <div class="card"><p class="small" style="margin-bottom:6px"><strong>Restricciones</strong></p>
-<ul class="clean"><li>Operación local, sin servidores en la nube.</li><li>Las actividades no deben interrumpir la atención al público.</li><li>Fecha de fin ligada al cierre del ciclo académico.</li><li>Cumplimiento de la Ley N.° 29733.</li></ul></div>
+<ul class="clean"><li>Operación local, sin servidores en la nube.</li><li>Equipo reducido y con dedicación parcial.</li><li>Las pruebas y la puesta en marcha no deben interrumpir la atención al público.</li><li>Cumplimiento de la Ley N.° 29733.</li></ul></div>
 </div>
 <h3 id="inicio/interesados"><span class="num">1.5</span>Interesados y roles en la implementación</h3>
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Interesado</th><th>Rol en este proyecto</th><th>Qué necesita del proyecto</th></tr></thead>
 <tbody>
-<tr><td>Dueña de Essenza SPA</td><td>Patrocinadora; preside el comité de cambios y firma la aceptación</td><td>Un sistema que su equipo use de verdad y que retenga clientes valiosos.</td></tr>
-<tr><td>Administradora</td><td>Usuaria líder y futura responsable operativa del CRM</td><td>Control sin duplicar el registro; procedimientos claros de respaldo y soporte.</td></tr>
-<tr><td>Recepcionista</td><td>Usuaria operativa: Excel, Centro de Alertas, contacto por WhatsApp</td><td>Interfaz simple y un flujo que no le sume carga en horas punta.</td></tr>
-<tr><td>Cosmiatras</td><td>Usuarias consultivas: ficha 360° y ejecución de acciones de retención</td><td>Saber qué cliente atender y qué ofrecerle, en lenguaje sencillo.</td></tr>
+<tr><td>Dueña de Essenza SPA</td><td>Patrocinadora; aprueba alcance y cambios, y firma la aceptación</td><td>Un sistema que su equipo use de verdad y que retenga clientes valiosos.</td></tr>
+<tr><td>Administradora</td><td>Usuaria líder; valida requisitos, prototipos y pruebas de aceptación</td><td>Control sin duplicar el registro; procedimientos claros de respaldo y soporte.</td></tr>
+<tr><td>Recepcionista</td><td>Usuaria operativa: Excel, alertas y contacto por WhatsApp</td><td>Una interfaz simple que no le sume carga en horas punta.</td></tr>
+<tr><td>Cosmiatras</td><td>Usuarias consultivas: ficha 360° y acciones de retención</td><td>Saber qué cliente atender y qué ofrecerle, en lenguaje sencillo.</td></tr>
 <tr><td>Clientes del spa</td><td>Beneficiarios y titulares de los datos personales</td><td>Mensajes oportunos, personalizados y con su consentimiento.</td></tr>
-<tr><td>Equipo del proyecto</td><td>Director del proyecto, líder técnico, analista de datos/ML, QA y capacitación</td><td>Decisiones a tiempo y acceso al spa fuera del horario de atención.</td></tr>
+<tr><td>Equipo del proyecto</td><td>Director del proyecto, analista funcional, científico de datos, desarrolladores backend y frontend, QA y capacitación</td><td>Requisitos claros, decisiones a tiempo y acceso a los datos del spa.</td></tr>
 <tr><td>Docente del curso</td><td>Evaluador académico</td><td>Aplicación rigurosa de la Guía PMBOK® 8 y evidencias verificables.</td></tr>
 </tbody>
 </table></div>
 <h3 id="inicio/ciclo"><span class="num">1.6</span>Ciclo de vida de la implementación e hitos</h3>
-<p>Se adopta un ciclo de vida <strong>predictivo por fases</strong>, porque el producto ya está construido y el riesgo principal está en la transición, no en el diseño. Cada fase termina con un punto de revisión del patrocinador. Las fechas son la propuesta inicial; se formalizarán en la línea base del cronograma.</p>
+<p>Se adopta un ciclo de vida <strong>híbrido</strong>: fases planificadas de forma predictiva para cumplir hitos y presupuesto, y construcción por incrementos con una demostración a la usuaria líder al final de cada fase de desarrollo. Las fechas son la propuesta inicial y se formalizarán en la línea base del cronograma.</p>
 <div class="tl">
-<div class="tl-i ms"><div class="d">26/10/2026</div><div class="t">H0 · Reunión de inicio de la implementación</div></div>
-<div class="tl-i"><div class="d">26/10 – 30/10</div><div class="t">F1 · Arranque y evaluación de preparación</div><p>Confirmar roles, comunicaciones y estado del equipo de cómputo; validar el inventario de brechas.</p></div>
-<div class="tl-i"><div class="d">02/11 – 06/11</div><div class="t">F2 · Preparación y aseguramiento del entorno</div><p>Instalación, usuarios por rol, configuración de <code>.env</code>, compilación del frontend y respaldos.</p></div>
-<div class="tl-i"><div class="d">09/11 – 13/11</div><div class="t">F3 · Migración y validación de datos</div><p>Carga del Excel real, fecha de corte real, conciliación de clientes y revisión de predicciones.</p></div>
-<div class="tl-i ms"><div class="d">13/11/2026</div><div class="t">H1 · Entorno listo y datos validados</div></div>
-<div class="tl-i"><div class="d">16/11 – 20/11</div><div class="t">F4 · Capacitación y gestión del cambio</div><p>Talleres por rol, manual de usuario, guía rápida y evaluación práctica.</p></div>
-<div class="tl-i"><div class="d">23/11 – 27/11</div><div class="t">F5 · Piloto controlado</div><p>Uso real con un grupo de clientes en riesgo alto; pruebas de aceptación por módulo.</p></div>
-<div class="tl-i ms"><div class="d">30/11/2026</div><div class="t">H2 · Puesta en producción (go-live)</div></div>
-<div class="tl-i"><div class="d">30/11 – 11/12</div><div class="t">F6 · Estabilización asistida</div><p>Soporte cercano, atención de incidentes, ajuste de reglas y seguimiento de adopción.</p></div>
-<div class="tl-i"><div class="d">14/12 – 18/12</div><div class="t">F7 · Transición a la operación y cierre</div><p>Entrega a la administradora, informe final, lecciones aprendidas y archivo.</p></div>
-<div class="tl-i ms"><div class="d">18/12/2026</div><div class="t">H3 · Acta de aceptación y cierre del proyecto</div></div>
+<div class="tl-i ms"><div class="d">02/11/2026</div><div class="t">H0 · Reunión de inicio del proyecto</div></div>
+<div class="tl-i"><div class="d">02/11 – 13/11</div><div class="t">F1 · Arranque y requisitos</div><p>Roles, plan de comunicaciones, levantamiento del proceso actual y requisitos priorizados.</p></div>
+<div class="tl-i"><div class="d">16/11 – 27/11</div><div class="t">F2 · Diseño de la solución</div><p>Arquitectura, modelo de datos, prototipo de pantallas y reglas de retención.</p></div>
+<div class="tl-i ms"><div class="d">27/11/2026</div><div class="t">H1 · Requisitos y diseño aprobados</div></div>
+<div class="tl-i"><div class="d">30/11 – 24/12</div><div class="t">F3 · Datos y modelo predictivo</div><p>Depuración del registro, variables por cliente, entrenamiento y evaluación del modelo.</p></div>
+<div class="tl-i ms"><div class="d">24/12/2026</div><div class="t">H2 · Modelo predictivo validado</div></div>
+<div class="tl-i"><div class="d">28/12 – 22/01</div><div class="t">F4 · Backend y sincronización</div><p>Base de datos, API, autenticación por rol y sincronización automática con el Excel.</p></div>
+<div class="tl-i"><div class="d">25/01 – 19/02</div><div class="t">F5 · Aplicación web y Centro de Retención</div><p>Pantallas del CRM, casos de retención, plantillas y contacto por WhatsApp.</p></div>
+<div class="tl-i ms"><div class="d">19/02/2027</div><div class="t">H3 · Sistema integrado</div></div>
+<div class="tl-i"><div class="d">22/02 – 12/03</div><div class="t">F6 · Pruebas, capacitación y puesta en producción</div><p>Pruebas integrales y de aceptación, capacitación por rol, instalación en el spa y go-live.</p></div>
+<div class="tl-i ms"><div class="d">12/03/2027</div><div class="t">H4 · Puesta en producción (go-live)</div></div>
+<div class="tl-i"><div class="d">15/03 – 26/03</div><div class="t">F7 · Estabilización y cierre</div><p>Soporte asistido, transición a la administradora, informe final y lecciones aprendidas.</p></div>
+<div class="tl-i ms"><div class="d">26/03/2027</div><div class="t">H5 · Acta de aceptación y cierre del proyecto</div></div>
 </div>
 <h3 id="inicio/enfoque"><span class="num">1.7</span>Enfoque de dirección: Guía PMBOK® 8</h3>
 <p>La octava edición de la Guía PMBOK® organiza la dirección de proyectos en <strong>6 principios</strong>, <strong>7 dominios de desempeño</strong> y <strong>5 áreas de enfoque</strong>, y vuelve a describir <strong>40 procesos</strong> como orientación no prescriptiva. Este blog usa esa estructura de forma explícita.</p>
 <div class="grid2">
 <div class="card"><h4>6 principios</h4><ul class="clean">
-<li><strong>Adoptar una visión holística:</strong> la implementación toca personas, datos, equipo y procesos del spa a la vez.</li>
-<li><strong>Enfocarse en el valor:</strong> el éxito es la retención de clientes, no solo un sistema instalado.</li>
+<li><strong>Adoptar una visión holística:</strong> la implementación toca personas, datos, tecnología y procesos del spa a la vez.</li>
+<li><strong>Enfocarse en el valor:</strong> el éxito es la retención de clientes, no solo un sistema terminado.</li>
 <li><strong>Integrar la calidad:</strong> cada fase cierra con verificación y criterios de aceptación.</li>
 <li><strong>Ser un líder responsable:</strong> decisiones trazables ante la patrocinadora.</li>
 <li><strong>Integrar la sostenibilidad:</strong> el spa debe poder operar el CRM sin el equipo del proyecto.</li>
-<li><strong>Construir una cultura empoderada:</strong> las usuarias son protagonistas del cambio.</li>
+<li><strong>Construir una cultura empoderada:</strong> las usuarias participan desde el diseño.</li>
 </ul></div>
 <div class="card"><h4>7 dominios de desempeño</h4><ul class="clean">
 <li>Gobernanza</li><li>Alcance</li><li>Cronograma</li><li>Finanzas</li><li>Interesados</li><li>Recursos</li><li>Riesgo</li>
 </ul>
 <p class="small" style="margin-top:12px">Los dominios son las filas del mapa de procesos de la sección 03.</p></div>
 </div>
-<h4>5 áreas de enfoque y foco de este proyecto</h4>
+<h4>5 áreas de enfoque y foco de este blog</h4>
 <div class="flow5">
 <div class="f5">Inicio<small>2 procesos</small></div>
 <div class="f5">Planificación<small>19 procesos</small></div>
@@ -380,7 +383,7 @@ h3{font-size:22px}
 <div class="f5 mc">Monitoreo y Control<small>10 procesos</small></div>
 <div class="f5 ci">Cierre<small>1 proceso</small></div>
 </div>
-<p>Como el producto ya fue concebido, planificado y construido en el proyecto anterior, el peso de este proyecto está en las tres áreas resaltadas: <strong>Ejecución, Monitoreo y Control, y Cierre</strong> (19 de los 40 procesos). Inicio y Planificación se realizan de forma ligera para formalizar el arranque y las líneas base de la implementación.</p>
+<p>El inicio queda formalizado en el acta de constitución. Este blog se concentra en las tres áreas resaltadas: <strong>Ejecución, Monitoreo y Control, y Cierre</strong> (19 de los 40 procesos), es decir, en cómo se va a construir, controlar y entregar el CRM.</p>
 <p style="margin-top:22px"><a class="btn" href="#acta" style="text-decoration:none">Ver el acta de constitución →</a></p>
 </section>
 <!-- ======================= MAPA ======================= -->
@@ -513,13 +516,13 @@ h3{font-size:22px}
 <h3 id="mapa/matriz"><span class="num">3.3</span>Procesos activos por fase de la implementación</h3>
 <p>El flujo no se ejecuta una sola vez: los procesos se repiten en cada fase. La matriz muestra dónde tiene más peso cada uno.</p>
 <div class="tblwrap"><table class="tbl mx" id="matrix"></table></div>
-<div class="callout warn"><p><strong>Lectura de gestión.</strong> Los procesos de Monitoreo y Control de desempeño, cambios y riesgos atraviesan las siete fases: son el “sistema nervioso” del proyecto. Las fases F5 (piloto) y F6 (estabilización) concentran la mayor cantidad de procesos activos, por lo que el equipo refuerza ahí las reuniones de control y la presencia en el spa.</p></div>
+<div class="callout warn"><p><strong>Lectura de gestión.</strong> Los procesos de control del desempeño, de cambios y de riesgos atraviesan las siete fases: son el “sistema nervioso” del proyecto. Las fases F5 (aplicación web y retención) y F6 (pruebas y go-live) concentran más procesos activos, porque ahí se integran los módulos y entran en juego las usuarias; el equipo refuerza en ellas las reuniones de control y la presencia en el spa. Cerrar el proyecto o fase también aparece en las fases que terminan con un entregable aceptado.</p></div>
 <h3><span class="num">Ref.</span>Referencias</h3>
 <ul class="refs">
 <li>Congreso de la República del Perú. (2011). <em>Ley N.° 29733, Ley de Protección de Datos Personales</em>.</li>
 <li>Project Management Institute. (2025). <em>A guide to the project management body of knowledge (PMBOK® guide)</em> (8th ed.). PMI.</li>
 <li>ProjInsights. (s. f.). <em>PMBOK 8th edition performance domains and processes: The complete guide</em>. https://www.projinsights.com/pmbok-8th-edition-performance-domains-and-processes/</li>
-<li>Equipo del proyecto. (2026). <em>Informe ejecutivo — CRM SPA ESSENZA: sistema de predicción de churn basado en machine learning</em> [Documento interno].</li>
+<li>Essenza SPA. (2026). <em>Registro operacional de atenciones (2023–2026)</em> [Base de datos interna].</li>
 </ul>
 </section>
 <footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>
@@ -530,128 +533,128 @@ const AREAS={ej:'Ejecución',mc:'Monitoreo y Control',ci:'Cierre'};
 const P={
 'E-EJE':{n:'Gestionar la ejecución del proyecto',en:'Manage Project Execution',d:'Gobernanza',a:'ej',
 p:'Dirigir y realizar el trabajo definido en el plan e implementar los cambios aprobados para lograr los objetivos del proyecto.',
-x:'Ejecutar el plan de despliegue: instalar backend y frontend en la PC de recepción, configurar el archivo .env (ruta del Excel, fecha de corte, umbrales), cargar los datos reales y conducir la puesta en producción del 30/11.',
-i:['Plan para la dirección del proyecto','Cambios aprobados','Paquete del sistema (código, modelo .pkl)','Registro de riesgos'],
-o:['CRM instalado y operativo','Datos de desempeño del trabajo','Registro de incidentes','Solicitudes de cambio'],
-t:['Checklist de despliegue','Tablero Kanban del equipo','Reuniones diarias de 15 min']},
+x:'Conducir la construcción por incrementos: datos y modelo, backend y sincronización, aplicación web y Centro de Retención; luego la instalación en la PC de recepción y la puesta en producción del 12/03/2027.',
+i:['Plan para la dirección del proyecto','Requisitos y diseño aprobados','Cambios aprobados','Registro de riesgos'],
+o:['Incrementos del CRM (modelo, API, aplicación web, retención)','Datos de desempeño del trabajo','Registro de incidentes','Solicitudes de cambio'],
+t:['Tablero Kanban del equipo','Reuniones diarias de 15 min','Repositorio y control de versiones (Git)']},
 'E-CAL':{n:'Gestionar el aseguramiento de la calidad',en:'Manage Quality Assurance',d:'Gobernanza',a:'ej',
 p:'Convertir el plan de calidad en actividades ejecutables que den confianza de que procesos y entregables cumplirán los requisitos.',
-x:'Aplicar la lista de preparación para producción: credenciales propias, puerto único, frontend compilado, prueba de humo de sincronización (0 errores, sin duplicar ID_Atención) y verificación de los umbrales de riesgo 0,30 / 0,60.',
-i:['Plan de gestión de la calidad','Métricas de calidad','Resultados de pruebas (pytest)'],
+x:'Aplicar estándares de código y revisiones entre pares, pruebas unitarias y de integración en cada incremento, verificación de las métricas del modelo (ROC-AUC ≥ 0,80, recall ≥ 0,60) y una lista de seguridad: sin credenciales por defecto, usuarios por rol y respaldo diario.',
+i:['Plan de gestión de la calidad','Métricas de calidad','Resultados de pruebas'],
 o:['Entregables verificados','Informes de calidad','Solicitudes de cambio'],
-t:['Listas de verificación','Pruebas de humo y regresión','Análisis de causa raíz']},
+t:['Revisión de código','Pruebas automatizadas (pytest)','Listas de verificación']},
 'E-CON':{n:'Gestionar el conocimiento del proyecto',en:'Manage Project Knowledge',d:'Gobernanza',a:'ej',
 p:'Usar el conocimiento existente y crear conocimiento nuevo para lograr los objetivos y contribuir al aprendizaje de la organización.',
-x:'Producir el manual de usuario por rol, la guía rápida “qué hacer con una alerta”, el README técnico actualizado y un registro semanal de lecciones aprendidas que la administradora conservará.',
-i:['README y documentación técnica','Informe de resultados del modelo','Entregables del proyecto'],
+x:'Documentar decisiones de arquitectura y del modelo, mantener el README técnico, producir el manual de usuario por rol y la guía rápida «qué hacer con una alerta», y llevar un registro de lecciones aprendidas por fase.',
+i:['Requisitos y diseño','Documentación técnica','Entregables del proyecto'],
 o:['Registro de lecciones aprendidas','Manuales y guías','Activos de procesos actualizados'],
-t:['Talleres y demostraciones','Gestión de la información','Retrospectivas']},
+t:['Registro de decisiones','Talleres y demostraciones','Retrospectivas']},
 'E-INV':{n:'Gestionar el involucramiento de los interesados',en:'Manage Stakeholder Engagement',d:'Interesados',a:'ej',
 p:'Comunicarse y trabajar con los interesados para atender sus necesidades, abordar incidentes y fomentar su participación.',
-x:'Validar con la dueña las reglas de prioridad, plantillas y beneficios; acompañar a recepción y cosmiatras en sus primeros casos; tratar la resistencia del tipo “el Excel ya funciona” mostrando qué gana cada rol.',
+x:'Hacer partícipes a la dueña y a la administradora desde el diseño: validación de prototipos, demostración al final de cada fase de desarrollo y definición conjunta de reglas de prioridad, plantillas y beneficios; acompañar a recepción y cosmiatras en sus primeros casos.',
 i:['Plan de involucramiento','Registro de interesados','Registro de incidentes'],
 o:['Interesados comprometidos','Solicitudes de cambio','Registro de incidentes actualizado'],
-t:['Gestión del cambio','Negociación','Reuniones de seguimiento']},
+t:['Demostraciones por incremento','Gestión del cambio','Negociación']},
 'E-COM':{n:'Gestionar las comunicaciones',en:'Manage Communications',d:'Interesados',a:'ej',
 p:'Recopilar, crear, distribuir, almacenar y disponer de la información del proyecto de forma oportuna y adecuada.',
-x:'Reunión de inicio, informe semanal de estado a la patrocinadora, comunicado de go-live y de la ventana de corte, canal interno de soporte y aviso a clientes sobre el tratamiento de sus datos.',
+x:'Reunión de inicio, informe semanal de estado a la patrocinadora, actas de cada demostración, comunicado de puesta en producción, canal interno de soporte y aviso a clientes sobre el tratamiento de sus datos.',
 i:['Plan de gestión de las comunicaciones','Informes de desempeño','Registro de interesados'],
 o:['Comunicaciones del proyecto','Actualizaciones de documentos'],
 t:['Métodos push, pull e interactivos','Informes de estado','Tecnología de comunicación (WhatsApp, correo)']},
 'E-ADQ':{n:'Adquirir recursos',en:'Acquire Resources',d:'Recursos',a:'ej',
 p:'Obtener los miembros del equipo, instalaciones, equipos y demás recursos necesarios para completar el trabajo.',
-x:'Asegurar la PC de recepción (Windows, Python 3.9+, Node 18+), un medio de respaldo, el número de WhatsApp del spa y la disponibilidad de las usuarias clave para capacitarse fuera del horario de atención.',
+x:'Conformar el equipo (analista funcional, científico de datos, desarrolladores backend y frontend, QA), habilitar las herramientas de trabajo (repositorio, entornos de desarrollo), obtener una copia anonimizada del historial de atenciones y asegurar la PC de recepción para la instalación.',
 i:['Plan de gestión de recursos','Requisitos de recursos','Estrategia de abastecimiento'],
-o:['Asignaciones de recursos físicos y del equipo','Calendarios de recursos'],
+o:['Asignaciones del equipo y de recursos físicos','Calendarios de recursos'],
 t:['Negociación','Análisis multicriterio','Preasignación']},
 'E-LID':{n:'Liderar el equipo',en:'Lead the Team',d:'Recursos',a:'ej',
 p:'Orientar, motivar y desarrollar al equipo, gestionando su desempeño y los conflictos para optimizar los resultados.',
-x:'Roles claros (director, líder técnico, analista de datos, QA/capacitación), reunión diaria corta, acuerdos de trabajo frente a la carga académica y resolución rápida de bloqueos durante el piloto y la estabilización.',
+x:'Roles y responsabilidades claros, reunión diaria corta, acuerdos de trabajo frente a la carga académica, retrospectiva al cierre de cada fase y resolución rápida de bloqueos técnicos entre datos, backend y frontend.',
 i:['Asignaciones del equipo','Acuerdos de trabajo','Informes de desempeño'],
 o:['Evaluaciones del desempeño del equipo','Solicitudes de cambio','Acuerdos actualizados'],
-t:['Liderazgo de servicio','Gestión de conflictos','Inteligencia emocional']},
+t:['Liderazgo de servicio','Gestión de conflictos','Retrospectivas']},
 'E-RIE':{n:'Implementar las respuestas a los riesgos',en:'Implement Risk Responses',d:'Riesgo',a:'ej',
 p:'Ejecutar los planes de respuesta acordados para los riesgos identificados.',
-x:'Respaldo diario de la base SQLite y del Excel; plan de vuelta atrás al registro manual; doble revisión antes de contactar clientes; instalación de contingencia en una segunda laptop.',
+x:'Ejecutar las respuestas acordadas: limpieza y validación temprana de datos, modelo de respaldo más simple si no se alcanza la meta, integración continua para evitar sorpresas al unir módulos, respaldo diario y plan de vuelta atrás al registro manual tras el go-live.',
 i:['Registro de riesgos','Plan de respuesta a los riesgos','Lecciones aprendidas'],
 o:['Solicitudes de cambio','Registro de riesgos actualizado','Registro de incidentes'],
 t:['Dueños de riesgo','Juicio de expertos','Sistema de información del proyecto']},
 'M-DES':{n:'Monitorear y controlar el desempeño del proyecto',en:'Monitor and Control Project Performance',d:'Gobernanza',a:'mc',
 p:'Dar seguimiento, revisar e informar el avance global frente al plan, integrando la información de desempeño de todos los dominios.',
-x:'Tablero semanal que integra avance, SPI y CPI con indicadores del propio CRM: sincronizaciones exitosas, alertas de riesgo alto atendidas y casos abiertos o cerrados. Base del informe de estado a la patrocinadora.',
+x:'Tablero semanal con avance por fase, SPI y CPI, entregables terminados frente a los planificados, defectos abiertos y, tras el go-live, indicadores de uso del CRM. Base del informe de estado a la patrocinadora.',
 i:['Plan para la dirección del proyecto','Información de desempeño de los dominios','Pronósticos'],
 o:['Informes de desempeño del trabajo','Solicitudes de cambio','Pronósticos actualizados'],
 t:['Valor ganado (EVM)','Análisis de variación y tendencias','Reuniones de estado']},
 'M-CAM':{n:'Evaluar e implementar cambios',en:'Assess and Implement Changes',d:'Gobernanza',a:'mc',
 p:'Revisar todas las solicitudes de cambio, aprobarlas o rechazarlas y gestionar los cambios a entregables, documentos y plan.',
-x:'Comité de cambios (dueña + director del proyecto) para decisiones como ajustar el umbral de riesgo alto, agregar plantillas de mensaje o cambiar la fecha de corte; cada cambio queda registrado con su impacto y versionado en Git.',
+x:'Comité de cambios (dueña + director del proyecto) para decisiones como agregar una pantalla, cambiar el umbral de riesgo alto o incorporar nuevas plantillas; cada cambio se registra con su impacto en alcance, plazo y costo, y se versiona en Git.',
 i:['Solicitudes de cambio','Plan para la dirección del proyecto','Informes de desempeño'],
 o:['Solicitudes de cambio aprobadas','Registro de cambios','Plan actualizado'],
 t:['Comité de control de cambios','Control de configuración (Git)','Análisis de impacto']},
 'M-ALC':{n:'Monitorear y controlar el alcance',en:'Monitor and Control Scope',d:'Alcance',a:'mc',
 p:'Monitorear el estado del alcance y gestionar cambios a la línea base del alcance.',
-x:'Comparar lo implementado con los módulos comprometidos (dashboard, clientes, ficha 360°, alertas, retención, sincronización, modelo) y frenar el crecimiento no controlado, por ejemplo pedidos de facturación o API oficial de WhatsApp.',
+x:'Comparar lo construido con los requisitos RQ-01 a RQ-07 y los siete módulos comprometidos, y frenar el crecimiento no controlado, por ejemplo pedidos de reservas en línea o envíos masivos automáticos.',
 i:['Línea base del alcance','Matriz de trazabilidad de requisitos','Datos de desempeño'],
 o:['Información de desempeño del trabajo','Solicitudes de cambio'],
 t:['Análisis de variación','Trazabilidad de requisitos']},
 'M-VAL':{n:'Validar el alcance',en:'Validate Scope',d:'Alcance',a:'mc',
 p:'Formalizar la aceptación de los entregables completados.',
-x:'Pruebas de aceptación con la administradora: importar el Excel sin duplicados, obtener predicción para el 100 % de clientes, crear y cerrar un caso, abrir WhatsApp con mensaje editable y detectar una recuperación tras una nueva visita. Acta por módulo.',
+x:'Aceptación formal por entregable: diseño aprobado, modelo validado con sus métricas y, al final, pruebas de aceptación con la administradora (sincronizar el Excel sin duplicados, predecir para todos los clientes, crear y cerrar un caso, contactar por WhatsApp y detectar una recuperación).',
 i:['Entregables verificados','Criterios de aceptación','Matriz de trazabilidad'],
 o:['Entregables aceptados','Solicitudes de cambio'],
 t:['Inspección','Pruebas de aceptación de usuario (UAT)','Toma de decisiones']},
 'M-CRO':{n:'Monitorear y controlar el cronograma',en:'Monitor and Control Schedule',d:'Cronograma',a:'mc',
 p:'Monitorear el estado del proyecto para actualizar el cronograma y gestionar cambios a su línea base.',
-x:'Seguir los hitos H1–H3 y la secuencia crítica entorno → migración → capacitación → piloto → go-live; si la capacitación se atrasa, aplicar compresión antes de mover la fecha de producción.',
+x:'Seguir los hitos H1 a H5 y la secuencia crítica datos → modelo → API → aplicación web → retención → pruebas → go-live; ante retrasos, aplicar paralelización o compresión antes de mover la fecha de producción.',
 i:['Línea base del cronograma','Datos de desempeño','Calendarios de recursos'],
 o:['Pronósticos del cronograma','Solicitudes de cambio'],
 t:['SPI y valor ganado','Gráfico de hitos','Compresión del cronograma']},
 'M-FIN':{n:'Monitorear y controlar las finanzas',en:'Monitor and Control Finances',d:'Finanzas',a:'mc',
 p:'Monitorear el estado financiero del proyecto y gestionar cambios a la línea base de costos.',
-x:'Controlar horas del equipo, equipamiento y respaldo; y comparar el costo de los beneficios otorgados en retención con el ingreso recuperado que registra el propio CRM.',
+x:'Controlar las horas del equipo por fase, el equipamiento y las herramientas frente a la línea base de costos; calcular CPI y EAC y decidir el uso de la reserva de contingencia.',
 i:['Línea base de costos','Requisitos de financiamiento','Datos de desempeño'],
 o:['Pronósticos de costos (EAC, ETC)','Solicitudes de cambio'],
 t:['CPI y valor ganado','TCPI','Análisis de reservas']},
 'M-INV':{n:'Monitorear el involucramiento de los interesados',en:'Monitor Stakeholder Engagement',d:'Interesados',a:'mc',
 p:'Monitorear las relaciones con los interesados y ajustar las estrategias de involucramiento.',
-x:'Medir la adopción por rol: inicios de sesión, porcentaje de alertas revisadas y casos con acción registrada; encuesta breve a la dueña y la administradora; comparación del nivel actual y deseado de cada interesada.',
-i:['Plan de involucramiento','Registro de interesados','Datos de uso del CRM'],
+x:'Medir la asistencia y la retroalimentación en las demostraciones, y después del go-live la adopción por rol (inicios de sesión, alertas revisadas, casos con acción registrada); comparar el nivel actual y deseado de cada interesada.',
+i:['Plan de involucramiento','Registro de interesados','Retroalimentación de demostraciones'],
 o:['Información de desempeño del trabajo','Solicitudes de cambio'],
 t:['Matriz de evaluación del involucramiento','Encuestas','Retroalimentación']},
 'M-COM':{n:'Monitorear las comunicaciones',en:'Monitor Communications',d:'Interesados',a:'mc',
 p:'Asegurar que se satisfagan las necesidades de información del proyecto y de sus interesados.',
-x:'Verificar que los informes semanales lleguen y se entiendan, medir el tiempo de respuesta del canal de soporte y revisar tono y consentimiento de los mensajes de retención enviados a clientes.',
+x:'Verificar que los informes semanales y las actas de demostración lleguen y se entiendan, medir el tiempo de respuesta del canal de soporte y revisar el tono y el consentimiento de los mensajes de retención.',
 i:['Plan de gestión de las comunicaciones','Comunicaciones del proyecto','Registro de incidentes'],
 o:['Información de desempeño del trabajo','Solicitudes de cambio'],
-t:['Revisión de mensajes','Reuniones de retroalimentación','Sistema de información del proyecto']},
+t:['Reuniones de retroalimentación','Revisión de mensajes','Sistema de información del proyecto']},
 'M-REC':{n:'Monitorear y controlar los recursos',en:'Monitor and Control Resourcing',d:'Recursos',a:'mc',
 p:'Asegurar que los recursos asignados estén disponibles según lo planificado y tomar acciones correctivas.',
-x:'Vigilar disponibilidad y estado de la PC (espacio en disco, respaldo), horas del equipo frente al plan y asistencia de las usuarias clave a la capacitación; reasignar cuando haga falta.',
+x:'Vigilar la dedicación real del equipo frente a la planificada, la disponibilidad de la administradora para validar y la PC del spa para la instalación; reasignar tareas cuando un perfil se convierte en cuello de botella.',
 i:['Plan de gestión de recursos','Asignaciones','Datos de desempeño'],
 o:['Información de desempeño del trabajo','Solicitudes de cambio'],
 t:['Análisis de tendencias','Resolución de problemas','Negociación']},
 'M-RIE':{n:'Monitorear los riesgos',en:'Monitor Risks',d:'Riesgo',a:'mc',
 p:'Monitorear la implementación de las respuestas, dar seguimiento a riesgos identificados e identificar riesgos nuevos.',
-x:'Revisión semanal de los riesgos principales: pérdida de datos, baja adopción, Excel abierto o dañado durante la sincronización, falsos positivos del modelo (precisión 57 %) y cumplimiento de la Ley N.° 29733.',
+x:'Revisión semanal de los riesgos principales: datos incompletos, modelo por debajo de la meta, problemas de integración con el Excel, baja adopción del personal, pérdida de datos y cumplimiento de la Ley N.° 29733.',
 i:['Registro de riesgos','Informes de desempeño','Registro de incidentes'],
 o:['Información de desempeño del trabajo','Solicitudes de cambio','Registro de riesgos actualizado'],
 t:['Auditorías de riesgos','Análisis de reservas','Reuniones de riesgos']},
 'C-CIE':{n:'Cerrar el proyecto o fase',en:'Close Project or Phase',d:'Gobernanza',a:'ci',
 p:'Finalizar todas las actividades, transferir el producto, archivar la información y liberar los recursos.',
-x:'Transición formal a la administradora como responsable operativa; acta de aceptación firmada por la dueña; entrega de manuales, accesos y respaldos; informe final de indicadores frente a objetivos; lecciones aprendidas y liberación del equipo.',
+x:'Cierre de cada fase con su entregable aceptado y, al final, transición formal a la administradora como responsable operativa: acta de aceptación firmada por la dueña, entrega de código, manuales, accesos y respaldos, informe final de indicadores, lecciones aprendidas y liberación del equipo.',
 i:['Entregables aceptados','Registro de lecciones aprendidas','Plan para la dirección del proyecto'],
 o:['Transición del producto a la operación','Informe final','Activos de procesos actualizados'],
 t:['Reunión de cierre','Análisis de documentos','Encuesta de satisfacción']}
 };
 const ORDER=['E-EJE','E-CAL','E-CON','E-INV','E-COM','E-ADQ','E-LID','E-RIE','M-DES','M-CAM','M-ALC','M-VAL','M-CRO','M-FIN','M-INV','M-COM','M-REC','M-RIE','C-CIE'];
 const PH=['F1','F2','F3','F4','F5','F6','F7'];
-const PHN=['Arranque','Entorno','Migración','Capacitación','Piloto','Go-live y estabilización','Transición y cierre'];
+const PHN=['Arranque y requisitos','Diseño','Datos y modelo','Backend','App web y retención','Pruebas y go-live','Estabilización y cierre'];
 const MX={
-'E-EJE':[1,1,1,0,1,1,0],'E-CAL':[0,1,1,0,1,1,0],'E-CON':[0,0,0,1,0,1,1],'E-INV':[1,0,0,1,1,1,0],'E-COM':[1,0,0,1,1,1,1],
-'E-ADQ':[1,1,0,1,0,0,0],'E-LID':[1,1,1,1,1,1,1],'E-RIE':[0,1,1,0,1,1,0],
-'M-DES':[1,1,1,1,1,1,1],'M-CAM':[1,1,1,1,1,1,1],'M-ALC':[0,1,1,0,1,1,0],'M-VAL':[0,0,1,0,1,0,1],'M-CRO':[1,1,1,1,1,1,0],
-'M-FIN':[0,1,0,0,1,1,1],'M-INV':[0,0,0,1,1,1,0],'M-COM':[0,0,0,1,1,1,0],'M-REC':[1,1,0,1,0,1,0],'M-RIE':[1,1,1,1,1,1,1],
-'C-CIE':[0,0,0,0,0,0,1]};
+'E-EJE':[1,1,1,1,1,1,0],'E-CAL':[0,1,1,1,1,1,0],'E-CON':[1,0,0,0,0,1,1],'E-INV':[1,1,0,0,1,1,1],'E-COM':[1,1,1,1,1,1,1],
+'E-ADQ':[1,1,1,0,0,1,0],'E-LID':[1,1,1,1,1,1,1],'E-RIE':[0,1,1,1,1,1,1],
+'M-DES':[1,1,1,1,1,1,1],'M-CAM':[1,1,1,1,1,1,1],'M-ALC':[0,1,1,1,1,1,0],'M-VAL':[0,1,1,1,1,1,1],'M-CRO':[1,1,1,1,1,1,0],
+'M-FIN':[0,1,1,1,1,1,1],'M-INV':[1,1,0,0,1,1,1],'M-COM':[1,0,1,1,1,1,1],'M-REC':[1,1,1,1,1,1,0],'M-RIE':[1,1,1,1,1,1,1],
+'C-CIE':[0,1,1,0,1,1,1]};
 const detail=document.getElementById('detail');
 let cur='E-EJE';
 function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
