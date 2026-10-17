@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Implementación CRM Essenza</title>
+<meta name="description" content="Proyecto de implementación del CRM Predictivo y Retención Postventa en Essenza SPA — Gestión de Proyectos TI, UNTELS 2026, con enfoque en la Guía PMBOK® 8.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#f5f2ec;--paper:#fffdf9;--ink:#1d2a24;--ink-2:#3b4a43;--muted:#66736c;--rule:#e3ddd2;
+--sage:#2f6b55;--sage-2:#3f8a6e;--sage-lt:#e1efe8;
+--amber:#a8681a;--amber-lt:#f7ebd6;
+--plum:#7a3d68;--plum-lt:#f3e3ee;
+--gold:#b88a3b;--side:#16231d;
+--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--sage)}
+img{max-width:100%;display:block}
+/* layout */
+.side{position:fixed;inset:0 auto 0 0;width:280px;background:var(--side);color:#cfd9d3;display:flex;flex-direction:column;z-index:50;overflow-y:auto;transition:transform .3s}
+.brand{padding:28px 24px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.kick{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.brand h1{font-family:var(--serif);font-weight:600;font-size:23px;line-height:1.2;color:#fff;margin:6px 0 4px}
+.brand p{font-size:12.5px;color:#9fb0a7}
+.nav{padding:18px 0;flex:1}
+.nav-t{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7f948a;padding:6px 24px}
+.nav a{display:flex;gap:12px;align-items:baseline;padding:10px 24px;color:#cfd9d3;text-decoration:none;font-size:14px;border-left:3px solid transparent}
+.nav a:hover{background:rgba(255,255,255,.04);color:#fff}
+.nav a.on{border-left-color:var(--gold);background:rgba(255,255,255,.06);color:#fff;font-weight:600}
+.nav a .n{font-family:var(--mono);font-size:11px;color:var(--gold)}
+.nav .sub{padding:0 0 6px}
+.nav .sub a{padding:4px 24px 4px 52px;font-size:12.5px;color:#9fb0a7;border:0}
+.nav .sub a:hover{color:#fff;background:none}
+.nav .soon{padding:8px 24px;font-size:12.5px;color:#6d8177;display:flex;gap:12px}
+.meta{padding:18px 24px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:#9fb0a7}
+.meta b{color:#e6ede9;font-weight:600}
+.main{margin-left:280px;min-height:100vh}
+.topbar{display:none}
+.wrap{max-width:980px;margin:0 auto;padding:56px 48px 96px}
+/* typography */
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+h2.sec{font-family:var(--serif);font-weight:700;font-size:clamp(30px,4.2vw,44px);line-height:1.12;letter-spacing:-.01em;margin:10px 0 18px}
+h3{font-family:var(--serif);font-weight:600;font-size:25px;line-height:1.25;margin:56px 0 14px;scroll-margin-top:24px}
+h3 .num{font-family:var(--mono);font-size:13px;color:var(--gold);display:block;letter-spacing:.08em;margin-bottom:4px}
+h4{font-size:15px;font-weight:700;margin:22px 0 8px}
+p{margin:0 0 14px;color:var(--ink-2)}
+.lead{font-size:18.5px;color:var(--ink);max-width:62ch}
+ul.clean{list-style:none;margin:0 0 14px}
+ul.clean li{position:relative;padding-left:20px;margin-bottom:8px;color:var(--ink-2)}
+ul.clean li::before{content:"";position:absolute;left:3px;top:.72em;width:7px;height:7px;border-radius:2px;background:var(--sage-2)}
+strong{color:var(--ink)}
+.small{font-size:13.5px;color:var(--muted)}
+code{font-family:var(--mono);font-size:.86em;background:#efe9de;padding:1px 6px;border-radius:4px;color:#4b3b22}
+/* hero */
+.hero{background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:44px 44px 36px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,var(--sage-lt),transparent 70%)}
+.hero h2{position:relative;z-index:1}
+.hero .lead{position:relative;z-index:1}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-top:28px;position:relative;z-index:1}
+.fact{background:var(--paper);padding:14px 16px}
+.fact .k{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fact .v{font-weight:700;font-size:15px;color:var(--ink);line-height:1.35;margin-top:2px}
+/* cards & grids */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:20px 22px}
+.card h4{margin-top:0}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--sage-lt);color:var(--sage);font-weight:600}
+.tag.amber{background:var(--amber-lt);color:var(--amber)}
+.tag.plum{background:var(--plum-lt);color:var(--plum)}
+.quote{border-left:3px solid var(--gold);padding:6px 0 6px 18px;margin:22px 0;font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink)}
+.callout{background:var(--sage-lt);border:1px solid #c7ddd2;border-radius:12px;padding:16px 20px;margin:20px 0}
+.callout.warn{background:var(--amber-lt);border-color:#ead3ad}
+.callout p:last-child{margin:0}
+figure{margin:22px 0}
+figure img{border-radius:12px;border:1px solid var(--rule)}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;background:var(--paper);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.tbl th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:#f1ece2;padding:10px 14px;font-weight:600}
+.tbl td{padding:11px 14px;border-top:1px solid var(--rule);vertical-align:top;color:var(--ink-2)}
+.tbl td:first-child{color:var(--ink);font-weight:600}
+.tblwrap{overflow-x:auto;margin:16px 0;border-radius:12px}
+/* timeline */
+.tl{position:relative;margin:20px 0 8px;padding-left:28px}
+.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--rule)}
+.tl-i{position:relative;padding:0 0 18px}
+.tl-i::before{content:"";position:absolute;left:-24px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--sage-2)}
+.tl-i.ms::before{background:var(--gold);border-color:var(--gold);border-radius:2px;transform:rotate(45deg)}
+.tl-i .d{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.tl-i .t{font-weight:700;color:var(--ink)}
+.tl-i p{margin:2px 0 0;font-size:14.5px}
+/* pmbok strip */
+.flow5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:18px 0}
+.f5{border-radius:10px;padding:14px 12px;text-align:center;border:1px dashed #cfc7b8;color:var(--muted);background:transparent;font-weight:600;font-size:14px;position:relative}
+.f5 small{display:block;font-family:var(--mono);font-size:10.5px;font-weight:400;margin-top:2px}
+.f5.ej{background:var(--sage-lt);border:1px solid #bcd8ca;color:var(--sage)}
+.f5.mc{background:var(--amber-lt);border:1px solid #e6cfa5;color:var(--amber)}
+.f5.ci{background:var(--plum-lt);border:1px solid #e0c3d6;color:var(--plum)}
+/* process map */
+.mapbox{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:14px;margin:18px 0;width:min(1220px,calc(100vw - 280px - 40px));position:relative;left:50%;transform:translateX(-50%)}
+@media (max-width:1024px){.mapbox{width:calc(100vw - 32px)}}
+.mapscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pmap{min-width:900px;width:100%;height:auto;display:block;font-family:var(--sans)}
+.pmap .colbg.ej{fill:#eef6f1}.pmap .colbg.mc{fill:#fbf3e4}.pmap .colbg.ci{fill:#f8eef4}
+.pmap .colh{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.12em}
+.pmap .colh.ej{fill:var(--sage)}.pmap .colh.mc{fill:var(--amber)}.pmap .colh.ci{fill:var(--plum)}
+.pmap .colsub{font-size:11px;fill:var(--muted)}
+.pmap .rowbg{fill:rgba(29,42,36,.025)}.pmap .rowbg.alt{fill:rgba(29,42,36,.055)}
+.pmap .rowl{font-family:var(--serif);font-weight:600;font-size:14px;fill:var(--ink)}
+.pmap .pbox{cursor:pointer;outline:none}
+.pmap .pbox rect{stroke-width:1.5;transition:filter .15s}
+.pmap .pbox text{font-size:12px;font-weight:600;pointer-events:none}
+.pmap .pbox.ej rect{fill:#fff;stroke:var(--sage-2)}.pmap .pbox.ej text{fill:#1f4e3d}
+.pmap .pbox.mc rect{fill:#fff;stroke:#c98a2e}.pmap .pbox.mc text{fill:#6e430f}
+.pmap .pbox.ci rect{fill:var(--plum);stroke:var(--plum)}.pmap .pbox.ci text{fill:#fff;font-size:13px}
+.pmap .pbox:hover rect,.pmap .pbox:focus rect{filter:drop-shadow(0 3px 6px rgba(0,0,0,.18))}
+.pmap .pbox.sel rect{stroke-width:3}
+.pmap .pbox.ej.sel rect{fill:var(--sage-lt)}.pmap .pbox.mc.sel rect{fill:var(--amber-lt)}
+.pmap .fl{fill:none;stroke:#7b8580;stroke-width:1.6}
+.pmap .fl.dash{stroke-dasharray:5 4}
+.pmap .fl.bus{stroke:#c98a2e;stroke-width:1.6}
+.pmap .fl.cl{stroke:var(--plum)}
+.pmap .halo{fill:none;stroke:#fffdf9;stroke-width:6}
+.pmap .ahead{fill:#7b8580}.pmap .ahead-c{fill:var(--plum)}
+.pmap .bdg circle{fill:var(--ink)}.pmap .bdg text{fill:#fff;font-family:var(--mono);font-size:10px;font-weight:600}
+.pmap .note{font-size:12px;fill:var(--muted)}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;margin:14px 4px 4px;font-size:13.5px;color:var(--ink-2)}
+.legend span.b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--mono);font-size:10.5px;font-weight:600;margin-right:8px;vertical-align:middle}
+/* detail panel */
+.detail{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:26px 28px;margin:18px 0;border-top:5px solid var(--sage-2)}
+.detail.mc{border-top-color:#c98a2e}.detail.ci{border-top-color:var(--plum)}
+.detail h4.dt{font-family:var(--serif);font-size:24px;font-weight:600;margin:8px 0 2px}
+.detail .en{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:14px}
+.detail .apl{background:#f6f2ea;border-radius:10px;padding:14px 16px;margin:12px 0 16px}
+.detail .apl b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.detail .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.detail .cols h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.detail .cols ul{list-style:none;font-size:14px;color:var(--ink-2)}
+.detail .cols li{padding:4px 0;border-bottom:1px dashed var(--rule)}
+.detail .nav2{display:flex;justify-content:space-between;margin-top:18px;gap:10px}
+.btn{font-family:var(--sans);font-size:13.5px;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
+.btn:hover{border-color:var(--sage-2);color:var(--sage)}
+/* process list */
+.plist{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.pcol h4{margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.pitem{display:block;width:100%;text-align:left;background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--sage-2);border-radius:10px;padding:10px 12px;margin-bottom:8px;font-family:var(--sans);font-size:13.8px;font-weight:600;color:var(--ink);cursor:pointer}
+.pitem small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.pitem.mc{border-left-color:#c98a2e}.pitem.ci{border-left-color:var(--plum)}
+.pitem:hover{background:#fff}
+/* matrix */
+.mx td,.mx th{text-align:center}
+.mx td:first-child,.mx th:first-child{text-align:left}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%}
+.dot.ej{background:var(--sage-2)}.dot.mc{background:#c98a2e}.dot.ci{background:var(--plum)}
+.mx tr.grp td{background:#f1ece2;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.riskbar{display:flex;height:34px;border-radius:8px;overflow:hidden;gap:2px}.riskbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.refs li{margin-bottom:10px;padding-left:2.2em;text-indent:-2.2em;font-size:14.5px;color:var(--ink-2);list-style:none}
+footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.page{display:none}.page.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* responsive */
+@media (max-width:1024px){
+.side{transform:translateX(-100%)}
+.side.open{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.35)}
+.main{margin-left:0}
+.topbar{display:flex;position:sticky;top:0;z-index:40;background:var(--side);color:#fff;align-items:center;gap:12px;padding:12px 16px}
+.topbar button{background:none;border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:8px;padding:4px 10px;font-size:18px;cursor:pointer}
+.topbar span{font-family:var(--serif);font-size:16px}
+.wrap{padding:32px 16px 72px}
+}
+@media (max-width:760px){
+.hero{padding:28px 20px 22px}
+.facts{grid-template-columns:1fr 1fr}
+.grid2,.grid3,.plist,.detail .cols,.legend{grid-template-columns:1fr}
+.flow5{grid-template-columns:1fr}
+h3{font-size:22px}
+.detail{padding:20px 18px}
+}
+@media print{.side,.topbar{display:none}.main{margin:0}.page{display:block!important}}
+</style>
+</head>
+<body>
+<aside class="side" id="side">
+<div class="brand">
+<div class="kick">Gestión de Proyectos TI · UNTELS</div>
+<h1>Implementación del CRM Essenza</h1>
+<p>CRM Predictivo y Retención Postventa · Guía PMBOK® 8</p>
+</div>
+<nav class="nav" aria-label="Secciones">
+<div class="nav-t">Proyecto de implementación</div>
+<a href="#inicio" data-p="inicio"><span class="n">01</span>Inicio</a>
+<div class="sub">
+<a href="#inicio/negocio">El negocio</a>
+<a href="#inicio/producto">El producto a implementar</a>
+<a href="#inicio/brechas">Brechas de preparación</a>
+<a href="#inicio/objetivos">Objetivos y alcance</a>
+<a href="#inicio/interesados">Interesados y roles</a>
+<a href="#inicio/ciclo">Ciclo de vida e hitos</a>
+<a href="#inicio/enfoque">Enfoque PMBOK® 8</a>
+</div>
+<a href="#mapa" data-p="mapa"><span class="n">02</span>Mapa de procesos</a>
+<div class="sub">
+<a href="#mapa/flujo">Flujo de procesos</a>
+<a href="#mapa/catalogo">Catálogo por área de enfoque</a>
+<a href="#mapa/matriz">Procesos por fase</a>
+</div>
+<div class="nav-t" style="margin-top:14px">Próximas entregas</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">03</span>Ejecución del proyecto</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">04</span>Monitoreo y control</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">05</span>Cierre</div>
+</nav>
+<div class="meta">
+<div><b>Docente:</b> Mg. Antonio Arqque Pantigozo</div>
+<div><b>Escuela:</b> Ingeniería de Sistemas</div>
+<div><b>Ciclo:</b> 2026-II · Lima, Perú</div>
+</div>
+</aside>
+<div class="main">
+<div class="topbar"><button id="menu" aria-label="Abrir menú">☰</button><span>Implementación del CRM Essenza</span></div>
+<div class="wrap">
+<!-- ======================= INICIO ======================= -->
+<section class="page" id="p-inicio">
+<div class="hero">
+<div class="eyebrow">01 · Inicio del proyecto de implementación</div>
+<h2 class="sec">Del prototipo a la operación: implementación del CRM Predictivo en Essenza SPA</h2>
+<p class="lead">El sistema ya existe y funciona en un entorno de desarrollo. Este nuevo proyecto se encarga de lo que viene después: instalarlo en el spa, migrar los datos reales, preparar a las personas que lo usarán, ponerlo en producción y entregarlo formalmente a la operación del negocio.</p>
+<div class="facts">
+<div class="fact"><div class="k">Cliente</div><div class="v">Essenza SPA · Santiago de Surco</div></div>
+<div class="fact"><div class="k">Producto</div><div class="v">CRM Predictivo y Retención Postventa</div></div>
+<div class="fact"><div class="k">Marco de referencia</div><div class="v">Guía PMBOK® 8.ª ed. (PMI)</div></div>
+<div class="fact"><div class="k">Ventana propuesta</div><div class="v">26/10/2026 – 18/12/2026</div></div>
+</div>
+</div>
+<h3 id="inicio/negocio"><span class="num">1.1</span>El negocio: Essenza SPA</h3>
+<p><strong>Essenza SPA</strong> es un centro estético y de bienestar ubicado en el distrito de Santiago de Surco, Lima, Perú, en operación desde el año 2023. El establecimiento se especializa en ofrecer tratamientos de belleza y cuidado personal de alto estándar, combinando técnicas modernas con un enfoque personalizado para cada cliente. Su equipo está conformado por cosmiatras altamente calificadas que garantizan calidad, profesionalismo y una experiencia de relajación superior.</p>
+<p>Los servicios principales que ofrece Essenza SPA comprenden: <strong>tratamientos faciales</strong> (hidratación, limpieza profunda, antiedad), <strong>masajes terapéuticos y de relajación</strong>, <strong>depilación especializada</strong> y <strong>cuidados corporales integrales</strong>. Esta oferta posiciona al SPA como un referente de excelencia estética en su zona de influencia.</p>
+<div class="grid3" style="margin-top:18px">
+<div class="card"><span class="tag">Hoy</span><h4 style="margin-top:10px">Registro en Excel</h4><p class="small">Las atenciones se registran en <code>spa_registro_operacional.xlsx</code>. No hay alertas de abandono ni seguimiento postventa sistemático.</p></div>
+<div class="card"><span class="tag amber">El problema</span><h4 style="margin-top:10px">Clientes que se van sin aviso</h4><p class="small">El análisis de 420 clientes mostró una tasa de abandono real de <strong>29,8 %</strong> (125 clientes sin visita en más de 120 días), pese a una calificación promedio de 4,35/5.</p></div>
+<div class="card"><span class="tag plum">La respuesta</span><h4 style="margin-top:10px">Retención guiada por datos</h4><p class="small">Un CRM que conserva el Excel como fuente, predice el riesgo de abandono y convierte cada alerta en un caso de retención con una acción concreta.</p></div>
+</div>
+<div class="quote">El abandono en Essenza no se explica por mala calidad del servicio, sino por un desenganche gradual que nadie estaba midiendo.</div>
+<h3 id="inicio/producto"><span class="num">1.2</span>El producto que se va a implementar</h3>
+<p>El proyecto anterior del curso entregó el <strong>CRM Predictivo y Retención Postventa — Spa ESSENZA</strong>: una aplicación web local que lee el Excel operacional, consolida las atenciones por cliente, calcula la probabilidad de abandono con un modelo XGBoost y organiza la respuesta del equipo en un Centro de Retención. Ese producto es la <strong>entrada</strong> de este proyecto; aquí no se vuelve a desarrollar, se pone en operación.</p>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Componente</th><th>Tecnología</th><th>Qué hace en el spa</th></tr></thead>
+<tbody>
+<tr><td>Backend / API</td><td>FastAPI, SQLAlchemy, SQLite, JWT</td><td>Autenticación, clientes, alertas, dashboard, retención y modelo vía API REST.</td></tr>
+<tr><td>Sincronización</td><td>Pandas, openpyxl, watchdog, hash MD5</td><td>Revisa el Excel cada 30 s, valida las 25 columnas y actualiza sin duplicar <code>ID_Atención</code>.</td></tr>
+<tr><td>Modelo predictivo</td><td>XGBoost + SHAP (113 variables)</td><td>Probabilidad de abandono por cliente; riesgo Bajo (&lt;30 %), Medio (30–60 %), Alto (&gt;60 %).</td></tr>
+<tr><td>Aplicación web</td><td>React 19, TypeScript, Vite, Recharts</td><td>Dashboard, clientes, ficha 360°, Centro de Alertas, Sincronización y Rendimiento del modelo.</td></tr>
+<tr><td>Centro de Retención</td><td>Casos, acciones, plantillas, beneficios</td><td>Prioriza (Urgente/Alta/Media/Baja), sugiere la siguiente acción y abre WhatsApp con mensaje editable.</td></tr>
+</tbody>
+</table></div>
+<div class="card" style="margin:22px 0">
+<div class="eyebrow" style="margin-bottom:10px">Línea de partida del modelo · 420 clientes</div>
+<div class="riskbar" role="img" aria-label="Riesgo alto 118, medio 98, bajo 204"><span style="flex:118;background:#b9443a">118 alto</span><span style="flex:98;background:#c98a2e">98 medio</span><span style="flex:204;background:#3f8a6e">204 bajo</span></div>
+<div class="facts" style="grid-template-columns:repeat(4,1fr);margin-top:16px"><div class="fact"><div class="k">ROC-AUC</div><div class="v">0,821</div></div><div class="fact"><div class="k">Recall</div><div class="v">0,64</div></div><div class="fact"><div class="k">Precisión</div><div class="v">0,57</div></div><div class="fact"><div class="k">Abandono real</div><div class="v">29,8 %</div></div></div>
+<p class="small" style="margin:12px 0 0">Variables más influyentes (SHAP): score RFM, gasto total, % de compra de productos, días desde la última visita y frecuencia mensual. Fuente: informe de resultados del CRM.</p></div>
+<h3 id="inicio/brechas"><span class="num">1.3</span>Brechas de preparación para producción</h3>
+<p>Antes de iniciar se revisó el paquete del sistema tal como está en el repositorio del equipo. Funciona, pero está configurado para demostración y desarrollo. Estas brechas no son defectos del proyecto anterior: son exactamente el trabajo que justifica un proyecto de implementación.</p>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Hallazgo en el sistema</th><th>Riesgo si se pasa a producción así</th><th>Tratamiento en la implementación</th></tr></thead>
+<tbody>
+<tr><td>Credenciales por defecto documentadas (<code>admin / admin123</code>)</td><td>Acceso no autorizado a datos personales de clientes.</td><td>Usuarios por rol, contraseñas propias y clave JWT nueva en <code>.env</code>.</td></tr>
+<tr><td>Fecha de corte fija de demostración (<code>FECHA_CORTE_DEMO = 2026-06-30</code>)</td><td>El riesgo y la inactividad se calculan contra una fecha pasada.</td><td>Parametrizar la fecha de corte a la fecha real de operación y revalidar las predicciones.</td></tr>
+<tr><td>Arranque en modo desarrollo (<code>uvicorn --reload</code>, <code>npm run dev</code>)</td><td>Menor estabilidad y dependencia de consolas abiertas.</td><td>Compilar el frontend y dejar un arranque de operación estable.</td></tr>
+<tr><td>El script de inicio levanta el backend en el puerto 8001, pero anuncia el 8000</td><td>Confusión en soporte y documentación.</td><td>Unificar puerto, script y manual.</td></tr>
+<tr><td>Bases SQLite sin datos en el paquete y sin respaldo programado</td><td>Pérdida del historial de casos y acciones de retención.</td><td>Inicialización controlada y respaldo diario de la base y del Excel.</td></tr>
+<tr><td>Contacto con clientes por WhatsApp desde el CRM</td><td>Incumplir la Ley N.° 29733 de Protección de Datos Personales.</td><td>Validar consentimiento y finalidad antes de habilitar las plantillas.</td></tr>
+</tbody>
+</table></div>
+<h3 id="inicio/objetivos"><span class="num">1.4</span>Objetivos y alcance de la implementación</h3>
+<div class="callout"><p><strong>Objetivo general.</strong> Implementar y transferir a la operación de Essenza SPA el CRM Predictivo y de Retención Postventa, con datos reales, usuarias capacitadas y aceptación formal de la patrocinadora, entre el 26 de octubre y el 18 de diciembre de 2026.</p></div>
+<h4>Objetivos específicos y criterios de éxito</h4>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Objetivo</th><th>Indicador</th><th>Meta</th></tr></thead>
+<tbody>
+<tr><td>Migrar y sincronizar los datos reales</td><td>Atenciones del Excel cargadas sin duplicados ni errores de validación</td><td>100 % (referencia: 2 500 atenciones / 420 clientes)</td></tr>
+<tr><td>Asegurar el entorno de producción</td><td>Brechas de preparación cerradas y respaldo diario verificado</td><td>6 de 6 brechas cerradas antes del go-live</td></tr>
+<tr><td>Capacitar a las usuarias</td><td>Usuarias clave que aprueban una evaluación práctica</td><td>100 % de las usuarias clave, con nota ≥ 80 %</td></tr>
+<tr><td>Lograr la adopción</td><td>Alertas de riesgo alto revisadas dentro de 48 h durante la estabilización</td><td>≥ 90 %</td></tr>
+<tr><td>Cerrar formalmente</td><td>Acta de aceptación firmada y 0 incidentes críticos abiertos</td><td>Al 18/12/2026</td></tr>
+</tbody>
+</table></div>
+<p class="small">Indicador de beneficio que la operación seguirá midiendo después del cierre: tasa de recuperación de clientes en riesgo (casos “Recuperado” sobre casos gestionados). El informe del modelo estima una recuperación posible de 10–15 % de los clientes perdidos.</p>
+<div class="grid2" style="margin-top:18px">
+<div class="card"><span class="tag">Dentro del alcance</span>
+<ul class="clean" style="margin-top:12px">
+<li>Instalación y configuración segura en el equipo del spa.</li>
+<li>Migración, validación y sincronización del Excel operacional.</li>
+<li>Recalibración de la fecha de corte y validación de predicciones.</li>
+<li>Configuración de reglas de prioridad, plantillas y beneficios con la patrocinadora.</li>
+<li>Capacitación por rol, manuales y guía rápida.</li>
+<li>Piloto controlado, puesta en producción y estabilización asistida.</li>
+<li>Transición a operación, respaldo y cierre formal.</li>
+</ul></div>
+<div class="card"><span class="tag amber">Fuera del alcance</span>
+<ul class="clean" style="margin-top:12px">
+<li>Nuevas funcionalidades del CRM (se tratan como solicitudes de cambio).</li>
+<li>Envío automático con la API oficial de WhatsApp Business.</li>
+<li>Reservas, pagos en línea, facturación electrónica o integración con POS.</li>
+<li>Despliegue en la nube multiempresa o aplicación móvil nativa.</li>
+<li>Reentrenamiento automático del modelo en producción.</li>
+</ul></div>
+</div>
+<h4>Supuestos y restricciones</h4>
+<div class="grid2">
+<div class="card"><p class="small" style="margin-bottom:6px"><strong>Supuestos</strong></p>
+<ul class="clean"><li>El Excel seguirá siendo la herramienta de registro diario.</li><li>El spa dispone de una PC con Windows en recepción.</li><li>La dueña participa en el comité de cambios y en la aceptación.</li></ul></div>
+<div class="card"><p class="small" style="margin-bottom:6px"><strong>Restricciones</strong></p>
+<ul class="clean"><li>Operación local, sin servidores en la nube.</li><li>Las actividades no deben interrumpir la atención al público.</li><li>Fecha de fin ligada al cierre del ciclo académico.</li><li>Cumplimiento de la Ley N.° 29733.</li></ul></div>
+</div>
+<h3 id="inicio/interesados"><span class="num">1.5</span>Interesados y roles en la implementación</h3>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Interesado</th><th>Rol en este proyecto</th><th>Qué necesita del proyecto</th></tr></thead>
+<tbody>
+<tr><td>Dueña de Essenza SPA</td><td>Patrocinadora; preside el comité de cambios y firma la aceptación</td><td>Un sistema que su equipo use de verdad y que retenga clientes valiosos.</td></tr>
+<tr><td>Administradora</td><td>Usuaria líder y futura responsable operativa del CRM</td><td>Control sin duplicar el registro; procedimientos claros de respaldo y soporte.</td></tr>
+<tr><td>Recepcionista</td><td>Usuaria operativa: Excel, Centro de Alertas, contacto por WhatsApp</td><td>Interfaz simple y un flujo que no le sume carga en horas punta.</td></tr>
+<tr><td>Cosmiatras</td><td>Usuarias consultivas: ficha 360° y ejecución de acciones de retención</td><td>Saber qué cliente atender y qué ofrecerle, en lenguaje sencillo.</td></tr>
+<tr><td>Clientes del spa</td><td>Beneficiarios y titulares de los datos personales</td><td>Mensajes oportunos, personalizados y con su consentimiento.</td></tr>
+<tr><td>Equipo del proyecto</td><td>Director del proyecto, líder técnico, analista de datos/ML, QA y capacitación</td><td>Decisiones a tiempo y acceso al spa fuera del horario de atención.</td></tr>
+<tr><td>Docente del curso</td><td>Evaluador académico</td><td>Aplicación rigurosa de la Guía PMBOK® 8 y evidencias verificables.</td></tr>
+</tbody>
+</table></div>
+<h3 id="inicio/ciclo"><span class="num">1.6</span>Ciclo de vida de la implementación e hitos</h3>
+<p>Se adopta un ciclo de vida <strong>predictivo por fases</strong>, porque el producto ya está construido y el riesgo principal está en la transición, no en el diseño. Cada fase termina con un punto de revisión del patrocinador. Las fechas son la propuesta inicial; se formalizarán en la línea base del cronograma.</p>
+<div class="tl">
+<div class="tl-i ms"><div class="d">26/10/2026</div><div class="t">H0 · Reunión de inicio de la implementación</div></div>
+<div class="tl-i"><div class="d">26/10 – 30/10</div><div class="t">F1 · Arranque y evaluación de preparación</div><p>Confirmar roles, comunicaciones y estado del equipo de cómputo; validar el inventario de brechas.</p></div>
+<div class="tl-i"><div class="d">02/11 – 06/11</div><div class="t">F2 · Preparación y aseguramiento del entorno</div><p>Instalación, usuarios por rol, configuración de <code>.env</code>, compilación del frontend y respaldos.</p></div>
+<div class="tl-i"><div class="d">09/11 – 13/11</div><div class="t">F3 · Migración y validación de datos</div><p>Carga del Excel real, fecha de corte real, conciliación de clientes y revisión de predicciones.</p></div>
+<div class="tl-i ms"><div class="d">13/11/2026</div><div class="t">H1 · Entorno listo y datos validados</div></div>
+<div class="tl-i"><div class="d">16/11 – 20/11</div><div class="t">F4 · Capacitación y gestión del cambio</div><p>Talleres por rol, manual de usuario, guía rápida y evaluación práctica.</p></div>
+<div class="tl-i"><div class="d">23/11 – 27/11</div><div class="t">F5 · Piloto controlado</div><p>Uso real con un grupo de clientes en riesgo alto; pruebas de aceptación por módulo.</p></div>
+<div class="tl-i ms"><div class="d">30/11/2026</div><div class="t">H2 · Puesta en producción (go-live)</div></div>
+<div class="tl-i"><div class="d">30/11 – 11/12</div><div class="t">F6 · Estabilización asistida</div><p>Soporte cercano, atención de incidentes, ajuste de reglas y seguimiento de adopción.</p></div>
+<div class="tl-i"><div class="d">14/12 – 18/12</div><div class="t">F7 · Transición a la operación y cierre</div><p>Entrega a la administradora, informe final, lecciones aprendidas y archivo.</p></div>
+<div class="tl-i ms"><div class="d">18/12/2026</div><div class="t">H3 · Acta de aceptación y cierre del proyecto</div></div>
+</div>
+<h3 id="inicio/enfoque"><span class="num">1.7</span>Enfoque de dirección: Guía PMBOK® 8</h3>
+<p>La octava edición de la Guía PMBOK® organiza la dirección de proyectos en <strong>6 principios</strong>, <strong>7 dominios de desempeño</strong> y <strong>5 áreas de enfoque</strong>, y vuelve a describir <strong>40 procesos</strong> como orientación no prescriptiva. Este blog usa esa estructura de forma explícita.</p>
+<div class="grid2">
+<div class="card"><h4>6 principios</h4><ul class="clean">
+<li><strong>Adoptar una visión holística:</strong> la implementación toca personas, datos, equipo y procesos del spa a la vez.</li>
+<li><strong>Enfocarse en el valor:</strong> el éxito es la retención de clientes, no solo un sistema instalado.</li>
+<li><strong>Integrar la calidad:</strong> cada fase cierra con verificación y criterios de aceptación.</li>
+<li><strong>Ser un líder responsable:</strong> decisiones trazables ante la patrocinadora.</li>
+<li><strong>Integrar la sostenibilidad:</strong> el spa debe poder operar el CRM sin el equipo del proyecto.</li>
+<li><strong>Construir una cultura empoderada:</strong> las usuarias son protagonistas del cambio.</li>
+</ul></div>
+<div class="card"><h4>7 dominios de desempeño</h4><ul class="clean">
+<li>Gobernanza</li><li>Alcance</li><li>Cronograma</li><li>Finanzas</li><li>Interesados</li><li>Recursos</li><li>Riesgo</li>
+</ul>
+<p class="small" style="margin-top:12px">Los dominios son las filas del mapa de procesos de la sección 02.</p></div>
+</div>
+<h4>5 áreas de enfoque y foco de este proyecto</h4>
+<div class="flow5">
+<div class="f5">Inicio<small>2 procesos</small></div>
+<div class="f5">Planificación<small>19 procesos</small></div>
+<div class="f5 ej">Ejecución<small>8 procesos</small></div>
+<div class="f5 mc">Monitoreo y Control<small>10 procesos</small></div>
+<div class="f5 ci">Cierre<small>1 proceso</small></div>
+</div>
+<p>Como el producto ya fue concebido, planificado y construido en el proyecto anterior, el peso de este proyecto está en las tres áreas resaltadas: <strong>Ejecución, Monitoreo y Control, y Cierre</strong> (19 de los 40 procesos). Inicio y Planificación se realizan de forma ligera para formalizar el arranque y las líneas base de la implementación.</p>
+<p style="margin-top:22px"><a class="btn" href="#mapa" style="text-decoration:none">Ver el mapa de procesos →</a></p>
+</section>
+<!-- ======================= MAPA ======================= -->
+<section class="page" id="p-mapa">
+<div class="eyebrow">02 · Mapa de procesos</div>
+<h2 class="sec">Ejecución, Monitoreo y Control, y Cierre</h2>
+<p class="lead">El mapa agrupa los 19 procesos que gobiernan la implementación del CRM tal como lo hace el flujo de procesos de la Guía PMBOK® 8: por <strong>área de enfoque</strong> en columnas y por <strong>dominio de desempeño</strong> en filas.</p>
+<h3 id="mapa/flujo"><span class="num">2.1</span>Flujo de procesos</h3>
+<p>La lectura es de izquierda a derecha. La Ejecución produce entregables y datos de desempeño; Monitoreo y Control los compara con el plan, genera solicitudes de cambio y valida lo construido; los cambios aprobados regresan a la Ejecución; y solo los entregables aceptados pasan al Cierre.</p>
+<div class="mapbox">
+<div class="mapscroll">
+<svg viewBox="0 0 1200 700" class="pmap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa de procesos de Ejecución, Monitoreo y Control y Cierre según la Guía PMBOK 8">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahead"/></marker><marker id="ahc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahead-c"/></marker></defs>
+<rect class="colbg ej" x="150" y="10" width="370" height="648" rx="12"/>
+<rect class="colbg mc" x="560" y="10" width="440" height="648" rx="12"/>
+<rect class="colbg ci" x="1003" y="10" width="190" height="648" rx="12"/>
+<text class="colh ej" x="335.0" y="36" text-anchor="middle">EJECUCIÓN</text>
+<text class="colsub" x="335.0" y="54" text-anchor="middle">8 procesos</text>
+<text class="colh mc" x="780.0" y="36" text-anchor="middle">MONITOREO Y CONTROL</text>
+<text class="colsub" x="780.0" y="54" text-anchor="middle">10 procesos</text>
+<text class="colh ci" x="1098.0" y="36" text-anchor="middle">CIERRE</text>
+<text class="colsub" x="1098.0" y="54" text-anchor="middle">1 proceso</text>
+<rect class="rowbg" x="6" y="90" width="1188" height="120" rx="6"/>
+<text class="rowl" x="16" y="150.0" dy=".35em">Gobernanza</text>
+<rect class="rowbg alt" x="6" y="226" width="1188" height="64" rx="6"/>
+<text class="rowl" x="16" y="258.0" dy=".35em">Alcance</text>
+<rect class="rowbg" x="6" y="298" width="1188" height="64" rx="6"/>
+<text class="rowl" x="16" y="330.0" dy=".35em">Cronograma</text>
+<rect class="rowbg alt" x="6" y="370" width="1188" height="64" rx="6"/>
+<text class="rowl" x="16" y="402.0" dy=".35em">Finanzas</text>
+<rect class="rowbg" x="6" y="442" width="1188" height="64" rx="6"/>
+<text class="rowl" x="16" y="474.0" dy=".35em">Interesados</text>
+<rect class="rowbg alt" x="6" y="514" width="1188" height="64" rx="6"/>
+<text class="rowl" x="16" y="546.0" dy=".35em">Recursos</text>
+<rect class="rowbg" x="6" y="586" width="1188" height="64" rx="6"/>
+<text class="rowl" x="16" y="618.0" dy=".35em">Riesgo</text>
+<path class="fl" d="M510,122 H568" marker-end="url(#ah)"/>
+<path class="fl" d="M760,122 H783" marker-end="url(#ah)"/>
+<path class="fl dash" d="M875,98 V80 H425 V96" marker-end="url(#ah)"/>
+<path class="fl" d="M425,146 V218 H875 V232" marker-end="url(#ah)"/>
+<path class="fl bus" d="M760,330 H985 M760,402 H985 M965,474 H985 M760,546 H985 M760,618 H985 M985,618 V122 H967" marker-end="url(#ah)"/>
+<path class="halo" d="M965,258 H1008"/>
+<path class="fl cl" d="M965,258 H1008" marker-end="url(#ahc)"/>
+<path class="fl" d="M510,474 H568" marker-end="url(#ah)"/>
+<path class="fl" d="M510,546 H568" marker-end="url(#ah)"/>
+<path class="fl" d="M510,618 H568" marker-end="url(#ah)"/>
+<path class="halo" d="M330,176 H1097"/>
+<path class="fl dash cl" d="M330,176 H1097 V214" marker-end="url(#ahc)"/>
+<g class="pbox ej" data-id="E-CAL" tabindex="0" role="button" aria-label="Gestionar el aseguramiento de la calidad"><rect x="160" y="98" width="170" height="48" rx="8"/><text x="245.0" y="115.0" dy=".35em" text-anchor="middle">Gestionar el aseguramiento</text><text x="245.0" y="129.0" dy=".35em" text-anchor="middle">de la calidad</text></g>
+<g class="pbox ej" data-id="E-EJE" tabindex="0" role="button" aria-label="Gestionar la ejecución del proyecto"><rect x="340" y="98" width="170" height="48" rx="8"/><text x="425.0" y="115.0" dy=".35em" text-anchor="middle">Gestionar la ejecución</text><text x="425.0" y="129.0" dy=".35em" text-anchor="middle">del proyecto</text></g>
+<g class="pbox ej" data-id="E-CON" tabindex="0" role="button" aria-label="Gestionar el conocimiento del proyecto"><rect x="160" y="152" width="170" height="48" rx="8"/><text x="245.0" y="169.0" dy=".35em" text-anchor="middle">Gestionar el conocimiento</text><text x="245.0" y="183.0" dy=".35em" text-anchor="middle">del proyecto</text></g>
+<g class="pbox mc" data-id="M-DES" tabindex="0" role="button" aria-label="Monitorear y controlar el desempeño del proyecto"><rect x="570" y="98" width="190" height="48" rx="8"/><text x="665.0" y="115.0" dy=".35em" text-anchor="middle">Monitorear y controlar el</text><text x="665.0" y="129.0" dy=".35em" text-anchor="middle">desempeño del proyecto</text></g>
+<g class="pbox mc" data-id="M-CAM" tabindex="0" role="button" aria-label="Evaluar e implementar cambios"><rect x="785" y="98" width="180" height="48" rx="8"/><text x="875.0" y="115.0" dy=".35em" text-anchor="middle">Evaluar e implementar</text><text x="875.0" y="129.0" dy=".35em" text-anchor="middle">cambios</text></g>
+<g class="pbox mc" data-id="M-ALC" tabindex="0" role="button" aria-label="Monitorear y controlar el alcance"><rect x="570" y="234" width="190" height="48" rx="8"/><text x="665.0" y="251.0" dy=".35em" text-anchor="middle">Monitorear y controlar</text><text x="665.0" y="265.0" dy=".35em" text-anchor="middle">el alcance</text></g>
+<g class="pbox mc" data-id="M-VAL" tabindex="0" role="button" aria-label="Validar el alcance"><rect x="785" y="234" width="180" height="48" rx="8"/><text x="875.0" y="258.0" dy=".35em" text-anchor="middle">Validar el alcance</text></g>
+<g class="pbox mc" data-id="M-CRO" tabindex="0" role="button" aria-label="Monitorear y controlar el cronograma"><rect x="570" y="306" width="190" height="48" rx="8"/><text x="665.0" y="323.0" dy=".35em" text-anchor="middle">Monitorear y controlar</text><text x="665.0" y="337.0" dy=".35em" text-anchor="middle">el cronograma</text></g>
+<g class="pbox mc" data-id="M-FIN" tabindex="0" role="button" aria-label="Monitorear y controlar las finanzas"><rect x="570" y="378" width="190" height="48" rx="8"/><text x="665.0" y="395.0" dy=".35em" text-anchor="middle">Monitorear y controlar</text><text x="665.0" y="409.0" dy=".35em" text-anchor="middle">las finanzas</text></g>
+<g class="pbox ej" data-id="E-COM" tabindex="0" role="button" aria-label="Gestionar las comunicaciones"><rect x="160" y="450" width="170" height="48" rx="8"/><text x="245.0" y="467.0" dy=".35em" text-anchor="middle">Gestionar las</text><text x="245.0" y="481.0" dy=".35em" text-anchor="middle">comunicaciones</text></g>
+<g class="pbox ej" data-id="E-INV" tabindex="0" role="button" aria-label="Gestionar el involucramiento de los interesados"><rect x="340" y="450" width="170" height="48" rx="8"/><text x="425.0" y="467.0" dy=".35em" text-anchor="middle">Gestionar el involucramiento</text><text x="425.0" y="481.0" dy=".35em" text-anchor="middle">de los interesados</text></g>
+<g class="pbox mc" data-id="M-INV" tabindex="0" role="button" aria-label="Monitorear el involucramiento de los interesados"><rect x="570" y="450" width="190" height="48" rx="8"/><text x="665.0" y="467.0" dy=".35em" text-anchor="middle">Monitorear el involucramiento</text><text x="665.0" y="481.0" dy=".35em" text-anchor="middle">de los interesados</text></g>
+<g class="pbox mc" data-id="M-COM" tabindex="0" role="button" aria-label="Monitorear las comunicaciones"><rect x="785" y="450" width="180" height="48" rx="8"/><text x="875.0" y="467.0" dy=".35em" text-anchor="middle">Monitorear las</text><text x="875.0" y="481.0" dy=".35em" text-anchor="middle">comunicaciones</text></g>
+<g class="pbox ej" data-id="E-ADQ" tabindex="0" role="button" aria-label="Adquirir recursos"><rect x="160" y="522" width="170" height="48" rx="8"/><text x="245.0" y="546.0" dy=".35em" text-anchor="middle">Adquirir recursos</text></g>
+<g class="pbox ej" data-id="E-LID" tabindex="0" role="button" aria-label="Liderar el equipo"><rect x="340" y="522" width="170" height="48" rx="8"/><text x="425.0" y="546.0" dy=".35em" text-anchor="middle">Liderar el equipo</text></g>
+<g class="pbox mc" data-id="M-REC" tabindex="0" role="button" aria-label="Monitorear y controlar los recursos"><rect x="570" y="522" width="190" height="48" rx="8"/><text x="665.0" y="539.0" dy=".35em" text-anchor="middle">Monitorear y controlar</text><text x="665.0" y="553.0" dy=".35em" text-anchor="middle">los recursos</text></g>
+<g class="pbox ej" data-id="E-RIE" tabindex="0" role="button" aria-label="Implementar las respuestas a los riesgos"><rect x="340" y="594" width="170" height="48" rx="8"/><text x="425.0" y="611.0" dy=".35em" text-anchor="middle">Implementar las respuestas</text><text x="425.0" y="625.0" dy=".35em" text-anchor="middle">a los riesgos</text></g>
+<g class="pbox mc" data-id="M-RIE" tabindex="0" role="button" aria-label="Monitorear los riesgos"><rect x="570" y="594" width="190" height="48" rx="8"/><text x="665.0" y="618.0" dy=".35em" text-anchor="middle">Monitorear los riesgos</text></g>
+<g class="pbox ci" data-id="C-CIE" tabindex="0" role="button" aria-label="Cerrar el proyecto o fase"><rect x="1010" y="216" width="175" height="84" rx="8"/><text x="1097.5" y="251.0" dy=".35em" text-anchor="middle">Cerrar el proyecto</text><text x="1097.5" y="265.0" dy=".35em" text-anchor="middle">o fase</text></g>
+<g class="bdg"><circle cx="539" cy="122" r="9"/><text x="539" y="122" dy=".35em" text-anchor="middle">1</text></g>
+<g class="bdg"><circle cx="772" cy="108" r="9"/><text x="772" y="108" dy=".35em" text-anchor="middle">2</text></g>
+<g class="bdg"><circle cx="650" cy="80" r="9"/><text x="650" y="80" dy=".35em" text-anchor="middle">3</text></g>
+<g class="bdg"><circle cx="650" cy="218" r="9"/><text x="650" y="218" dy=".35em" text-anchor="middle">4</text></g>
+<g class="bdg"><circle cx="990" cy="240" r="9"/><text x="990" y="240" dy=".35em" text-anchor="middle">5</text></g>
+<g class="bdg"><circle cx="985" cy="440" r="9"/><text x="985" y="440" dy=".35em" text-anchor="middle">6</text></g>
+<g class="bdg"><circle cx="539" cy="474" r="9"/><text x="539" y="474" dy=".35em" text-anchor="middle">7</text></g>
+<g class="bdg"><circle cx="539" cy="546" r="9"/><text x="539" y="546" dy=".35em" text-anchor="middle">7</text></g>
+<g class="bdg"><circle cx="539" cy="618" r="9"/><text x="539" y="618" dy=".35em" text-anchor="middle">7</text></g>
+<g class="bdg"><circle cx="700" cy="176" r="9"/><text x="700" y="176" dy=".35em" text-anchor="middle">8</text></g>
+<text class="note" x="16" y="684">Haz clic en cualquier proceso para ver su propósito, entradas, salidas y cómo se aplica en la implementación del CRM.</text>
+</svg>
+</div>
+<div class="legend">
+<div><span class="b">1</span>Datos de desempeño del trabajo hacia el monitoreo integrado</div>
+<div><span class="b">2</span>Solicitudes de cambio al control integrado de cambios</div>
+<div><span class="b">3</span>Cambios aprobados que regresan a la ejecución</div>
+<div><span class="b">4</span>Entregables (verificados por calidad) hacia la validación</div>
+<div><span class="b">5</span>Entregables aceptados hacia el cierre</div>
+<div><span class="b">6</span>Información de desempeño y cambios de cada dominio</div>
+<div><span class="b">7</span>Datos de desempeño de la ejecución en cada dominio</div>
+<div><span class="b">8</span>Lecciones aprendidas y conocimiento hacia el cierre</div>
+</div>
+</div>
+<div id="detail" class="detail" aria-live="polite"></div>
+<p class="small">Nota: la Guía PMBOK® 8 se publicó en inglés; los nombres de los procesos en español son una traducción del equipo y pueden diferir de la edición oficial en español.</p>
+<h3 id="mapa/catalogo"><span class="num">2.2</span>Catálogo por área de enfoque</h3>
+<p>La misma información en formato de lista, útil en pantallas pequeñas. Cada proceso abre su ficha.</p>
+<div class="plist" id="plist"></div>
+<h3 id="mapa/matriz"><span class="num">2.3</span>Procesos activos por fase de la implementación</h3>
+<p>El flujo no se ejecuta una sola vez: los procesos se repiten en cada fase. La matriz muestra dónde tiene más peso cada uno.</p>
+<div class="tblwrap"><table class="tbl mx" id="matrix"></table></div>
+<div class="callout warn"><p><strong>Lectura de gestión.</strong> Los procesos de Monitoreo y Control de desempeño, cambios y riesgos atraviesan las siete fases: son el “sistema nervioso” del proyecto. Las fases F5 (piloto) y F6 (estabilización) concentran la mayor cantidad de procesos activos, por lo que el equipo refuerza ahí las reuniones de control y la presencia en el spa.</p></div>
+<h3><span class="num">Ref.</span>Referencias</h3>
+<ul class="refs">
+<li>Congreso de la República del Perú. (2011). <em>Ley N.° 29733, Ley de Protección de Datos Personales</em>.</li>
+<li>Project Management Institute. (2025). <em>A guide to the project management body of knowledge (PMBOK® guide)</em> (8th ed.). PMI.</li>
+<li>ProjInsights. (s. f.). <em>PMBOK 8th edition performance domains and processes: The complete guide</em>. https://www.projinsights.com/pmbok-8th-edition-performance-domains-and-processes/</li>
+<li>Equipo del proyecto. (2026). <em>Informe ejecutivo — CRM SPA ESSENZA: sistema de predicción de churn basado en machine learning</em> [Documento interno].</li>
+</ul>
+</section>
+<footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>
+</div>
+</div>
+<script>
+const AREAS={ej:'Ejecución',mc:'Monitoreo y Control',ci:'Cierre'};
+const P={
+'E-EJE':{n:'Gestionar la ejecución del proyecto',en:'Manage Project Execution',d:'Gobernanza',a:'ej',
+p:'Dirigir y realizar el trabajo definido en el plan e implementar los cambios aprobados para lograr los objetivos del proyecto.',
+x:'Ejecutar el plan de despliegue: instalar backend y frontend en la PC de recepción, configurar el archivo .env (ruta del Excel, fecha de corte, umbrales), cargar los datos reales y conducir la puesta en producción del 30/11.',
+i:['Plan para la dirección del proyecto','Cambios aprobados','Paquete del sistema (código, modelo .pkl)','Registro de riesgos'],
+o:['CRM instalado y operativo','Datos de desempeño del trabajo','Registro de incidentes','Solicitudes de cambio'],
+t:['Checklist de despliegue','Tablero Kanban del equipo','Reuniones diarias de 15 min']},
+'E-CAL':{n:'Gestionar el aseguramiento de la calidad',en:'Manage Quality Assurance',d:'Gobernanza',a:'ej',
+p:'Convertir el plan de calidad en actividades ejecutables que den confianza de que procesos y entregables cumplirán los requisitos.',
+x:'Aplicar la lista de preparación para producción: credenciales propias, puerto único, frontend compilado, prueba de humo de sincronización (0 errores, sin duplicar ID_Atención) y verificación de los umbrales de riesgo 0,30 / 0,60.',
+i:['Plan de gestión de la calidad','Métricas de calidad','Resultados de pruebas (pytest)'],
+o:['Entregables verificados','Informes de calidad','Solicitudes de cambio'],
+t:['Listas de verificación','Pruebas de humo y regresión','Análisis de causa raíz']},
+'E-CON':{n:'Gestionar el conocimiento del proyecto',en:'Manage Project Knowledge',d:'Gobernanza',a:'ej',
+p:'Usar el conocimiento existente y crear conocimiento nuevo para lograr los objetivos y contribuir al aprendizaje de la organización.',
+x:'Producir el manual de usuario por rol, la guía rápida “qué hacer con una alerta”, el README técnico actualizado y un registro semanal de lecciones aprendidas que la administradora conservará.',
+i:['README y documentación técnica','Informe de resultados del modelo','Entregables del proyecto'],
+o:['Registro de lecciones aprendidas','Manuales y guías','Activos de procesos actualizados'],
+t:['Talleres y demostraciones','Gestión de la información','Retrospectivas']},
+'E-INV':{n:'Gestionar el involucramiento de los interesados',en:'Manage Stakeholder Engagement',d:'Interesados',a:'ej',
+p:'Comunicarse y trabajar con los interesados para atender sus necesidades, abordar incidentes y fomentar su participación.',
+x:'Validar con la dueña las reglas de prioridad, plantillas y beneficios; acompañar a recepción y cosmiatras en sus primeros casos; tratar la resistencia del tipo “el Excel ya funciona” mostrando qué gana cada rol.',
+i:['Plan de involucramiento','Registro de interesados','Registro de incidentes'],
+o:['Interesados comprometidos','Solicitudes de cambio','Registro de incidentes actualizado'],
+t:['Gestión del cambio','Negociación','Reuniones de seguimiento']},
+'E-COM':{n:'Gestionar las comunicaciones',en:'Manage Communications',d:'Interesados',a:'ej',
+p:'Recopilar, crear, distribuir, almacenar y disponer de la información del proyecto de forma oportuna y adecuada.',
+x:'Reunión de inicio, informe semanal de estado a la patrocinadora, comunicado de go-live y de la ventana de corte, canal interno de soporte y aviso a clientes sobre el tratamiento de sus datos.',
+i:['Plan de gestión de las comunicaciones','Informes de desempeño','Registro de interesados'],
+o:['Comunicaciones del proyecto','Actualizaciones de documentos'],
+t:['Métodos push, pull e interactivos','Informes de estado','Tecnología de comunicación (WhatsApp, correo)']},
+'E-ADQ':{n:'Adquirir recursos',en:'Acquire Resources',d:'Recursos',a:'ej',
+p:'Obtener los miembros del equipo, instalaciones, equipos y demás recursos necesarios para completar el trabajo.',
+x:'Asegurar la PC de recepción (Windows, Python 3.9+, Node 18+), un medio de respaldo, el número de WhatsApp del spa y la disponibilidad de las usuarias clave para capacitarse fuera del horario de atención.',
+i:['Plan de gestión de recursos','Requisitos de recursos','Estrategia de abastecimiento'],
+o:['Asignaciones de recursos físicos y del equipo','Calendarios de recursos'],
+t:['Negociación','Análisis multicriterio','Preasignación']},
+'E-LID':{n:'Liderar el equipo',en:'Lead the Team',d:'Recursos',a:'ej',
+p:'Orientar, motivar y desarrollar al equipo, gestionando su desempeño y los conflictos para optimizar los resultados.',
+x:'Roles claros (director, líder técnico, analista de datos, QA/capacitación), reunión diaria corta, acuerdos de trabajo frente a la carga académica y resolución rápida de bloqueos durante el piloto y la estabilización.',
+i:['Asignaciones del equipo','Acuerdos de trabajo','Informes de desempeño'],
+o:['Evaluaciones del desempeño del equipo','Solicitudes de cambio','Acuerdos actualizados'],
+t:['Liderazgo de servicio','Gestión de conflictos','Inteligencia emocional']},
+'E-RIE':{n:'Implementar las respuestas a los riesgos',en:'Implement Risk Responses',d:'Riesgo',a:'ej',
+p:'Ejecutar los planes de respuesta acordados para los riesgos identificados.',
+x:'Respaldo diario de la base SQLite y del Excel; plan de vuelta atrás al registro manual; doble revisión antes de contactar clientes; instalación de contingencia en una segunda laptop.',
+i:['Registro de riesgos','Plan de respuesta a los riesgos','Lecciones aprendidas'],
+o:['Solicitudes de cambio','Registro de riesgos actualizado','Registro de incidentes'],
+t:['Dueños de riesgo','Juicio de expertos','Sistema de información del proyecto']},
+'M-DES':{n:'Monitorear y controlar el desempeño del proyecto',en:'Monitor and Control Project Performance',d:'Gobernanza',a:'mc',
+p:'Dar seguimiento, revisar e informar el avance global frente al plan, integrando la información de desempeño de todos los dominios.',
+x:'Tablero semanal que integra avance, SPI y CPI con indicadores del propio CRM: sincronizaciones exitosas, alertas de riesgo alto atendidas y casos abiertos o cerrados. Base del informe de estado a la patrocinadora.',
+i:['Plan para la dirección del proyecto','Información de desempeño de los dominios','Pronósticos'],
+o:['Informes de desempeño del trabajo','Solicitudes de cambio','Pronósticos actualizados'],
+t:['Valor ganado (EVM)','Análisis de variación y tendencias','Reuniones de estado']},
+'M-CAM':{n:'Evaluar e implementar cambios',en:'Assess and Implement Changes',d:'Gobernanza',a:'mc',
+p:'Revisar todas las solicitudes de cambio, aprobarlas o rechazarlas y gestionar los cambios a entregables, documentos y plan.',
+x:'Comité de cambios (dueña + director del proyecto) para decisiones como ajustar el umbral de riesgo alto, agregar plantillas de mensaje o cambiar la fecha de corte; cada cambio queda registrado con su impacto y versionado en Git.',
+i:['Solicitudes de cambio','Plan para la dirección del proyecto','Informes de desempeño'],
+o:['Solicitudes de cambio aprobadas','Registro de cambios','Plan actualizado'],
+t:['Comité de control de cambios','Control de configuración (Git)','Análisis de impacto']},
+'M-ALC':{n:'Monitorear y controlar el alcance',en:'Monitor and Control Scope',d:'Alcance',a:'mc',
+p:'Monitorear el estado del alcance y gestionar cambios a la línea base del alcance.',
+x:'Comparar lo implementado con los módulos comprometidos (dashboard, clientes, ficha 360°, alertas, retención, sincronización, modelo) y frenar el crecimiento no controlado, por ejemplo pedidos de facturación o API oficial de WhatsApp.',
+i:['Línea base del alcance','Matriz de trazabilidad de requisitos','Datos de desempeño'],
+o:['Información de desempeño del trabajo','Solicitudes de cambio'],
+t:['Análisis de variación','Trazabilidad de requisitos']},
+'M-VAL':{n:'Validar el alcance',en:'Validate Scope',d:'Alcance',a:'mc',
+p:'Formalizar la aceptación de los entregables completados.',
+x:'Pruebas de aceptación con la administradora: importar el Excel sin duplicados, obtener predicción para el 100 % de clientes, crear y cerrar un caso, abrir WhatsApp con mensaje editable y detectar una recuperación tras una nueva visita. Acta por módulo.',
+i:['Entregables verificados','Criterios de aceptación','Matriz de trazabilidad'],
+o:['Entregables aceptados','Solicitudes de cambio'],
+t:['Inspección','Pruebas de aceptación de usuario (UAT)','Toma de decisiones']},
+'M-CRO':{n:'Monitorear y controlar el cronograma',en:'Monitor and Control Schedule',d:'Cronograma',a:'mc',
+p:'Monitorear el estado del proyecto para actualizar el cronograma y gestionar cambios a su línea base.',
+x:'Seguir los hitos H1–H3 y la secuencia crítica entorno → migración → capacitación → piloto → go-live; si la capacitación se atrasa, aplicar compresión antes de mover la fecha de producción.',
+i:['Línea base del cronograma','Datos de desempeño','Calendarios de recursos'],
+o:['Pronósticos del cronograma','Solicitudes de cambio'],
+t:['SPI y valor ganado','Gráfico de hitos','Compresión del cronograma']},
+'M-FIN':{n:'Monitorear y controlar las finanzas',en:'Monitor and Control Finances',d:'Finanzas',a:'mc',
+p:'Monitorear el estado financiero del proyecto y gestionar cambios a la línea base de costos.',
+x:'Controlar horas del equipo, equipamiento y respaldo; y comparar el costo de los beneficios otorgados en retención con el ingreso recuperado que registra el propio CRM.',
+i:['Línea base de costos','Requisitos de financiamiento','Datos de desempeño'],
+o:['Pronósticos de costos (EAC, ETC)','Solicitudes de cambio'],
+t:['CPI y valor ganado','TCPI','Análisis de reservas']},
+'M-INV':{n:'Monitorear el involucramiento de los interesados',en:'Monitor Stakeholder Engagement',d:'Interesados',a:'mc',
+p:'Monitorear las relaciones con los interesados y ajustar las estrategias de involucramiento.',
+x:'Medir la adopción por rol: inicios de sesión, porcentaje de alertas revisadas y casos con acción registrada; encuesta breve a la dueña y la administradora; comparación del nivel actual y deseado de cada interesada.',
+i:['Plan de involucramiento','Registro de interesados','Datos de uso del CRM'],
+o:['Información de desempeño del trabajo','Solicitudes de cambio'],
+t:['Matriz de evaluación del involucramiento','Encuestas','Retroalimentación']},
+'M-COM':{n:'Monitorear las comunicaciones',en:'Monitor Communications',d:'Interesados',a:'mc',
+p:'Asegurar que se satisfagan las necesidades de información del proyecto y de sus interesados.',
+x:'Verificar que los informes semanales lleguen y se entiendan, medir el tiempo de respuesta del canal de soporte y revisar tono y consentimiento de los mensajes de retención enviados a clientes.',
+i:['Plan de gestión de las comunicaciones','Comunicaciones del proyecto','Registro de incidentes'],
+o:['Información de desempeño del trabajo','Solicitudes de cambio'],
+t:['Revisión de mensajes','Reuniones de retroalimentación','Sistema de información del proyecto']},
+'M-REC':{n:'Monitorear y controlar los recursos',en:'Monitor and Control Resourcing',d:'Recursos',a:'mc',
+p:'Asegurar que los recursos asignados estén disponibles según lo planificado y tomar acciones correctivas.',
+x:'Vigilar disponibilidad y estado de la PC (espacio en disco, respaldo), horas del equipo frente al plan y asistencia de las usuarias clave a la capacitación; reasignar cuando haga falta.',
+i:['Plan de gestión de recursos','Asignaciones','Datos de desempeño'],
+o:['Información de desempeño del trabajo','Solicitudes de cambio'],
+t:['Análisis de tendencias','Resolución de problemas','Negociación']},
+'M-RIE':{n:'Monitorear los riesgos',en:'Monitor Risks',d:'Riesgo',a:'mc',
+p:'Monitorear la implementación de las respuestas, dar seguimiento a riesgos identificados e identificar riesgos nuevos.',
+x:'Revisión semanal de los riesgos principales: pérdida de datos, baja adopción, Excel abierto o dañado durante la sincronización, falsos positivos del modelo (precisión 57 %) y cumplimiento de la Ley N.° 29733.',
+i:['Registro de riesgos','Informes de desempeño','Registro de incidentes'],
+o:['Información de desempeño del trabajo','Solicitudes de cambio','Registro de riesgos actualizado'],
+t:['Auditorías de riesgos','Análisis de reservas','Reuniones de riesgos']},
+'C-CIE':{n:'Cerrar el proyecto o fase',en:'Close Project or Phase',d:'Gobernanza',a:'ci',
+p:'Finalizar todas las actividades, transferir el producto, archivar la información y liberar los recursos.',
+x:'Transición formal a la administradora como responsable operativa; acta de aceptación firmada por la dueña; entrega de manuales, accesos y respaldos; informe final de indicadores frente a objetivos; lecciones aprendidas y liberación del equipo.',
+i:['Entregables aceptados','Registro de lecciones aprendidas','Plan para la dirección del proyecto'],
+o:['Transición del producto a la operación','Informe final','Activos de procesos actualizados'],
+t:['Reunión de cierre','Análisis de documentos','Encuesta de satisfacción']}
+};
+const ORDER=['E-EJE','E-CAL','E-CON','E-INV','E-COM','E-ADQ','E-LID','E-RIE','M-DES','M-CAM','M-ALC','M-VAL','M-CRO','M-FIN','M-INV','M-COM','M-REC','M-RIE','C-CIE'];
+const PH=['F1','F2','F3','F4','F5','F6','F7'];
+const PHN=['Arranque','Entorno','Migración','Capacitación','Piloto','Go-live y estabilización','Transición y cierre'];
+const MX={
+'E-EJE':[1,1,1,0,1,1,0],'E-CAL':[0,1,1,0,1,1,0],'E-CON':[0,0,0,1,0,1,1],'E-INV':[1,0,0,1,1,1,0],'E-COM':[1,0,0,1,1,1,1],
+'E-ADQ':[1,1,0,1,0,0,0],'E-LID':[1,1,1,1,1,1,1],'E-RIE':[0,1,1,0,1,1,0],
+'M-DES':[1,1,1,1,1,1,1],'M-CAM':[1,1,1,1,1,1,1],'M-ALC':[0,1,1,0,1,1,0],'M-VAL':[0,0,1,0,1,0,1],'M-CRO':[1,1,1,1,1,1,0],
+'M-FIN':[0,1,0,0,1,1,1],'M-INV':[0,0,0,1,1,1,0],'M-COM':[0,0,0,1,1,1,0],'M-REC':[1,1,0,1,0,1,0],'M-RIE':[1,1,1,1,1,1,1],
+'C-CIE':[0,0,0,0,0,0,1]};
+const detail=document.getElementById('detail');
+let cur='E-EJE';
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function show(id,scroll){
+const p=P[id];if(!p)return;cur=id;
+document.querySelectorAll('.pbox').forEach(b=>b.classList.toggle('sel',b.dataset.id===id));
+const k=ORDER.indexOf(id),prev=ORDER[(k+ORDER.length-1)%ORDER.length],next=ORDER[(k+1)%ORDER.length];
+const tg={ej:'',mc:' amber',ci:' plum'}[p.a];
+const li=a=>a.map(x=>'<li>'+esc(x)+'</li>').join('');
+detail.className='detail '+p.a;
+detail.innerHTML=`<span class="tag${tg}">${AREAS[p.a]}</span> <span class="tag" style="background:#efe9de;color:#5b5140">Dominio: ${p.d}</span>
+<h4 class="dt">${esc(p.n)}</h4><div class="en">PMBOK® 8 · ${p.en}</div>
+<p>${esc(p.p)}</p>
+<div class="apl"><b>Aplicación en la implementación del CRM</b>${esc(p.x)}</div>
+<div class="cols"><div><h5>Entradas clave</h5><ul>${li(p.i)}</ul></div><div><h5>Salidas clave</h5><ul>${li(p.o)}</ul></div><div><h5>Herramientas y técnicas</h5><ul>${li(p.t)}</ul></div></div>
+<div class="nav2"><button class="btn" data-go="${prev}">← ${esc(P[prev].n)}</button><button class="btn" data-go="${next}">${esc(P[next].n)} →</button></div>`;
+if(scroll)detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+detail.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)show(b.dataset.go,false)});
+document.querySelectorAll('.pbox').forEach(b=>{
+b.addEventListener('click',()=>show(b.dataset.id,true));
+b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(b.dataset.id,true)}});
+});
+// catálogo
+const pl=document.getElementById('plist');
+['ej','mc','ci'].forEach(a=>{
+const ids=ORDER.filter(i=>P[i].a===a);
+const tg={ej:'',mc:' amber',ci:' plum'}[a];
+pl.insertAdjacentHTML('beforeend',`<div class="pcol"><h4><span class="tag${tg}">${AREAS[a]}</span><span class="small">${ids.length} ${ids.length>1?'procesos':'proceso'}</span></h4>${ids.map(i=>`<button class="pitem ${a}" data-id="${i}">${esc(P[i].n)}<small>${P[i].d}</small></button>`).join('')}</div>`);
+});
+pl.addEventListener('click',e=>{const b=e.target.closest('.pitem');if(b){show(b.dataset.id,false);document.getElementById('mapa/flujo').scrollIntoView({behavior:'smooth'});setTimeout(()=>detail.scrollIntoView({behavior:'smooth',block:'start'}),450)}});
+// matriz
+const mx=document.getElementById('matrix');
+let h='<thead><tr><th>Proceso</th>'+PH.map((f,i)=>`<th title="${PHN[i]}">${f}<br><span style="text-transform:none;letter-spacing:0;font-family:var(--sans);font-weight:500">${PHN[i]}</span></th>`).join('')+'</tr></thead><tbody>';
+['ej','mc','ci'].forEach(a=>{
+h+=`<tr class="grp"><td colspan="8">${AREAS[a]}</td></tr>`;
+ORDER.filter(i=>P[i].a===a).forEach(i=>{h+=`<tr><td>${esc(P[i].n)}</td>`+MX[i].map(v=>`<td>${v?`<span class="dot ${a}" aria-label="activo"></span>`:''}</td>`).join('')+'</tr>'});
+});
+mx.innerHTML=h+'</tbody>';
+show('E-EJE',false);
+// navegación por hash
+function route(){
+const h=decodeURIComponent(location.hash.slice(1))||'inicio';
+const page=h.split('/')[0];
+const pg=document.getElementById('p-'+page)?page:'inicio';
+document.querySelectorAll('.page').forEach(s=>s.classList.toggle('on',s.id==='p-'+pg));
+document.querySelectorAll('.nav a[data-p]').forEach(a=>a.classList.toggle('on',a.dataset.p===pg));
+document.getElementById('side').classList.remove('open');
+const t=h.includes('/')?document.getElementById(h):null;
+if(t)setTimeout(()=>t.scrollIntoView({behavior:'smooth'}),40);else window.scrollTo({top:0});
+}
+window.addEventListener('hashchange',route);route();
+document.getElementById('menu').addEventListener('click',e=>{e.stopPropagation();document.getElementById('side').classList.toggle('open')});
+document.addEventListener('click',e=>{const s=document.getElementById('side');if(s.classList.contains('open')&&!s.contains(e.target))s.classList.remove('open')});
+</script>
+</body>
+</html>
