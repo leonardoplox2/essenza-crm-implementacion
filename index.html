@@ -170,6 +170,21 @@ a.btn{text-decoration:none;display:inline-block}
 .viewer iframe{display:block;width:100%;height:80vh;min-height:560px;border:0;background:#e9e4da}
 .viewer .vbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--rule);font-size:13px;color:var(--muted);flex-wrap:wrap}
 @media (max-width:760px){.viewer iframe{height:70vh;min-height:420px}}
+.lv{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px}
+.lv.a{background:var(--amber-lt);color:var(--amber)}.lv.b{background:#eef0ee;color:var(--muted)}
+.tbl.reg td,.tbl.cm td{font-size:13.5px}
+.tbl.reg td:first-child,.tbl.cm td:first-child{white-space:nowrap}
+.mev td,.mev th{text-align:center}.mev td:first-child,.mev th:first-child,.mev td:last-child,.mev th:last-child{text-align:left}
+.mev i{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-style:normal;font-weight:700;font-size:12px;margin:0 2px}
+.mev i.x{background:#f4dedb;color:#9b3a2f}.mev i.d{background:var(--sage-lt);color:var(--sage)}
+.pim{display:grid;grid-template-columns:28px 1fr;grid-template-rows:1fr auto;gap:6px;margin:16px 0}
+.pim-y{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em}
+.pim-x{grid-column:2;text-align:center;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em}
+.pim-g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pim-c{border-radius:12px;padding:14px 16px;border:1px solid var(--rule);background:var(--paper)}
+.pim-c b{display:block;font-size:15px}.pim-c span{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.pim-c ul{list-style:none;margin-top:8px;font-size:14px;color:var(--ink-2)}.pim-c li{padding:2px 0}
+.pim-c.cer{background:var(--sage-lt);border-color:#bcd8ca}.pim-c.sat{background:var(--amber-lt);border-color:#e6cfa5}.pim-c.inf{background:#eaf0f7;border-color:#cbd8e8}
 .refs li{margin-bottom:10px;padding-left:2.2em;text-indent:-2.2em;font-size:14.5px;color:var(--ink-2);list-style:none}
 footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .page{display:none}.page.on{display:block;animation:fade .35s ease}
@@ -185,6 +200,7 @@ footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-si
 .wrap{padding:32px 16px 72px}
 }
 @media (max-width:760px){
+.pim-g{grid-template-columns:1fr}
 .hero{padding:28px 20px 22px}
 .facts,.facts.c3{grid-template-columns:1fr 1fr}
 .grid2,.grid3,.plist,.detail .cols,.legend{grid-template-columns:1fr}
@@ -221,10 +237,24 @@ h3{font-size:22px}
 <a href="#mapa/catalogo">Catálogo por área de enfoque</a>
 <a href="#mapa/matriz">Procesos por fase</a>
 </div>
+<a href="#involucramiento" data-p="involucramiento"><span class="n">04</span>Plan de involucramiento</a>
+<div class="sub">
+<a href="#involucramiento/identificar">Registro de interesados</a>
+<a href="#involucramiento/planificar">Matriz de involucramiento</a>
+<a href="#involucramiento/gestionar">Gestionar</a>
+<a href="#involucramiento/monitorear">Monitorear</a>
+</div>
+<a href="#comunicaciones" data-p="comunicaciones"><span class="n">05</span>Plan de comunicaciones</a>
+<div class="sub">
+<a href="#comunicaciones/requisitos">Requisitos de comunicación</a>
+<a href="#comunicaciones/matriz">Matriz de comunicaciones</a>
+<a href="#comunicaciones/escalamiento">Escalamiento</a>
+<a href="#comunicaciones/monitorear">Monitorear</a>
+</div>
 <div class="nav-t" style="margin-top:14px">Próximas entregas</div>
-<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">04</span>Ejecución del proyecto</div>
-<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">05</span>Monitoreo y control</div>
-<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">06</span>Cierre</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">06</span>Ejecución del proyecto</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">07</span>Monitoreo y control</div>
+<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">08</span>Cierre</div>
 </nav>
 <div class="meta">
 <div><b>Docente:</b> Mg. Antonio Arqque Pantigozo</div>
@@ -525,6 +555,220 @@ h3{font-size:22px}
 <li>Essenza SPA. (2026). <em>Registro operacional de atenciones (2023–2026)</em> [Base de datos interna].</li>
 </ul>
 </section>
+<section class="page" id="p-involucramiento">
+<div class="eyebrow">04 · Plan de involucramiento de los interesados</div>
+<h2 class="sec">Plan de involucramiento de los interesados</h2>
+<p class="lead">Define quiénes pueden afectar o verse afectados por la implementación del CRM, qué esperan, cuánto pueden influir y qué haremos para llevar a cada uno del nivel de participación actual al que el proyecto necesita.</p>
+<div class="flow5" style="grid-template-columns:repeat(4,1fr)">
+<div class="f5 ej">1. Identificar<small>Registro de interesados</small></div>
+<div class="f5 ej">2. Planificar<small>Matriz y estrategias</small></div>
+<div class="f5 ej">3. Gestionar<small>Acciones en ejecución</small></div>
+<div class="f5 mc">4. Monitorear<small>Indicadores y ajustes</small></div>
+</div>
+<p class="small">Estructura según los cuatro procesos de la Gestión de los Interesados vistos en el curso. En la Guía PMBOK® 8 corresponden a los procesos del dominio de Interesados.</p>
+
+<h3 id="involucramiento/identificar"><span class="num">4.1</span>Identificar a los interesados</h3>
+<p>Se siguieron los tres pasos del análisis de interesados: <strong>identificarlos</strong> (rol, intereses, expectativas), <strong>medir su impacto</strong> (poder, interés, influencia) y <strong>evaluar</strong> cómo podrían reaccionar o influir en el proyecto. El registro se revisará al inicio de cada fase, porque la identificación continúa hasta el cierre.</p>
+<h4>Registro de interesados</h4>
+<div class="tblwrap"><table class="tbl reg">
+<thead><tr><th>ID</th><th>Interesado</th><th>Rol en el proyecto</th><th>Tipo</th><th>Expectativas principales</th><th>Poder</th><th>Interés</th><th>Actitud</th></tr></thead>
+<tbody>
+<tr><td>I-01</td><td>Dueña de Essenza SPA</td><td>Patrocinadora; aprueba alcance, cambios y aceptación</td><td>Interno</td><td>Retener clientes valiosos y que el equipo use el sistema</td><td><span class="lv a">Alto</span></td><td><span class="lv a">Alto</span></td><td>Promotor</td></tr>
+<tr><td>I-02</td><td>Administradora</td><td>Usuaria líder; valida requisitos, prototipos y pruebas</td><td>Interno</td><td>No registrar dos veces; control y reportes confiables</td><td><span class="lv a">Alto</span></td><td><span class="lv a">Alto</span></td><td>Neutral</td></tr>
+<tr><td>I-03</td><td>Recepcionista</td><td>Usuaria operativa: Excel, alertas y WhatsApp</td><td>Interno</td><td>Que el CRM no le sume trabajo en horas punta</td><td><span class="lv b">Bajo</span></td><td><span class="lv a">Alto</span></td><td>Resistente</td></tr>
+<tr><td>I-04</td><td>Cosmiatras</td><td>Usuarias consultivas: ficha 360° y acciones de retención</td><td>Interno</td><td>Saber a qué cliente atender y qué ofrecerle</td><td><span class="lv b">Bajo</span></td><td><span class="lv a">Alto</span></td><td>Desinformado</td></tr>
+<tr><td>I-05</td><td>Director del proyecto</td><td>Planifica, ejecuta y controla el proyecto</td><td>Interno</td><td>Cumplir alcance, plazo y presupuesto con aceptación formal</td><td><span class="lv a">Alto</span></td><td><span class="lv a">Alto</span></td><td>Impulsor</td></tr>
+<tr><td>I-06</td><td>Equipo del proyecto</td><td>Analista, científico de datos, desarrolladores, QA</td><td>Interno</td><td>Requisitos claros, acceso a datos y decisiones a tiempo</td><td><span class="lv b">Bajo</span></td><td><span class="lv a">Alto</span></td><td>Promotor</td></tr>
+<tr><td>I-07</td><td>Clientes del spa</td><td>Beneficiarios y titulares de los datos personales</td><td>Externo</td><td>Mensajes oportunos y uso responsable de sus datos</td><td><span class="lv b">Bajo</span></td><td><span class="lv b">Bajo</span></td><td>Desinformado</td></tr>
+<tr><td>I-08</td><td>Docente del curso</td><td>Evaluador académico del plan</td><td>Externo</td><td>Aplicación rigurosa de la Guía PMBOK® y evidencias</td><td><span class="lv a">Alto</span></td><td><span class="lv b">Bajo</span></td><td>Neutral</td></tr>
+<tr><td>I-09</td><td>Autoridad Nacional de Protección de Datos Personales</td><td>Regulador de la Ley N.° 29733</td><td>Externo</td><td>Consentimiento, finalidad y seguridad de los datos</td><td><span class="lv a">Alto</span></td><td><span class="lv b">Bajo</span></td><td>Desinformado</td></tr>
+<tr><td>I-10</td><td>Proveedor de equipos y conectividad</td><td>Soporte de la PC de recepción e internet</td><td>Externo</td><td>Relación comercial estable</td><td><span class="lv b">Bajo</span></td><td><span class="lv b">Bajo</span></td><td>Neutral</td></tr>
+</tbody></table></div>
+<p class="small">Actitud según la escala del curso: Impulsor, Promotor, Neutral, Resistente, Desinformado.</p>
+
+<h4>Matriz poder – interés</h4>
+<div class="pim">
+<div class="pim-y">Poder →</div>
+<div class="pim-g">
+<div class="pim-c sat"><b>Mantener satisfechos</b><span>Alto poder · bajo interés</span><ul><li>I-08 Docente del curso</li><li>I-09 Autoridad de Protección de Datos</li></ul></div>
+<div class="pim-c cer"><b>Gestionar de cerca</b><span>Alto poder · alto interés</span><ul><li>I-01 Dueña (patrocinadora)</li><li>I-02 Administradora</li><li>I-05 Director del proyecto</li></ul></div>
+<div class="pim-c mon"><b>Monitorear</b><span>Bajo poder · bajo interés</span><ul><li>I-07 Clientes del spa</li><li>I-10 Proveedor de equipos</li></ul></div>
+<div class="pim-c inf"><b>Mantener informados</b><span>Bajo poder · alto interés</span><ul><li>I-03 Recepcionista</li><li>I-04 Cosmiatras</li><li>I-06 Equipo del proyecto</li></ul></div>
+</div>
+<div class="pim-x">Interés →</div>
+</div>
+
+<h3 id="involucramiento/planificar"><span class="num">4.2</span>Planificar el involucramiento</h3>
+<p>Para cada interesado se compara su nivel de participación <strong>actual (X)</strong> con el <strong>deseado (D)</strong> mediante la matriz de evaluación del involucramiento. La brecha entre ambos define la estrategia.</p>
+<div class="tblwrap"><table class="tbl mev">
+<thead><tr><th>Interesado</th><th>Desconoce</th><th>Se resiste</th><th>Neutral</th><th>Apoya</th><th>Líder</th><th>Poder / Interés</th><th>Estrategia</th></tr></thead>
+<tbody>
+<tr><td>I-01 Dueña de Essenza SPA</td><td></td><td></td><td></td><td><i class="x">X</i></td><td><i class="d">D</i></td><td>A / A</td><td>Gestionar de cerca</td></tr>
+<tr><td>I-02 Administradora</td><td></td><td></td><td><i class="x">X</i></td><td></td><td><i class="d">D</i></td><td>A / A</td><td>Gestionar de cerca</td></tr>
+<tr><td>I-03 Recepcionista</td><td></td><td><i class="x">X</i></td><td></td><td><i class="d">D</i></td><td></td><td>B / A</td><td>Mantener informada</td></tr>
+<tr><td>I-04 Cosmiatras</td><td><i class="x">X</i></td><td></td><td></td><td><i class="d">D</i></td><td></td><td>B / A</td><td>Mantener informadas</td></tr>
+<tr><td>I-05 Director del proyecto</td><td></td><td></td><td></td><td></td><td><i class="x">X</i><i class="d">D</i></td><td>A / A</td><td>Gestionar de cerca</td></tr>
+<tr><td>I-06 Equipo del proyecto</td><td></td><td></td><td></td><td><i class="x">X</i><i class="d">D</i></td><td></td><td>B / A</td><td>Mantener informado</td></tr>
+<tr><td>I-07 Clientes del spa</td><td><i class="x">X</i></td><td></td><td><i class="d">D</i></td><td></td><td></td><td>B / B</td><td>Monitorear</td></tr>
+<tr><td>I-08 Docente del curso</td><td></td><td></td><td><i class="x">X</i></td><td><i class="d">D</i></td><td></td><td>A / B</td><td>Mantener satisfecho</td></tr>
+<tr><td>I-09 Autoridad de Protección de Datos</td><td><i class="x">X</i></td><td></td><td><i class="d">D</i></td><td></td><td></td><td>A / B</td><td>Mantener satisfecha</td></tr>
+<tr><td>I-10 Proveedor de equipos</td><td><i class="x">X</i></td><td></td><td><i class="d">D</i></td><td></td><td></td><td>B / B</td><td>Monitorear</td></tr>
+</tbody></table></div>
+<p class="small">X: nivel actual · D: nivel deseado · A: alto · B: bajo. Las brechas más grandes (administradora, recepcionista y cosmiatras) son las que más ponen en riesgo la adopción del CRM, por eso concentran las acciones.</p>
+<h4>Estrategias y acciones de involucramiento</h4>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Interesado</th><th>Acciones específicas</th><th>Momento</th><th>Frecuencia</th><th>Responsable</th></tr></thead>
+<tbody>
+<tr><td>I-01 Dueña</td><td>Preside el comité de cambios; recibe el informe de estado; aprueba cada demostración de fin de fase; define con el equipo las reglas de prioridad y los beneficios de retención.</td><td>F1–F7</td><td>Semanal y en cada hito</td><td>Director del proyecto</td></tr>
+<tr><td>I-02 Administradora</td><td>Participa en el levantamiento y en el diseño de pantallas; valida cada incremento; es la usuaria piloto; recibe la transferencia operativa al cierre.</td><td>F1–F7</td><td>Quincenal y en cada demostración</td><td>Analista funcional</td></tr>
+<tr><td>I-03 Recepcionista</td><td>Entrevista sobre su rutina; prueba el prototipo de alertas; capacitación práctica fuera de horario; acompañamiento en sus primeros casos.</td><td>F1, F2, F5–F7</td><td>Por fase</td><td>QA y capacitación</td></tr>
+<tr><td>I-04 Cosmiatras</td><td>Charla corta sobre qué hará el CRM por ellas; prueba de la ficha 360°; capacitación y guía rápida «qué hacer con una alerta».</td><td>F2, F5–F7</td><td>Por fase</td><td>QA y capacitación</td></tr>
+<tr><td>I-05 Director del proyecto</td><td>Lidera el plan, informa a la patrocinadora y escala lo que supere las tolerancias.</td><td>F1–F7</td><td>Continua</td><td>Director del proyecto</td></tr>
+<tr><td>I-06 Equipo</td><td>Reunión diaria de 15 minutos, tablero compartido, retrospectiva al cerrar cada fase.</td><td>F1–F7</td><td>Diaria</td><td>Director del proyecto</td></tr>
+<tr><td>I-07 Clientes</td><td>Aviso claro sobre el uso de sus datos y solicitud de consentimiento antes de contactarlos; seguimiento de quejas o bajas.</td><td>F6–F7</td><td>Al habilitar el contacto</td><td>Administradora</td></tr>
+<tr><td>I-08 Docente</td><td>Publicación de avances en este blog y presentación en las fechas del curso.</td><td>Según calendario</td><td>Por entrega</td><td>Director del proyecto</td></tr>
+<tr><td>I-09 Autoridad de datos</td><td>Revisión de cumplimiento de la Ley N.° 29733 (consentimiento, finalidad, seguridad) antes del go-live.</td><td>F2 y F6</td><td>Puntual</td><td>Director del proyecto</td></tr>
+<tr><td>I-10 Proveedor</td><td>Coordinar disponibilidad de la PC y la conexión para la instalación y el soporte.</td><td>F6</td><td>Puntual</td><td>Líder técnico</td></tr>
+</tbody></table></div>
+
+<h3 id="involucramiento/gestionar"><span class="num">4.3</span>Gestionar el involucramiento</h3>
+<p>Durante la ejecución se aplicarán las acciones anteriores y se atenderán los incidentes con los interesados para aumentar el apoyo y reducir la resistencia.</p>
+<div class="grid2">
+<div class="card"><h4>Herramientas y técnicas</h4><ul class="clean">
+<li><strong>Retroalimentación</strong> al final de cada demostración, registrada en el acta.</li>
+<li><strong>Gestión de conflictos y negociación</strong> cuando choquen las prioridades del negocio y del equipo.</li>
+<li><strong>Observación y conversación</strong> con recepción y cosmiatras durante el piloto.</li>
+<li><strong>Conciencia política y cultural:</strong> lenguaje sencillo, sin tecnicismos, y respeto por la autoridad de la dueña.</li>
+<li><strong>Reglas básicas</strong> del acta de constitución del equipo: puntualidad, respeto y decisiones registradas.</li>
+</ul></div>
+<div class="card"><h4>Reuniones clave</h4><ul class="clean">
+<li>Lanzamiento del proyecto (02/11/2026).</li>
+<li>Demostraciones de fin de fase: 27/11, 24/12, 22/01 y 19/02.</li>
+<li>Comité de cambios quincenal.</li>
+<li>Reunión de preparación del go-live (semana del 08/03/2027).</li>
+<li>Reunión de cierre y lecciones aprendidas (26/03/2027).</li>
+</ul></div>
+</div>
+<h4>Resistencias previstas y respuesta</h4>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Situación esperada</th><th>Interesado</th><th>Respuesta</th></tr></thead>
+<tbody>
+<tr><td>«El Excel ya funciona, esto es más trabajo»</td><td>Recepcionista</td><td>Mostrar que el CRM lee su mismo Excel y que solo agrega una lista de clientes a contactar; capacitación práctica con sus casos reales.</td></tr>
+<tr><td>Desconfianza en la predicción del sistema</td><td>Dueña y administradora</td><td>Explicar cada alerta con los factores que la generan (SHAP) y validar el modelo con clientes que ellas conocen.</td></tr>
+<tr><td>Poca disponibilidad por la carga del spa</td><td>Administradora y cosmiatras</td><td>Sesiones cortas, fuera de horario y agendadas con una semana de anticipación.</td></tr>
+<tr><td>Molestia de clientes por mensajes</td><td>Clientes</td><td>Contacto solo con consentimiento, mensaje editable y frecuencia limitada.</td></tr>
+</tbody></table></div>
+<p>Salidas de este proceso: solicitudes de cambio, actualizaciones del registro de interesados, del registro de incidentes y del registro de lecciones aprendidas.</p>
+
+<h3 id="involucramiento/monitorear"><span class="num">4.4</span>Monitorear el involucramiento</h3>
+<p>La matriz de evaluación del involucramiento se vuelve a llenar en cada hito (H1 a H5) para ver si cada interesado se acerca a su nivel deseado. Si no avanza, se analiza la causa raíz y se ajusta la estrategia.</p>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Indicador</th><th>Cómo se mide</th><th>Meta</th><th>Frecuencia</th></tr></thead>
+<tbody>
+<tr><td>Interesados en su nivel deseado</td><td>Interesados con X = D / total de interesados</td><td>≥ 80 % al go-live</td><td>En cada hito</td></tr>
+<tr><td>Asistencia a demostraciones</td><td>Asistentes clave presentes / convocados</td><td>≥ 90 %</td><td>Por demostración</td></tr>
+<tr><td>Satisfacción de la patrocinadora</td><td>Encuesta breve de 1 a 5</td><td>≥ 4</td><td>Al cierre de cada fase</td></tr>
+<tr><td>Incidentes con interesados sin resolver</td><td>Incidentes abiertos más de 7 días</td><td>0</td><td>Semanal</td></tr>
+<tr><td>Adopción del CRM</td><td>Alertas de riesgo alto revisadas en 48 h</td><td>≥ 90 %</td><td>Semanal en F6–F7</td></tr>
+</tbody></table></div>
+<p>Salidas: información de desempeño del trabajo sobre el involucramiento, solicitudes de cambio y actualizaciones del plan de involucramiento, del plan de comunicaciones y del registro de interesados.</p>
+<p style="margin-top:22px"><a class="btn" href="#comunicaciones">Ver el plan de gestión de las comunicaciones →</a></p>
+</section>
+
+<section class="page" id="p-comunicaciones">
+<div class="eyebrow">05 · Plan de gestión de las comunicaciones</div>
+<h2 class="sec">Plan de gestión de las comunicaciones</h2>
+<p class="lead">Establece qué información se comunica en la implementación del CRM, a quién, por qué, cuándo, por qué medio y quién es responsable, para que el mensaje adecuado llegue a la persona adecuada en el momento adecuado.</p>
+<div class="flow5" style="grid-template-columns:repeat(3,1fr)">
+<div class="f5">1. Planificar<small>Este plan</small></div>
+<div class="f5 ej">2. Gestionar<small>Comunicaciones del proyecto</small></div>
+<div class="f5 mc">3. Monitorear<small>Eficacia y ajustes</small></div>
+</div>
+
+<h3 id="comunicaciones/requisitos"><span class="num">5.1</span>Requisitos de comunicación de los interesados</h3>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Interesado</th><th>Qué información necesita</th><th>Formato y estilo preferido</th></tr></thead>
+<tbody>
+<tr><td>I-01 Dueña</td><td>Avance, costos, riesgos, decisiones pendientes y resultados de negocio</td><td>Resumen ejecutivo de una página; reunión breve; WhatsApp para urgencias</td></tr>
+<tr><td>I-02 Administradora</td><td>Fechas de validación, cambios en el proceso, capacitación, soporte y respaldo</td><td>Reuniones presenciales; guías paso a paso</td></tr>
+<tr><td>I-03 Recepcionista · I-04 Cosmiatras</td><td>Qué cambia en su trabajo, cuándo, cómo usar el CRM y a quién pedir ayuda</td><td>Mensajes cortos, capacitaciones prácticas, afiche en recepción</td></tr>
+<tr><td>I-05 Director · I-06 Equipo</td><td>Tareas, bloqueos, decisiones técnicas, cambios aprobados</td><td>Reunión diaria, tablero Kanban, repositorio Git</td></tr>
+<tr><td>I-07 Clientes</td><td>Para qué se usan sus datos y cómo dejar de recibir mensajes</td><td>Texto simple impreso o por WhatsApp</td></tr>
+<tr><td>I-08 Docente</td><td>Avances del plan con evidencias</td><td>Este blog y presentaciones</td></tr>
+<tr><td>I-09 Autoridad de datos</td><td>Cumplimiento de la Ley N.° 29733 (solo si lo requiere)</td><td>Documento formal</td></tr>
+<tr><td>I-10 Proveedor</td><td>Fechas de instalación y requerimientos técnicos</td><td>Llamada o correo</td></tr>
+</tbody></table></div>
+
+<h3 id="comunicaciones/canales"><span class="num">5.2</span>Canales, métodos y modelo de comunicación</h3>
+<div class="grid3">
+<div class="card"><span class="tag">Canales</span><h4 style="margin-top:10px">C = n(n − 1) / 2</h4><p class="small">Con <strong>10 interesados</strong> registrados hay <strong>10 × 9 / 2 = 45 canales</strong> posibles de comunicación. Por eso la información formal se centraliza en el director del proyecto y en canales definidos, en lugar de conversaciones sueltas.</p></div>
+<div class="card"><span class="tag amber">Métodos</span><ul class="clean" style="margin-top:12px"><li><strong>Interactiva:</strong> reuniones, demostraciones, capacitaciones, llamadas.</li><li><strong>Push:</strong> informe semanal, comunicados, avisos a clientes.</li><li><strong>Pull:</strong> este blog, carpeta de documentos y tablero del proyecto.</li></ul></div>
+<div class="card"><span class="tag plum">Modelo</span><h4 style="margin-top:10px">Interactivo</h4><p class="small">Para decisiones, aprobaciones y comunicados críticos no basta con enviar: se pide <strong>acuse de recibo</strong> y <strong>retroalimentación</strong> para confirmar que el mensaje se entendió.</p></div>
+</div>
+
+<h3 id="comunicaciones/matriz"><span class="num">5.3</span>Matriz de comunicaciones</h3>
+<div class="tblwrap"><table class="tbl cm">
+<thead><tr><th>ID</th><th>Comunicación</th><th>Propósito</th><th>Responsable</th><th>Receptores</th><th>Método y medio</th><th>Frecuencia</th><th>Confirmación</th></tr></thead>
+<tbody>
+<tr><td>C-01</td><td>Reunión de lanzamiento</td><td>Alinear objetivos, roles, reglas y calendario</td><td>Director</td><td>I-01 a I-06</td><td>Interactiva · presencial en el spa</td><td>Una vez · 02/11/2026</td><td>Acta firmada</td></tr>
+<tr><td>C-02</td><td>Reunión diaria del equipo</td><td>Avance, plan del día y bloqueos</td><td>Director</td><td>I-06</td><td>Interactiva · videollamada 15 min</td><td>Diaria (lun–vie)</td><td>Tablero actualizado</td></tr>
+<tr><td>C-03</td><td>Informe semanal de estado</td><td>Avance, SPI/CPI, riesgos, incidentes y decisiones</td><td>Director</td><td>I-01, I-02</td><td>Push · correo + PDF de una página</td><td>Semanal · viernes</td><td>Acuse en 48 h</td></tr>
+<tr><td>C-04</td><td>Demostración de fin de fase</td><td>Validar el incremento y recoger observaciones</td><td>Director y líder técnico</td><td>I-01, I-02</td><td>Interactiva · presencial</td><td>27/11, 24/12, 22/01, 19/02</td><td>Acta de aceptación u observaciones</td></tr>
+<tr><td>C-05</td><td>Comité de control de cambios</td><td>Aprobar o rechazar solicitudes de cambio</td><td>Director</td><td>I-01</td><td>Interactiva · reunión</td><td>Quincenal o a demanda</td><td>Registro de cambios</td></tr>
+<tr><td>C-06</td><td>Repositorio del proyecto</td><td>Consultar documentos, actas y estado</td><td>Director</td><td>Todos los internos e I-08</td><td>Pull · este blog y carpeta compartida</td><td>Actualización semanal</td><td>—</td></tr>
+<tr><td>C-07</td><td>Talleres de capacitación</td><td>Preparar a las usuarias para usar el CRM</td><td>QA y capacitación</td><td>I-02, I-03, I-04</td><td>Interactiva · presencial fuera de horario</td><td>3 sesiones en F6</td><td>Evaluación práctica</td></tr>
+<tr><td>C-08</td><td>Comunicado de go-live</td><td>Informar fecha, cambios operativos y soporte</td><td>Director</td><td>I-02, I-03, I-04</td><td>Push · grupo de WhatsApp y afiche en recepción</td><td>1 semana antes y el día del go-live</td><td>Confirmación en reunión</td></tr>
+<tr><td>C-09</td><td>Aviso de tratamiento de datos</td><td>Informar el uso de datos y solicitar consentimiento</td><td>Administradora</td><td>I-07</td><td>Push · formato impreso o WhatsApp</td><td>Antes de habilitar el contacto</td><td>Consentimiento registrado</td></tr>
+<tr><td>C-10</td><td>Canal de soporte</td><td>Reportar incidentes y dudas de uso</td><td>Equipo técnico</td><td>I-02, I-03, I-04</td><td>Interactiva · grupo de WhatsApp</td><td>Continuo en F6–F7 · respuesta ≤ 4 h hábiles</td><td>Incidente registrado</td></tr>
+<tr><td>C-11</td><td>Entregas académicas</td><td>Mostrar el avance del plan con evidencias</td><td>Director</td><td>I-08</td><td>Pull · este blog · presentación</td><td>Según calendario del curso</td><td>Retroalimentación del docente</td></tr>
+<tr><td>C-12</td><td>Informe final y reunión de cierre</td><td>Resultados frente a objetivos, lecciones y aceptación</td><td>Director</td><td>I-01, I-02, I-06, I-08</td><td>Interactiva + push · reunión y PDF</td><td>Una vez · 26/03/2027</td><td>Acta de aceptación firmada</td></tr>
+</tbody></table></div>
+
+<h3 id="comunicaciones/escalamiento"><span class="num">5.4</span>Proceso de escalamiento y confidencialidad</h3>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Nivel</th><th>Quién resuelve</th><th>Cuándo se escala</th><th>Plazo de respuesta</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Equipo del proyecto</td><td>Dudas de uso, defectos menores, bloqueos técnicos</td><td>≤ 2 días hábiles</td></tr>
+<tr><td>2</td><td>Director del proyecto</td><td>No se resuelve en el nivel 1, o afecta una tarea de la ruta crítica</td><td>≤ 3 días hábiles</td></tr>
+<tr><td>3</td><td>Patrocinadora (dueña)</td><td>Afecta alcance, plazo o costo por encima de la tolerancia (±10 %), o es un incidente crítico con datos de clientes</td><td>Inmediato · reunión en 48 h</td></tr>
+</tbody></table></div>
+<div class="callout"><p><strong>Información confidencial.</strong> La dueña es la única que autoriza difundir información del negocio fuera del proyecto. Los datos personales de los clientes no salen del equipo del spa: el modelo se entrena con datos anonimizados y los informes muestran solo cifras agregadas.</p></div>
+
+<h3 id="comunicaciones/gestionar"><span class="num">5.5</span>Gestionar las comunicaciones</h3>
+<div class="grid2">
+<div class="card"><h4>Cómo se ejecutará el plan</h4><ul class="clean">
+<li><strong>Sistema de información del proyecto:</strong> tablero Kanban, repositorio Git, carpeta compartida y este blog.</li>
+<li><strong>Informes adaptados:</strong> una página para la dueña, detalle técnico para el equipo.</li>
+<li><strong>Gestión de reuniones:</strong> agenda enviada 24 h antes y acta publicada en 24 h.</li>
+<li><strong>Escucha activa y retroalimentación</strong> en demostraciones y capacitaciones.</li>
+</ul></div>
+<div class="card"><h4>Salidas</h4><ul class="clean">
+<li>Comunicaciones del proyecto: informes de estado, actas, presentaciones, comunicados.</li>
+<li>Actualizaciones del plan de comunicaciones y del plan de involucramiento.</li>
+<li>Actualizaciones de los registros de incidentes, lecciones aprendidas y riesgos.</li>
+<li>Archivo de correspondencia y actas en los activos del proyecto.</li>
+</ul></div>
+</div>
+
+<h3 id="comunicaciones/monitorear"><span class="num">5.6</span>Monitorear las comunicaciones</h3>
+<p>Se verifica que las comunicaciones tengan el efecto buscado: que la información llegue a tiempo, se entienda y mantenga el apoyo de los interesados. Si un indicador falla, se vuelve a planificar o a gestionar esa comunicación.</p>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Indicador</th><th>Cómo se mide</th><th>Meta</th><th>Frecuencia</th></tr></thead>
+<tbody>
+<tr><td>Puntualidad</td><td>Comunicaciones enviadas en la fecha de la matriz / programadas</td><td>≥ 95 %</td><td>Semanal</td></tr>
+<tr><td>Acuse de recibo</td><td>Informes semanales confirmados en 48 h</td><td>≥ 90 %</td><td>Semanal</td></tr>
+<tr><td>Comprensión</td><td>Encuesta de 1 a 5 sobre claridad de la información</td><td>≥ 4</td><td>Al cierre de cada fase</td></tr>
+<tr><td>Tiempo de respuesta del soporte</td><td>Horas hábiles hasta la primera respuesta</td><td>≤ 4 h</td><td>Semanal en F6–F7</td></tr>
+<tr><td>Incidentes por falta de información</td><td>Incidentes cuya causa raíz fue la comunicación</td><td>0</td><td>Mensual</td></tr>
+</tbody></table></div>
+<p>Herramientas: juicio de expertos, sistema de información del proyecto, matriz de evaluación del involucramiento, observación y conversación, y reuniones. Salidas: información de desempeño del trabajo, solicitudes de cambio y actualizaciones del plan.</p>
+<h3><span class="num">Ref.</span>Referencias</h3>
+<ul class="refs">
+<li>Arqque Pantigozo, A. (2026). <em>Gestión de los interesados del proyecto</em> [Material de clase, Gestión de Proyecto de TI]. Universidad Nacional Tecnológica de Lima Sur.</li>
+<li>Arqque Pantigozo, A. (2026). <em>Gestión de las comunicaciones del proyecto</em> [Material de clase, Gestión de Proyecto de TI]. Universidad Nacional Tecnológica de Lima Sur.</li>
+<li>Project Management Institute. (2025). <em>A guide to the project management body of knowledge (PMBOK® guide)</em> (8th ed.). PMI.</li>
+</ul>
+</section>
 <footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>
 </div>
 </div>
@@ -671,6 +915,8 @@ detail.innerHTML=`<span class="tag${tg}">${AREAS[p.a]}</span> <span class="tag" 
 <div class="apl"><b>Aplicación en la implementación del CRM</b>${esc(p.x)}</div>
 <div class="cols"><div><h5>Entradas clave</h5><ul>${li(p.i)}</ul></div><div><h5>Salidas clave</h5><ul>${li(p.o)}</ul></div><div><h5>Herramientas y técnicas</h5><ul>${li(p.t)}</ul></div></div>
 <div class="nav2"><button class="btn" data-go="${prev}">← ${esc(P[prev].n)}</button><button class="btn" data-go="${next}">${esc(P[next].n)} →</button></div>`;
+const LK={'E-INV':['involucramiento','Ver el plan de involucramiento'],'M-INV':['involucramiento','Ver el plan de involucramiento'],'E-COM':['comunicaciones','Ver el plan de comunicaciones'],'M-COM':['comunicaciones','Ver el plan de comunicaciones']}[id];
+if(LK)detail.querySelector('.apl').insertAdjacentHTML('beforeend',` <a href="#${LK[0]}">${LK[1]} →</a>`);
 if(scroll)detail.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 detail.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)show(b.dataset.go,false)});
