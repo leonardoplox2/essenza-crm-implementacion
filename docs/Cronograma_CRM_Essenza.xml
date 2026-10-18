@@ -42,7 +42,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2026-10-17T22:51:42</CurrentDate>
+    <CurrentDate>2026-10-17T23:00:27</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -261,6 +261,62 @@
                     <DayWorking>0</DayWorking>
                 </Exception>
             </Exceptions>
+        </Calendar>
+        <Calendar>
+            <UID>2</UID>
+            <Name>Director del proyecto</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>3</UID>
+            <Name>Analista funcional</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>4</UID>
+            <Name>Científico de datos</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>5</UID>
+            <Name>Desarrollador backend</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>6</UID>
+            <Name>Desarrollador frontend</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>7</UID>
+            <Name>QA y capacitación</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>8</UID>
+            <Name>Administradora</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>9</UID>
+            <Name>Dueña (patrocinadora)</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <IsBaselineCalendar>0</IsBaselineCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
     </Calendars>
     <Tasks>
@@ -9385,6 +9441,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>2</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -9406,6 +9463,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>3</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -9427,6 +9485,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>4</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -9448,6 +9507,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>5</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -9469,6 +9529,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>6</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -9490,6 +9551,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>7</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -9511,6 +9573,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>8</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -9532,6 +9595,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
             <OvertimeRateFormat>2</OvertimeRateFormat>
+            <CalendarUID>9</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>0</IsInactive>
             <IsEnterprise>0</IsEnterprise>
