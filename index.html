@@ -185,6 +185,29 @@ a.btn{text-decoration:none;display:inline-block}
 .pim-c b{display:block;font-size:15px}.pim-c span{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .pim-c ul{list-style:none;margin-top:8px;font-size:14px;color:var(--ink-2)}.pim-c li{padding:2px 0}
 .pim-c.cer{background:var(--sage-lt);border-color:#bcd8ca}.pim-c.sat{background:var(--amber-lt);border-color:#e6cfa5}.pim-c.inf{background:#eaf0f7;border-color:#cbd8e8}
+.swbox .pmap,.swim{display:block;width:100%;height:auto;font-family:var(--sans)}
+.swim .sw-lane{fill:#fbf9f5}.swim .sw-lane.alt{fill:#f3efe7}.swim .sw-lane.hl{fill:#e6f1eb}
+.swim .sw-lab{fill:#ebe5da}.swim .sw-lab.hl{fill:var(--sage)}
+.swim .sw-lt{font-family:var(--serif);font-weight:600;font-size:13px;fill:var(--ink)}
+.swim .sw-lab.hl+text,.swim .sw-lab.hl+text+text{fill:#fff}
+.swim .sw-task{fill:#fff;stroke:#9aa39e;stroke-width:1.3}
+.swim .sw-sys{fill:#fff;stroke:var(--sage-2);stroke-width:2}
+.swim .sw-dec{fill:#fff8ea;stroke:#c98a2e;stroke-width:1.5}
+.swim .sw-start{fill:#fff;stroke:var(--sage-2);stroke-width:2.5}
+.swim .sw-end{fill:var(--sage-2);stroke:var(--sage)}
+.swim .sw-endbad{fill:#b9443a;stroke:#8f3027}
+.swim .sw-t{font-size:11.5px;font-weight:600;fill:var(--ink)}
+.swim .sw-cap{font-size:10.5px;fill:var(--muted)}
+.swim .sw-e{fill:none;stroke:#7b8580;stroke-width:1.5}.swim .sw-e.dash{stroke-dasharray:5 4}
+.swim .sw-ah{fill:#7b8580}
+.swim .sw-el{font-size:11px;font-weight:700;fill:var(--amber)}
+.swim .sw-m circle{fill:#b9443a}.swim .sw-m.good circle{fill:var(--sage)}
+.swim .sw-m text{fill:#fff;font-family:var(--mono);font-size:10px;font-weight:600}
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:6px 0 24px}
+.pain{display:flex;gap:10px;align-items:flex-start;background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:10px 12px}
+.pain b{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#b9443a;color:#fff;font-family:var(--mono);font-size:11px}
+.pains.good .pain b{background:var(--sage)}
+.pain p{margin:0;font-size:13.5px;line-height:1.5}
 .refs li{margin-bottom:10px;padding-left:2.2em;text-indent:-2.2em;font-size:14.5px;color:var(--ink-2);list-style:none}
 footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .page{display:none}.page.on{display:block;animation:fade .35s ease}
@@ -200,6 +223,7 @@ footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-si
 .wrap{padding:32px 16px 72px}
 }
 @media (max-width:760px){
+.pains{grid-template-columns:1fr}
 .pim-g{grid-template-columns:1fr}
 .hero{padding:28px 20px 22px}
 .facts,.facts.c3{grid-template-columns:1fr 1fr}
@@ -223,6 +247,7 @@ h3{font-size:22px}
 <a href="#inicio" data-p="inicio"><span class="n">01</span>Inicio</a>
 <div class="sub">
 <a href="#inicio/negocio">El negocio</a>
+<a href="#inicio/procesos">Procesos AS-IS / TO-BE</a>
 <a href="#inicio/producto">La solución a implementar</a>
 <a href="#inicio/brechas">Requisitos de alto nivel</a>
 <a href="#inicio/objetivos">Objetivos y alcance</a>
@@ -287,7 +312,212 @@ h3{font-size:22px}
 <div class="card"><span class="tag plum">La propuesta</span><h4 style="margin-top:10px">Retención guiada por datos</h4><p class="small">Un CRM que use el Excel como fuente, prediga el riesgo de abandono y convierta cada alerta en un caso de retención con una acción concreta.</p></div>
 </div>
 <div class="quote">El abandono en Essenza no se explica por mala calidad del servicio, sino por un desenganche gradual que nadie está midiendo.</div>
-<h3 id="inicio/producto"><span class="num">1.2</span>La solución que se va a implementar</h3>
+<h3 id="inicio/procesos"><span class="num">1.2</span>Proceso actual (AS-IS) y proceso futuro (TO-BE)</h3>
+<p>Antes de construir el CRM conviene ver cómo trabaja hoy el spa y cómo trabajará después. El cambio no está en la atención: la recepcionista sigue registrando en el mismo Excel. El cambio está en lo que pasa <strong>después</strong> de la atención, que hoy no lo hace nadie.</p>
+<h4>AS-IS · Cómo funciona hoy</h4>
+<div class="mapbox swbox">
+<div class="mapscroll">
+<svg viewBox="0 0 1340 502" style="min-width:1072px" class="swim" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flujo AS-IS del proceso de atención y seguimiento de clientes en Essenza SPA">
+<defs><marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="sw-ah"/></marker></defs>
+<rect class="sw-lane" x="0" y="20" width="1340" height="118"/>
+<rect class="sw-lab" x="0" y="20" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="79.0" dy=".35em" text-anchor="middle">Cliente</text>
+<rect class="sw-lane alt" x="0" y="138" width="1340" height="118"/>
+<rect class="sw-lab" x="0" y="138" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="197.0" dy=".35em" text-anchor="middle">Recepcionista</text>
+<rect class="sw-lane" x="0" y="256" width="1340" height="118"/>
+<rect class="sw-lab" x="0" y="256" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="315.0" dy=".35em" text-anchor="middle">Cosmiatra</text>
+<rect class="sw-lane alt" x="0" y="374" width="1340" height="118"/>
+<rect class="sw-lab" x="0" y="374" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="425.5" dy=".35em" text-anchor="middle">Administración</text>
+<text class="sw-lt" x="55.0" y="440.5" dy=".35em" text-anchor="middle">/ dueña</text>
+<circle class="sw-start" cx="195.0" cy="79.0" r="20"/>
+<text class="sw-cap" x="195.0" y="113.0" text-anchor="middle">Necesita un</text>
+<text class="sw-cap" x="195.0" y="126.0" text-anchor="middle">servicio</text>
+<rect class="sw-task" x="281.0" y="46.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="345.0" y="65.5" dy=".35em" text-anchor="middle">Pide cita por</text>
+<text class="sw-t" x="345.0" y="79.0" dy=".35em" text-anchor="middle">WhatsApp, llamada o</text>
+<text class="sw-t" x="345.0" y="92.5" dy=".35em" text-anchor="middle">en persona</text>
+<rect class="sw-task" x="431.0" y="164.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="495.0" y="190.25" dy=".35em" text-anchor="middle">Revisa la agenda y</text>
+<text class="sw-t" x="495.0" y="203.75" dy=".35em" text-anchor="middle">separa la cita</text>
+<rect class="sw-task" x="581.0" y="46.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="645.0" y="79.0" dy=".35em" text-anchor="middle">Asiste al spa</text>
+<rect class="sw-task" x="731.0" y="282.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="795.0" y="301.5" dy=".35em" text-anchor="middle">Atiende sin ver el</text>
+<text class="sw-t" x="795.0" y="315.0" dy=".35em" text-anchor="middle">historial del</text>
+<text class="sw-t" x="795.0" y="328.5" dy=".35em" text-anchor="middle">cliente</text>
+<rect class="sw-task" x="881.0" y="164.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="945.0" y="190.25" dy=".35em" text-anchor="middle">Cobra y registra la</text>
+<text class="sw-t" x="945.0" y="203.75" dy=".35em" text-anchor="middle">atención en Excel</text>
+<polygon class="sw-dec" points="1095.0,41.0 1157.0,79.0 1095.0,117.0 1033.0,79.0"/>
+<text class="sw-t" x="1095.0" y="72.25" dy=".35em" text-anchor="middle">¿Vuelve por</text>
+<text class="sw-t" x="1095.0" y="85.75" dy=".35em" text-anchor="middle">su cuenta?</text>
+<circle class="sw-endbad" cx="1245.0" cy="79.0" r="20"/>
+<text class="sw-cap" x="1245.0" y="113.0" text-anchor="middle">Cliente perdido</text>
+<text class="sw-cap" x="1245.0" y="126.0" text-anchor="middle">sin que nadie lo</text>
+<text class="sw-cap" x="1245.0" y="139.0" text-anchor="middle">note</text>
+<rect class="sw-task" x="1031.0" y="400.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1095.0" y="426.25" dy=".35em" text-anchor="middle">Revisa el Excel de</text>
+<text class="sw-t" x="1095.0" y="439.75" dy=".35em" text-anchor="middle">vez en cuando</text>
+<rect class="sw-task" x="1181.0" y="400.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1245.0" y="426.25" dy=".35em" text-anchor="middle">Lanza promociones</text>
+<text class="sw-t" x="1245.0" y="439.75" dy=".35em" text-anchor="middle">generales a todos</text>
+<path class="sw-e" d="M215.0,79.0 H279.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M409.0,79.0 H420.0 V197.0 H429.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M559.0,197.0 H570.0 V79.0 H579.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M709.0,79.0 H720.0 V315.0 H729.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M859.0,315.0 H870.0 V197.0 H879.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1009.0,197.0 H1021.0 V79.0 H1031.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1157.0,79.0 H1223.0" marker-end="url(#sa)"/>
+<text class="sw-el" x="1191.0" y="73.0" text-anchor="middle">No</text>
+<path class="sw-e" d="M1095.0,41.0 V25.0 H345.0 V44.0" marker-end="url(#sa)"/>
+<text class="sw-el" x="720.0" y="20.0" text-anchor="middle">Sí</text>
+<path class="sw-e dash" d="M1009.0,197.0 H1020.0 V433.0 H1029.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1159.0,433.0 H1179.0" marker-end="url(#sa)"/>
+<g class="sw-m"><circle cx="555.0" cy="166.0" r="10"/><text x="555.0" y="166.0" dy=".35em" text-anchor="middle">1</text></g>
+<g class="sw-m"><circle cx="855.0" cy="284.0" r="10"/><text x="855.0" y="284.0" dy=".35em" text-anchor="middle">2</text></g>
+<g class="sw-m"><circle cx="1005.0" cy="166.0" r="10"/><text x="1005.0" y="166.0" dy=".35em" text-anchor="middle">3</text></g>
+<g class="sw-m"><circle cx="1155.0" cy="402.0" r="10"/><text x="1155.0" y="402.0" dy=".35em" text-anchor="middle">4</text></g>
+<g class="sw-m"><circle cx="1305.0" cy="402.0" r="10"/><text x="1305.0" y="402.0" dy=".35em" text-anchor="middle">5</text></g>
+<g class="sw-m"><circle cx="1261.0" cy="61.0" r="10"/><text x="1261.0" y="61.0" dy=".35em" text-anchor="middle">6</text></g>
+</svg>
+</div>
+</div>
+<div class="pains">
+<div class="pain"><b>1</b><p><strong>Sin recordatorios.</strong> La cita depende de que el cliente escriba o llame.</p></div>
+<div class="pain"><b>2</b><p><strong>Sin historial a la mano.</strong> La cosmiatra no sabe qué tratamientos tuvo el cliente ni cuánto tiempo lleva sin venir.</p></div>
+<div class="pain"><b>3</b><p><strong>Datos aislados.</strong> El Excel guarda las atenciones, pero nadie los convierte en información.</p></div>
+<div class="pain"><b>4</b><p><strong>Sin alertas.</strong> No hay forma de saber qué clientes están por dejar de venir.</p></div>
+<div class="pain"><b>5</b><p><strong>Promociones sin segmentar.</strong> El mismo mensaje para todos, sin priorizar a quien está en riesgo.</p></div>
+<div class="pain"><b>6</b><p><strong>Fuga no detectada.</strong> Cerca de 3 de cada 10 clientes llevan más de 120 días sin volver.</p></div>
+</div>
+<h4>TO-BE · Cómo funcionará con el CRM</h4>
+<p class="small">El diagrama es ancho: desliza horizontalmente para recorrerlo completo.</p>
+<div class="mapbox swbox">
+<div class="mapscroll">
+<svg viewBox="0 0 2240 620" style="min-width:1792px" class="swim" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flujo TO-BE con el CRM Predictivo y Retención Postventa">
+<defs><marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="sw-ah"/></marker></defs>
+<rect class="sw-lane" x="0" y="20" width="2240" height="118"/>
+<rect class="sw-lab" x="0" y="20" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="79.0" dy=".35em" text-anchor="middle">Cliente</text>
+<rect class="sw-lane alt" x="0" y="138" width="2240" height="118"/>
+<rect class="sw-lab" x="0" y="138" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="197.0" dy=".35em" text-anchor="middle">Recepcionista</text>
+<rect class="sw-lane" x="0" y="256" width="2240" height="118"/>
+<rect class="sw-lab" x="0" y="256" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="315.0" dy=".35em" text-anchor="middle">Cosmiatra</text>
+<rect class="sw-lane alt hl" x="0" y="374" width="2240" height="118"/>
+<rect class="sw-lab hl" x="0" y="374" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="425.5" dy=".35em" text-anchor="middle">CRM</text>
+<text class="sw-lt" x="55.0" y="440.5" dy=".35em" text-anchor="middle">Predictivo</text>
+<rect class="sw-lane" x="0" y="492" width="2240" height="118"/>
+<rect class="sw-lab" x="0" y="492" width="110" height="118"/>
+<text class="sw-lt" x="55.0" y="543.5" dy=".35em" text-anchor="middle">Administración</text>
+<text class="sw-lt" x="55.0" y="558.5" dy=".35em" text-anchor="middle">/ dueña</text>
+<circle class="sw-start" cx="195.0" cy="79.0" r="20"/>
+<text class="sw-cap" x="195.0" y="113.0" text-anchor="middle">Necesita un</text>
+<text class="sw-cap" x="195.0" y="126.0" text-anchor="middle">servicio</text>
+<rect class="sw-task" x="281.0" y="46.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="345.0" y="65.5" dy=".35em" text-anchor="middle">Pide cita por</text>
+<text class="sw-t" x="345.0" y="79.0" dy=".35em" text-anchor="middle">WhatsApp, llamada o</text>
+<text class="sw-t" x="345.0" y="92.5" dy=".35em" text-anchor="middle">en persona</text>
+<rect class="sw-task" x="431.0" y="164.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="495.0" y="190.25" dy=".35em" text-anchor="middle">Revisa la agenda y</text>
+<text class="sw-t" x="495.0" y="203.75" dy=".35em" text-anchor="middle">separa la cita</text>
+<rect class="sw-task" x="581.0" y="282.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="645.0" y="308.25" dy=".35em" text-anchor="middle">Consulta la ficha</text>
+<text class="sw-t" x="645.0" y="321.75" dy=".35em" text-anchor="middle">360° y atiende</text>
+<rect class="sw-task" x="731.0" y="164.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="795.0" y="183.5" dy=".35em" text-anchor="middle">Cobra y registra la</text>
+<text class="sw-t" x="795.0" y="197.0" dy=".35em" text-anchor="middle">atención en el</text>
+<text class="sw-t" x="795.0" y="210.5" dy=".35em" text-anchor="middle">mismo Excel</text>
+<rect class="sw-sys" x="881.0" y="400.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="945.0" y="426.25" dy=".35em" text-anchor="middle">Sincroniza el Excel</text>
+<text class="sw-t" x="945.0" y="439.75" dy=".35em" text-anchor="middle">automáticamente</text>
+<rect class="sw-sys" x="1031.0" y="400.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1095.0" y="419.5" dy=".35em" text-anchor="middle">Recalcula la</text>
+<text class="sw-t" x="1095.0" y="433.0" dy=".35em" text-anchor="middle">probabilidad de</text>
+<text class="sw-t" x="1095.0" y="446.5" dy=".35em" text-anchor="middle">abandono</text>
+<polygon class="sw-dec" points="1245.0,395.0 1307.0,433.0 1245.0,471.0 1183.0,433.0"/>
+<text class="sw-t" x="1245.0" y="426.25" dy=".35em" text-anchor="middle">¿Riesgo medio</text>
+<text class="sw-t" x="1245.0" y="439.75" dy=".35em" text-anchor="middle">o alto?</text>
+<circle class="sw-end" cx="1245.0" cy="551.0" r="20"/>
+<text class="sw-cap" x="1245.0" y="585.0" text-anchor="middle">Cliente sigue en</text>
+<text class="sw-cap" x="1245.0" y="598.0" text-anchor="middle">monitoreo normal</text>
+<rect class="sw-sys" x="1331.0" y="400.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1395.0" y="419.5" dy=".35em" text-anchor="middle">Crea caso con</text>
+<text class="sw-t" x="1395.0" y="433.0" dy=".35em" text-anchor="middle">prioridad y acción</text>
+<text class="sw-t" x="1395.0" y="446.5" dy=".35em" text-anchor="middle">sugerida</text>
+<rect class="sw-task" x="1481.0" y="164.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1545.0" y="176.75" dy=".35em" text-anchor="middle">Revisa la alerta,</text>
+<text class="sw-t" x="1545.0" y="190.25" dy=".35em" text-anchor="middle">edita el mensaje y</text>
+<text class="sw-t" x="1545.0" y="203.75" dy=".35em" text-anchor="middle">contacta por</text>
+<text class="sw-t" x="1545.0" y="217.25" dy=".35em" text-anchor="middle">WhatsApp</text>
+<rect class="sw-task" x="1631.0" y="46.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1695.0" y="72.25" dy=".35em" text-anchor="middle">Recibe el beneficio</text>
+<text class="sw-t" x="1695.0" y="85.75" dy=".35em" text-anchor="middle">y reserva</text>
+<rect class="sw-sys" x="1781.0" y="400.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1845.0" y="419.5" dy=".35em" text-anchor="middle">Detecta la nueva</text>
+<text class="sw-t" x="1845.0" y="433.0" dy=".35em" text-anchor="middle">visita y marca</text>
+<text class="sw-t" x="1845.0" y="446.5" dy=".35em" text-anchor="middle">«Recuperado»</text>
+<rect class="sw-task" x="1931.0" y="518.0" width="128" height="66" rx="9"/>
+<text class="sw-t" x="1995.0" y="537.5" dy=".35em" text-anchor="middle">Revisa el dashboard</text>
+<text class="sw-t" x="1995.0" y="551.0" dy=".35em" text-anchor="middle">e indicadores de</text>
+<text class="sw-t" x="1995.0" y="564.5" dy=".35em" text-anchor="middle">retención</text>
+<circle class="sw-end" cx="2145.0" cy="551.0" r="20"/>
+<text class="sw-cap" x="2145.0" y="585.0" text-anchor="middle">Decide acciones</text>
+<text class="sw-cap" x="2145.0" y="598.0" text-anchor="middle">del mes</text>
+<path class="sw-e" d="M215.0,79.0 H279.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M409.0,79.0 H420.0 V197.0 H429.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M559.0,197.0 H570.0 V315.0 H579.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M709.0,315.0 H720.0 V197.0 H729.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M859.0,197.0 H870.0 V433.0 H879.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1009.0,433.0 H1029.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1159.0,433.0 H1181.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1307.0,433.0 H1329.0" marker-end="url(#sa)"/>
+<text class="sw-el" x="1319.0" y="427.0" text-anchor="middle">Sí</text>
+<path class="sw-e" d="M1245.0,471.0 V529.0" marker-end="url(#sa)"/>
+<text class="sw-el" x="1253.0" y="511.0" text-anchor="start">No</text>
+<path class="sw-e" d="M1459.0,433.0 H1470.0 V197.0 H1479.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1609.0,197.0 H1620.0 V79.0 H1629.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1759.0,79.0 H1770.0 V433.0 H1779.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M1909.0,433.0 H1920.0 V551.0 H1929.0" marker-end="url(#sa)"/>
+<path class="sw-e" d="M2059.0,551.0 H2123.0" marker-end="url(#sa)"/>
+<g class="sw-m good"><circle cx="705.0" cy="284.0" r="10"/><text x="705.0" y="284.0" dy=".35em" text-anchor="middle">1</text></g>
+<g class="sw-m good"><circle cx="855.0" cy="166.0" r="10"/><text x="855.0" y="166.0" dy=".35em" text-anchor="middle">2</text></g>
+<g class="sw-m good"><circle cx="1155.0" cy="402.0" r="10"/><text x="1155.0" y="402.0" dy=".35em" text-anchor="middle">3</text></g>
+<g class="sw-m good"><circle cx="1455.0" cy="402.0" r="10"/><text x="1455.0" y="402.0" dy=".35em" text-anchor="middle">4</text></g>
+<g class="sw-m good"><circle cx="1605.0" cy="166.0" r="10"/><text x="1605.0" y="166.0" dy=".35em" text-anchor="middle">5</text></g>
+<g class="sw-m good"><circle cx="1905.0" cy="402.0" r="10"/><text x="1905.0" y="402.0" dy=".35em" text-anchor="middle">6</text></g>
+<g class="sw-m good"><circle cx="2055.0" cy="520.0" r="10"/><text x="2055.0" y="520.0" dy=".35em" text-anchor="middle">7</text></g>
+</svg>
+</div>
+</div>
+<div class="pains good">
+<div class="pain"><b>1</b><p><strong>Atención informada.</strong> La cosmiatra ve la ficha 360° del cliente antes del servicio.</p></div>
+<div class="pain"><b>2</b><p><strong>Sin doble registro.</strong> Se sigue usando el mismo Excel; el CRM lo lee solo.</p></div>
+<div class="pain"><b>3</b><p><strong>Riesgo calculado.</strong> Cada cliente tiene su probabilidad de abandono actualizada.</p></div>
+<div class="pain"><b>4</b><p><strong>Alertas priorizadas.</strong> El CRM crea el caso con prioridad, motivo y acción sugerida.</p></div>
+<div class="pain"><b>5</b><p><strong>Contacto personalizado.</strong> Mensaje editable por WhatsApp, con consentimiento y confirmación humana.</p></div>
+<div class="pain"><b>6</b><p><strong>Recuperación medida.</strong> El CRM detecta la nueva visita y marca el caso como recuperado.</p></div>
+<div class="pain"><b>7</b><p><strong>Decisiones con datos.</strong> La dueña revisa indicadores de retención en el dashboard.</p></div>
+</div>
+<h4>Comparación AS-IS frente a TO-BE</h4>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Aspecto</th><th>AS-IS (hoy)</th><th>TO-BE (con el CRM)</th></tr></thead>
+<tbody>
+<tr><td>Registro de atenciones</td><td>Excel manual</td><td>El mismo Excel, sincronizado automáticamente</td></tr>
+<tr><td>Información del cliente en la atención</td><td>Depende de la memoria del personal</td><td>Ficha 360° con historial, gasto y última visita</td></tr>
+<tr><td>Detección de clientes en riesgo</td><td>No existe</td><td>Probabilidad de abandono y nivel de riesgo por cliente</td></tr>
+<tr><td>Seguimiento postventa</td><td>No sistemático</td><td>Casos de retención con prioridad, responsable y fecha límite</td></tr>
+<tr><td>Contacto con el cliente</td><td>Promociones generales</td><td>Mensaje personalizado según el motivo de riesgo</td></tr>
+<tr><td>Medición de resultados</td><td>No se mide la retención</td><td>Casos recuperados e ingreso recuperado en el dashboard</td></tr>
+<tr><td>Datos personales</td><td>Sin control de acceso ni consentimiento</td><td>Usuarios por rol, respaldo diario y consentimiento registrado</td></tr>
+</tbody></table></div>
+
+<h3 id="inicio/producto"><span class="num">1.3</span>La solución que se va a implementar</h3>
 <p>El producto del proyecto es el <strong>CRM Predictivo y Retención Postventa — Spa ESSENZA</strong>: una aplicación web de uso local que leerá el Excel operacional, consolidará las atenciones por cliente, calculará la probabilidad de abandono con un modelo de machine learning y organizará la respuesta del equipo en un Centro de Retención. La arquitectura prevista es la siguiente:</p>
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Componente</th><th>Tecnología prevista</th><th>Qué hará en el spa</th></tr></thead>
@@ -303,7 +533,7 @@ h3{font-size:22px}
 <div class="eyebrow" style="margin-bottom:10px">Situación de partida · registro histórico del spa</div>
 <div class="facts" style="margin-top:6px"><div class="fact"><div class="k">Clientes</div><div class="v">420</div></div><div class="fact"><div class="k">Atenciones registradas</div><div class="v">2 500</div></div><div class="fact"><div class="k">Sin visita &gt; 120 días</div><div class="v">29,8 %</div></div><div class="fact"><div class="k">Satisfacción promedio</div><div class="v">4,35 / 5</div></div></div>
 <p class="small" style="margin:12px 0 0">Estos datos son la base para entrenar el modelo y para medir, al final del proyecto, si el CRM ayuda a recuperar clientes.</p></div>
-<h3 id="inicio/brechas"><span class="num">1.3</span>Requisitos de alto nivel</h3>
+<h3 id="inicio/brechas"><span class="num">1.4</span>Requisitos de alto nivel</h3>
 <p>Requisitos que la solución debe cumplir para ser aceptada por la patrocinadora. Se detallarán y trazarán en la documentación de requisitos.</p>
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Código</th><th>Requisito</th><th>Cómo se verificará</th></tr></thead>
@@ -317,7 +547,7 @@ h3{font-size:22px}
 <tr><td>RQ-07</td><td>Cumplir la Ley N.° 29733 de Protección de Datos Personales.</td><td>Consentimiento registrado antes de habilitar el contacto.</td></tr>
 </tbody>
 </table></div>
-<h3 id="inicio/objetivos"><span class="num">1.4</span>Objetivos y alcance de la implementación</h3>
+<h3 id="inicio/objetivos"><span class="num">1.5</span>Objetivos y alcance de la implementación</h3>
 <div class="callout"><p><strong>Objetivo general.</strong> Desarrollar e implementar en Essenza SPA un CRM web que prediga el riesgo de abandono de los clientes y apoye su retención postventa, con usuarias capacitadas y aceptación formal de la patrocinadora, entre noviembre de 2026 y marzo de 2027.</p></div>
 <h4>Objetivos específicos y criterios de éxito</h4>
 <div class="tblwrap"><table class="tbl">
@@ -359,7 +589,7 @@ h3{font-size:22px}
 <div class="card"><p class="small" style="margin-bottom:6px"><strong>Restricciones</strong></p>
 <ul class="clean"><li>Operación local, sin servidores en la nube.</li><li>Equipo reducido y con dedicación parcial.</li><li>Las pruebas y la puesta en marcha no deben interrumpir la atención al público.</li><li>Cumplimiento de la Ley N.° 29733.</li></ul></div>
 </div>
-<h3 id="inicio/interesados"><span class="num">1.5</span>Interesados y roles en la implementación</h3>
+<h3 id="inicio/interesados"><span class="num">1.6</span>Interesados y roles en la implementación</h3>
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Interesado</th><th>Rol en este proyecto</th><th>Qué necesita del proyecto</th></tr></thead>
 <tbody>
@@ -372,7 +602,7 @@ h3{font-size:22px}
 <tr><td>Docente del curso</td><td>Evaluador académico</td><td>Aplicación rigurosa de la Guía PMBOK® 8 y evidencias verificables.</td></tr>
 </tbody>
 </table></div>
-<h3 id="inicio/ciclo"><span class="num">1.6</span>Ciclo de vida de la implementación e hitos</h3>
+<h3 id="inicio/ciclo"><span class="num">1.7</span>Ciclo de vida de la implementación e hitos</h3>
 <p>Se adopta un ciclo de vida <strong>híbrido</strong>: fases planificadas de forma predictiva para cumplir hitos y presupuesto, y construcción por incrementos con una demostración a la usuaria líder al final de cada fase de desarrollo. Las fechas son la propuesta inicial y se formalizarán en la línea base del cronograma.</p>
 <div class="tl">
 <div class="tl-i ms"><div class="d">02/11/2026</div><div class="t">H0 · Reunión de inicio del proyecto</div></div>
@@ -389,7 +619,7 @@ h3{font-size:22px}
 <div class="tl-i"><div class="d">15/03 – 26/03</div><div class="t">F7 · Estabilización y cierre</div><p>Soporte asistido, transición a la administradora, informe final y lecciones aprendidas.</p></div>
 <div class="tl-i ms"><div class="d">26/03/2027</div><div class="t">H5 · Acta de aceptación y cierre del proyecto</div></div>
 </div>
-<h3 id="inicio/enfoque"><span class="num">1.7</span>Enfoque de dirección: Guía PMBOK® 8</h3>
+<h3 id="inicio/enfoque"><span class="num">1.8</span>Enfoque de dirección: Guía PMBOK® 8</h3>
 <p>La octava edición de la Guía PMBOK® organiza la dirección de proyectos en <strong>6 principios</strong>, <strong>7 dominios de desempeño</strong> y <strong>5 áreas de enfoque</strong>, y vuelve a describir <strong>40 procesos</strong> como orientación no prescriptiva. Este blog usa esa estructura de forma explícita.</p>
 <div class="grid2">
 <div class="card"><h4>6 principios</h4><ul class="clean">
