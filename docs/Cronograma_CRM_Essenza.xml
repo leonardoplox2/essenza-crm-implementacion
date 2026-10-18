@@ -42,7 +42,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2026-10-17T23:11:49</CurrentDate>
+    <CurrentDate>2026-10-18T01:12:10</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -499,7 +499,9 @@
             <LateFinish>2026-09-15T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -545,7 +547,9 @@
             <LateFinish>2026-09-16T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -598,7 +602,9 @@
             <LateFinish>2026-09-17T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -755,7 +761,9 @@
             <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -811,7 +819,9 @@
             <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -868,7 +878,9 @@
             <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -924,7 +936,9 @@
             <FinishSlack>24000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1037,7 +1051,9 @@
             <FinishSlack>24000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>151200</Cost>
             <RemainingDuration>PT504H0M0S</RemainingDuration>
+            <RemainingCost>151200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1095,7 +1111,9 @@
             <FinishSlack>24000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>151200</Cost>
             <RemainingDuration>PT504H0M0S</RemainingDuration>
+            <RemainingCost>151200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1153,7 +1171,9 @@
             <FinishSlack>24000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>151200</Cost>
             <RemainingDuration>PT504H0M0S</RemainingDuration>
+            <RemainingCost>151200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1211,7 +1231,9 @@
             <FinishSlack>24000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>151200</Cost>
             <RemainingDuration>PT504H0M0S</RemainingDuration>
+            <RemainingCost>151200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1310,7 +1332,9 @@
             <LateFinish>2027-01-13T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1363,7 +1387,9 @@
             <LateFinish>2027-01-14T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1416,7 +1442,9 @@
             <LateFinish>2027-01-15T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1607,7 +1635,9 @@
             <LateFinish>2026-09-18T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>28000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>28000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1660,7 +1690,9 @@
             <LateFinish>2026-09-21T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1713,7 +1745,9 @@
             <LateFinish>2026-09-22T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1766,7 +1800,9 @@
             <LateFinish>2026-09-23T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1864,7 +1900,9 @@
             <LateFinish>2026-09-24T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1917,7 +1955,9 @@
             <LateFinish>2026-09-25T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1970,7 +2010,9 @@
             <LateFinish>2026-09-28T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2023,7 +2065,9 @@
             <LateFinish>2026-09-29T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2121,7 +2165,9 @@
             <LateFinish>2026-09-30T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2174,7 +2220,9 @@
             <LateFinish>2026-10-01T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2227,7 +2275,9 @@
             <LateFinish>2026-10-02T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2280,7 +2330,9 @@
             <LateFinish>2026-10-05T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2378,7 +2430,9 @@
             <LateFinish>2026-09-30T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2431,7 +2485,9 @@
             <LateFinish>2026-10-01T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2484,7 +2540,9 @@
             <LateFinish>2026-10-02T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2537,7 +2595,9 @@
             <LateFinish>2026-10-05T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2639,7 +2699,9 @@
             <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2695,7 +2757,9 @@
             <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2752,7 +2816,9 @@
             <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2957,7 +3023,9 @@
             <LateFinish>2026-10-06T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3010,7 +3078,9 @@
             <LateFinish>2026-10-07T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3063,7 +3133,9 @@
             <LateFinish>2026-10-09T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3161,7 +3233,9 @@
             <LateFinish>2026-10-12T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3214,7 +3288,9 @@
             <LateFinish>2026-10-13T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3267,7 +3343,9 @@
             <LateFinish>2026-10-14T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3320,7 +3398,9 @@
             <LateFinish>2026-10-15T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3418,7 +3498,9 @@
             <LateFinish>2026-10-16T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3471,7 +3553,9 @@
             <LateFinish>2026-10-20T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>40000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>40000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3524,7 +3608,9 @@
             <LateFinish>2026-10-21T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3577,7 +3663,9 @@
             <LateFinish>2026-10-22T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3675,7 +3763,9 @@
             <LateFinish>2026-10-23T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3728,7 +3818,9 @@
             <LateFinish>2026-10-27T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>40000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>40000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3781,7 +3873,9 @@
             <LateFinish>2026-10-30T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>60000</Cost>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <RemainingCost>60000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3834,7 +3928,9 @@
             <LateFinish>2026-11-02T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3932,7 +4028,9 @@
             <LateFinish>2026-11-03T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -3985,7 +4083,9 @@
             <LateFinish>2026-11-04T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4038,7 +4138,9 @@
             <LateFinish>2026-11-05T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>40000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>40000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4091,7 +4193,9 @@
             <LateFinish>2026-11-06T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>20000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>20000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4290,7 +4394,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4346,7 +4452,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4402,7 +4510,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4507,7 +4617,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4570,7 +4682,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4626,7 +4740,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4731,7 +4847,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4787,7 +4905,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4843,7 +4963,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -4941,7 +5063,9 @@
             <LateFinish>2026-11-09T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>37600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>37600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5001,7 +5125,9 @@
             <LateFinish>2026-11-10T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5054,7 +5180,9 @@
             <LateFinish>2026-11-11T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5107,7 +5235,9 @@
             <LateFinish>2026-11-12T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5212,7 +5342,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>35200</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>35200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5268,7 +5400,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5324,7 +5458,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>35200</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>35200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5380,7 +5516,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5530,7 +5668,9 @@
             <FinishSlack>52800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5593,7 +5733,9 @@
             <FinishSlack>52800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5650,7 +5792,9 @@
             <FinishSlack>52800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5755,7 +5899,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>32000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>32000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5818,7 +5964,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>32000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>32000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5874,7 +6022,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -5979,7 +6129,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>32000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>32000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6035,7 +6187,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>48000</Cost>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <RemainingCost>48000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6091,7 +6245,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6196,7 +6352,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>32000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>32000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6252,7 +6410,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6309,7 +6469,9 @@
             <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6456,7 +6618,9 @@
             <FinishSlack>43200</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6512,7 +6676,9 @@
             <FinishSlack>43200</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6569,7 +6735,9 @@
             <FinishSlack>43200</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6667,7 +6835,9 @@
             <LateFinish>2026-11-13T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6727,7 +6897,9 @@
             <LateFinish>2026-11-17T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>75200</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>75200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6780,7 +6952,9 @@
             <LateFinish>2026-11-18T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6833,7 +7007,9 @@
             <LateFinish>2026-11-19T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6931,7 +7107,9 @@
             <LateFinish>2026-11-23T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>32000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>32000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -6991,7 +7169,9 @@
             <LateFinish>2026-11-25T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>32000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>32000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7044,7 +7224,9 @@
             <LateFinish>2026-11-26T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7142,7 +7324,9 @@
             <LateFinish>2026-11-27T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7195,7 +7379,9 @@
             <LateFinish>2026-11-30T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7248,7 +7434,9 @@
             <LateFinish>2026-12-01T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7398,7 +7586,9 @@
             <FinishSlack>168000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7454,7 +7644,9 @@
             <FinishSlack>168000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>25600</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>25600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7511,7 +7703,9 @@
             <FinishSlack>168000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7614,7 +7808,9 @@
             <FinishSlack>96000</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>38400</Cost>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <RemainingCost>38400</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7678,7 +7874,9 @@
             <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>25600</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>25600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7738,7 +7936,9 @@
             <LateFinish>2026-12-03T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>25600</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>25600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7902,7 +8102,9 @@
             <LateFinish>2026-12-07T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>25600</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>25600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -7955,7 +8157,9 @@
             <LateFinish>2026-12-10T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8008,7 +8212,9 @@
             <LateFinish>2026-12-11T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8113,7 +8319,9 @@
             <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8169,7 +8377,9 @@
             <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8226,7 +8436,9 @@
             <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8366,7 +8578,9 @@
             <LateFinish>2026-12-14T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8419,7 +8633,9 @@
             <LateFinish>2026-12-15T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8472,7 +8688,9 @@
             <LateFinish>2026-12-16T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8525,7 +8743,9 @@
             <LateFinish>2026-12-17T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>17600</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>17600</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8630,7 +8850,9 @@
             <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8686,7 +8908,9 @@
             <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>32000</Cost>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <RemainingCost>32000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8743,7 +8967,9 @@
             <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8841,7 +9067,9 @@
             <LateFinish>2026-12-18T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8908,7 +9136,9 @@
             <LateFinish>2026-12-21T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -8961,7 +9191,9 @@
             <LateFinish>2026-12-22T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -9014,7 +9246,9 @@
             <LateFinish>2026-12-23T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>12800</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>12800</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -9112,7 +9346,9 @@
             <LateFinish>2026-12-24T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -9217,7 +9453,9 @@
             <LateFinish>2027-01-07T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>371200</Cost>
             <RemainingDuration>PT64H0M0S</RemainingDuration>
+            <RemainingCost>371200</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -9270,7 +9508,9 @@
             <LateFinish>2027-01-08T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>16000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>16000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -9368,7 +9608,9 @@
             <LateFinish>2027-01-11T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -9421,7 +9663,9 @@
             <LateFinish>2027-01-12T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
+            <Cost>24000</Cost>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
+            <RemainingCost>24000</RemainingCost>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -9457,7 +9701,9 @@
             <Start>2026-09-15T08:00:00</Start>
             <Finish>2027-01-15T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>30</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>30</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>2</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9479,7 +9725,9 @@
             <Start>2026-09-18T08:00:00</Start>
             <Finish>2027-01-08T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>20</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>20</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>3</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9501,7 +9749,9 @@
             <Start>2026-10-06T08:00:00</Start>
             <Finish>2026-11-17T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>25</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>25</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>4</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9523,7 +9773,9 @@
             <Start>2026-09-30T08:00:00</Start>
             <Finish>2027-01-07T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>22</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>22</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>5</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9545,7 +9797,9 @@
             <Start>2026-09-30T08:00:00</Start>
             <Finish>2027-01-07T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>20</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>20</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>6</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9567,7 +9821,9 @@
             <Start>2026-09-30T08:00:00</Start>
             <Finish>2027-01-07T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>16</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>16</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>7</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9589,7 +9845,9 @@
             <Start>2026-09-18T08:00:00</Start>
             <Finish>2026-12-18T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>15</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>15</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>8</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9611,7 +9869,9 @@
             <Start>2026-11-05T08:00:00</Start>
             <Finish>2026-11-05T17:00:00</Finish>
             <CanLevel>0</CanLevel>
+            <StandardRate>25</StandardRate>
             <StandardRateFormat>2</StandardRateFormat>
+            <OvertimeRate>25</OvertimeRate>
             <OvertimeRateFormat>2</OvertimeRateFormat>
             <CalendarUID>9</CalendarUID>
             <IsGeneric>0</IsGeneric>
@@ -9626,10 +9886,12 @@
             <TaskUID>4</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-09-15T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-15T08:00:00</Start>
             <Units>1</Units>
@@ -9640,10 +9902,12 @@
             <TaskUID>5</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-09-16T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-16T08:00:00</Start>
             <Units>1</Units>
@@ -9654,10 +9918,12 @@
             <TaskUID>6</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-09-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-17T08:00:00</Start>
             <Units>1</Units>
@@ -9668,10 +9934,12 @@
             <TaskUID>9</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-09-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-30T08:00:00</Start>
             <Units>1</Units>
@@ -9682,10 +9950,12 @@
             <TaskUID>10</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-10-01T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-01T08:00:00</Start>
             <Units>1</Units>
@@ -9696,10 +9966,12 @@
             <TaskUID>11</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-10-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-02T08:00:00</Start>
             <Units>1</Units>
@@ -9710,10 +9982,12 @@
             <TaskUID>12</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-10-06T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-06T08:00:00</Start>
             <Units>1</Units>
@@ -9724,10 +9998,12 @@
             <TaskUID>14</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>151200</Cost>
             <Finish>2027-01-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>151200</RemainingCost>
             <RemainingWork>PT50H24M0S</RemainingWork>
             <Start>2026-10-07T08:00:00</Start>
             <Units>0.1</Units>
@@ -9738,10 +10014,12 @@
             <TaskUID>15</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>151200</Cost>
             <Finish>2027-01-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>151200</RemainingCost>
             <RemainingWork>PT50H24M0S</RemainingWork>
             <Start>2026-10-07T08:00:00</Start>
             <Units>0.1</Units>
@@ -9752,10 +10030,12 @@
             <TaskUID>16</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>151200</Cost>
             <Finish>2027-01-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>151200</RemainingCost>
             <RemainingWork>PT50H24M0S</RemainingWork>
             <Start>2026-10-07T08:00:00</Start>
             <Units>0.1</Units>
@@ -9766,10 +10046,12 @@
             <TaskUID>17</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>151200</Cost>
             <Finish>2027-01-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>151200</RemainingCost>
             <RemainingWork>PT50H24M0S</RemainingWork>
             <Start>2026-10-07T08:00:00</Start>
             <Units>0.1</Units>
@@ -9780,10 +10062,12 @@
             <TaskUID>19</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2027-01-13T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2027-01-13T08:00:00</Start>
             <Units>1</Units>
@@ -9794,10 +10078,12 @@
             <TaskUID>20</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2027-01-14T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2027-01-14T08:00:00</Start>
             <Units>1</Units>
@@ -9808,10 +10094,12 @@
             <TaskUID>21</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2027-01-15T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2027-01-15T08:00:00</Start>
             <Units>1</Units>
@@ -9822,10 +10110,12 @@
             <TaskUID>25</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-18T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-18T08:00:00</Start>
             <Units>1</Units>
@@ -9836,10 +10126,12 @@
             <TaskUID>25</TaskUID>
             <ResourceUID>7</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12000</Cost>
             <Finish>2026-09-18T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-18T08:00:00</Start>
             <Units>1</Units>
@@ -9850,10 +10142,12 @@
             <TaskUID>26</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-21T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-21T08:00:00</Start>
             <Units>1</Units>
@@ -9864,10 +10158,12 @@
             <TaskUID>27</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-22T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-22T08:00:00</Start>
             <Units>1</Units>
@@ -9878,10 +10174,12 @@
             <TaskUID>28</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-23T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-23T08:00:00</Start>
             <Units>1</Units>
@@ -9892,10 +10190,12 @@
             <TaskUID>30</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-24T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-24T08:00:00</Start>
             <Units>1</Units>
@@ -9906,10 +10206,12 @@
             <TaskUID>31</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-25T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-25T08:00:00</Start>
             <Units>1</Units>
@@ -9920,10 +10222,12 @@
             <TaskUID>32</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-28T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-28T08:00:00</Start>
             <Units>1</Units>
@@ -9934,10 +10238,12 @@
             <TaskUID>33</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-29T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-29T08:00:00</Start>
             <Units>1</Units>
@@ -9948,10 +10254,12 @@
             <TaskUID>35</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-09-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-30T08:00:00</Start>
             <Units>1</Units>
@@ -9962,10 +10270,12 @@
             <TaskUID>36</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-01T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-01T08:00:00</Start>
             <Units>1</Units>
@@ -9976,10 +10286,12 @@
             <TaskUID>37</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-02T08:00:00</Start>
             <Units>1</Units>
@@ -9990,10 +10302,12 @@
             <TaskUID>38</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-05T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-05T08:00:00</Start>
             <Units>1</Units>
@@ -10004,10 +10318,12 @@
             <TaskUID>40</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-30T08:00:00</Start>
             <Units>1</Units>
@@ -10018,10 +10334,12 @@
             <TaskUID>41</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-01T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-01T08:00:00</Start>
             <Units>1</Units>
@@ -10032,10 +10350,12 @@
             <TaskUID>42</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-02T08:00:00</Start>
             <Units>1</Units>
@@ -10046,10 +10366,12 @@
             <TaskUID>43</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-05T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-05T08:00:00</Start>
             <Units>1</Units>
@@ -10060,10 +10382,12 @@
             <TaskUID>45</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-09-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-30T08:00:00</Start>
             <Units>1</Units>
@@ -10074,10 +10398,12 @@
             <TaskUID>46</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-01T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-01T08:00:00</Start>
             <Units>1</Units>
@@ -10088,10 +10414,12 @@
             <TaskUID>47</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-02T08:00:00</Start>
             <Units>1</Units>
@@ -10102,10 +10430,12 @@
             <TaskUID>51</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-06T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-06T08:00:00</Start>
             <Units>1</Units>
@@ -10116,10 +10446,12 @@
             <TaskUID>52</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-07T08:00:00</Start>
             <Units>1</Units>
@@ -10130,10 +10462,12 @@
             <TaskUID>53</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-09T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-09T08:00:00</Start>
             <Units>1</Units>
@@ -10144,10 +10478,12 @@
             <TaskUID>55</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-12T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-12T08:00:00</Start>
             <Units>1</Units>
@@ -10158,10 +10494,12 @@
             <TaskUID>56</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-13T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-13T08:00:00</Start>
             <Units>1</Units>
@@ -10172,10 +10510,12 @@
             <TaskUID>57</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-14T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-14T08:00:00</Start>
             <Units>1</Units>
@@ -10186,10 +10526,12 @@
             <TaskUID>58</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-15T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-15T08:00:00</Start>
             <Units>1</Units>
@@ -10200,10 +10542,12 @@
             <TaskUID>60</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-16T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-16T08:00:00</Start>
             <Units>1</Units>
@@ -10214,10 +10558,12 @@
             <TaskUID>61</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>40000</Cost>
             <Finish>2026-10-20T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>40000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-10-19T08:00:00</Start>
             <Units>1</Units>
@@ -10228,10 +10574,12 @@
             <TaskUID>62</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-21T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-21T08:00:00</Start>
             <Units>1</Units>
@@ -10242,10 +10590,12 @@
             <TaskUID>63</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-22T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-22T08:00:00</Start>
             <Units>1</Units>
@@ -10256,10 +10606,12 @@
             <TaskUID>65</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-10-23T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-23T08:00:00</Start>
             <Units>1</Units>
@@ -10270,10 +10622,12 @@
             <TaskUID>66</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>40000</Cost>
             <Finish>2026-10-27T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>40000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-10-26T08:00:00</Start>
             <Units>1</Units>
@@ -10284,10 +10638,12 @@
             <TaskUID>67</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>60000</Cost>
             <Finish>2026-10-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>60000</RemainingCost>
             <RemainingWork>PT24H0M0S</RemainingWork>
             <Start>2026-10-28T08:00:00</Start>
             <Units>1</Units>
@@ -10298,10 +10654,12 @@
             <TaskUID>68</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-11-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-02T08:00:00</Start>
             <Units>1</Units>
@@ -10312,10 +10670,12 @@
             <TaskUID>70</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-11-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-03T08:00:00</Start>
             <Units>1</Units>
@@ -10326,10 +10686,12 @@
             <TaskUID>71</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-11-04T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-04T08:00:00</Start>
             <Units>1</Units>
@@ -10340,10 +10702,12 @@
             <TaskUID>72</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-11-05T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-05T08:00:00</Start>
             <Units>1</Units>
@@ -10354,10 +10718,12 @@
             <TaskUID>72</TaskUID>
             <ResourceUID>8</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-11-05T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-05T08:00:00</Start>
             <Units>1</Units>
@@ -10368,10 +10734,12 @@
             <TaskUID>73</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-11-06T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-06T08:00:00</Start>
             <Units>1</Units>
@@ -10382,10 +10750,12 @@
             <TaskUID>77</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-06T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-06T08:00:00</Start>
             <Units>1</Units>
@@ -10396,10 +10766,12 @@
             <TaskUID>78</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-07T08:00:00</Start>
             <Units>1</Units>
@@ -10410,10 +10782,12 @@
             <TaskUID>79</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-09T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-09T08:00:00</Start>
             <Units>1</Units>
@@ -10424,10 +10798,12 @@
             <TaskUID>81</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-12T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-12T08:00:00</Start>
             <Units>1</Units>
@@ -10438,10 +10814,12 @@
             <TaskUID>82</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-13T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-13T08:00:00</Start>
             <Units>1</Units>
@@ -10452,10 +10830,12 @@
             <TaskUID>83</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-14T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-14T08:00:00</Start>
             <Units>1</Units>
@@ -10466,10 +10846,12 @@
             <TaskUID>85</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-15T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-15T08:00:00</Start>
             <Units>1</Units>
@@ -10480,10 +10862,12 @@
             <TaskUID>86</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-16T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-16T08:00:00</Start>
             <Units>1</Units>
@@ -10494,10 +10878,12 @@
             <TaskUID>87</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-19T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-19T08:00:00</Start>
             <Units>1</Units>
@@ -10508,10 +10894,12 @@
             <TaskUID>89</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-11-09T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-09T08:00:00</Start>
             <Units>1</Units>
@@ -10522,10 +10910,12 @@
             <TaskUID>89</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>20000</Cost>
             <Finish>2026-11-09T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>20000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-09T08:00:00</Start>
             <Units>1</Units>
@@ -10536,10 +10926,12 @@
             <TaskUID>90</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-11-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-10T08:00:00</Start>
             <Units>1</Units>
@@ -10550,10 +10942,12 @@
             <TaskUID>91</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-11-11T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-11T08:00:00</Start>
             <Units>1</Units>
@@ -10564,10 +10958,12 @@
             <TaskUID>92</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-11-12T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-12T08:00:00</Start>
             <Units>1</Units>
@@ -10578,10 +10974,12 @@
             <TaskUID>94</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>35200</Cost>
             <Finish>2026-10-21T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>35200</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-10-20T08:00:00</Start>
             <Units>1</Units>
@@ -10592,10 +10990,12 @@
             <TaskUID>95</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-22T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-22T08:00:00</Start>
             <Units>1</Units>
@@ -10606,10 +11006,12 @@
             <TaskUID>96</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>35200</Cost>
             <Finish>2026-10-26T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>35200</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-10-23T08:00:00</Start>
             <Units>1</Units>
@@ -10620,10 +11022,12 @@
             <TaskUID>97</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-27T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-27T08:00:00</Start>
             <Units>1</Units>
@@ -10634,10 +11038,12 @@
             <TaskUID>100</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-12T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-12T08:00:00</Start>
             <Units>1</Units>
@@ -10648,10 +11054,12 @@
             <TaskUID>101</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-13T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-13T08:00:00</Start>
             <Units>1</Units>
@@ -10662,10 +11070,12 @@
             <TaskUID>102</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-10-14T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-14T08:00:00</Start>
             <Units>1</Units>
@@ -10676,10 +11086,12 @@
             <TaskUID>104</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>32000</Cost>
             <Finish>2026-10-29T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>32000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-10-28T08:00:00</Start>
             <Units>1</Units>
@@ -10690,10 +11102,12 @@
             <TaskUID>105</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>32000</Cost>
             <Finish>2026-11-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>32000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-10-30T08:00:00</Start>
             <Units>1</Units>
@@ -10704,10 +11118,12 @@
             <TaskUID>106</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-11-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-03T08:00:00</Start>
             <Units>1</Units>
@@ -10718,10 +11134,12 @@
             <TaskUID>108</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>32000</Cost>
             <Finish>2026-11-05T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>32000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-04T08:00:00</Start>
             <Units>1</Units>
@@ -10732,10 +11150,12 @@
             <TaskUID>109</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>48000</Cost>
             <Finish>2026-11-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>48000</RemainingCost>
             <RemainingWork>PT24H0M0S</RemainingWork>
             <Start>2026-11-06T08:00:00</Start>
             <Units>1</Units>
@@ -10746,10 +11166,12 @@
             <TaskUID>110</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-11-11T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-11T08:00:00</Start>
             <Units>1</Units>
@@ -10760,10 +11182,12 @@
             <TaskUID>112</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>32000</Cost>
             <Finish>2026-11-13T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>32000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-12T08:00:00</Start>
             <Units>1</Units>
@@ -10774,10 +11198,12 @@
             <TaskUID>113</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-11-16T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-16T08:00:00</Start>
             <Units>1</Units>
@@ -10788,10 +11214,12 @@
             <TaskUID>114</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-11-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-17T08:00:00</Start>
             <Units>1</Units>
@@ -10802,10 +11230,12 @@
             <TaskUID>117</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-28T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-28T08:00:00</Start>
             <Units>1</Units>
@@ -10816,10 +11246,12 @@
             <TaskUID>118</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-29T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-29T08:00:00</Start>
             <Units>1</Units>
@@ -10830,10 +11262,12 @@
             <TaskUID>119</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-10-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-30T08:00:00</Start>
             <Units>1</Units>
@@ -10844,10 +11278,12 @@
             <TaskUID>121</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-11-13T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-13T08:00:00</Start>
             <Units>1</Units>
@@ -10858,10 +11294,12 @@
             <TaskUID>122</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>35200</Cost>
             <Finish>2026-11-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>35200</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-16T08:00:00</Start>
             <Units>1</Units>
@@ -10872,10 +11310,12 @@
             <TaskUID>122</TaskUID>
             <ResourceUID>3</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>40000</Cost>
             <Finish>2026-11-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>40000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-16T08:00:00</Start>
             <Units>1</Units>
@@ -10886,10 +11326,12 @@
             <TaskUID>123</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-11-18T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-18T08:00:00</Start>
             <Units>1</Units>
@@ -10900,10 +11342,12 @@
             <TaskUID>124</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-11-19T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-19T08:00:00</Start>
             <Units>1</Units>
@@ -10914,10 +11358,12 @@
             <TaskUID>126</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>32000</Cost>
             <Finish>2026-11-23T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>32000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-20T08:00:00</Start>
             <Units>1</Units>
@@ -10928,10 +11374,12 @@
             <TaskUID>127</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>32000</Cost>
             <Finish>2026-11-25T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>32000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-24T08:00:00</Start>
             <Units>1</Units>
@@ -10942,10 +11390,12 @@
             <TaskUID>128</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-11-26T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-26T08:00:00</Start>
             <Units>1</Units>
@@ -10956,10 +11406,12 @@
             <TaskUID>130</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-11-27T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-27T08:00:00</Start>
             <Units>1</Units>
@@ -10970,10 +11422,12 @@
             <TaskUID>131</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-11-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-11-30T08:00:00</Start>
             <Units>1</Units>
@@ -10984,10 +11438,12 @@
             <TaskUID>132</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-12-01T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-01T08:00:00</Start>
             <Units>1</Units>
@@ -10998,10 +11454,12 @@
             <TaskUID>135</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-09-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-09-30T08:00:00</Start>
             <Units>1</Units>
@@ -11012,10 +11470,12 @@
             <TaskUID>136</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>25600</Cost>
             <Finish>2026-10-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>25600</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-10-01T08:00:00</Start>
             <Units>1</Units>
@@ -11026,10 +11486,12 @@
             <TaskUID>137</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-10-05T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-10-05T08:00:00</Start>
             <Units>1</Units>
@@ -11040,10 +11502,12 @@
             <TaskUID>139</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>38400</Cost>
             <Finish>2026-10-30T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>38400</RemainingCost>
             <RemainingWork>PT24H0M0S</RemainingWork>
             <Start>2026-10-28T08:00:00</Start>
             <Units>1</Units>
@@ -11054,10 +11518,12 @@
             <TaskUID>140</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>25600</Cost>
             <Finish>2026-11-23T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>25600</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-11-20T08:00:00</Start>
             <Units>1</Units>
@@ -11068,10 +11534,12 @@
             <TaskUID>141</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>25600</Cost>
             <Finish>2026-12-03T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>25600</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-12-02T08:00:00</Start>
             <Units>1</Units>
@@ -11082,10 +11550,12 @@
             <TaskUID>144</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>25600</Cost>
             <Finish>2026-12-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>25600</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-12-04T08:00:00</Start>
             <Units>1</Units>
@@ -11096,10 +11566,12 @@
             <TaskUID>145</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-10T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-10T08:00:00</Start>
             <Units>1</Units>
@@ -11110,10 +11582,12 @@
             <TaskUID>146</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-11T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-11T08:00:00</Start>
             <Units>1</Units>
@@ -11124,10 +11598,12 @@
             <TaskUID>148</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-14T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-14T08:00:00</Start>
             <Units>1</Units>
@@ -11138,10 +11614,12 @@
             <TaskUID>148</TaskUID>
             <ResourceUID>7</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12000</Cost>
             <Finish>2026-12-14T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-14T08:00:00</Start>
             <Units>1</Units>
@@ -11152,10 +11630,12 @@
             <TaskUID>149</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-15T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-15T08:00:00</Start>
             <Units>1</Units>
@@ -11166,10 +11646,12 @@
             <TaskUID>150</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-16T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-16T08:00:00</Start>
             <Units>1</Units>
@@ -11180,10 +11662,12 @@
             <TaskUID>150</TaskUID>
             <ResourceUID>7</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12000</Cost>
             <Finish>2026-12-16T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-16T08:00:00</Start>
             <Units>1</Units>
@@ -11194,10 +11678,12 @@
             <TaskUID>153</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-12-14T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-14T08:00:00</Start>
             <Units>1</Units>
@@ -11208,10 +11694,12 @@
             <TaskUID>154</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-12-15T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-15T08:00:00</Start>
             <Units>1</Units>
@@ -11222,10 +11710,12 @@
             <TaskUID>155</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-12-16T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-16T08:00:00</Start>
             <Units>1</Units>
@@ -11236,10 +11726,12 @@
             <TaskUID>156</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>17600</Cost>
             <Finish>2026-12-17T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>17600</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-17T08:00:00</Start>
             <Units>1</Units>
@@ -11250,10 +11742,12 @@
             <TaskUID>158</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-12-02T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-02T08:00:00</Start>
             <Units>1</Units>
@@ -11264,10 +11758,12 @@
             <TaskUID>159</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>32000</Cost>
             <Finish>2026-12-04T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>32000</RemainingCost>
             <RemainingWork>PT16H0M0S</RemainingWork>
             <Start>2026-12-03T08:00:00</Start>
             <Units>1</Units>
@@ -11278,10 +11774,12 @@
             <TaskUID>160</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2026-12-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-07T08:00:00</Start>
             <Units>1</Units>
@@ -11292,10 +11790,12 @@
             <TaskUID>162</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-18T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-18T08:00:00</Start>
             <Units>1</Units>
@@ -11306,10 +11806,12 @@
             <TaskUID>162</TaskUID>
             <ResourceUID>7</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12000</Cost>
             <Finish>2026-12-18T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-18T08:00:00</Start>
             <Units>1</Units>
@@ -11320,10 +11822,12 @@
             <TaskUID>163</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-21T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-21T08:00:00</Start>
             <Units>1</Units>
@@ -11334,10 +11838,12 @@
             <TaskUID>164</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-22T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-22T08:00:00</Start>
             <Units>1</Units>
@@ -11348,10 +11854,12 @@
             <TaskUID>165</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>12800</Cost>
             <Finish>2026-12-23T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>12800</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-23T08:00:00</Start>
             <Units>1</Units>
@@ -11362,10 +11870,12 @@
             <TaskUID>167</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2026-12-24T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2026-12-24T08:00:00</Start>
             <Units>1</Units>
@@ -11376,10 +11886,12 @@
             <TaskUID>169</TaskUID>
             <ResourceUID>4</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>140800</Cost>
             <Finish>2027-01-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>140800</RemainingCost>
             <RemainingWork>PT64H0M0S</RemainingWork>
             <Start>2026-12-28T08:00:00</Start>
             <Units>1</Units>
@@ -11390,10 +11902,12 @@
             <TaskUID>169</TaskUID>
             <ResourceUID>5</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>128000</Cost>
             <Finish>2027-01-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>128000</RemainingCost>
             <RemainingWork>PT64H0M0S</RemainingWork>
             <Start>2026-12-28T08:00:00</Start>
             <Units>1</Units>
@@ -11404,10 +11918,12 @@
             <TaskUID>169</TaskUID>
             <ResourceUID>6</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>102400</Cost>
             <Finish>2027-01-07T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>102400</RemainingCost>
             <RemainingWork>PT64H0M0S</RemainingWork>
             <Start>2026-12-28T08:00:00</Start>
             <Units>1</Units>
@@ -11418,10 +11934,12 @@
             <TaskUID>170</TaskUID>
             <ResourceUID>2</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>16000</Cost>
             <Finish>2027-01-08T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>16000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2027-01-08T08:00:00</Start>
             <Units>1</Units>
@@ -11432,10 +11950,12 @@
             <TaskUID>172</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2027-01-11T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2027-01-11T08:00:00</Start>
             <Units>1</Units>
@@ -11446,10 +11966,12 @@
             <TaskUID>173</TaskUID>
             <ResourceUID>1</ResourceUID>
             <PercentWorkComplete>0</PercentWorkComplete>
+            <Cost>24000</Cost>
             <Finish>2027-01-12T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
             <FixedMaterial>0</FixedMaterial>
             <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingCost>24000</RemainingCost>
             <RemainingWork>PT8H0M0S</RemainingWork>
             <Start>2027-01-12T08:00:00</Start>
             <Units>1</Units>
