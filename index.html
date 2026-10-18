@@ -213,13 +213,34 @@ a.btn{text-decoration:none;display:inline-block}
 .wbs-root{background:var(--side);color:#fff;border-radius:10px;padding:12px 16px;text-align:center;font-family:var(--serif);font-weight:600;font-size:17px;max-width:560px;margin:0 auto 22px;position:relative}
 .wbs-root span,.wbs-l2 span,.wbs-l3 span,.dict-h span{font-family:var(--mono);font-size:11px;margin-right:6px;opacity:.75}
 .wbs-root::after{content:"";position:absolute;left:50%;bottom:-12px;height:12px;border-left:2px solid #c9c1b2}
-.wbs-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;border-top:2px solid #c9c1b2;padding-top:12px}
-.wbs-col{display:flex;flex-direction:column;gap:6px;min-width:0}
-.wbs-l2{background:var(--sage);color:#fff;border-radius:8px;padding:8px 9px;font-size:12.5px;font-weight:700;line-height:1.3;min-height:58px}
-.wbs-l3{text-align:left;background:#fff;border:1px solid var(--rule);border-left:3px solid var(--sage-2);border-radius:7px;padding:6px 8px;font-family:var(--sans);font-size:11.8px;line-height:1.3;color:var(--ink);cursor:pointer}
-.wbs-l3:hover{border-color:var(--sage-2)}.wbs-l3.sel{background:var(--sage-lt);border-color:var(--sage);box-shadow:0 0 0 1px var(--sage)}
-.wbs-l3 span{display:block;margin:0 0 1px;color:var(--sage)}
-.wl{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:middle;margin-right:8px}.wl.w1{background:var(--side)}.wl.w2{background:var(--sage)}.wl.w3{background:#fff;border:1px solid var(--rule);border-left:3px solid var(--sage-2)}
+.wbs-root small{display:block;font-family:var(--mono);font-size:11px;font-weight:400;opacity:.75;margin-top:2px}
+.wbsbox .wbs-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.wbs-grid{display:grid;grid-template-columns:repeat(8,minmax(210px,1fr));gap:14px;border-top:2px solid #c9c1b2;padding-top:14px;min-width:1780px}
+.wbs-col{display:flex;flex-direction:column;min-width:0;position:relative}
+.wbs-col::before{content:"";position:absolute;left:50%;top:-14px;height:14px;border-left:2px solid #c9c1b2}
+.wbs-l2{background:var(--side);color:#fff;border-radius:10px;padding:10px 12px;line-height:1.3;min-height:92px}
+.wbs-l2 span{display:block;color:var(--gold);opacity:1}
+.wbs-l2 b{display:block;font-size:14px}.wbs-l2 small{display:block;font-size:11.5px;color:#a9bab1;margin-top:3px}
+.wbs-pk{margin-left:12px;border-left:2px solid #c9c1b2;padding-top:8px;display:flex;flex-direction:column;gap:8px}
+.wbs-l3{position:relative;margin-left:12px;background:#fff;border:1px solid var(--rule);border-radius:9px}
+.wbs-l3::before{content:"";position:absolute;left:-14px;top:20px;width:12px;border-top:2px solid #c9c1b2}
+.wbs-l3.sel{border-color:var(--sage);box-shadow:0 0 0 1px var(--sage)}
+.pk-h{display:block;width:100%;text-align:left;background:none;border:0;padding:9px 10px;font-family:var(--sans);color:var(--ink);cursor:pointer;position:relative}
+.pk-h .pk-c{display:block;font-family:var(--mono);font-size:10.5px;color:var(--sage);font-weight:600}
+.pk-h i{position:absolute;right:10px;top:7px;font-style:normal;font-family:var(--mono);color:var(--muted);font-size:14px}
+.pk-h b{display:block;font-size:13px;line-height:1.3;padding-right:12px}
+.pk-h small{display:block;font-size:11.5px;color:var(--muted)}
+.pk-b{display:none;padding:0 10px 10px;font-size:12.5px}
+.wbs-l3.open .pk-b{display:block}.wbs-l3.open{border-color:#bcd8ca}
+.pk-b p{margin:0 0 4px;font-size:12.5px;color:var(--ink-2);line-height:1.4}.pk-b .pk-r{color:var(--muted);font-size:11.5px;margin-bottom:6px}
+ol.acts{list-style:none;margin:6px 0 0;padding:6px 0 0;border-top:1px solid var(--rule)}
+ol.acts li{display:flex;gap:8px;padding:3px 0;font-size:12.5px;line-height:1.35;color:var(--ink-2)}
+ol.acts li span{font-family:var(--mono);font-size:11px;color:var(--muted);min-width:34px;flex:none}
+ol.acts li em{font-style:normal}
+ol.acts li.ms em{font-weight:700;color:var(--amber)}
+.detail ol.acts li{font-size:14px}.detail ol.acts{border:0;margin:0;padding:0}
+.pk-more{margin-top:8px;background:none;border:0;padding:0;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--sage);cursor:pointer}
+.wl{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:middle;margin-right:8px}.wl.w1{background:var(--side)}.wl.w2{background:var(--sage)}.wl.w3{background:#fff;border:1px solid var(--rule)}.wl.w4{background:transparent;border-bottom:2px solid var(--muted);border-radius:0;height:8px}
 .dict-h{font-family:var(--serif);font-size:18px;margin:26px 0 10px}
 details.dict{background:var(--paper);border:1px solid var(--rule);border-radius:10px;margin-bottom:8px}
 details.dict summary{display:flex;gap:12px;align-items:baseline;padding:11px 14px;cursor:pointer;list-style:none}
@@ -231,8 +252,7 @@ details.dict .nm{font-weight:700;font-size:14.5px;flex:1}
 details.dict .meta{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
 .dict-b{padding:4px 18px 18px;border-top:1px dashed var(--rule)}
 .dict-b h4.dt{font-size:19px}
-@media (max-width:1180px){.wbs-grid{grid-template-columns:repeat(4,1fr)}}
-@media (max-width:760px){.wbs-grid{grid-template-columns:1fr}details.dict .meta{display:none}}
+@media (max-width:760px){details.dict .meta{display:none}}
 .refs li{margin-bottom:10px;padding-left:2.2em;text-indent:-2.2em;font-size:14.5px;color:var(--ink-2);list-style:none}
 footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .page{display:none}.page.on{display:block;animation:fade .35s ease}
@@ -1035,9 +1055,10 @@ h3{font-size:22px}
 <div class="eyebrow">06 · Línea base</div>
 <h2 class="sec">Línea base del alcance: EDT y diccionario</h2>
 <p class="lead">La línea base del alcance es la versión aprobada del enunciado del alcance, la EDT y su diccionario. Solo puede cambiarse mediante el control integrado de cambios, y es la referencia contra la que se medirá el avance de la implementación.</p>
-<div class="facts c3" style="margin-top:18px">
-<div class="fact"><div class="k">Entregables principales (nivel 2)</div><div class="v">8</div></div>
-<div class="fact"><div class="k">Paquetes de trabajo</div><div class="v" id="wbs-count">41</div></div>
+<div class="facts" style="margin-top:18px">
+<div class="fact"><div class="k">Entregables (nivel 2)</div><div class="v">8</div></div>
+<div class="fact"><div class="k">Paquetes de trabajo</div><div class="v" id="wbs-count">36</div></div>
+<div class="fact"><div class="k">Actividades</div><div class="v" id="wbs-acts">—</div></div>
 <div class="fact"><div class="k">Hitos de control</div><div class="v">6 (H0 – H5)</div></div>
 </div>
 
@@ -1049,31 +1070,32 @@ h3{font-size:22px}
 </div>
 
 <h3 id="lineabase/edt"><span class="num">6.2</span>Estructura de Desglose del Trabajo (EDT)</h3>
-<p>La EDT se construyó a partir de los componentes reales de la solución (modelo predictivo, servicios del backend, pantallas de la aplicación y módulo de retención), aplicando la <strong>regla del 100 %</strong>: todo el trabajo del proyecto está en algún paquete y nada fuera del alcance aparece en ella. Haz clic en un paquete para ver su ficha del diccionario.</p>
+<p>La EDT se construyó a partir de los componentes reales de la solución (modelo predictivo, servicios del backend, pantallas de la aplicación y módulo de retención), aplicando la <strong>regla del 100 %</strong>: todo el trabajo del proyecto está en algún paquete y nada fuera del alcance aparece en ella. Cada paquete de trabajo (EDT-x.x.xx) se despliega para mostrar su entregable, su responsable y las <strong>actividades o procesos</strong> que lo componen, numerados de forma correlativa dentro de cada entregable. Las actividades marcadas con ◆ son hitos.</p>
 <div class="wbsbox">
-<div class="wbs-root"><span>1</span>CRM Predictivo y Retención Postventa — Essenza SPA</div>
-<div class="wbs-grid" id="wbs-grid"></div>
+<div class="btns" style="margin:0 0 14px"><button class="btn" id="wbs-toggle" type="button">Expandir todos los paquetes</button></div>
+<div class="wbs-root"><span>1</span>CRM Predictivo y Retención Postventa — Essenza SPA<small id="wbs-sum"></small></div>
+<div class="wbs-scroll"><div class="wbs-grid" id="wbs-grid"></div></div>
 </div>
-<div class="legend" style="grid-template-columns:repeat(3,auto);justify-content:start;gap:6px 22px">
-<div><span class="wl w1"></span>Nivel 1 · Proyecto</div><div><span class="wl w2"></span>Nivel 2 · Entregable principal</div><div><span class="wl w3"></span>Nivel 3 · Paquete de trabajo</div>
+<div class="legend" style="grid-template-columns:repeat(4,auto);justify-content:start;gap:6px 22px">
+<div><span class="wl w1"></span>Nivel 1 · Proyecto</div><div><span class="wl w2"></span>Nivel 2 · Entregable principal</div><div><span class="wl w3"></span>Nivel 3 · Paquete de trabajo</div><div><span class="wl w4"></span>Nivel 4 · Actividad</div>
 </div>
 <div id="wbs-detail" class="detail" aria-live="polite"></div>
 
 <h3 id="lineabase/diccionario"><span class="num">6.3</span>Diccionario de la EDT</h3>
-<p>Ficha de cada paquete de trabajo. Roles: <strong>DP</strong> director del proyecto · <strong>AF</strong> analista funcional · <strong>CD</strong> científico de datos · <strong>DB</strong> desarrollador backend · <strong>DF</strong> desarrollador frontend · <strong>QA</strong> calidad y capacitación. Las duraciones están en días hábiles y se secuenciarán en la línea base del cronograma.</p>
-<div class="btns"><button class="btn pri" id="dl-csv" type="button">Descargar diccionario (CSV para Excel)</button><button class="btn" id="exp-all" type="button">Expandir todo</button></div>
+<p>Ficha de cada paquete de trabajo con sus actividades. Roles: <strong>DP</strong> director del proyecto · <strong>AF</strong> analista funcional · <strong>CD</strong> científico de datos · <strong>DB</strong> desarrollador backend · <strong>DF</strong> desarrollador frontend · <strong>QA</strong> calidad y capacitación. Las duraciones están en días hábiles y se secuenciarán en la línea base del cronograma.</p>
+<div class="btns"><button class="btn pri" id="dl-csv" type="button">Descargar EDT y diccionario (CSV para Excel)</button><button class="btn" id="exp-all" type="button">Expandir todo</button></div>
 <div id="wbs-dict"></div>
 
 <h3 id="lineabase/hitos"><span class="num">6.4</span>Hitos de control</h3>
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Hito</th><th>Descripción</th><th>Paquetes que lo cierran</th><th>Fecha</th></tr></thead>
 <tbody>
-<tr><td>H0</td><td>Reunión de lanzamiento del proyecto</td><td>1.1.1</td><td>02/11/2026</td></tr>
-<tr><td>H1</td><td>Requisitos y diseño aprobados</td><td>1.2.1 – 1.2.5</td><td>27/11/2026</td></tr>
-<tr><td>H2</td><td>Modelo predictivo validado</td><td>1.3.1 – 1.3.6</td><td>24/12/2026</td></tr>
-<tr><td>H3</td><td>Sistema integrado</td><td>1.4, 1.5 y 1.6 completos</td><td>19/02/2027</td></tr>
-<tr><td>H4</td><td>Puesta en producción (go-live)</td><td>1.7.4, 1.8.1 – 1.8.4</td><td>12/03/2027</td></tr>
-<tr><td>H5</td><td>Acta de aceptación y cierre</td><td>1.8.5, 1.8.6, 1.1.4</td><td>26/03/2027</td></tr>
+<tr><td>H0</td><td>Reunión de lanzamiento del proyecto</td><td>EDT-1.1.01 (actividad 1.1.4)</td><td>02/11/2026</td></tr>
+<tr><td>H1</td><td>Requisitos y diseño aprobados</td><td>EDT-1.2.01 – EDT-1.2.05</td><td>27/11/2026</td></tr>
+<tr><td>H2</td><td>Modelo predictivo validado</td><td>EDT-1.3.01 – EDT-1.3.05</td><td>24/12/2026</td></tr>
+<tr><td>H3</td><td>Sistema integrado</td><td>1.4, 1.5, 1.6 y EDT-1.7.02</td><td>19/02/2027</td></tr>
+<tr><td>H4</td><td>Puesta en producción (go-live)</td><td>EDT-1.7.04, EDT-1.8.01 – EDT-1.8.03</td><td>12/03/2027</td></tr>
+<tr><td>H5</td><td>Acta de aceptación y cierre</td><td>EDT-1.8.04, EDT-1.8.05, EDT-1.1.04</td><td>26/03/2027</td></tr>
 </tbody></table></div>
 </section>
 <footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>
@@ -1263,81 +1285,83 @@ window.addEventListener('hashchange',route);route();
 document.getElementById('menu').addEventListener('click',e=>{e.stopPropagation();document.getElementById('side').classList.toggle('open')});
 document.addEventListener('click',e=>{const s=document.getElementById('side');if(s.classList.contains('open')&&!s.contains(e.target))s.classList.remove('open')});
 const WBS=[
-{id:'1.1',n:'Gestión del proyecto',c:[
-{id:'1.1.1',n:'Acta de constitución y reunión de lanzamiento',d:'Formalizar el inicio del proyecto y alinear a los interesados clave en objetivos, roles y reglas de trabajo.',a:['Elaborar y firmar el acta de constitución','Preparar la agenda y los materiales del lanzamiento','Realizar la reunión de lanzamiento y publicar el acta'],e:'Acta de constitución firmada y acta de la reunión de lanzamiento',k:'Acta firmada por la patrocinadora; asistencia de I-01, I-02 y el equipo',r:'DP',t:'3',f:'F1',q:'—'},
-{id:'1.1.2',n:'Plan para la dirección del proyecto',d:'Integrar las líneas base y los planes subsidiarios que guían la ejecución, el control y el cierre.',a:['Consolidar líneas base de alcance, cronograma y costos','Integrar los planes de involucramiento, comunicaciones, calidad, recursos y riesgos','Aprobar el plan con la patrocinadora'],e:'Plan para la dirección del proyecto aprobado',k:'Aprobado por la patrocinadora y publicado en el repositorio del proyecto',r:'DP',t:'7',f:'F1 – F2',q:'—'},
-{id:'1.1.3',n:'Seguimiento y control del proyecto',d:'Medir el avance frente a las líneas base, gestionar cambios y mantener informados a los interesados durante todo el proyecto.',a:['Elaborar el informe semanal de estado (SPI, CPI, riesgos, incidentes)','Conducir el comité de control de cambios','Actualizar los registros de riesgos, incidentes y cambios'],e:'Informes de estado, registro de cambios y registros actualizados',k:'Un informe por semana con acuse de la patrocinadora en 48 h',r:'DP',t:'Continuo',f:'F1 – F7',q:'—'},
-{id:'1.1.4',n:'Cierre del proyecto',d:'Cerrar formalmente el proyecto, documentar resultados y lecciones y liberar al equipo.',a:['Elaborar el informe final de indicadores frente a objetivos','Consolidar las lecciones aprendidas','Firmar el acta de aceptación y archivar el proyecto'],e:'Informe final, registro de lecciones aprendidas y acta de aceptación',k:'Acta de aceptación firmada por la patrocinadora; 0 incidentes críticos abiertos',r:'DP',t:'5',f:'F7',q:'—'}]},
-{id:'1.2',n:'Análisis y diseño',c:[
-{id:'1.2.1',n:'Levantamiento del proceso AS-IS y requisitos',d:'Entender cómo trabaja hoy el spa y obtener los requisitos de cada rol.',a:['Entrevistar a la dueña, la administradora, la recepcionista y las cosmiatras','Modelar el flujo AS-IS','Listar y priorizar necesidades'],e:'Flujo AS-IS y lista priorizada de necesidades',k:'Validados por la administradora',r:'AF',t:'5',f:'F1',q:'RQ-01 a RQ-07'},
-{id:'1.2.2',n:'Especificación de requisitos y matriz de trazabilidad',d:'Documentar requisitos funcionales y no funcionales y relacionarlos con los entregables y sus pruebas.',a:['Redactar requisitos con criterios de aceptación','Construir la matriz de trazabilidad requisito – paquete – prueba'],e:'Documento de requisitos y matriz de trazabilidad',k:'Cada requisito tiene criterio de aceptación y al menos un paquete y una prueba asociados',r:'AF',t:'4',f:'F1 – F2',q:'RQ-01 a RQ-07'},
-{id:'1.2.3',n:'Arquitectura de la solución y modelo de datos',d:'Definir los componentes, su integración y la estructura de la base de datos.',a:['Diseñar la arquitectura (FastAPI, SQLite, React, modelo predictivo)','Diseñar las tablas de clientes, atenciones, predicciones y sincronización','Definir el formato del Excel y su validación'],e:'Documento de arquitectura y diagrama del modelo de datos',k:'Revisado por el equipo técnico y aprobado por el DP',r:'DB',t:'5',f:'F2',q:'RQ-01, RQ-06'},
-{id:'1.2.4',n:'Prototipo de interfaz (UX/UI)',d:'Diseñar las pantallas y la navegación para validarlas con las usuarias antes de programar.',a:['Bocetos del dashboard, clientes, ficha 360°, alertas y Centro de Retención','Guía visual','Prueba del prototipo con la administradora y la recepcionista'],e:'Prototipo navegable y guía visual',k:'Aprobado por la administradora en la demostración de H1',r:'DF',t:'5',f:'F2',q:'RQ-03, RQ-04'},
-{id:'1.2.5',n:'Reglas de negocio de retención',d:'Acordar con la patrocinadora cómo se priorizan los casos, qué se ofrece y por qué canal.',a:['Definir umbrales de riesgo y prioridades (Urgente, Alta, Media, Baja)','Definir motivos de riesgo y acciones sugeridas','Definir beneficios, plantillas de mensaje y reglas de contacto'],e:'Matriz de reglas de retención y catálogo de beneficios y plantillas',k:'Aprobada por la dueña',r:'AF',t:'3',f:'F2',q:'RQ-04, RQ-05'}]},
-{id:'1.3',n:'Datos y modelo predictivo',c:[
-{id:'1.3.1',n:'Registro operacional Excel normalizado',d:'Estandarizar el Excel que el spa seguirá usando como fuente única.',a:['Definir la hoja y las 25 columnas del registro operacional','Normalizar formatos de fecha, montos y códigos','Validar con la recepcionista'],e:'Plantilla del registro operacional (Excel)',k:'La recepcionista registra una atención sin ayuda',r:'CD',t:'3',f:'F3',q:'RQ-01'},
-{id:'1.3.2',n:'Dataset depurado y reporte de calidad de datos',d:'Limpiar el historial de atenciones para que pueda usarse en el modelo.',a:['Detectar duplicados, nulos y valores atípicos','Anonimizar datos personales para el entrenamiento','Emitir el reporte de calidad'],e:'Dataset depurado y reporte de calidad de datos',k:'0 duplicados de ID de atención; datos personales anonimizados',r:'CD',t:'4',f:'F3',q:'RQ-02, RQ-07'},
-{id:'1.3.3',n:'Ingeniería de características',d:'Construir las variables por cliente que explican el abandono.',a:['Consolidar atenciones por cliente','Calcular recencia, frecuencia, gasto y score RFM','Definir la variable de abandono (más de 120 días sin visita)'],e:'Dataset analítico por cliente',k:'Una fila por cliente con todas las variables definidas',r:'CD',t:'4',f:'F3',q:'RQ-02'},
-{id:'1.3.4',n:'Modelo XGBoost entrenado y optimizado',d:'Entrenar el modelo de clasificación del riesgo de abandono.',a:['Separar datos de entrenamiento y prueba','Entrenar y optimizar hiperparámetros con validación cruzada','Definir los umbrales bajo, medio y alto'],e:'Modelo entrenado',k:'ROC-AUC ≥ 0,80 y recall ≥ 0,60 en datos de prueba',r:'CD',t:'5',f:'F3',q:'RQ-02'},
-{id:'1.3.5',n:'Informe de evaluación e interpretabilidad',d:'Demostrar el desempeño del modelo y explicar qué factores pesan más.',a:['Calcular métricas y matriz de confusión','Explicar variables con SHAP','Validar resultados con clientes conocidos por la dueña'],e:'Informe de métricas y explicaciones SHAP',k:'Aprobado por la patrocinadora en el hito H2',r:'CD',t:'2',f:'F3',q:'RQ-02'},
-{id:'1.3.6',n:'Paquete del modelo',d:'Dejar el modelo listo para ser consumido por el backend.',a:['Serializar modelo y metadatos','Documentar variables esperadas y versión'],e:'Archivo del modelo, metadatos y dataset final versionados',k:'El backend carga el modelo y reproduce las métricas',r:'CD',t:'1',f:'F3',q:'RQ-02'}]},
-{id:'1.4',n:'Backend e integración de datos',c:[
-{id:'1.4.1',n:'Base de datos SQLite',d:'Implementar el modelo de datos del CRM.',a:['Crear tablas de clientes, atenciones, predicciones y sincronización','Crear índices y datos iniciales'],e:'Base de datos creada y documentada',k:'Todas las tablas del diseño existen y se crean con un script',r:'DB',t:'3',f:'F4',q:'RQ-01'},
-{id:'1.4.2',n:'Servicio de lectura y validación del Excel',d:'Leer el registro operacional y rechazar filas inválidas con su motivo.',a:['Leer la hoja del registro y mapear columnas','Validar tipos y obligatorios','Registrar errores por fila'],e:'Servicio de importación con log de errores',k:'Prueba con filas válidas, duplicadas e inválidas sin fallas',r:'DB',t:'3',f:'F4',q:'RQ-01'},
-{id:'1.4.3',n:'Servicio de sincronización automática',d:'Mantener el CRM actualizado cada vez que se guarda el Excel, sin duplicar.',a:['Vigilar cambios del archivo cada 30 s','Control de cambios por hash','Carga incremental e historial de sincronizaciones'],e:'Motor de sincronización automática',k:'Una atención nueva aparece en el CRM en menos de 1 minuto y sin duplicados',r:'DB',t:'3',f:'F4',q:'RQ-01'},
-{id:'1.4.4',n:'Servicio de transformación y predicción',d:'Calcular para cada cliente su probabilidad y nivel de riesgo tras cada sincronización.',a:['Aplicar la misma ingeniería de características del modelo','Invocar el modelo y guardar predicciones','Registrar historial de predicciones'],e:'Servicio de predicción integrado',k:'Predicción para el 100 % de clientes, igual a la del informe del modelo',r:'DB',t:'3',f:'F4',q:'RQ-02'},
-{id:'1.4.5',n:'Servicio de alertas',d:'Detectar clientes que cambian a riesgo medio o alto o superan días de inactividad.',a:['Reglas de alerta por riesgo e inactividad (90 y 120 días)','Detección de nuevas alertas por cambio de estado'],e:'Servicio de alertas',k:'Las alertas coinciden con los umbrales definidos en 1.2.5',r:'DB',t:'2',f:'F4',q:'RQ-02, RQ-03'},
-{id:'1.4.6',n:'API REST y autenticación',d:'Exponer los servicios a la aplicación web de forma segura.',a:['Endpoints de clientes, dashboard, alertas, modelo y sincronización','Autenticación por token y roles','Documentación de la API'],e:'API documentada y protegida',k:'Ningún endpoint de datos responde sin autenticación; sin credenciales por defecto',r:'DB',t:'4',f:'F4',q:'RQ-03, RQ-06'}]},
-{id:'1.5',n:'Aplicación web CRM',c:[
-{id:'1.5.1',n:'Inicio de sesión y navegación',d:'Estructura base de la aplicación con acceso por usuario.',a:['Pantalla de inicio de sesión','Menú lateral y rutas protegidas','Cierre de sesión'],e:'Aplicación base con autenticación',k:'Solo usuarios autenticados acceden a las pantallas',r:'DF',t:'2',f:'F4',q:'RQ-06'},
-{id:'1.5.2',n:'Dashboard analítico',d:'Vista general del estado de la cartera de clientes.',a:['Indicadores de clientes y riesgo','Distribución por nivel de riesgo y estado temporal','Evolución de alertas'],e:'Pantalla de dashboard',k:'Las cifras coinciden con la base de datos',r:'DF',t:'4',f:'F5',q:'RQ-03'},
-{id:'1.5.3',n:'Gestión de clientes y ficha 360°',d:'Consultar clientes y ver toda su información en un solo lugar.',a:['Listado con filtros y exportación','Ficha 360°: historial de atenciones, gasto, última visita y riesgo','Historial de predicciones del cliente'],e:'Pantallas de clientes y ficha 360°',k:'La cosmiatra encuentra a un cliente y su historial en menos de 30 s',r:'DF',t:'5',f:'F5',q:'RQ-03'},
-{id:'1.5.4',n:'Centro de alertas',d:'Mostrar los clientes en riesgo que requieren atención.',a:['Listado de alertas por prioridad','Marcar alertas revisadas','Enlace a la ficha del cliente'],e:'Pantalla del centro de alertas',k:'Todas las alertas del servicio 1.4.5 se muestran',r:'DF',t:'3',f:'F5',q:'RQ-03'},
-{id:'1.5.5',n:'Vistas de sincronización y rendimiento del modelo',d:'Dar transparencia sobre la actualización de datos y la calidad del modelo.',a:['Estado e historial de sincronizaciones, sincronización manual','Métricas del modelo y variables más importantes'],e:'Pantallas de sincronización y de rendimiento del modelo',k:'Muestran la última sincronización y las métricas vigentes',r:'DF',t:'3',f:'F5',q:'RQ-01, RQ-02'}]},
-{id:'1.6',n:'Módulo de retención postventa',c:[
-{id:'1.6.1',n:'Modelo de datos de retención',d:'Estructuras para gestionar el ciclo completo de un caso de retención.',a:['Tablas de casos, acciones e historial','Plantillas, beneficios, cupones y campañas','Preferencias de contacto y configuración'],e:'Tablas de retención creadas y cargadas con valores iniciales',k:'Reflejan las reglas aprobadas en 1.2.5',r:'DB',t:'2',f:'F5',q:'RQ-04, RQ-07'},
-{id:'1.6.2',n:'Motor de evaluación y priorización de casos',d:'Convertir cada cliente en riesgo en un caso con prioridad, motivo y acción sugerida.',a:['Evaluar clientes tras cada sincronización','Asignar prioridad, motivo principal y siguiente mejor acción','Evitar casos duplicados y subir prioridad si el riesgo empeora'],e:'Motor de casos de retención',k:'Un solo caso abierto por cliente; prioridad según las reglas',r:'DB',t:'4',f:'F5',q:'RQ-04'},
-{id:'1.6.3',n:'Detección de recuperación',d:'Reconocer automáticamente cuando un cliente contactado vuelve al spa.',a:['Revisar nuevas visitas tras cada sincronización','Marcar el caso como «Recuperado» y registrar el ingreso'],e:'Servicio de detección de recuperación',k:'Una visita nueva de un cliente con caso abierto lo marca como recuperado',r:'DB',t:'2',f:'F5',q:'RQ-04'},
-{id:'1.6.4',n:'Centro de Retención y detalle del caso',d:'Pantallas para que el personal gestione los casos.',a:['Bandeja de casos por prioridad y estado','Detalle del caso con historial y acciones','Cambio de estado y seguimiento'],e:'Pantallas del Centro de Retención',k:'Se puede crear, actualizar y cerrar un caso desde la interfaz',r:'DF',t:'5',f:'F5',q:'RQ-04'},
-{id:'1.6.5',n:'Contacto por WhatsApp con plantillas',d:'Contactar al cliente con un mensaje personalizado y confirmado por una persona.',a:['Generar el mensaje desde la plantilla','Abrir WhatsApp con el mensaje editable','Registrar la respuesta y verificar consentimiento'],e:'Función de contacto y registro de respuestas',k:'Solo contacta clientes con consentimiento; nunca envía de forma masiva',r:'DF',t:'3',f:'F5',q:'RQ-05, RQ-07'}]},
-{id:'1.7',n:'Pruebas y calidad',c:[
-{id:'1.7.1',n:'Plan y casos de prueba',d:'Definir qué se prueba, cómo y con qué datos.',a:['Plan de pruebas','Casos de prueba por requisito','Datos de prueba anonimizados'],e:'Plan y casos de prueba',k:'Cada requisito RQ tiene al menos un caso de prueba',r:'QA',t:'3',f:'F2 – F4',q:'RQ-01 a RQ-07'},
-{id:'1.7.2',n:'Pruebas unitarias y de integración',d:'Verificar cada servicio y su integración durante el desarrollo.',a:['Pruebas automatizadas del backend','Pruebas de integración con el Excel y el modelo','Corrección de defectos'],e:'Suite de pruebas automatizadas y reporte',k:'Todas las pruebas pasan antes de cada demostración',r:'QA',t:'6',f:'F4 – F5',q:'RQ-01 a RQ-06'},
-{id:'1.7.3',n:'Pruebas integrales del sistema',d:'Probar el sistema completo con escenarios reales del spa.',a:['Escenarios de extremo a extremo','Pruebas de rendimiento con el volumen real','Pruebas de seguridad y respaldo'],e:'Reporte de pruebas integrales y versión estabilizada',k:'0 defectos críticos y 0 altos abiertos',r:'QA',t:'5',f:'F6',q:'RQ-01 a RQ-07'},
-{id:'1.7.4',n:'Pruebas de aceptación de usuario (UAT)',d:'Que la usuaria líder confirme que el sistema cumple lo acordado.',a:['Recorrido de los 7 módulos con la administradora','Registro de observaciones','Firma del acta de aceptación'],e:'Acta de pruebas de aceptación firmada',k:'7 de 7 módulos aprobados',r:'QA',t:'3',f:'F6',q:'RQ-01 a RQ-07'}]},
-{id:'1.8',n:'Despliegue, capacitación y transición',c:[
-{id:'1.8.1',n:'Entorno de producción en el spa',d:'Instalar y configurar el CRM de forma segura en la PC de recepción.',a:['Instalación de dependencias y del sistema','Configuración segura: usuarios por rol, claves propias, ruta del Excel, fecha de corte real','Script de inicio de operación'],e:'CRM instalado y configurado en el spa',k:'El sistema arranca con un clic y sin credenciales por defecto',r:'DB',t:'3',f:'F6',q:'RQ-06'},
-{id:'1.8.2',n:'Respaldo y recuperación',d:'Proteger la información del CRM y del Excel.',a:['Respaldo diario automático de la base de datos y el Excel','Procedimiento de restauración','Prueba de restauración'],e:'Procedimiento de respaldo probado',k:'Restauración exitosa de un respaldo',r:'DB',t:'2',f:'F6',q:'RQ-06'},
-{id:'1.8.3',n:'Documentación técnica y manual de usuario',d:'Dejar al spa la información para operar y mantener el sistema.',a:['README técnico y guía de instalación','Manual de usuario por rol','Guía rápida «qué hacer con una alerta»'],e:'Documentación técnica, manual y guía rápida',k:'Revisados por la administradora',r:'AF',t:'4',f:'F6',q:'RQ-03'},
-{id:'1.8.4',n:'Capacitación por rol',d:'Preparar a cada usuaria para usar el CRM en su trabajo diario.',a:['3 talleres prácticos fuera de horario','Evaluación práctica por usuaria'],e:'Usuarias capacitadas y registro de evaluaciones',k:'100 % de usuarias clave con nota ≥ 80 %',r:'QA',t:'3',f:'F6',q:'RQ-03 a RQ-05'},
-{id:'1.8.5',n:'Puesta en producción y estabilización asistida',d:'Iniciar el uso real del CRM y acompañar a las usuarias.',a:['Go-live el 12/03/2027','Soporte asistido y atención de incidentes','Ajuste de reglas y seguimiento de adopción'],e:'CRM en operación y registro de incidentes',k:'≥ 90 % de alertas de riesgo alto revisadas en 48 h; 0 incidentes críticos abiertos',r:'DP',t:'10',f:'F6 – F7',q:'RQ-01 a RQ-07'},
-{id:'1.8.6',n:'Transferencia a la operación',d:'Entregar formalmente el CRM a la administradora como responsable.',a:['Entrega de accesos, código, respaldos y documentación','Acta de transferencia'],e:'Acta de transferencia a la operación',k:'Firmada por la administradora y la patrocinadora',r:'DP',t:'2',f:'F7',q:'—'}]}
+{id:'1.1',n:'Gestión del proyecto',s:'Acta, plan, seguimiento y cierre',c:[
+{n:'Acta de constitución y lanzamiento',e:'Acta firmada y equipo alineado en objetivos, roles y reglas',k:'Acta firmada por la patrocinadora; asistencia de I-01, I-02 y el equipo',r:'DP',t:'3',f:'F1',q:'—',d:'Formalizar el inicio del proyecto y alinear a los interesados clave.',a:['Redactar el acta de constitución con objetivos medibles','Identificar interesados y responsables','Preparar agenda y materiales del lanzamiento','◆ H0 · Reunión de lanzamiento realizada']},
+{n:'Plan para la dirección del proyecto',e:'Plan integrado con líneas base y planes subsidiarios aprobados',k:'Aprobado por la patrocinadora y publicado en el repositorio',r:'DP',t:'7',f:'F1 – F2',q:'—',d:'Integrar las líneas base y los planes que guían la ejecución, el control y el cierre.',a:['Elaborar la línea base del alcance (EDT y diccionario)','Elaborar las líneas base de cronograma y costos','Integrar planes de involucramiento, comunicaciones, calidad, recursos y riesgos','Aprobar el plan con la patrocinadora']},
+{n:'Seguimiento y control',e:'Informes semanales y registros de cambios, riesgos e incidentes al día',k:'Un informe por semana con acuse de la patrocinadora en 48 h',r:'DP',t:'Continuo',f:'F1 – F7',q:'—',d:'Medir el avance frente a las líneas base, gestionar cambios y mantener informados a los interesados.',a:['Emitir el informe semanal de estado (SPI, CPI, riesgos)','Conducir el comité de control de cambios','Actualizar registros de riesgos, incidentes y cambios','Reevaluar la matriz de involucramiento en cada hito']},
+{n:'Cierre del proyecto',e:'Informe final, lecciones aprendidas y acta de aceptación',k:'Acta firmada; 0 incidentes críticos abiertos',r:'DP',t:'5',f:'F7',q:'—',d:'Cerrar formalmente el proyecto, documentar resultados y liberar al equipo.',a:['Elaborar el informe final de indicadores frente a objetivos','Consolidar las lecciones aprendidas','Archivar la documentación del proyecto','◆ H5 · Acta de aceptación y cierre firmada']}]},
+{id:'1.2',n:'Análisis y diseño',s:'AS-IS, requisitos, arquitectura y prototipo',c:[
+{n:'Levantamiento AS-IS y requisitos',e:'Flujo AS-IS validado y necesidades priorizadas por rol',k:'Validado por la administradora',r:'AF',t:'5',f:'F1',q:'RQ-01 a RQ-07',d:'Entender cómo trabaja hoy el spa y obtener las necesidades de cada rol.',a:['Entrevistar a la dueña, administradora, recepcionista y cosmiatras','Observar el registro de atenciones en el Excel','Modelar el flujo AS-IS e identificar puntos de dolor','Priorizar necesidades con la patrocinadora']},
+{n:'Especificación de requisitos y trazabilidad',e:'Requisitos RQ-01 a RQ-07 detallados y matriz de trazabilidad firmada',k:'Cada requisito tiene criterio de aceptación, paquete y prueba asociados',r:'AF',t:'4',f:'F1 – F2',q:'RQ-01 a RQ-07',d:'Documentar requisitos funcionales y no funcionales y relacionarlos con entregables y pruebas.',a:['Redactar fichas de requisitos con criterios de aceptación','Diseñar el flujo TO-BE','Construir la matriz requisito – paquete – prueba','Validar y firmar los requisitos con la patrocinadora']},
+{n:'Arquitectura y modelo de datos',e:'Documento de arquitectura y diagrama de datos aprobados',k:'Revisado por el equipo técnico y aprobado por el DP',r:'DB',t:'5',f:'F2',q:'RQ-01, RQ-06',d:'Definir componentes, integración y estructura de datos de la solución.',a:['Diseñar la arquitectura FastAPI – SQLite – React – modelo','Diseñar tablas de clientes, atenciones, predicciones y sincronización','Definir el formato y la validación del Excel','Definir el esquema de seguridad por roles']},
+{n:'Prototipo de interfaz (UX/UI)',e:'Prototipo navegable y guía visual aprobados',k:'Aprobado por la administradora en la demostración de H1',r:'DF',t:'5',f:'F2',q:'RQ-03, RQ-04',d:'Diseñar pantallas y navegación para validarlas antes de programar.',a:['Bocetar dashboard, clientes, ficha 360° y alertas','Bocetar el Centro de Retención y el detalle de caso','Definir la guía visual','Probar el prototipo con administradora y recepcionista']},
+{n:'Reglas de negocio de retención',e:'Matriz de reglas, beneficios y plantillas aprobada',k:'Aprobada por la dueña',r:'AF',t:'3',f:'F2',q:'RQ-04, RQ-05',d:'Acordar cómo se priorizan los casos, qué se ofrece y por qué canal.',a:['Definir umbrales de riesgo y prioridades (Urgente, Alta, Media, Baja)','Definir motivos de riesgo y acciones sugeridas','Definir beneficios, plantillas y reglas de contacto','◆ H1 · Requisitos y diseño aprobados']}]},
+{id:'1.3',n:'Datos y modelo predictivo',s:'Datos limpios, variables y modelo XGBoost',c:[
+{n:'Registro operacional Excel normalizado',e:'Plantilla del registro operacional de 25 columnas',k:'La recepcionista registra una atención sin ayuda',r:'CD',t:'3',f:'F3',q:'RQ-01',d:'Estandarizar el Excel que el spa seguirá usando como fuente única.',a:['Definir la hoja y las 25 columnas del registro','Normalizar formatos de fecha, montos y códigos','Validar la plantilla con la recepcionista']},
+{n:'Dataset depurado y calidad de datos',e:'Dataset limpio, anonimizado y con reporte de calidad',k:'0 duplicados de ID de atención; datos personales anonimizados',r:'CD',t:'4',f:'F3',q:'RQ-02, RQ-07',d:'Limpiar el historial de atenciones para usarlo en el modelo.',a:['Detectar duplicados, nulos y valores atípicos','Corregir o descartar registros inválidos','Anonimizar datos personales para el entrenamiento','Emitir el reporte de calidad de datos']},
+{n:'Ingeniería de características',e:'Dataset analítico con una fila por cliente',k:'Todas las variables definidas calculadas para cada cliente',r:'CD',t:'4',f:'F3',q:'RQ-02',d:'Construir las variables por cliente que explican el abandono.',a:['Consolidar atenciones por cliente','Calcular recencia, frecuencia, gasto y score RFM','Definir la variable de abandono (más de 120 días sin visita)','Codificar variables categóricas']},
+{n:'Modelo XGBoost entrenado',e:'Modelo de riesgo de abandono optimizado',k:'ROC-AUC ≥ 0,80 y recall ≥ 0,60 en datos de prueba',r:'CD',t:'5',f:'F3',q:'RQ-02',d:'Entrenar el modelo de clasificación del riesgo de abandono.',a:['Separar datos de entrenamiento y prueba','Entrenar un modelo base','Optimizar hiperparámetros con validación cruzada','Definir umbrales de riesgo bajo, medio y alto']},
+{n:'Evaluación, interpretabilidad y empaquetado',e:'Informe de métricas y SHAP, y modelo versionado',k:'Aprobado por la patrocinadora; el backend reproduce las métricas',r:'CD',t:'3',f:'F3',q:'RQ-02',d:'Demostrar el desempeño del modelo, explicarlo y dejarlo listo para el backend.',a:['Calcular métricas y matriz de confusión','Explicar las variables con SHAP','Validar resultados con clientes conocidos por la dueña','Serializar modelo y metadatos','◆ H2 · Modelo predictivo validado']}]},
+{id:'1.4',n:'Backend e integración',s:'Base de datos, sincronización, predicción y API',c:[
+{n:'Base de datos SQLite',e:'Base de datos creada por script y documentada',k:'Todas las tablas del diseño existen',r:'DB',t:'3',f:'F4',q:'RQ-01',d:'Implementar el modelo de datos del CRM.',a:['Crear tablas de clientes y atenciones','Crear tablas de predicciones y sincronización','Crear índices y datos iniciales']},
+{n:'Lectura y validación del Excel',e:'Servicio de importación con registro de errores por fila',k:'Pasa pruebas con filas válidas, duplicadas e inválidas',r:'DB',t:'3',f:'F4',q:'RQ-01',d:'Leer el registro operacional y rechazar filas inválidas indicando el motivo.',a:['Leer la hoja del registro y mapear columnas','Validar tipos y campos obligatorios','Registrar errores por fila']},
+{n:'Sincronización automática',e:'Motor de sincronización incremental e idempotente',k:'Una atención nueva aparece en el CRM en menos de 1 minuto y sin duplicados',r:'DB',t:'3',f:'F4',q:'RQ-01',d:'Mantener el CRM actualizado cada vez que se guarda el Excel.',a:['Vigilar cambios del archivo cada 30 s','Detectar cambios mediante hash','Cargar solo lo nuevo y guardar historial de sincronizaciones']},
+{n:'Predicción y alertas',e:'Servicios de predicción y de alertas integrados',k:'Predicción para el 100 % de clientes; alertas según umbrales aprobados',r:'DB',t:'5',f:'F4',q:'RQ-02, RQ-03',d:'Calcular el riesgo de cada cliente tras cada sincronización y detectar alertas.',a:['Aplicar la ingeniería de características del modelo','Invocar el modelo y guardar predicciones con historial','Generar alertas por riesgo e inactividad (90 y 120 días)','Detectar nuevas alertas por cambio de estado']},
+{n:'API REST y autenticación',e:'API documentada y protegida por roles',k:'Ningún endpoint de datos responde sin autenticación',r:'DB',t:'4',f:'F4',q:'RQ-03, RQ-06',d:'Exponer los servicios a la aplicación web de forma segura.',a:['Endpoints de clientes, dashboard y alertas','Endpoints de modelo y sincronización','Autenticación por token y roles, sin credenciales por defecto','Documentar la API']}]},
+{id:'1.5',n:'Aplicación web CRM',s:'Pantallas para el personal del spa',c:[
+{n:'Inicio de sesión y navegación',e:'Aplicación base con acceso por usuario',k:'Solo usuarios autenticados acceden a las pantallas',r:'DF',t:'2',f:'F4',q:'RQ-06',d:'Estructura base de la aplicación.',a:['Pantalla de inicio de sesión','Menú lateral y rutas protegidas','Cierre de sesión']},
+{n:'Dashboard analítico',e:'Pantalla de dashboard con indicadores',k:'Las cifras coinciden con la base de datos',r:'DF',t:'4',f:'F5',q:'RQ-03',d:'Vista general del estado de la cartera de clientes.',a:['Indicadores de clientes y riesgo','Distribución por nivel de riesgo y estado temporal','Evolución de alertas en el tiempo']},
+{n:'Clientes y ficha 360°',e:'Listado de clientes y ficha 360°',k:'La cosmiatra encuentra a un cliente y su historial en menos de 30 s',r:'DF',t:'5',f:'F5',q:'RQ-03',d:'Consultar clientes y ver toda su información en un solo lugar.',a:['Listado con filtros y exportación','Ficha 360° con historial, gasto y última visita','Barra de inactividad e historial de predicciones']},
+{n:'Centro de alertas y vistas del sistema',e:'Pantallas de alertas, sincronización y rendimiento del modelo',k:'Muestran todas las alertas, la última sincronización y las métricas vigentes',r:'DF',t:'6',f:'F5',q:'RQ-01 a RQ-03',d:'Mostrar los clientes en riesgo y dar transparencia sobre datos y modelo.',a:['Listado de alertas por prioridad y marcado de revisadas','Estado e historial de sincronizaciones y sincronización manual','Métricas del modelo y variables más importantes']}]},
+{id:'1.6',n:'Módulo de retención',s:'Casos, acciones y contacto postventa',c:[
+{n:'Modelo de datos de retención',e:'Tablas de retención con valores iniciales',k:'Reflejan las reglas aprobadas en EDT-1.2.05',r:'DB',t:'2',f:'F5',q:'RQ-04, RQ-07',d:'Estructuras para el ciclo completo de un caso de retención.',a:['Tablas de casos, acciones e historial','Tablas de plantillas, beneficios, cupones y campañas','Preferencias de contacto y configuración']},
+{n:'Motor de casos y recuperación',e:'Motor de priorización y detección de recuperación',k:'Un solo caso abierto por cliente; visita nueva lo marca «Recuperado»',r:'DB',t:'6',f:'F5',q:'RQ-04',d:'Convertir cada cliente en riesgo en un caso y reconocer cuando vuelve.',a:['Evaluar clientes tras cada sincronización','Asignar prioridad, motivo y siguiente mejor acción','Evitar duplicados y subir prioridad si el riesgo empeora','Detectar nuevas visitas y registrar el ingreso recuperado']},
+{n:'Centro de Retención',e:'Bandeja de casos y detalle del caso',k:'Se puede crear, actualizar y cerrar un caso desde la interfaz',r:'DF',t:'5',f:'F5',q:'RQ-04',d:'Pantallas para que el personal gestione los casos.',a:['Bandeja de casos por prioridad y estado','Detalle del caso con historial y acciones','Cambio de estado y seguimiento']},
+{n:'Contacto por WhatsApp',e:'Contacto con plantilla editable y registro de respuesta',k:'Solo contacta clientes con consentimiento; nunca de forma masiva',r:'DF',t:'3',f:'F5',q:'RQ-05, RQ-07',d:'Contactar al cliente con un mensaje personalizado y confirmado por una persona.',a:['Generar el mensaje desde la plantilla','Abrir WhatsApp con el mensaje editable','Verificar consentimiento y registrar la respuesta']}]},
+{id:'1.7',n:'Pruebas y calidad',s:'Verificación y aceptación',c:[
+{n:'Plan y casos de prueba',e:'Plan de pruebas y casos por requisito',k:'Cada requisito RQ tiene al menos un caso de prueba',r:'QA',t:'3',f:'F2 – F4',q:'RQ-01 a RQ-07',d:'Definir qué se prueba, cómo y con qué datos.',a:['Redactar el plan de pruebas','Diseñar casos de prueba por requisito','Preparar datos de prueba anonimizados']},
+{n:'Pruebas unitarias e integración',e:'Suite de pruebas automatizadas y reporte',k:'Todas las pruebas pasan antes de cada demostración',r:'QA',t:'6',f:'F4 – F5',q:'RQ-01 a RQ-06',d:'Verificar cada servicio y su integración durante el desarrollo.',a:['Automatizar pruebas del backend','Probar la integración con el Excel y el modelo','Corregir defectos encontrados','◆ H3 · Sistema integrado']},
+{n:'Pruebas integrales del sistema',e:'Reporte de pruebas y versión estabilizada',k:'0 defectos críticos y 0 altos abiertos',r:'QA',t:'5',f:'F6',q:'RQ-01 a RQ-07',d:'Probar el sistema completo con escenarios reales del spa.',a:['Ejecutar escenarios de extremo a extremo','Probar rendimiento con el volumen real','Probar seguridad, respaldo y restauración']},
+{n:'Pruebas de aceptación (UAT)',e:'Acta de aceptación de usuario firmada',k:'7 de 7 módulos aprobados',r:'QA',t:'3',f:'F6',q:'RQ-01 a RQ-07',d:'Que la usuaria líder confirme que el sistema cumple lo acordado.',a:['Recorrer los 7 módulos con la administradora','Registrar y resolver observaciones','Firmar el acta de aceptación de usuario']}]},
+{id:'1.8',n:'Despliegue y transición',s:'Instalación, capacitación, go-live y entrega',c:[
+{n:'Entorno de producción y respaldo',e:'CRM instalado, configurado y con respaldo diario probado',k:'Arranca con un clic, sin credenciales por defecto; restauración exitosa',r:'DB',t:'5',f:'F6',q:'RQ-06',d:'Instalar y asegurar el CRM en la PC de recepción.',a:['Instalar dependencias y el sistema','Configurar usuarios por rol, claves, ruta del Excel y fecha de corte real','Crear el script de inicio de operación','Programar y probar el respaldo diario']},
+{n:'Documentación y manuales',e:'README técnico, manual por rol y guía rápida',k:'Revisados por la administradora',r:'AF',t:'4',f:'F6',q:'RQ-03',d:'Dejar al spa la información para operar y mantener el sistema.',a:['Redactar el README técnico y la guía de instalación','Redactar el manual de usuario por rol','Elaborar la guía rápida «qué hacer con una alerta»']},
+{n:'Capacitación por rol',e:'Usuarias capacitadas y evaluadas',k:'100 % de usuarias clave con nota ≥ 80 %',r:'QA',t:'3',f:'F6',q:'RQ-03 a RQ-05',d:'Preparar a cada usuaria para usar el CRM en su trabajo diario.',a:['Taller para administradora y dueña','Taller para recepcionista','Taller para cosmiatras','Evaluación práctica por usuaria']},
+{n:'Go-live y estabilización',e:'CRM en operación y registro de incidentes',k:'≥ 90 % de alertas de riesgo alto revisadas en 48 h',r:'DP',t:'10',f:'F6 – F7',q:'RQ-01 a RQ-07',d:'Iniciar el uso real del CRM y acompañar a las usuarias.',a:['Comunicar el go-live y la ventana de corte','◆ H4 · Puesta en producción (go-live)','Brindar soporte asistido y atender incidentes','Ajustar reglas y medir la adopción']},
+{n:'Transferencia a la operación',e:'Acta de transferencia a la administradora',k:'Firmada por la administradora y la patrocinadora',r:'DP',t:'2',f:'F7',q:'—',d:'Entregar formalmente el CRM a la administradora como responsable.',a:['Entregar accesos, código, respaldos y documentación','Firmar el acta de transferencia']}]}
 ];
 (function(){
 const R={DP:'Director del proyecto',AF:'Analista funcional',CD:'Científico de datos',DB:'Desarrollador backend',DF:'Desarrollador frontend',QA:'Calidad y capacitación'};
-const all=[];WBS.forEach(b=>b.c.forEach(p=>{p.b=b;all.push(p)}));
+const all=[];let nAct=0;
+WBS.forEach(b=>{let k=0;b.c.forEach((p,i)=>{p.b=b;p.id='EDT-'+b.id+'.'+String(i+1).padStart(2,'0');p.acts=p.a.map(x=>{k++;const ms=x.startsWith('◆');return {n:b.id+'.'+k,t:ms?x.slice(2):x,ms}});nAct+=p.a.length;all.push(p)})});
 document.getElementById('wbs-count').textContent=all.length;
+const sum=document.getElementById('wbs-sum');if(sum)sum.textContent=`${WBS.length} entregables · ${all.length} paquetes · ${nAct} actividades`;
+const nA=document.getElementById('wbs-acts');if(nA)nA.textContent=nAct;
 const g=document.getElementById('wbs-grid'),det=document.getElementById('wbs-detail'),dict=document.getElementById('wbs-dict');
 const e=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-g.innerHTML=WBS.map(b=>`<div class="wbs-col"><div class="wbs-l2"><span>${b.id}</span>${e(b.n)}</div>${b.c.map(p=>`<button type="button" class="wbs-l3" data-w="${p.id}"><span>${p.id}</span>${e(p.n)}</button>`).join('')}</div>`).join('');
+const actList=p=>`<ol class="acts">${p.acts.map(a=>`<li class="${a.ms?'ms':''}"><span>${a.n}</span><em>${a.ms?'◆ ':''}${e(a.t)}</em></li>`).join('')}</ol>`;
+g.innerHTML=WBS.map(b=>`<div class="wbs-col"><div class="wbs-l2"><span>${b.id}</span><b>${e(b.n)}</b><small>${e(b.s)}</small></div><div class="wbs-pk">${b.c.map((p,i)=>`<div class="wbs-l3${i===0?' open':''}" data-w="${p.id}"><button type="button" class="pk-h"><span class="pk-c">${p.id}</span><i>${i===0?'−':'+'}</i><b>${e(p.n)}</b><small>${p.acts.length} actividades</small></button><div class="pk-b"><p>${e(p.e)}</p><p class="pk-r">Responsable: ${R[p.r]}</p>${actList(p)}<button type="button" class="pk-more" data-w="${p.id}">Ver ficha del diccionario →</button></div></div>`).join('')}</div></div>`).join('');
 function card(p){return `<span class="tag">Paquete de trabajo ${p.id}</span> <span class="tag amber">${e(p.b.id)} ${e(p.b.n)}</span>
-<h4 class="dt">${e(p.n)}</h4><div class="en">Fase ${p.f} · Responsable: ${R[p.r]} (${p.r}) · Duración: ${p.t==='Continuo'?'continuo':p.t+' días hábiles'}</div>
+<h4 class="dt">${e(p.n)}</h4><div class="en">Fase ${p.f} · Responsable: ${R[p.r]} (${p.r}) · Duración: ${p.t==='Continuo'?'continuo':p.t+' días hábiles'} · ${p.acts.length} actividades</div>
 <p>${e(p.d)}</p>
 <div class="apl"><b>Entregable</b>${e(p.e)}</div>
-<div class="cols"><div><h5>Actividades principales</h5><ul>${p.a.map(x=>'<li>'+e(x)+'</li>').join('')}</ul></div><div><h5>Criterio de aceptación</h5><ul><li>${e(p.k)}</li></ul></div><div><h5>Requisitos trazados</h5><ul><li>${e(p.q)}</li></ul></div></div>`}
+<div class="cols"><div><h5>Actividades (procesos)</h5>${actList(p)}</div><div><h5>Criterio de aceptación</h5><ul><li>${e(p.k)}</li></ul></div><div><h5>Requisitos trazados</h5><ul><li>${e(p.q)}</li></ul></div></div>`}
 function sel(id,scroll){const p=all.find(x=>x.id===id);if(!p)return;
 document.querySelectorAll('.wbs-l3').forEach(x=>x.classList.toggle('sel',x.dataset.w===id));
 det.innerHTML=card(p);if(scroll)det.scrollIntoView({behavior:'smooth',block:'nearest'})}
-g.addEventListener('click',ev=>{const b=ev.target.closest('.wbs-l3');if(b)sel(b.dataset.w,true)});
+g.addEventListener('click',ev=>{
+const m=ev.target.closest('.pk-more');if(m){sel(m.dataset.w,true);return}
+const h=ev.target.closest('.pk-h');if(h){const c=h.parentElement;c.classList.toggle('open');h.querySelector('i').textContent=c.classList.contains('open')?'−':'+';}});
+const tg=document.getElementById('wbs-toggle');if(tg)tg.addEventListener('click',function(){const o=this.dataset.o!=='1';document.querySelectorAll('.wbs-l3').forEach(c=>{c.classList.toggle('open',o);c.querySelector('.pk-h i').textContent=o?'−':'+'});this.dataset.o=o?'1':'0';this.textContent=o?'Contraer paquetes':'Expandir todos los paquetes'});
 dict.innerHTML=WBS.map(b=>`<h4 class="dict-h"><span>${b.id}</span>${e(b.n)}</h4>`+b.c.map(p=>`<details class="dict" id="d-${p.id}"><summary><span class="code">${p.id}</span><span class="nm">${e(p.n)}</span><span class="meta">${p.r} · ${p.t==='Continuo'?'continuo':p.t+' d'} · ${p.f}</span></summary><div class="dict-b">${card(p)}</div></details>`).join('')).join('');
 document.getElementById('exp-all').addEventListener('click',function(){const open=this.dataset.o!=='1';document.querySelectorAll('details.dict').forEach(d=>d.open=open);this.dataset.o=open?'1':'0';this.textContent=open?'Contraer todo':'Expandir todo'});
 document.getElementById('dl-csv').addEventListener('click',()=>{
 const q=s=>'"'+String(s).replace(/"/g,'""')+'"';
-const rows=[['Código','Entregable nivel 2','Paquete de trabajo','Descripción','Actividades','Entregable','Criterio de aceptación','Responsable','Duración (días hábiles)','Fase','Requisitos']];
-all.forEach(p=>rows.push([p.id,p.b.n,p.n,p.d,p.a.join(' | '),p.e,p.k,R[p.r],p.t,p.f,p.q]));
+const rows=[['Código','Entregable nivel 2','Paquete de trabajo','Actividad N.°','Actividad','Hito','Entregable','Criterio de aceptación','Responsable','Duración del paquete (días hábiles)','Fase','Requisitos']];
+all.forEach(p=>p.acts.forEach(a=>rows.push([p.id,p.b.n,p.n,a.n,a.t,a.ms?'Sí':'',p.e,p.k,R[p.r],p.t,p.f,p.q])));
 const blob=new Blob(['﻿'+rows.map(r=>r.map(q).join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'});
-const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Diccionario_EDT_CRM_Essenza.csv';document.body.appendChild(a);a.click();a.remove();});
-sel('1.3.4',false);
+const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='EDT_Diccionario_CRM_Essenza.csv';document.body.appendChild(a);a.click();a.remove();});
+sel('EDT-1.3.04',false);
 })();
 
 </script>
