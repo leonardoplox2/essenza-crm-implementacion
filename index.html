@@ -101,6 +101,7 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 /* pmbok strip */
 .flow5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:18px 0}
 .f5{border-radius:10px;padding:14px 12px;text-align:center;border:1px dashed #cfc7b8;color:var(--muted);background:transparent;font-weight:600;font-size:14px;position:relative}
+.flow5.c4{grid-template-columns:repeat(4,1fr)}.flow5.c3{grid-template-columns:repeat(3,1fr)}
 .f5 small{display:block;font-family:var(--mono);font-size:10.5px;font-weight:400;margin-top:2px}
 .f5.ej{background:var(--sage-lt);border:1px solid #bcd8ca;color:var(--sage)}
 .f5.mc{background:var(--amber-lt);border:1px solid #e6cfa5;color:var(--amber)}
@@ -277,6 +278,33 @@ details.dict .meta{font-family:var(--mono);font-size:11px;color:var(--muted);whi
 .ctab tr.cr td:nth-child(4)::after{content:" ●";color:#b9443a}
 .ctab tr.ms td{color:var(--amber);font-weight:700}
 details.crono{margin-bottom:10px}details.crono .tblwrap{border-radius:0 0 10px 10px}
+.formula{overflow-wrap:anywhere;background:var(--side);color:#e8efe9;font-family:var(--mono);font-size:13px;border-radius:10px;padding:12px 16px;margin:12px 0;line-height:1.6}
+.tbl.num td{font-variant-numeric:tabular-nums}
+.tbl tr.tot td{font-weight:700;background:#f1ece2;color:var(--ink)}
+.cpk td:nth-child(3){font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.cpk td:nth-child(4),.cpk td:nth-child(5),.cpk td:nth-child(6){white-space:nowrap}
+.pert-tag{font-family:var(--mono);font-size:10px;font-weight:700;background:var(--amber-lt);color:var(--amber);padding:1px 6px;border-radius:999px;margin-left:4px}
+.cost-big{font-size:20px!important;color:var(--sage)!important}
+.cost-stack{display:flex;gap:3px;height:38px;border-radius:10px;overflow:hidden;margin:16px 0 8px}
+.cost-stack span{display:flex;align-items:center;padding:0 12px;color:#fff;font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.cs-w{background:var(--sage-2)}.cs-c{background:#c98a2e}.cs-m{background:var(--plum)}
+.agg{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:16px 0}
+.agg div{flex:1;min-width:150px;background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:12px}
+.agg div b{display:block;font-size:17px;color:var(--ink)}.agg div span{font-size:12.5px;color:var(--muted)}
+.agg div.hl{background:var(--sage-lt);border-color:#bcd8ca}.agg div.hl2{background:var(--side)}.agg div.hl2 b{color:#fff}.agg div.hl2 span{color:#a9bab1}
+.agg i{align-self:center;font-style:normal;font-weight:700;color:var(--muted);font-size:18px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.fgrid div{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:10px 12px;font-size:13.5px;color:var(--ink-2)}
+.fgrid b{display:block;font-family:var(--mono);font-size:13px;color:var(--sage);margin-bottom:2px}
+.evm td:nth-child(2){font-family:var(--mono);font-size:12px;color:var(--muted)}.evm td:nth-child(3){font-weight:700;white-space:nowrap}
+.scurve{display:block;width:100%;min-width:700px;height:auto;font-family:var(--sans)}
+.scurve .sc-g{stroke:#ebe5da}.scurve .sc-y,.scurve .sc-x{font-size:11px;fill:var(--muted);font-family:var(--mono)}
+.scurve .sc-pv{fill:none;stroke:var(--sage-2);stroke-width:3}.scurve .sc-pt{fill:var(--sage-2)}
+.scurve .sc-bl{stroke:var(--side);stroke-width:1.5}.scurve .sc-bu{stroke:var(--plum);stroke-width:1.5;stroke-dasharray:6 4}
+.scurve .sc-l{font-size:11.5px;font-weight:700;fill:var(--ink)}.scurve .sc-l.bu{fill:var(--plum)}
+.scurve .sc-cut{stroke:#c98a2e;stroke-dasharray:4 4}.scurve .sc-ev{fill:#c98a2e}.scurve .sc-ac{fill:#b9443a}
+.gl.bl{background:var(--side);height:3px}.gl.bu{background:var(--plum);height:3px}.gl.ev{background:#c98a2e;width:10px;height:10px;border-radius:50%}.gl.ac{background:#b9443a;width:10px;height:10px;border-radius:50%}
+@media (max-width:760px){.legend{grid-template-columns:1fr 1fr!important}.agg{flex-direction:column}.agg i{align-self:flex-start}.agg div{min-width:0}.fgrid{grid-template-columns:1fr}.cost-stack span{font-size:0;padding:0}}
 .refs li{margin-bottom:10px;padding-left:2.2em;text-indent:-2.2em;font-size:14.5px;color:var(--ink-2);list-style:none}
 footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .page{display:none}.page.on{display:block;animation:fade .35s ease}
@@ -297,7 +325,7 @@ footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-si
 .hero{padding:28px 20px 22px}
 .facts,.facts.c3{grid-template-columns:1fr 1fr}
 .grid2,.grid3,.plist,.detail .cols,.legend{grid-template-columns:1fr}
-.flow5{grid-template-columns:1fr}
+.flow5,.flow5.c4,.flow5.c3{grid-template-columns:1fr}
 h3{font-size:22px}
 .detail{padding:20px 18px}
 }
@@ -355,6 +383,12 @@ h3{font-size:22px}
 <a href="#lineabase/gantt">Diagrama de Gantt</a>
 <a href="#lineabase/ruta">Ruta crítica</a>
 <a href="#lineabase/detalle">Cronograma detallado</a>
+<a href="#lineabase/costos"><b>Costos</b></a>
+<a href="#lineabase/costos-estimar">Estimación de costos</a>
+<a href="#lineabase/costos-presupuesto">Presupuesto y reservas</a>
+<a href="#lineabase/curva-s">Curva S</a>
+<a href="#lineabase/evm">Valor ganado (EVM)</a>
+<a href="#lineabase/viabilidad">Viabilidad</a>
 </div>
 <div class="nav-t" style="margin-top:14px">Próximas entregas</div>
 <div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">07</span>Ejecución del proyecto</div>
@@ -869,7 +903,7 @@ h3{font-size:22px}
 <div class="eyebrow">04 · Plan de involucramiento de los interesados</div>
 <h2 class="sec">Plan de involucramiento de los interesados</h2>
 <p class="lead">Define quiénes pueden afectar o verse afectados por la implementación del CRM, qué esperan, cuánto pueden influir y qué haremos para llevar a cada uno del nivel de participación actual al que el proyecto necesita.</p>
-<div class="flow5" style="grid-template-columns:repeat(4,1fr)">
+<div class="flow5 c4">
 <div class="f5 ej">1. Identificar<small>Registro de interesados</small></div>
 <div class="f5 ej">2. Planificar<small>Matriz y estrategias</small></div>
 <div class="f5 ej">3. Gestionar<small>Acciones en ejecución</small></div>
@@ -989,7 +1023,7 @@ h3{font-size:22px}
 <div class="eyebrow">05 · Plan de gestión de las comunicaciones</div>
 <h2 class="sec">Plan de gestión de las comunicaciones</h2>
 <p class="lead">Establece qué información se comunica en la implementación del CRM, a quién, por qué, cuándo, por qué medio y quién es responsable, para que el mensaje adecuado llegue a la persona adecuada en el momento adecuado.</p>
-<div class="flow5" style="grid-template-columns:repeat(3,1fr)">
+<div class="flow5 c3">
 <div class="f5">1. Planificar<small>Este plan</small></div>
 <div class="f5 ej">2. Gestionar<small>Comunicaciones del proyecto</small></div>
 <div class="f5 mc">3. Monitorear<small>Eficacia y ajustes</small></div>
@@ -1081,8 +1115,8 @@ h3{font-size:22px}
 </section>
 <section class="page" id="p-lineabase">
 <div class="eyebrow">06 · Línea base</div>
-<h2 class="sec">Línea base: alcance y cronograma</h2>
-<p class="lead">La línea base del alcance es la versión aprobada del enunciado del alcance, la EDT y su diccionario. Solo puede cambiarse mediante el control integrado de cambios, y es la referencia contra la que se medirá el avance de la implementación.</p>
+<h2 class="sec">Línea base: alcance, cronograma y costos</h2>
+<p class="lead">Las líneas base de alcance, cronograma y costos son las versiones aprobadas contra las que se medirá el desempeño de la implementación. Solo pueden cambiarse mediante el control integrado de cambios.</p>
 <div class="facts" style="margin-top:18px">
 <div class="fact"><div class="k">Entregables (nivel 2)</div><div class="v">8</div></div>
 <div class="fact"><div class="k">Paquetes de trabajo</div><div class="v" id="wbs-count">36</div></div>
@@ -1341,6 +1375,185 @@ h3{font-size:22px}
 <tr><td>01/01/2027</td><td>Año Nuevo</td></tr>
 </tbody></table></div>
 <p class="small">Jornada de 8 horas (08:00 a 12:00 y 13:00 a 17:00), de lunes a viernes. Recursos: director del proyecto, analista funcional, científico de datos, desarrolladores backend y frontend, QA y capacitación, más la administradora y la dueña en las actividades de validación.</p>
+<div class="lb-div" id="lineabase/costos"><span>Línea base de costos</span></div>
+<h3 id="lineabase/costos-resumen"><span class="num">6.10</span>¿Cuánto cuesta implementar el CRM?</h3>
+<p>La línea base de costos se construyó de abajo hacia arriba (<em>bottom-up</em>) sobre la EDT y el cronograma de 4 meses, siguiendo los cuatro procesos del dominio de <strong>Finanzas</strong> de la Guía PMBOK® 8: planificar la gestión financiera, estimar los costos, desarrollar el presupuesto y monitorear y controlar las finanzas.</p>
+<div class="facts">
+<div class="fact"><div class="k">Costo de los paquetes de trabajo</div><div class="v">S/ 59 754</div></div>
+<div class="fact"><div class="k">+ Reserva de contingencia</div><div class="v">S/ 2 525</div></div>
+<div class="fact"><div class="k">= Línea base de costos (BAC)</div><div class="v">S/ 62 279</div></div>
+<div class="fact"><div class="k">Presupuesto total del proyecto</div><div class="v cost-big">S/ 65 393</div></div>
+</div>
+<div class="cost-stack" role="img" aria-label="Composición del presupuesto">
+<span class="cs-w" style="flex:59754">Paquetes de trabajo · S/ 59 754</span><span class="cs-c" style="flex:7575">Contingencia</span><span class="cs-m" style="flex:9342">Reserva</span>
+</div>
+<p class="small">Moneda: soles (S/). La mano de obra está valorizada a precios de mercado de Lima aunque el equipo sea académico, para reflejar el costo económico real de la implementación. El desembolso en efectivo para el spa se analiza en 6.16.</p>
+
+<h3 id="lineabase/costos-plan"><span class="num">6.11</span>Planificar la gestión financiera</h3>
+<div class="grid2">
+<div class="card"><h4>Reglas del plan financiero</h4><ul class="clean">
+<li><strong>Unidad de medida:</strong> horas-persona para el trabajo y soles (S/) para el costo.</li>
+<li><strong>Precisión:</strong> redondeo a S/ 1.</li>
+<li><strong>Nivel de exactitud:</strong> estimación definitiva, rango de −5 % a +10 %.</li>
+<li><strong>Cuentas de control:</strong> los 8 entregables de nivel 2 de la EDT.</li>
+<li><strong>Técnica de medición del valor ganado:</strong> 0/100 en actividades de 1 día y porcentaje completado en las demás.</li>
+</ul></div>
+<div class="card"><h4>Umbrales de control</h4><ul class="clean">
+<li><strong>CPI o SPI entre 0,95 y 1,05:</strong> en control, se informa en el reporte semanal.</li>
+<li><strong>CPI o SPI entre 0,90 y 0,95:</strong> alerta; análisis de causa y plan de acción del director.</li>
+<li><strong>CPI o SPI menor a 0,90:</strong> acción correctiva y escalamiento a la patrocinadora.</li>
+<li><strong>Uso de la reserva de contingencia:</strong> lo autoriza el director cuando ocurre un riesgo registrado.</li>
+<li><strong>Uso de la reserva de gestión:</strong> solo la patrocinadora, mediante el comité de cambios.</li>
+</ul></div>
+</div>
+
+<h3 id="lineabase/costos-estimar"><span class="num">6.12</span>Estimar los costos</h3>
+<h4>1. Tarifas por rol</h4>
+<p>La tarifa horaria se obtiene del sueldo mensual de referencia para un perfil semi senior en Lima, dividido entre 160 horas de trabajo al mes.</p>
+<div class="formula">Tarifa por hora = Sueldo mensual ÷ 160 h  ·  Costo de mano de obra = Σ (horas asignadas × tarifa por hora)</div>
+<div class="tblwrap"><table class="tbl num">
+<thead><tr><th>Recurso</th><th>Código</th><th>Sueldo mensual</th><th>Tarifa por hora</th><th>Horas en el cronograma</th><th>Costo</th></tr></thead>
+<tbody><tr><td>Director del proyecto</td><td>DP</td><td>S/ 8 000</td><td>S/ 50,00</td><td>306 h</td><td>S/ 15 280</td></tr><tr><td>Analista funcional</td><td>AF</td><td>S/ 4 960</td><td>S/ 31,00</td><td>128 h</td><td>S/ 3 968</td></tr><tr><td>Científico de datos</td><td>CD</td><td>S/ 7 040</td><td>S/ 44,00</td><td>208 h</td><td>S/ 9 152</td></tr><tr><td>Desarrollador backend</td><td>DB</td><td>S/ 5 600</td><td>S/ 35,00</td><td>344 h</td><td>S/ 12 040</td></tr><tr><td>Desarrollador frontend</td><td>DF</td><td>S/ 5 280</td><td>S/ 33,00</td><td>304 h</td><td>S/ 10 032</td></tr><tr><td>QA y capacitación</td><td>QA</td><td>S/ 4 000</td><td>S/ 25,00</td><td>240 h</td><td>S/ 6 000</td></tr><tr><td>Administradora (interno)</td><td>—</td><td>S/ 2 400</td><td>S/ 15,00</td><td>32 h</td><td>S/ 480</td></tr><tr><td>Dueña – patrocinadora (interno)</td><td>—</td><td>S/ 4 000</td><td>S/ 25,00</td><td>8 h</td><td>S/ 200</td></tr><tr class="tot"><td>Total mano de obra</td><td></td><td></td><td></td><td>1570 h</td><td>S/ 57 152</td></tr></tbody></table></div>
+<p class="small">Las horas salen de las asignaciones del cronograma en MS Project: duración × 8 h × porcentaje de asignación (10 % para el director en las actividades continuas de seguimiento y control).</p>
+<h4>2. Estimación por tres valores (PERT) en los paquetes más inciertos</h4>
+<div class="formula">E = (O + 4M + P) ÷ 6  ·  σ = (P − O) ÷ 6</div>
+<div class="tblwrap"><table class="tbl num">
+<thead><tr><th>Paquete</th><th>Nombre</th><th>Optimista (O)</th><th>Más probable (M)</th><th>Pesimista (P)</th><th>Esperado (E)</th><th>Desviación (σ)</th></tr></thead>
+<tbody><tr><td>EDT-1.3.04</td><td>Modelo XGBoost entrenado</td><td>S/ 2 094</td><td>S/ 2 464</td><td>S/ 3 942</td><td><b>S/ 2 649</b></td><td>± S/ 308</td></tr><tr><td>EDT-1.4.03</td><td>Sincronización automática</td><td>S/ 714</td><td>S/ 840</td><td>S/ 1 260</td><td><b>S/ 889</b></td><td>± S/ 91</td></tr><tr><td>EDT-1.6.02</td><td>Motor de casos y recuperación</td><td>S/ 1 788</td><td>S/ 2 104</td><td>S/ 3 366</td><td><b>S/ 2 262</b></td><td>± S/ 263</td></tr></tbody></table></div>
+<p class="small">Son los paquetes con mayor incertidumbre técnica: entrenar el modelo, sincronizar con el Excel y el motor de casos. En la línea base se usa el valor esperado E.</p>
+<h4>3. Costos directos no laborales</h4>
+<div class="tblwrap"><table class="tbl num">
+<thead><tr><th>Paquete</th><th>Concepto</th><th>Monto</th></tr></thead>
+<tbody><tr><td>EDT-1.1.01</td><td>Impresión de actas y documentos del proyecto</td><td>S/ 120</td></tr><tr><td>EDT-1.1.03</td><td>Movilidad del equipo a las reuniones en el spa</td><td>S/ 480</td></tr><tr><td>EDT-1.2.01</td><td>Materiales para entrevistas y talleres de levantamiento</td><td>S/ 80</td></tr><tr><td>EDT-1.8.01</td><td>UPS para la PC de recepción</td><td>S/ 380</td></tr><tr><td>EDT-1.8.01</td><td>Disco externo de 1 TB para respaldos</td><td>S/ 260</td></tr><tr><td>EDT-1.8.02</td><td>Impresión de manuales y guía rápida</td><td>S/ 180</td></tr><tr><td>EDT-1.8.03</td><td>Refrigerios para los 3 talleres de capacitación</td><td>S/ 210</td></tr><tr><td>EDT-1.8.04</td><td>Fondo de beneficios para el piloto de retención</td><td>S/ 500</td></tr><tr class="tot"><td>Total</td><td></td><td>S/ 2 210</td></tr></tbody></table></div>
+<p class="small">El software no genera costo de licencias: Python, XGBoost, FastAPI, React y SQLite son de código abierto y el contacto por WhatsApp usa enlaces sin costo.</p>
+<h4>4. Costo por paquete de trabajo</h4>
+<div class="formula">Costo del paquete = Mano de obra + Costos directos no laborales (o E de PERT en los paquetes marcados)</div>
+<div class="tblwrap"><table class="tbl num cpk">
+<thead><tr><th>Código</th><th>Paquete de trabajo</th><th>Horas por rol</th><th>Mano de obra</th><th>No laboral</th><th>Estimado</th></tr></thead>
+<tbody><tr class="grp"><td colspan="5">1.1 Gestión del proyecto</td><td>S/ 14 680</td></tr><tr><td>EDT-1.1.01</td><td>Acta de constitución y lanzamiento</td><td>DP 24 h</td><td>S/ 1 200</td><td>S/ 120</td><td><b>S/ 1 320</b></td></tr><tr><td>EDT-1.1.02</td><td>Plan para la dirección del proyecto</td><td>DP 32 h</td><td>S/ 1 600</td><td>—</td><td><b>S/ 1 600</b></td></tr><tr><td>EDT-1.1.03</td><td>Seguimiento y control</td><td>DP 202 h</td><td>S/ 10 080</td><td>S/ 480</td><td><b>S/ 10 560</b></td></tr><tr><td>EDT-1.1.04</td><td>Cierre del proyecto</td><td>DP 24 h</td><td>S/ 1 200</td><td>—</td><td><b>S/ 1 200</b></td></tr><tr class="grp"><td colspan="5">1.2 Análisis y diseño</td><td>S/ 5 104</td></tr><tr><td>EDT-1.2.01</td><td>Levantamiento AS-IS y requisitos</td><td>AF 32 h, ADM 8 h</td><td>S/ 1 112</td><td>S/ 80</td><td><b>S/ 1 192</b></td></tr><tr><td>EDT-1.2.02</td><td>Especificación de requisitos y trazabilidad</td><td>AF 32 h</td><td>S/ 992</td><td>—</td><td><b>S/ 992</b></td></tr><tr><td>EDT-1.2.03</td><td>Arquitectura y modelo de datos</td><td>DB 32 h</td><td>S/ 1 120</td><td>—</td><td><b>S/ 1 120</b></td></tr><tr><td>EDT-1.2.04</td><td>Prototipo de interfaz (UX/UI)</td><td>DF 32 h</td><td>S/ 1 056</td><td>—</td><td><b>S/ 1 056</b></td></tr><tr><td>EDT-1.2.05</td><td>Reglas de negocio de retención</td><td>AF 24 h</td><td>S/ 744</td><td>—</td><td><b>S/ 744</b></td></tr><tr class="grp"><td colspan="5">1.3 Datos y modelo predictivo</td><td>S/ 8 481</td></tr><tr><td>EDT-1.3.01</td><td>Registro operacional Excel normalizado</td><td>CD 24 h</td><td>S/ 1 056</td><td>—</td><td><b>S/ 1 056</b></td></tr><tr><td>EDT-1.3.02</td><td>Dataset depurado y calidad de datos</td><td>CD 32 h</td><td>S/ 1 408</td><td>—</td><td><b>S/ 1 408</b></td></tr><tr><td>EDT-1.3.03</td><td>Ingeniería de características</td><td>CD 40 h</td><td>S/ 1 760</td><td>—</td><td><b>S/ 1 760</b></td></tr><tr><td>EDT-1.3.04</td><td>Modelo XGBoost entrenado <span class="pert-tag">PERT</span></td><td>CD 56 h</td><td>S/ 2 464</td><td>—</td><td><b>S/ 2 649</b></td></tr><tr><td>EDT-1.3.05</td><td>Evaluación, interpretabilidad y empaquetado</td><td>CD 32 h, PAT 8 h</td><td>S/ 1 608</td><td>—</td><td><b>S/ 1 608</b></td></tr><tr class="grp"><td colspan="5">1.4 Backend e integración</td><td>S/ 5 721</td></tr><tr><td>EDT-1.4.01</td><td>Base de datos SQLite</td><td>DB 24 h</td><td>S/ 840</td><td>—</td><td><b>S/ 840</b></td></tr><tr><td>EDT-1.4.02</td><td>Lectura y validación del Excel</td><td>DB 24 h</td><td>S/ 840</td><td>—</td><td><b>S/ 840</b></td></tr><tr><td>EDT-1.4.03</td><td>Sincronización automática <span class="pert-tag">PERT</span></td><td>DB 24 h</td><td>S/ 840</td><td>—</td><td><b>S/ 889</b></td></tr><tr><td>EDT-1.4.04</td><td>Predicción y alertas</td><td>DB 32 h, CD 8 h</td><td>S/ 1 472</td><td>—</td><td><b>S/ 1 472</b></td></tr><tr><td>EDT-1.4.05</td><td>API REST y autenticación</td><td>DB 48 h</td><td>S/ 1 680</td><td>—</td><td><b>S/ 1 680</b></td></tr><tr class="grp"><td colspan="5">1.5 Aplicación web CRM</td><td>S/ 4 752</td></tr><tr><td>EDT-1.5.01</td><td>Inicio de sesión y navegación</td><td>DF 24 h</td><td>S/ 792</td><td>—</td><td><b>S/ 792</b></td></tr><tr><td>EDT-1.5.02</td><td>Dashboard analítico</td><td>DF 40 h</td><td>S/ 1 320</td><td>—</td><td><b>S/ 1 320</b></td></tr><tr><td>EDT-1.5.03</td><td>Clientes y ficha 360°</td><td>DF 48 h</td><td>S/ 1 584</td><td>—</td><td><b>S/ 1 584</b></td></tr><tr><td>EDT-1.5.04</td><td>Centro de alertas y vistas del sistema</td><td>DF 32 h</td><td>S/ 1 056</td><td>—</td><td><b>S/ 1 056</b></td></tr><tr class="grp"><td colspan="5">1.6 Módulo de retención</td><td>S/ 5 214</td></tr><tr><td>EDT-1.6.01</td><td>Modelo de datos de retención</td><td>DB 24 h</td><td>S/ 840</td><td>—</td><td><b>S/ 840</b></td></tr><tr><td>EDT-1.6.02</td><td>Motor de casos y recuperación <span class="pert-tag">PERT</span></td><td>DB 40 h, CD 16 h</td><td>S/ 2 104</td><td>—</td><td><b>S/ 2 262</b></td></tr><tr><td>EDT-1.6.03</td><td>Centro de Retención</td><td>DF 40 h</td><td>S/ 1 320</td><td>—</td><td><b>S/ 1 320</b></td></tr><tr><td>EDT-1.6.04</td><td>Contacto por WhatsApp</td><td>DF 24 h</td><td>S/ 792</td><td>—</td><td><b>S/ 792</b></td></tr><tr class="grp"><td colspan="5">1.7 Pruebas y calidad</td><td>S/ 3 840</td></tr><tr><td>EDT-1.7.01</td><td>Plan y casos de prueba</td><td>QA 32 h</td><td>S/ 800</td><td>—</td><td><b>S/ 800</b></td></tr><tr><td>EDT-1.7.02</td><td>Pruebas unitarias e integración</td><td>QA 56 h</td><td>S/ 1 400</td><td>—</td><td><b>S/ 1 400</b></td></tr><tr><td>EDT-1.7.03</td><td>Pruebas integrales del sistema</td><td>QA 32 h</td><td>S/ 800</td><td>—</td><td><b>S/ 800</b></td></tr><tr><td>EDT-1.7.04</td><td>Pruebas de aceptación (UAT)</td><td>QA 24 h, ADM 16 h</td><td>S/ 840</td><td>—</td><td><b>S/ 840</b></td></tr><tr class="grp"><td colspan="5">1.8 Despliegue y transición</td><td>S/ 11 962</td></tr><tr><td>EDT-1.8.01</td><td>Entorno de producción y respaldo</td><td>DB 32 h</td><td>S/ 1 120</td><td>S/ 640</td><td><b>S/ 1 760</b></td></tr><tr><td>EDT-1.8.02</td><td>Documentación y manuales</td><td>AF 32 h</td><td>S/ 992</td><td>S/ 180</td><td><b>S/ 1 172</b></td></tr><tr><td>EDT-1.8.03</td><td>Capacitación por rol</td><td>QA 32 h, ADM 8 h</td><td>S/ 920</td><td>S/ 210</td><td><b>S/ 1 130</b></td></tr><tr><td>EDT-1.8.04</td><td>Go-live y estabilización</td><td>DP 8 h, DB 64 h, DF 64 h, QA 64 h, AF 8 h</td><td>S/ 6 600</td><td>S/ 500</td><td><b>S/ 7 100</b></td></tr><tr><td>EDT-1.8.05</td><td>Transferencia a la operación</td><td>DP 16 h</td><td>S/ 800</td><td>—</td><td><b>S/ 800</b></td></tr><tr class="tot"><td colspan="5">Total de los paquetes de trabajo</td><td>S/ 59 754</td></tr></tbody></table></div>
+
+<h3 id="lineabase/costos-presupuesto"><span class="num">6.13</span>Desarrollar el presupuesto</h3>
+<p>El presupuesto se arma por agregación: paquetes de trabajo → cuentas de control → línea base de costos → presupuesto del proyecto.</p>
+<div class="agg">
+<div><b>S/ 59 754</b><span>Σ estimaciones de los paquetes de trabajo</span></div><i>+</i>
+<div><b>S/ 2 525</b><span>Reserva de contingencia (riesgos conocidos)</span></div><i>=</i>
+<div class="hl"><b>S/ 62 279</b><span>Línea base de costos · BAC</span></div><i>+</i>
+<div><b>S/ 3 114</b><span>Reserva de gestión (5 %)</span></div><i>=</i>
+<div class="hl2"><b>S/ 65 393</b><span>Presupuesto del proyecto</span></div>
+</div>
+<h4>Cuentas de control (nivel 2 de la EDT)</h4>
+<div class="tblwrap"><table class="tbl num">
+<thead><tr><th>EDT</th><th>Entregable</th><th>Costo</th><th>% del trabajo</th></tr></thead>
+<tbody><tr><td>1.1</td><td>Gestión del proyecto</td><td>S/ 14 680</td><td>24,6 %</td></tr><tr><td>1.2</td><td>Análisis y diseño</td><td>S/ 5 104</td><td>8,5 %</td></tr><tr><td>1.3</td><td>Datos y modelo predictivo</td><td>S/ 8 481</td><td>14,2 %</td></tr><tr><td>1.4</td><td>Backend e integración</td><td>S/ 5 721</td><td>9,6 %</td></tr><tr><td>1.5</td><td>Aplicación web CRM</td><td>S/ 4 752</td><td>8,0 %</td></tr><tr><td>1.6</td><td>Módulo de retención</td><td>S/ 5 214</td><td>8,7 %</td></tr><tr><td>1.7</td><td>Pruebas y calidad</td><td>S/ 3 840</td><td>6,4 %</td></tr><tr><td>1.8</td><td>Despliegue y transición</td><td>S/ 11 962</td><td>20,0 %</td></tr><tr class="tot"><td></td><td>Total</td><td>S/ 59 754</td><td>100 %</td></tr></tbody></table></div>
+<h4>Reserva de contingencia: valor monetario esperado (EMV)</h4>
+<div class="formula">EMV = Probabilidad × Impacto  ·  Reserva de contingencia = Σ EMV de los riesgos identificados</div>
+<div class="tblwrap"><table class="tbl num">
+<thead><tr><th>ID</th><th>Riesgo</th><th>Probabilidad</th><th>Impacto</th><th>EMV</th></tr></thead>
+<tbody><tr><td>R1</td><td>Datos del registro incompletos o de baja calidad</td><td>40 %</td><td>S/ 2 000</td><td>S/ 800</td></tr><tr><td>R2</td><td>El modelo no alcanza la meta (ROC-AUC ≥ 0,80, recall ≥ 0,60)</td><td>30 %</td><td>S/ 2 500</td><td>S/ 750</td></tr><tr><td>R3</td><td>Retraso en la integración con el Excel del spa</td><td>25 %</td><td>S/ 1 500</td><td>S/ 375</td></tr><tr><td>R4</td><td>Baja adopción del personal: capacitación adicional</td><td>35 %</td><td>S/ 1 200</td><td>S/ 420</td></tr><tr><td>R5</td><td>Falla de la PC o pérdida de datos durante el piloto</td><td>10 %</td><td>S/ 1 800</td><td>S/ 180</td></tr><tr class="tot"><td></td><td>Reserva de contingencia</td><td></td><td></td><td>S/ 2 525</td></tr></tbody></table></div>
+<div class="formula">Reserva de gestión = 5 % × Línea base de costos = 0,05 × S/ 62 279 = S/ 3 114</div>
+<p class="small">La reserva de contingencia es parte de la línea base y cubre los riesgos identificados. La reserva de gestión queda fuera de la línea base, para trabajo imprevisto dentro del alcance, y solo la libera la patrocinadora.</p>
+
+<h3 id="lineabase/curva-s"><span class="num">6.14</span>Curva S: valor planificado acumulado</h3>
+<p>Distribución del costo de los paquetes en el tiempo, según las fechas del cronograma. Es la referencia (PV) contra la que se medirá el desempeño.</p>
+<div class="mapbox swbox"><div class="mapscroll"><svg viewBox="0 0 900 340" class="scurve" role="img" aria-label="Curva S del valor planificado acumulado">
+<line class="sc-g" x1="70" x2="880" y1="300.0" y2="300.0"/><text class="sc-y" x="62" y="300.0" dy=".35em" text-anchor="end">0 mil</text>
+<line class="sc-g" x1="70" x2="880" y1="260.0" y2="260.0"/><text class="sc-y" x="62" y="260.0" dy=".35em" text-anchor="end">10 mil</text>
+<line class="sc-g" x1="70" x2="880" y1="220.0" y2="220.0"/><text class="sc-y" x="62" y="220.0" dy=".35em" text-anchor="end">20 mil</text>
+<line class="sc-g" x1="70" x2="880" y1="180.0" y2="180.0"/><text class="sc-y" x="62" y="180.0" dy=".35em" text-anchor="end">30 mil</text>
+<line class="sc-g" x1="70" x2="880" y1="140.0" y2="140.0"/><text class="sc-y" x="62" y="140.0" dy=".35em" text-anchor="end">40 mil</text>
+<line class="sc-g" x1="70" x2="880" y1="100.0" y2="100.0"/><text class="sc-y" x="62" y="100.0" dy=".35em" text-anchor="end">50 mil</text>
+<line class="sc-g" x1="70" x2="880" y1="60.0" y2="60.0"/><text class="sc-y" x="62" y="60.0" dy=".35em" text-anchor="end">60 mil</text>
+<line class="sc-g" x1="70" x2="880" y1="20.0" y2="20.0"/><text class="sc-y" x="62" y="20.0" dy=".35em" text-anchor="end">70 mil</text>
+<text class="sc-x" x="70.0" y="318" text-anchor="middle">18/09</text>
+<text class="sc-x" x="165.3" y="318" text-anchor="middle">02/10</text>
+<text class="sc-x" x="260.6" y="318" text-anchor="middle">16/10</text>
+<text class="sc-x" x="355.9" y="318" text-anchor="middle">30/10</text>
+<text class="sc-x" x="451.2" y="318" text-anchor="middle">13/11</text>
+<text class="sc-x" x="546.5" y="318" text-anchor="middle">27/11</text>
+<text class="sc-x" x="641.8" y="318" text-anchor="middle">11/12</text>
+<text class="sc-x" x="737.1" y="318" text-anchor="middle">25/12</text>
+<text class="sc-x" x="832.4" y="318" text-anchor="middle">08/01</text>
+<line class="sc-bl" x1="70" x2="880" y1="50.9" y2="50.9"/><text class="sc-l bl" x="78" y="64.9">Línea base de costos S/ 62 279</text>
+<line class="sc-bu" x1="70" x2="880" y1="38.4" y2="38.4"/><text class="sc-l bu" x="78" y="32.4">Presupuesto S/ 65 393</text>
+<polyline class="sc-pv" points="70.0,293.2 117.6,288.0 165.3,269.3 212.9,255.8 260.6,236.7 308.2,220.7 355.9,198.8 403.5,182.3 451.2,166.8 498.8,151.7 546.5,142.5 594.1,131.8 641.8,125.7 689.4,110.9 737.1,103.5 784.7,89.0 832.4,69.0 880.0,61.0"/>
+<circle class="sc-pt" cx="70.0" cy="293.2" r="3"><title>Semana al 18/09/2026: S/ 1 688</title></circle>
+<circle class="sc-pt" cx="117.6" cy="288.0" r="3"><title>Semana al 25/09/2026: S/ 3 008</title></circle>
+<circle class="sc-pt" cx="165.3" cy="269.3" r="3"><title>Semana al 02/10/2026: S/ 7 680</title></circle>
+<circle class="sc-pt" cx="212.9" cy="255.8" r="3"><title>Semana al 09/10/2026: S/ 11 040</title></circle>
+<circle class="sc-pt" cx="260.6" cy="236.7" r="3"><title>Semana al 16/10/2026: S/ 15 825</title></circle>
+<circle class="sc-pt" cx="308.2" cy="220.7" r="3"><title>Semana al 23/10/2026: S/ 19 827</title></circle>
+<circle class="sc-pt" cx="355.9" cy="198.8" r="3"><title>Semana al 30/10/2026: S/ 25 312</title></circle>
+<circle class="sc-pt" cx="403.5" cy="182.3" r="3"><title>Semana al 06/11/2026: S/ 29 418</title></circle>
+<circle class="sc-pt" cx="451.2" cy="166.8" r="3"><title>Semana al 13/11/2026: S/ 33 311</title></circle>
+<circle class="sc-pt" cx="498.8" cy="151.7" r="3"><title>Semana al 20/11/2026: S/ 37 064</title></circle>
+<circle class="sc-pt" cx="546.5" cy="142.5" r="3"><title>Semana al 27/11/2026: S/ 39 384</title></circle>
+<circle class="sc-pt" cx="594.1" cy="131.8" r="3"><title>Semana al 04/12/2026: S/ 42 056</title></circle>
+<circle class="sc-pt" cx="641.8" cy="125.7" r="3"><title>Semana al 11/12/2026: S/ 43 564</title></circle>
+<circle class="sc-pt" cx="689.4" cy="110.9" r="3"><title>Semana al 18/12/2026: S/ 47 284</title></circle>
+<circle class="sc-pt" cx="737.1" cy="103.5" r="3"><title>Semana al 25/12/2026: S/ 49 134</title></circle>
+<circle class="sc-pt" cx="784.7" cy="89.0" r="3"><title>Semana al 01/01/2027: S/ 52 750</title></circle>
+<circle class="sc-pt" cx="832.4" cy="69.0" r="3"><title>Semana al 08/01/2027: S/ 57 754</title></circle>
+<circle class="sc-pt" cx="880.0" cy="61.0" r="3"><title>Semana al 15/01/2027: S/ 59 754</title></circle>
+<line class="sc-cut" x1="403.5" x2="403.5" y1="20" y2="300"/><text class="sc-l" x="409.5" y="32">Corte H2 · 06/11/2026</text>
+<circle class="sc-ev" cx="403.5" cy="189.4" r="5"><title>EV: S/ 27 653</title></circle>
+<circle class="sc-ac" cx="403.5" cy="183.9" r="5"><title>AC: S/ 29 036</title></circle>
+</svg></div>
+<div class="legend" style="grid-template-columns:repeat(5,auto);justify-content:start;gap:6px 22px">
+<div><span class="gl n"></span>PV acumulado</div><div><span class="gl bl"></span>Línea base de costos</div><div><span class="gl bu"></span>Presupuesto</div><div><span class="gl ev"></span>EV (ejemplo)</div><div><span class="gl ac"></span>AC (ejemplo)</div>
+</div></div>
+<details class="dict"><summary><span class="code">PV</span><span class="nm">Valor planificado por semana</span><span class="meta">18 semanas</span></summary><div class="tblwrap" style="margin:0"><table class="tbl num"><thead><tr><th>Semana</th><th>Cierre</th><th>PV de la semana</th><th>PV acumulado</th><th>% del trabajo</th></tr></thead><tbody><tr><td>1</td><td>18/09/2026</td><td>S/ 1 688</td><td>S/ 1 688</td><td>3 %</td></tr><tr><td>2</td><td>25/09/2026</td><td>S/ 1 320</td><td>S/ 3 008</td><td>5 %</td></tr><tr><td>3</td><td>02/10/2026</td><td>S/ 4 672</td><td>S/ 7 680</td><td>13 %</td></tr><tr><td>4</td><td>09/10/2026</td><td>S/ 3 360</td><td>S/ 11 040</td><td>18 %</td></tr><tr><td>5</td><td>16/10/2026</td><td>S/ 4 785</td><td>S/ 15 825</td><td>26 %</td></tr><tr><td>6</td><td>23/10/2026</td><td>S/ 4 002</td><td>S/ 19 827</td><td>33 %</td></tr><tr><td>7</td><td>30/10/2026</td><td>S/ 5 485</td><td>S/ 25 312</td><td>42 %</td></tr><tr><td>8</td><td>06/11/2026</td><td>S/ 4 106</td><td>S/ 29 418</td><td>49 %</td></tr><tr><td>9</td><td>13/11/2026</td><td>S/ 3 893</td><td>S/ 33 311</td><td>56 %</td></tr><tr><td>10</td><td>20/11/2026</td><td>S/ 3 753</td><td>S/ 37 064</td><td>62 %</td></tr><tr><td>11</td><td>27/11/2026</td><td>S/ 2 320</td><td>S/ 39 384</td><td>66 %</td></tr><tr><td>12</td><td>04/12/2026</td><td>S/ 2 672</td><td>S/ 42 056</td><td>70 %</td></tr><tr><td>13</td><td>11/12/2026</td><td>S/ 1 508</td><td>S/ 43 564</td><td>73 %</td></tr><tr><td>14</td><td>18/12/2026</td><td>S/ 3 720</td><td>S/ 47 284</td><td>79 %</td></tr><tr><td>15</td><td>25/12/2026</td><td>S/ 1 850</td><td>S/ 49 134</td><td>82 %</td></tr><tr><td>16</td><td>01/01/2027</td><td>S/ 3 616</td><td>S/ 52 750</td><td>88 %</td></tr><tr><td>17</td><td>08/01/2027</td><td>S/ 5 004</td><td>S/ 57 754</td><td>97 %</td></tr><tr><td>18</td><td>15/01/2027</td><td>S/ 2 000</td><td>S/ 59 754</td><td>100 %</td></tr></tbody></table></div></details>
+
+<h3 id="lineabase/evm"><span class="num">6.15</span>Monitorear y controlar las finanzas: valor ganado</h3>
+<p>El desempeño se medirá cada semana con la técnica del valor ganado (EVM). Fórmulas que se aplicarán:</p>
+<div class="fgrid">
+<div><b>PV</b> Valor planificado: costo presupuestado del trabajo programado a la fecha.</div>
+<div><b>EV</b> Valor ganado: % completado × presupuesto del trabajo.</div>
+<div><b>AC</b> Costo real del trabajo realizado.</div>
+<div><b>CV = EV − AC</b> Variación del costo (negativo: sobrecosto).</div>
+<div><b>SV = EV − PV</b> Variación del cronograma (negativo: atraso).</div>
+<div><b>CPI = EV ÷ AC</b> Índice de desempeño del costo.</div>
+<div><b>SPI = EV ÷ PV</b> Índice de desempeño del cronograma.</div>
+<div><b>EAC = BAC ÷ CPI</b> Estimación a la conclusión si sigue el mismo desempeño de costo.</div>
+<div><b>EAC = AC + (BAC − EV)</b> Si la desviación fue atípica.</div>
+<div><b>EAC = AC + (BAC − EV) ÷ (CPI × SPI)</b> Si influyen costo y plazo.</div>
+<div><b>ETC = EAC − AC</b> Estimación hasta la conclusión.</div>
+<div><b>VAC = BAC − EAC</b> Variación a la conclusión.</div>
+<div><b>TCPI = (BAC − EV) ÷ (BAC − AC)</b> Índice de desempeño que se necesita para terminar dentro del BAC.</div>
+</div>
+<h4>Ejemplo de aplicación al corte del hito H2 (06/11/2026)</h4>
+<p>Escenario ilustrativo para mostrar cómo se calculará: el PV sale de la curva S; EV y AC suponen un avance del 94 % de lo planificado y un costo real 5 % mayor a lo ganado.</p>
+<div class="tblwrap"><table class="tbl num evm">
+<thead><tr><th>Indicador</th><th>Cálculo</th><th>Resultado</th><th>Lectura</th></tr></thead>
+<tbody>
+<tr><td>BAC</td><td>Línea base de costos</td><td>S/ 62 279</td><td>Presupuesto del trabajo del proyecto</td></tr>
+<tr><td>PV</td><td>Curva S al 06/11/2026</td><td>S/ 29 418</td><td>Lo que debía estar hecho</td></tr>
+<tr><td>EV</td><td>0,94 × PV</td><td>S/ 27 653</td><td>Lo que realmente se hizo, valorizado</td></tr>
+<tr><td>AC</td><td>1,05 × EV</td><td>S/ 29 036</td><td>Lo que realmente se gastó</td></tr>
+<tr><td>CV</td><td>S/ 27 653 − S/ 29 036</td><td>−S/ 1 383</td><td>Sobrecosto</td></tr>
+<tr><td>SV</td><td>S/ 27 653 − S/ 29 418</td><td>−S/ 1 765</td><td>Atraso</td></tr>
+<tr><td>CPI</td><td>S/ 27 653 ÷ S/ 29 036</td><td>0,952</td><td>Por cada sol gastado se obtienen 0,952 soles de trabajo: alerta</td></tr>
+<tr><td>SPI</td><td>S/ 27 653 ÷ S/ 29 418</td><td>0,94</td><td>Se avanza al 94 % del ritmo planificado: alerta</td></tr>
+<tr><td>EAC</td><td>S/ 62 279 ÷ 0,952</td><td>S/ 65 394</td><td>Costo final proyectado</td></tr>
+<tr><td>ETC</td><td>S/ 65 394 − S/ 29 036</td><td>S/ 36 358</td><td>Lo que falta gastar</td></tr>
+<tr><td>VAC</td><td>S/ 62 279 − S/ 65 394</td><td>−S/ 3 115</td><td>Sobrecosto esperado al cierre</td></tr>
+<tr><td>TCPI</td><td>(S/ 62 279 − S/ 27 653) ÷ (S/ 62 279 − S/ 29 036)</td><td>1,042</td><td>Hay que trabajar 4 % más eficiente para no pasar el BAC</td></tr>
+</tbody></table></div>
+<div class="callout warn"><p><strong>Decisión según los umbrales.</strong> Con CPI y SPI entre 0,90 y 0,95 el proyecto entra en alerta: el director analiza la causa y propone acciones como la compresión del cronograma o una revisión del alcance del modelo. El EAC proyectado (S/ 65 394) se mantiene dentro del presupuesto total (S/ 65 393), por lo que no se necesita usar la reserva de gestión.</p></div>
+
+<h3 id="lineabase/viabilidad"><span class="num">6.16</span>Análisis de viabilidad financiera</h3>
+<p>Beneficio esperado: recuperar el 15 % de los 216 clientes en riesgo medio o alto, con un gasto promedio de S/ 750 por cliente según el registro histórico del spa.</p>
+<div class="formula">Beneficio anual = 32 clientes × S/ 750 = S/ 24 000  ·  Beneficio neto = S/ 24 000 − S/ 3 600 (soporte y mantenimiento) = S/ 20 400</div>
+<div class="tblwrap"><table class="tbl num">
+<thead><tr><th>Indicador</th><th>Fórmula</th><th>Resultado</th></tr></thead>
+<tbody>
+<tr><td>VAN a 3 años (10 %)</td><td>−Inversión + Σ Flujo neto ÷ (1 + i)<sup>t</sup></td><td>−S/ 14 661</td></tr>
+<tr><td>VAN a 5 años (10 %)</td><td>−Inversión + Σ Flujo neto ÷ (1 + i)<sup>t</sup></td><td>S/ 11 939</td></tr>
+<tr><td>ROI a 5 años</td><td>(Beneficio neto acumulado − Inversión) ÷ Inversión</td><td>56,0 %</td></tr>
+<tr><td>Recuperación del costo económico total</td><td>Inversión ÷ Beneficio neto anual</td><td>3,2 años</td></tr>
+<tr><td>Desembolso en efectivo del spa</td><td>No laborales + reservas</td><td>S/ 7 849</td></tr>
+<tr><td>Recuperación del desembolso en efectivo</td><td>Desembolso ÷ Beneficio neto mensual</td><td>4,6 meses</td></tr>
+</tbody></table></div>
+<p class="small">Lectura: valorizado a precios de mercado, el proyecto es rentable a partir del cuarto año (VAN positivo a 5 años). Para Essenza SPA, el desembolso real en efectivo es pequeño y se recupera en menos de un semestre. Los supuestos de beneficio se validarán con el indicador de recuperación de clientes después del cierre.</p>
 </section>
 <footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>
 </div>
