@@ -253,6 +253,19 @@ details.dict .meta{font-family:var(--mono);font-size:11px;color:var(--muted);whi
 .dict-b{padding:4px 18px 18px;border-top:1px dashed var(--rule)}
 .dict-b h4.dt{font-size:19px}
 @media (max-width:760px){details.dict .meta{display:none}}
+.gantt{display:block;width:100%;height:auto;font-family:var(--sans)}
+.gantt .g-mo{fill:#fbf9f5}.gantt .g-mo.alt{fill:#f3efe7}.gantt .g-mt{font-size:12px;font-weight:700;fill:var(--ink)}
+.gantt .g-wk{stroke:#e3ddd2}.gantt .g-wt{font-size:9px;fill:var(--muted);font-family:var(--mono)}.gantt .g-hol{fill:#f4dedb}
+.gantt .g-band{fill:#e9e4da}.gantt .g-lab{font-size:11.5px;fill:var(--ink-2)}.gantt .g-lab.L1{font-weight:700;fill:var(--ink);font-size:12px}
+.gantt .g-sum{fill:var(--side)}.gantt .g-bar{fill:var(--sage-2)}.gantt .g-bar.crit{fill:#b9443a}
+.gantt .g-ms{fill:var(--gold);stroke:#fff}.gantt .g-mst{font-size:10px;font-weight:700;fill:var(--amber);paint-order:stroke;stroke:#fff;stroke-width:3px}.gantt .g-sep{stroke:#c9c1b2}
+.gl{display:inline-block;width:16px;height:10px;border-radius:3px;vertical-align:middle;margin-right:8px}.gl.c{background:#b9443a}.gl.n{background:var(--sage-2)}.gl.m{width:10px;height:10px;background:var(--gold);transform:rotate(45deg);border-radius:1px}.gl.h{background:#f4dedb}
+.cpath{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:12px 0}
+.cpath span{background:#fbe9e6;border:1px solid #efc6bf;color:#8f3027;border-radius:999px;padding:4px 10px;font-size:12.5px;font-weight:600}
+.cpath span:not(:last-child)::after{content:" →";color:var(--muted);font-weight:400}
+.cpath span.m{background:var(--amber-lt);border-color:#e6cfa5;color:var(--amber)}
+.crit-tag{background:#fbe9e6;color:#8f3027;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px}
+.mx2 tr.grp td{background:#f1ece2;font-weight:700;color:var(--ink)}.mx2 td:nth-child(3),.mx2 td:nth-child(4){white-space:nowrap;font-family:var(--mono);font-size:12.5px}
 .refs li{margin-bottom:10px;padding-left:2.2em;text-indent:-2.2em;font-size:14.5px;color:var(--ink-2);list-style:none}
 footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .page{display:none}.page.on{display:block;animation:fade .35s ease}
@@ -327,6 +340,7 @@ h3{font-size:22px}
 <a href="#lineabase/edt">EDT</a>
 <a href="#lineabase/diccionario">Diccionario de la EDT</a>
 <a href="#lineabase/hitos">Hitos de control</a>
+<a href="#lineabase/cronograma">Cronograma y ruta crítica</a>
 </div>
 <div class="nav-t" style="margin-top:14px">Próximas entregas</div>
 <div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">07</span>Ejecución del proyecto</div>
@@ -352,7 +366,7 @@ h3{font-size:22px}
 <div class="fact"><div class="k">Cliente</div><div class="v">Essenza SPA · Santiago de Surco</div></div>
 <div class="fact"><div class="k">Producto</div><div class="v">CRM Predictivo y Retención Postventa</div></div>
 <div class="fact"><div class="k">Marco de referencia</div><div class="v">Guía PMBOK® 8.ª ed. (PMI)</div></div>
-<div class="fact"><div class="k">Ventana propuesta</div><div class="v">02/11/2026 – 26/03/2027</div></div>
+<div class="fact"><div class="k">Ventana propuesta</div><div class="v">02/11/2026 – 30/04/2027</div></div>
 </div>
 </div>
 <h3 id="inicio/negocio"><span class="num">1.1</span>El negocio: Essenza SPA</h3>
@@ -600,7 +614,7 @@ h3{font-size:22px}
 </tbody>
 </table></div>
 <h3 id="inicio/objetivos"><span class="num">1.5</span>Objetivos y alcance de la implementación</h3>
-<div class="callout"><p><strong>Objetivo general.</strong> Desarrollar e implementar en Essenza SPA un CRM web que prediga el riesgo de abandono de los clientes y apoye su retención postventa, con usuarias capacitadas y aceptación formal de la patrocinadora, entre noviembre de 2026 y marzo de 2027.</p></div>
+<div class="callout"><p><strong>Objetivo general.</strong> Desarrollar e implementar en Essenza SPA un CRM web que prediga el riesgo de abandono de los clientes y apoye su retención postventa, con usuarias capacitadas y aceptación formal de la patrocinadora, entre el 2 de noviembre de 2026 y el 30 de abril de 2027 (seis meses).</p></div>
 <h4>Objetivos específicos y criterios de éxito</h4>
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Objetivo</th><th>Indicador</th><th>Meta</th></tr></thead>
@@ -610,7 +624,7 @@ h3{font-size:22px}
 <tr><td>Entregar los módulos del CRM</td><td>Módulos aprobados en pruebas de aceptación</td><td>7 de 7 (dashboard, clientes, ficha 360°, alertas, sincronización, modelo, retención)</td></tr>
 <tr><td>Capacitar a las usuarias</td><td>Usuarias clave que aprueban una evaluación práctica</td><td>100 %, con nota ≥ 80 %</td></tr>
 <tr><td>Lograr la adopción</td><td>Alertas de riesgo alto revisadas dentro de 48 h durante la estabilización</td><td>≥ 90 %</td></tr>
-<tr><td>Cerrar formalmente</td><td>Acta de aceptación firmada y 0 incidentes críticos abiertos</td><td>Al 26/03/2027</td></tr>
+<tr><td>Cerrar formalmente</td><td>Acta de aceptación firmada y 0 incidentes críticos abiertos</td><td>Al 30/04/2027</td></tr>
 </tbody>
 </table></div>
 <p class="small">Indicador de beneficio que la operación seguirá midiendo después del cierre: tasa de recuperación de clientes en riesgo (casos “Recuperado” sobre casos gestionados).</p>
@@ -655,21 +669,21 @@ h3{font-size:22px}
 </tbody>
 </table></div>
 <h3 id="inicio/ciclo"><span class="num">1.7</span>Ciclo de vida de la implementación e hitos</h3>
-<p>Se adopta un ciclo de vida <strong>híbrido</strong>: fases planificadas de forma predictiva para cumplir hitos y presupuesto, y construcción por incrementos con una demostración a la usuaria líder al final de cada fase de desarrollo. Las fechas son la propuesta inicial y se formalizarán en la línea base del cronograma.</p>
+<p>Se adopta un ciclo de vida <strong>híbrido</strong>: fases planificadas de forma predictiva para cumplir hitos y presupuesto, y construcción por incrementos con una demostración a la usuaria líder al final de cada fase de desarrollo. Las fechas corresponden a la <a href="#lineabase/cronograma">línea base del cronograma</a> elaborada en MS Project.</p>
 <div class="tl">
-<div class="tl-i ms"><div class="d">02/11/2026</div><div class="t">H0 · Reunión de inicio del proyecto</div></div>
-<div class="tl-i"><div class="d">02/11 – 13/11</div><div class="t">F1 · Arranque y requisitos</div><p>Roles, plan de comunicaciones, levantamiento del proceso actual y requisitos priorizados.</p></div>
-<div class="tl-i"><div class="d">16/11 – 27/11</div><div class="t">F2 · Diseño de la solución</div><p>Arquitectura, modelo de datos, prototipo de pantallas y reglas de retención.</p></div>
-<div class="tl-i ms"><div class="d">27/11/2026</div><div class="t">H1 · Requisitos y diseño aprobados</div></div>
-<div class="tl-i"><div class="d">30/11 – 24/12</div><div class="t">F3 · Datos y modelo predictivo</div><p>Depuración del registro, variables por cliente, entrenamiento y evaluación del modelo.</p></div>
-<div class="tl-i ms"><div class="d">24/12/2026</div><div class="t">H2 · Modelo predictivo validado</div></div>
-<div class="tl-i"><div class="d">28/12 – 22/01</div><div class="t">F4 · Backend y sincronización</div><p>Base de datos, API, autenticación por rol y sincronización automática con el Excel.</p></div>
-<div class="tl-i"><div class="d">25/01 – 19/02</div><div class="t">F5 · Aplicación web y Centro de Retención</div><p>Pantallas del CRM, casos de retención, plantillas y contacto por WhatsApp.</p></div>
-<div class="tl-i ms"><div class="d">19/02/2027</div><div class="t">H3 · Sistema integrado</div></div>
-<div class="tl-i"><div class="d">22/02 – 12/03</div><div class="t">F6 · Pruebas, capacitación y puesta en producción</div><p>Pruebas integrales y de aceptación, capacitación por rol, instalación en el spa y go-live.</p></div>
-<div class="tl-i ms"><div class="d">12/03/2027</div><div class="t">H4 · Puesta en producción (go-live)</div></div>
-<div class="tl-i"><div class="d">15/03 – 26/03</div><div class="t">F7 · Estabilización y cierre</div><p>Soporte asistido, transición a la administradora, informe final y lecciones aprendidas.</p></div>
-<div class="tl-i ms"><div class="d">26/03/2027</div><div class="t">H5 · Acta de aceptación y cierre del proyecto</div></div>
+<div class="tl-i ms"><div class="d">05/11/2026</div><div class="t">H0 · Reunión de lanzamiento del proyecto</div></div>
+<div class="tl-i"><div class="d">02/11 – 25/11</div><div class="t">F1 · Arranque y requisitos</div><p>Acta, roles, plan de comunicaciones, levantamiento del proceso actual y requisitos priorizados.</p></div>
+<div class="tl-i"><div class="d">26/11 – 04/12</div><div class="t">F2 · Diseño de la solución</div><p>Arquitectura, modelo de datos, prototipo de pantallas y reglas de retención.</p></div>
+<div class="tl-i ms"><div class="d">04/12/2026</div><div class="t">H1 · Requisitos y diseño aprobados</div></div>
+<div class="tl-i"><div class="d">07/12 – 21/01</div><div class="t">F3 · Datos y modelo predictivo</div><p>Depuración del registro, variables por cliente, entrenamiento y evaluación del modelo.</p></div>
+<div class="tl-i"><div class="d">07/12 – 01/02</div><div class="t">F4 · Backend y sincronización (en paralelo con F3)</div><p>Base de datos, API, autenticación por rol, sincronización con el Excel y servicio de predicción.</p></div>
+<div class="tl-i ms"><div class="d">21/01/2027</div><div class="t">H2 · Modelo predictivo validado</div></div>
+<div class="tl-i"><div class="d">16/12 – 11/03</div><div class="t">F5 · Aplicación web y Centro de Retención</div><p>Pantallas del CRM, casos de retención, plantillas y contacto por WhatsApp.</p></div>
+<div class="tl-i ms"><div class="d">11/03/2027</div><div class="t">H3 · Sistema integrado</div></div>
+<div class="tl-i"><div class="d">12/03 – 07/04</div><div class="t">F6 · Pruebas, capacitación y puesta en producción</div><p>Pruebas integrales y de aceptación, instalación en el spa, respaldo, manuales y capacitación por rol.</p></div>
+<div class="tl-i ms"><div class="d">07/04/2027</div><div class="t">H4 · Puesta en producción (go-live)</div></div>
+<div class="tl-i"><div class="d">08/04 – 30/04</div><div class="t">F7 · Estabilización y cierre</div><p>Soporte asistido, transferencia a la administradora, informe final y lecciones aprendidas.</p></div>
+<div class="tl-i ms"><div class="d">30/04/2027</div><div class="t">H5 · Acta de aceptación y cierre del proyecto</div></div>
 </div>
 <h3 id="inicio/enfoque"><span class="num">1.8</span>Enfoque de dirección: Guía PMBOK® 8</h3>
 <p>La octava edición de la Guía PMBOK® organiza la dirección de proyectos en <strong>6 principios</strong>, <strong>7 dominios de desempeño</strong> y <strong>5 áreas de enfoque</strong>, y vuelve a describir <strong>40 procesos</strong> como orientación no prescriptiva. Este blog usa esa estructura de forma explícita.</p>
@@ -924,11 +938,11 @@ h3{font-size:22px}
 <li><strong>Reglas básicas</strong> del acta de constitución del equipo: puntualidad, respeto y decisiones registradas.</li>
 </ul></div>
 <div class="card"><h4>Reuniones clave</h4><ul class="clean">
-<li>Lanzamiento del proyecto (02/11/2026).</li>
-<li>Demostraciones de fin de fase: 27/11, 24/12, 22/01 y 19/02.</li>
+<li>Lanzamiento del proyecto (05/11/2026).</li>
+<li>Demostraciones de fin de fase: 04/12, 21/01, 01/02 y 11/03.</li>
 <li>Comité de cambios quincenal.</li>
-<li>Reunión de preparación del go-live (semana del 08/03/2027).</li>
-<li>Reunión de cierre y lecciones aprendidas (26/03/2027).</li>
+<li>Reunión de preparación del go-live (semana del 05/04/2027).</li>
+<li>Reunión de cierre y lecciones aprendidas (30/04/2027).</li>
 </ul></div>
 </div>
 <h4>Resistencias previstas y respuesta</h4>
@@ -992,10 +1006,10 @@ h3{font-size:22px}
 <div class="tblwrap"><table class="tbl cm">
 <thead><tr><th>ID</th><th>Comunicación</th><th>Propósito</th><th>Responsable</th><th>Receptores</th><th>Método y medio</th><th>Frecuencia</th><th>Confirmación</th></tr></thead>
 <tbody>
-<tr><td>C-01</td><td>Reunión de lanzamiento</td><td>Alinear objetivos, roles, reglas y calendario</td><td>Director</td><td>I-01 a I-06</td><td>Interactiva · presencial en el spa</td><td>Una vez · 02/11/2026</td><td>Acta firmada</td></tr>
+<tr><td>C-01</td><td>Reunión de lanzamiento</td><td>Alinear objetivos, roles, reglas y calendario</td><td>Director</td><td>I-01 a I-06</td><td>Interactiva · presencial en el spa</td><td>Una vez · 05/11/2026</td><td>Acta firmada</td></tr>
 <tr><td>C-02</td><td>Reunión diaria del equipo</td><td>Avance, plan del día y bloqueos</td><td>Director</td><td>I-06</td><td>Interactiva · videollamada 15 min</td><td>Diaria (lun–vie)</td><td>Tablero actualizado</td></tr>
 <tr><td>C-03</td><td>Informe semanal de estado</td><td>Avance, SPI/CPI, riesgos, incidentes y decisiones</td><td>Director</td><td>I-01, I-02</td><td>Push · correo + PDF de una página</td><td>Semanal · viernes</td><td>Acuse en 48 h</td></tr>
-<tr><td>C-04</td><td>Demostración de fin de fase</td><td>Validar el incremento y recoger observaciones</td><td>Director y líder técnico</td><td>I-01, I-02</td><td>Interactiva · presencial</td><td>27/11, 24/12, 22/01, 19/02</td><td>Acta de aceptación u observaciones</td></tr>
+<tr><td>C-04</td><td>Demostración de fin de fase</td><td>Validar el incremento y recoger observaciones</td><td>Director y líder técnico</td><td>I-01, I-02</td><td>Interactiva · presencial</td><td>04/12, 21/01, 01/02, 11/03</td><td>Acta de aceptación u observaciones</td></tr>
 <tr><td>C-05</td><td>Comité de control de cambios</td><td>Aprobar o rechazar solicitudes de cambio</td><td>Director</td><td>I-01</td><td>Interactiva · reunión</td><td>Quincenal o a demanda</td><td>Registro de cambios</td></tr>
 <tr><td>C-06</td><td>Repositorio del proyecto</td><td>Consultar documentos, actas y estado</td><td>Director</td><td>Todos los internos e I-08</td><td>Pull · este blog y carpeta compartida</td><td>Actualización semanal</td><td>—</td></tr>
 <tr><td>C-07</td><td>Talleres de capacitación</td><td>Preparar a las usuarias para usar el CRM</td><td>QA y capacitación</td><td>I-02, I-03, I-04</td><td>Interactiva · presencial fuera de horario</td><td>3 sesiones en F6</td><td>Evaluación práctica</td></tr>
@@ -1003,7 +1017,7 @@ h3{font-size:22px}
 <tr><td>C-09</td><td>Aviso de tratamiento de datos</td><td>Informar el uso de datos y solicitar consentimiento</td><td>Administradora</td><td>I-07</td><td>Push · formato impreso o WhatsApp</td><td>Antes de habilitar el contacto</td><td>Consentimiento registrado</td></tr>
 <tr><td>C-10</td><td>Canal de soporte</td><td>Reportar incidentes y dudas de uso</td><td>Equipo técnico</td><td>I-02, I-03, I-04</td><td>Interactiva · grupo de WhatsApp</td><td>Continuo en F6–F7 · respuesta ≤ 4 h hábiles</td><td>Incidente registrado</td></tr>
 <tr><td>C-11</td><td>Entregas académicas</td><td>Mostrar el avance del plan con evidencias</td><td>Director</td><td>I-08</td><td>Pull · este blog · presentación</td><td>Según calendario del curso</td><td>Retroalimentación del docente</td></tr>
-<tr><td>C-12</td><td>Informe final y reunión de cierre</td><td>Resultados frente a objetivos, lecciones y aceptación</td><td>Director</td><td>I-01, I-02, I-06, I-08</td><td>Interactiva + push · reunión y PDF</td><td>Una vez · 26/03/2027</td><td>Acta de aceptación firmada</td></tr>
+<tr><td>C-12</td><td>Informe final y reunión de cierre</td><td>Resultados frente a objetivos, lecciones y aceptación</td><td>Director</td><td>I-01, I-02, I-06, I-08</td><td>Interactiva + push · reunión y PDF</td><td>Una vez · 30/04/2027</td><td>Acta de aceptación firmada</td></tr>
 </tbody></table></div>
 
 <h3 id="comunicaciones/escalamiento"><span class="num">5.4</span>Proceso de escalamiento y confidencialidad</h3>
@@ -1053,7 +1067,7 @@ h3{font-size:22px}
 </section>
 <section class="page" id="p-lineabase">
 <div class="eyebrow">06 · Línea base</div>
-<h2 class="sec">Línea base del alcance: EDT y diccionario</h2>
+<h2 class="sec">Línea base: alcance y cronograma</h2>
 <p class="lead">La línea base del alcance es la versión aprobada del enunciado del alcance, la EDT y su diccionario. Solo puede cambiarse mediante el control integrado de cambios, y es la referencia contra la que se medirá el avance de la implementación.</p>
 <div class="facts" style="margin-top:18px">
 <div class="fact"><div class="k">Entregables (nivel 2)</div><div class="v">8</div></div>
@@ -1090,13 +1104,236 @@ h3{font-size:22px}
 <div class="tblwrap"><table class="tbl">
 <thead><tr><th>Hito</th><th>Descripción</th><th>Paquetes que lo cierran</th><th>Fecha</th></tr></thead>
 <tbody>
-<tr><td>H0</td><td>Reunión de lanzamiento del proyecto</td><td>EDT-1.1.01 (actividad 1.1.4)</td><td>02/11/2026</td></tr>
-<tr><td>H1</td><td>Requisitos y diseño aprobados</td><td>EDT-1.2.01 – EDT-1.2.05</td><td>27/11/2026</td></tr>
-<tr><td>H2</td><td>Modelo predictivo validado</td><td>EDT-1.3.01 – EDT-1.3.05</td><td>24/12/2026</td></tr>
-<tr><td>H3</td><td>Sistema integrado</td><td>1.4, 1.5, 1.6 y EDT-1.7.02</td><td>19/02/2027</td></tr>
-<tr><td>H4</td><td>Puesta en producción (go-live)</td><td>EDT-1.7.04, EDT-1.8.01 – EDT-1.8.03</td><td>12/03/2027</td></tr>
-<tr><td>H5</td><td>Acta de aceptación y cierre</td><td>EDT-1.8.04, EDT-1.8.05, EDT-1.1.04</td><td>26/03/2027</td></tr>
+<tr><td>H0</td><td>Reunión de lanzamiento del proyecto</td><td>EDT-1.1.01 (actividad 1.1.4)</td><td>05/11/2026</td></tr>
+<tr><td>H1</td><td>Requisitos y diseño aprobados</td><td>EDT-1.2.01 – EDT-1.2.05</td><td>04/12/2026</td></tr>
+<tr><td>H2</td><td>Modelo predictivo validado</td><td>EDT-1.3.01 – EDT-1.3.05</td><td>21/01/2027</td></tr>
+<tr><td>H3</td><td>Sistema integrado</td><td>1.4, 1.5, 1.6 y EDT-1.7.02</td><td>11/03/2027</td></tr>
+<tr><td>H4</td><td>Puesta en producción (go-live)</td><td>EDT-1.7.04, EDT-1.8.01 – EDT-1.8.03</td><td>07/04/2027</td></tr>
+<tr><td>H5</td><td>Acta de aceptación y cierre</td><td>EDT-1.8.04, EDT-1.8.05, EDT-1.1.04</td><td>30/04/2027</td></tr>
 </tbody></table></div>
+<h3 id="lineabase/cronograma"><span class="num">6.5</span>Línea base del cronograma</h3>
+<p>El cronograma se elaboró en <strong>Microsoft Project</strong> a partir de las 128 actividades de la EDT, con duraciones en días hábiles, dependencias fin-comienzo, recursos por rol y un calendario laboral de lunes a viernes que excluye los feriados nacionales del Perú. El proyecto dura <strong>seis meses</strong>.</p>
+<div class="facts" style="margin-top:16px">
+<div class="fact"><div class="k">Inicio</div><div class="v">Lunes 02/11/2026</div></div>
+<div class="fact"><div class="k">Fin</div><div class="v">Viernes 30/04/2027</div></div>
+<div class="fact"><div class="k">Duración</div><div class="v">6 meses · 124 días hábiles</div></div>
+<div class="fact"><div class="k">Actividades e hitos</div><div class="v">122 actividades · 6 hitos</div></div>
+</div>
+<div class="btns">
+<a class="btn pri" href="docs/Cronograma_CRM_Essenza.xml" download>Descargar cronograma para MS Project (.xml)</a>
+</div>
+<p class="small">Para obtener el archivo .mpp: en Microsoft Project, <em>Archivo → Abrir</em>, elige el tipo «Formato XML», abre el archivo y luego <em>Guardar como → Proyecto (*.mpp)</em>. También se abre en ProjectLibre.</p>
+<h4>Diagrama de Gantt por paquete de trabajo</h4>
+<div class="mapbox swbox"><div class="mapscroll">
+<svg viewBox="0 0 1082 1036" class="gantt" style="min-width:1082px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de Gantt del proyecto por paquete de trabajo">
+<rect class="g-mo" x="300.0" y="0" width="118.89999999999998" height="1036"/>
+<text class="g-mt" x="306.0" y="18">nov 2026</text>
+<rect class="g-mo alt" x="418.9" y="0" width="127.09999999999998" height="1036"/>
+<text class="g-mt" x="424.9" y="18">dic 2026</text>
+<rect class="g-mo" x="546.0" y="0" width="127.09999999999998" height="1036"/>
+<text class="g-mt" x="552.0" y="18">ene 2027</text>
+<rect class="g-mo alt" x="673.0999999999999" y="0" width="114.79999999999998" height="1036"/>
+<text class="g-mt" x="679.0999999999999" y="18">feb 2027</text>
+<rect class="g-mo" x="787.9" y="0" width="127.09999999999998" height="1036"/>
+<text class="g-mt" x="793.9" y="18">mar 2027</text>
+<rect class="g-mo alt" x="915.0" y="0" width="122.99999999999999" height="1036"/>
+<text class="g-mt" x="921.0" y="18">abr 2027</text>
+<rect class="g-hol" x="447.6" y="28" width="4.1" height="1008"><title>Feriado: Inmaculada Concepción</title></rect>
+<rect class="g-hol" x="451.7" y="28" width="4.1" height="1008"><title>Feriado: Batalla de Ayacucho</title></rect>
+<rect class="g-hol" x="517.3" y="28" width="4.1" height="1008"><title>Feriado: Navidad</title></rect>
+<rect class="g-hol" x="546.0" y="28" width="4.1" height="1008"><title>Feriado: Año Nuevo</title></rect>
+<rect class="g-hol" x="886.3" y="28" width="4.1" height="1008"><title>Feriado: Jueves Santo</title></rect>
+<rect class="g-hol" x="890.4" y="28" width="4.1" height="1008"><title>Feriado: Viernes Santo</title></rect>
+<line class="g-wk" x1="300.0" y1="28" x2="300.0" y2="1036"/>
+<text class="g-wt" x="302.0" y="42">02</text>
+<line class="g-wk" x1="328.7" y1="28" x2="328.7" y2="1036"/>
+<text class="g-wt" x="330.7" y="42">09</text>
+<line class="g-wk" x1="357.4" y1="28" x2="357.4" y2="1036"/>
+<text class="g-wt" x="359.4" y="42">16</text>
+<line class="g-wk" x1="386.1" y1="28" x2="386.1" y2="1036"/>
+<text class="g-wt" x="388.1" y="42">23</text>
+<line class="g-wk" x1="414.79999999999995" y1="28" x2="414.79999999999995" y2="1036"/>
+<text class="g-wt" x="416.79999999999995" y="42">30</text>
+<line class="g-wk" x1="443.5" y1="28" x2="443.5" y2="1036"/>
+<text class="g-wt" x="445.5" y="42">07</text>
+<line class="g-wk" x1="472.2" y1="28" x2="472.2" y2="1036"/>
+<text class="g-wt" x="474.2" y="42">14</text>
+<line class="g-wk" x1="500.9" y1="28" x2="500.9" y2="1036"/>
+<text class="g-wt" x="502.9" y="42">21</text>
+<line class="g-wk" x1="529.5999999999999" y1="28" x2="529.5999999999999" y2="1036"/>
+<text class="g-wt" x="531.5999999999999" y="42">28</text>
+<line class="g-wk" x1="558.3" y1="28" x2="558.3" y2="1036"/>
+<text class="g-wt" x="560.3" y="42">04</text>
+<line class="g-wk" x1="587.0" y1="28" x2="587.0" y2="1036"/>
+<text class="g-wt" x="589.0" y="42">11</text>
+<line class="g-wk" x1="615.7" y1="28" x2="615.7" y2="1036"/>
+<text class="g-wt" x="617.7" y="42">18</text>
+<line class="g-wk" x1="644.4" y1="28" x2="644.4" y2="1036"/>
+<text class="g-wt" x="646.4" y="42">25</text>
+<line class="g-wk" x1="673.0999999999999" y1="28" x2="673.0999999999999" y2="1036"/>
+<text class="g-wt" x="675.0999999999999" y="42">01</text>
+<line class="g-wk" x1="701.8" y1="28" x2="701.8" y2="1036"/>
+<text class="g-wt" x="703.8" y="42">08</text>
+<line class="g-wk" x1="730.5" y1="28" x2="730.5" y2="1036"/>
+<text class="g-wt" x="732.5" y="42">15</text>
+<line class="g-wk" x1="759.1999999999999" y1="28" x2="759.1999999999999" y2="1036"/>
+<text class="g-wt" x="761.1999999999999" y="42">22</text>
+<line class="g-wk" x1="787.9" y1="28" x2="787.9" y2="1036"/>
+<text class="g-wt" x="789.9" y="42">01</text>
+<line class="g-wk" x1="816.5999999999999" y1="28" x2="816.5999999999999" y2="1036"/>
+<text class="g-wt" x="818.5999999999999" y="42">08</text>
+<line class="g-wk" x1="845.3" y1="28" x2="845.3" y2="1036"/>
+<text class="g-wt" x="847.3" y="42">15</text>
+<line class="g-wk" x1="874.0" y1="28" x2="874.0" y2="1036"/>
+<text class="g-wt" x="876.0" y="42">22</text>
+<line class="g-wk" x1="902.6999999999999" y1="28" x2="902.6999999999999" y2="1036"/>
+<text class="g-wt" x="904.6999999999999" y="42">29</text>
+<line class="g-wk" x1="931.4" y1="28" x2="931.4" y2="1036"/>
+<text class="g-wt" x="933.4" y="42">05</text>
+<line class="g-wk" x1="960.0999999999999" y1="28" x2="960.0999999999999" y2="1036"/>
+<text class="g-wt" x="962.0999999999999" y="42">12</text>
+<line class="g-wk" x1="988.8" y1="28" x2="988.8" y2="1036"/>
+<text class="g-wt" x="990.8" y="42">19</text>
+<line class="g-wk" x1="1017.4999999999999" y1="28" x2="1017.4999999999999" y2="1036"/>
+<text class="g-wt" x="1019.4999999999999" y="42">26</text>
+<rect class="g-band" x="0" y="52" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="63.0" dy=".35em">1.1 Gestión del proyecto<title>1.1 Gestión del proyecto</title></text>
+<path class="g-sum" d="M300.0,59 h738.0 v8 l-4,-3 h-730.0 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="85.0" dy=".35em">EDT-1.1.01 Acta de constitución y lanzamiento<title>EDT-1.1.01 Acta de constitución y lanzamiento</title></text>
+<rect class="g-bar crit" x="300.0" y="79" width="16.4" height="12" rx="3"><title>EDT-1.1.01 Acta de constitución y lanzamiento: 2026-11-02 a 2026-11-05</title></rect>
+<path class="g-ms" d="M316.40000000000003,78.0 l7,7 l-7,7 l-7,-7 z"><title>H0 · Reunión de lanzamiento realizada · 2026-11-05</title></path>
+<text class="g-mst" x="326.40000000000003" y="85.0" dy=".35em">H0</text>
+<text class="g-lab L2" x="18" y="107.0" dy=".35em">EDT-1.1.02 Plan para la dirección del proyecto<title>EDT-1.1.02 Plan para la dirección del proyecto</title></text>
+<rect class="g-bar" x="398.4" y="101" width="49.199999999999996" height="12" rx="3"><title>EDT-1.1.02 Plan para la dirección del proyecto: 2026-11-26 a 2026-12-07</title></rect>
+<text class="g-lab L2" x="18" y="129.0" dy=".35em">EDT-1.1.03 Seguimiento y control<title>EDT-1.1.03 Seguimiento y control</title></text>
+<rect class="g-bar" x="455.79999999999995" y="123" width="549.4" height="12" rx="3"><title>EDT-1.1.03 Seguimiento y control: 2026-12-10 a 2027-04-22</title></rect>
+<text class="g-lab L2" x="18" y="151.0" dy=".35em">EDT-1.1.04 Cierre del proyecto<title>EDT-1.1.04 Cierre del proyecto</title></text>
+<rect class="g-bar crit" x="1021.5999999999999" y="145" width="16.4" height="12" rx="3"><title>EDT-1.1.04 Cierre del proyecto: 2027-04-27 a 2027-04-30</title></rect>
+<path class="g-ms" d="M1038.0,144.0 l7,7 l-7,7 l-7,-7 z"><title>H5 · Acta de aceptación y cierre firmada · 2027-04-30</title></path>
+<text class="g-mst" x="1048.0" y="151.0" dy=".35em">H5</text>
+<rect class="g-band" x="0" y="162" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="173.0" dy=".35em">1.2 Análisis y diseño<title>1.2 Análisis y diseño</title></text>
+<path class="g-sum" d="M316.4,169 h118.89999999999998 v8 l-4,-3 h-110.89999999999998 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="195.0" dy=".35em">EDT-1.2.01 Levantamiento AS-IS y requisitos<title>EDT-1.2.01 Levantamiento AS-IS y requisitos</title></text>
+<rect class="g-bar crit" x="316.4" y="189" width="45.1" height="12" rx="3"><title>EDT-1.2.01 Levantamiento AS-IS y requisitos: 2026-11-06 a 2026-11-16</title></rect>
+<text class="g-lab L2" x="18" y="217.0" dy=".35em">EDT-1.2.02 Especificación de requisitos y traz…<title>EDT-1.2.02 Especificación de requisitos y trazabilidad</title></text>
+<rect class="g-bar crit" x="361.5" y="211" width="36.9" height="12" rx="3"><title>EDT-1.2.02 Especificación de requisitos y trazabilidad: 2026-11-17 a 2026-11-25</title></rect>
+<text class="g-lab L2" x="18" y="239.0" dy=".35em">EDT-1.2.03 Arquitectura y modelo de datos<title>EDT-1.2.03 Arquitectura y modelo de datos</title></text>
+<rect class="g-bar crit" x="398.4" y="233" width="36.9" height="12" rx="3"><title>EDT-1.2.03 Arquitectura y modelo de datos: 2026-11-26 a 2026-12-04</title></rect>
+<text class="g-lab L2" x="18" y="261.0" dy=".35em">EDT-1.2.04 Prototipo de interfaz (UX/UI)<title>EDT-1.2.04 Prototipo de interfaz (UX/UI)</title></text>
+<rect class="g-bar crit" x="398.4" y="255" width="36.9" height="12" rx="3"><title>EDT-1.2.04 Prototipo de interfaz (UX/UI): 2026-11-26 a 2026-12-04</title></rect>
+<text class="g-lab L2" x="18" y="283.0" dy=".35em">EDT-1.2.05 Reglas de negocio de retención<title>EDT-1.2.05 Reglas de negocio de retención</title></text>
+<rect class="g-bar crit" x="398.4" y="277" width="36.9" height="12" rx="3"><title>EDT-1.2.05 Reglas de negocio de retención: 2026-11-26 a 2026-12-04</title></rect>
+<path class="g-ms" d="M435.3,276.0 l7,7 l-7,7 l-7,-7 z"><title>H1 · Requisitos y diseño aprobados · 2026-12-04</title></path>
+<text class="g-mst" x="445.3" y="283.0" dy=".35em">H1</text>
+<rect class="g-band" x="0" y="294" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="305.0" dy=".35em">1.3 Datos y modelo predictivo<title>1.3 Datos y modelo predictivo</title></text>
+<path class="g-sum" d="M443.5,301 h188.59999999999997 v8 l-4,-3 h-180.59999999999997 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="327.0" dy=".35em">EDT-1.3.01 Registro operacional Excel normaliz…<title>EDT-1.3.01 Registro operacional Excel normalizado</title></text>
+<rect class="g-bar" x="443.5" y="321" width="20.5" height="12" rx="3"><title>EDT-1.3.01 Registro operacional Excel normalizado: 2026-12-07 a 2026-12-11</title></rect>
+<text class="g-lab L2" x="18" y="349.0" dy=".35em">EDT-1.3.02 Dataset depurado y calidad de datos<title>EDT-1.3.02 Dataset depurado y calidad de datos</title></text>
+<rect class="g-bar" x="472.2" y="343" width="32.8" height="12" rx="3"><title>EDT-1.3.02 Dataset depurado y calidad de datos: 2026-12-14 a 2026-12-21</title></rect>
+<text class="g-lab L2" x="18" y="371.0" dy=".35em">EDT-1.3.03 Ingeniería de características<title>EDT-1.3.03 Ingeniería de características</title></text>
+<rect class="g-bar" x="505.0" y="365" width="41.0" height="12" rx="3"><title>EDT-1.3.03 Ingeniería de características: 2026-12-22 a 2026-12-31</title></rect>
+<text class="g-lab L2" x="18" y="393.0" dy=".35em">EDT-1.3.04 Modelo XGBoost entrenado<title>EDT-1.3.04 Modelo XGBoost entrenado</title></text>
+<rect class="g-bar" x="558.3" y="387" width="45.1" height="12" rx="3"><title>EDT-1.3.04 Modelo XGBoost entrenado: 2027-01-04 a 2027-01-14</title></rect>
+<text class="g-lab L2" x="18" y="415.0" dy=".35em">EDT-1.3.05 Evaluación, interpretabilidad y emp…<title>EDT-1.3.05 Evaluación, interpretabilidad y empaquetado</title></text>
+<rect class="g-bar" x="603.4" y="409" width="28.699999999999996" height="12" rx="3"><title>EDT-1.3.05 Evaluación, interpretabilidad y empaquetado: 2027-01-15 a 2027-01-21</title></rect>
+<path class="g-ms" d="M632.1,408.0 l7,7 l-7,7 l-7,-7 z"><title>H2 · Modelo predictivo validado · 2027-01-21</title></path>
+<text class="g-mst" x="642.1" y="415.0" dy=".35em">H2</text>
+<rect class="g-band" x="0" y="426" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="437.0" dy=".35em">1.4 Backend e integración<title>1.4 Backend e integración</title></text>
+<path class="g-sum" d="M443.5,433 h233.69999999999996 v8 l-4,-3 h-225.69999999999996 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="459.0" dy=".35em">EDT-1.4.01 Base de datos SQLite<title>EDT-1.4.01 Base de datos SQLite</title></text>
+<rect class="g-bar crit" x="443.5" y="453" width="36.9" height="12" rx="3"><title>EDT-1.4.01 Base de datos SQLite: 2026-12-07 a 2026-12-15</title></rect>
+<text class="g-lab L2" x="18" y="481.0" dy=".35em">EDT-1.4.02 Lectura y validación del Excel<title>EDT-1.4.02 Lectura y validación del Excel</title></text>
+<rect class="g-bar crit" x="480.4" y="475" width="28.699999999999996" height="12" rx="3"><title>EDT-1.4.02 Lectura y validación del Excel: 2026-12-16 a 2026-12-22</title></rect>
+<text class="g-lab L2" x="18" y="503.0" dy=".35em">EDT-1.4.03 Sincronización automática<title>EDT-1.4.03 Sincronización automática</title></text>
+<rect class="g-bar crit" x="509.1" y="497" width="36.9" height="12" rx="3"><title>EDT-1.4.03 Sincronización automática: 2026-12-23 a 2026-12-31</title></rect>
+<text class="g-lab L2" x="18" y="525.0" dy=".35em">EDT-1.4.04 Predicción y alertas<title>EDT-1.4.04 Predicción y alertas</title></text>
+<rect class="g-bar" x="632.0999999999999" y="519" width="45.1" height="12" rx="3"><title>EDT-1.4.04 Predicción y alertas: 2027-01-22 a 2027-02-01</title></rect>
+<text class="g-lab L2" x="18" y="547.0" dy=".35em">EDT-1.4.05 API REST y autenticación<title>EDT-1.4.05 API REST y autenticación</title></text>
+<rect class="g-bar crit" x="558.3" y="541" width="45.1" height="12" rx="3"><title>EDT-1.4.05 API REST y autenticación: 2027-01-04 a 2027-01-14</title></rect>
+<rect class="g-band" x="0" y="558" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="569.0" dy=".35em">1.5 Aplicación web CRM<title>1.5 Aplicación web CRM</title></text>
+<path class="g-sum" d="M480.4,565 h262.4 v8 l-4,-3 h-254.39999999999998 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="591.0" dy=".35em">EDT-1.5.01 Inicio de sesión y navegación<title>EDT-1.5.01 Inicio de sesión y navegación</title></text>
+<rect class="g-bar" x="480.4" y="585" width="28.699999999999996" height="12" rx="3"><title>EDT-1.5.01 Inicio de sesión y navegación: 2026-12-16 a 2026-12-22</title></rect>
+<text class="g-lab L2" x="18" y="613.0" dy=".35em">EDT-1.5.02 Dashboard analítico<title>EDT-1.5.02 Dashboard analítico</title></text>
+<rect class="g-bar crit" x="603.4" y="607" width="49.199999999999996" height="12" rx="3"><title>EDT-1.5.02 Dashboard analítico: 2027-01-15 a 2027-01-26</title></rect>
+<text class="g-lab L2" x="18" y="635.0" dy=".35em">EDT-1.5.03 Clientes y ficha 360°<title>EDT-1.5.03 Clientes y ficha 360°</title></text>
+<rect class="g-bar crit" x="652.5999999999999" y="629" width="53.3" height="12" rx="3"><title>EDT-1.5.03 Clientes y ficha 360°: 2027-01-27 a 2027-02-08</title></rect>
+<text class="g-lab L2" x="18" y="657.0" dy=".35em">EDT-1.5.04 Centro de alertas y vistas del sist…<title>EDT-1.5.04 Centro de alertas y vistas del sistema</title></text>
+<rect class="g-bar crit" x="705.9" y="651" width="36.9" height="12" rx="3"><title>EDT-1.5.04 Centro de alertas y vistas del sistema: 2027-02-09 a 2027-02-17</title></rect>
+<rect class="g-band" x="0" y="668" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="679.0" dy=".35em">1.6 Módulo de retención<title>1.6 Módulo de retención</title></text>
+<path class="g-sum" d="M603.4,675 h217.29999999999998 v8 l-4,-3 h-209.29999999999998 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="701.0" dy=".35em">EDT-1.6.01 Modelo de datos de retención<title>EDT-1.6.01 Modelo de datos de retención</title></text>
+<rect class="g-bar" x="603.4" y="695" width="28.699999999999996" height="12" rx="3"><title>EDT-1.6.01 Modelo de datos de retención: 2027-01-15 a 2027-01-21</title></rect>
+<text class="g-lab L2" x="18" y="723.0" dy=".35em">EDT-1.6.02 Motor de casos y recuperación<title>EDT-1.6.02 Motor de casos y recuperación</title></text>
+<rect class="g-bar" x="677.2" y="717" width="45.1" height="12" rx="3"><title>EDT-1.6.02 Motor de casos y recuperación: 2027-02-02 a 2027-02-12</title></rect>
+<text class="g-lab L2" x="18" y="745.0" dy=".35em">EDT-1.6.03 Centro de Retención<title>EDT-1.6.03 Centro de Retención</title></text>
+<rect class="g-bar crit" x="742.8" y="739" width="49.199999999999996" height="12" rx="3"><title>EDT-1.6.03 Centro de Retención: 2027-02-18 a 2027-03-01</title></rect>
+<text class="g-lab L2" x="18" y="767.0" dy=".35em">EDT-1.6.04 Contacto por WhatsApp<title>EDT-1.6.04 Contacto por WhatsApp</title></text>
+<rect class="g-bar crit" x="792.0" y="761" width="28.699999999999996" height="12" rx="3"><title>EDT-1.6.04 Contacto por WhatsApp: 2027-03-02 a 2027-03-08</title></rect>
+<rect class="g-band" x="0" y="778" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="789.0" dy=".35em">1.7 Pruebas y calidad<title>1.7 Pruebas y calidad</title></text>
+<path class="g-sum" d="M398.4,785 h516.6 v8 l-4,-3 h-508.6 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="811.0" dy=".35em">EDT-1.7.01 Plan y casos de prueba<title>EDT-1.7.01 Plan y casos de prueba</title></text>
+<rect class="g-bar" x="398.4" y="805" width="36.9" height="12" rx="3"><title>EDT-1.7.01 Plan y casos de prueba: 2026-11-26 a 2026-12-04</title></rect>
+<text class="g-lab L2" x="18" y="833.0" dy=".35em">EDT-1.7.02 Pruebas unitarias e integración<title>EDT-1.7.02 Pruebas unitarias e integración</title></text>
+<rect class="g-bar crit" x="603.4" y="827" width="229.59999999999997" height="12" rx="3"><title>EDT-1.7.02 Pruebas unitarias e integración: 2027-01-15 a 2027-03-11</title></rect>
+<path class="g-ms" d="M833.0,826.0 l7,7 l-7,7 l-7,-7 z"><title>H3 · Sistema integrado · 2027-03-11</title></path>
+<text class="g-mst" x="843.0" y="833.0" dy=".35em">H3</text>
+<text class="g-lab L2" x="18" y="855.0" dy=".35em">EDT-1.7.03 Pruebas integrales del sistema<title>EDT-1.7.03 Pruebas integrales del sistema</title></text>
+<rect class="g-bar crit" x="833.0" y="849" width="45.1" height="12" rx="3"><title>EDT-1.7.03 Pruebas integrales del sistema: 2027-03-12 a 2027-03-22</title></rect>
+<text class="g-lab L2" x="18" y="877.0" dy=".35em">EDT-1.7.04 Pruebas de aceptación (UAT)<title>EDT-1.7.04 Pruebas de aceptación (UAT)</title></text>
+<rect class="g-bar crit" x="878.0999999999999" y="871" width="36.9" height="12" rx="3"><title>EDT-1.7.04 Pruebas de aceptación (UAT): 2027-03-23 a 2027-03-31</title></rect>
+<rect class="g-band" x="0" y="888" width="1082" height="22"/>
+<text class="g-lab L1" x="8" y="899.0" dy=".35em">1.8 Despliegue y transición<title>1.8 Despliegue y transición</title></text>
+<path class="g-sum" d="M820.6999999999999,895 h200.89999999999998 v8 l-4,-3 h-192.89999999999998 l-4,3 z"/>
+<text class="g-lab L2" x="18" y="921.0" dy=".35em">EDT-1.8.01 Entorno de producción y respaldo<title>EDT-1.8.01 Entorno de producción y respaldo</title></text>
+<rect class="g-bar crit" x="878.0999999999999" y="915" width="36.9" height="12" rx="3"><title>EDT-1.8.01 Entorno de producción y respaldo: 2027-03-23 a 2027-03-31</title></rect>
+<text class="g-lab L2" x="18" y="943.0" dy=".35em">EDT-1.8.02 Documentación y manuales<title>EDT-1.8.02 Documentación y manuales</title></text>
+<rect class="g-bar" x="820.6999999999999" y="937" width="32.8" height="12" rx="3"><title>EDT-1.8.02 Documentación y manuales: 2027-03-09 a 2027-03-16</title></rect>
+<text class="g-lab L2" x="18" y="965.0" dy=".35em">EDT-1.8.03 Capacitación por rol<title>EDT-1.8.03 Capacitación por rol</title></text>
+<rect class="g-bar crit" x="915.0" y="959" width="24.6" height="12" rx="3"><title>EDT-1.8.03 Capacitación por rol: 2027-04-01 a 2027-04-06</title></rect>
+<text class="g-lab L2" x="18" y="987.0" dy=".35em">EDT-1.8.04 Go-live y estabilización<title>EDT-1.8.04 Go-live y estabilización</title></text>
+<rect class="g-bar crit" x="939.5999999999999" y="981" width="65.6" height="12" rx="3"><title>EDT-1.8.04 Go-live y estabilización: 2027-04-07 a 2027-04-22</title></rect>
+<path class="g-ms" d="M943.6999999999999,980.0 l7,7 l-7,7 l-7,-7 z"><title>H4 · Puesta en producción (go-live) · 2027-04-07</title></path>
+<text class="g-mst" x="953.6999999999999" y="987.0" dy=".35em">H4</text>
+<text class="g-lab L2" x="18" y="1009.0" dy=".35em">EDT-1.8.05 Transferencia a la operación<title>EDT-1.8.05 Transferencia a la operación</title></text>
+<rect class="g-bar crit" x="1005.1999999999999" y="1003" width="16.4" height="12" rx="3"><title>EDT-1.8.05 Transferencia a la operación: 2027-04-23 a 2027-04-26</title></rect>
+<line class="g-sep" x1="294" y1="28" x2="294" y2="1036"/>
+</svg>
+</div>
+<div class="legend" style="grid-template-columns:repeat(4,auto);justify-content:start;gap:6px 22px">
+<div><span class="gl c"></span>Paquete en la ruta crítica</div><div><span class="gl n"></span>Paquete con holgura</div><div><span class="gl m"></span>Hito</div><div><span class="gl h"></span>Feriado</div>
+</div></div>
+<h4>Ruta crítica</h4>
+<p>Las actividades con holgura total igual a cero forman la ruta crítica; cualquier retraso en ellas mueve la fecha de cierre del 30/04/2027.</p>
+<div class="cpath">
+<span>EDT-1.1.01 Acta y lanzamiento</span><span>EDT-1.2.01 AS-IS</span><span>EDT-1.2.02 Requisitos</span><span>EDT-1.2.03 / 1.2.04 Arquitectura y prototipo</span><span class="m">H1</span><span>EDT-1.4.01 Base de datos</span><span>EDT-1.4.02 Lectura del Excel</span><span>EDT-1.4.03 Sincronización</span><span>EDT-1.4.05 API</span><span>EDT-1.5.02 Dashboard</span><span>EDT-1.5.03 Clientes y ficha 360°</span><span>EDT-1.5.04 Alertas y vistas</span><span>EDT-1.6.03 Centro de Retención</span><span>EDT-1.6.04 WhatsApp</span><span class="m">H3</span><span>EDT-1.7.03 Pruebas integrales</span><span>EDT-1.7.04 UAT / 1.8.01 Producción</span><span>EDT-1.8.03 Capacitación</span><span class="m">H4</span><span>EDT-1.8.04 Estabilización</span><span>EDT-1.8.05 Transferencia</span><span>EDT-1.1.04 Cierre</span><span class="m">H5</span>
+</div>
+<p class="small">Lectura: el camino más largo es el desarrollo de la aplicación (backend → pantallas → Centro de Retención). La rama de datos y modelo (1.3) corre en paralelo con 3 días de holgura, por lo que un retraso mayor en el modelo también podría volverse crítico.</p>
+<h4>Fechas por paquete de trabajo</h4>
+<div class="tblwrap"><table class="tbl mx2">
+<thead><tr><th>Código</th><th>Paquete de trabajo</th><th>Inicio</th><th>Fin</th><th>Holgura</th></tr></thead>
+<tbody>
+<tr class="grp"><td colspan="5">1.1 Gestión del proyecto</td></tr><tr><td>EDT-1.1.01</td><td>Acta de constitución y lanzamiento</td><td>02/11/2026</td><td>05/11/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.1.02</td><td>Plan para la dirección del proyecto</td><td>26/11/2026</td><td>07/12/2026</td><td>7 d</td></tr><tr><td>EDT-1.1.03</td><td>Seguimiento y control</td><td>10/12/2026</td><td>22/04/2027</td><td>6 d</td></tr><tr><td>EDT-1.1.04</td><td>Cierre del proyecto</td><td>27/04/2027</td><td>30/04/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr class="grp"><td colspan="5">1.2 Análisis y diseño</td></tr><tr><td>EDT-1.2.01</td><td>Levantamiento AS-IS y requisitos</td><td>06/11/2026</td><td>16/11/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.2.02</td><td>Especificación de requisitos y trazabilidad</td><td>17/11/2026</td><td>25/11/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.2.03</td><td>Arquitectura y modelo de datos</td><td>26/11/2026</td><td>04/12/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.2.04</td><td>Prototipo de interfaz (UX/UI)</td><td>26/11/2026</td><td>04/12/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.2.05</td><td>Reglas de negocio de retención</td><td>26/11/2026</td><td>04/12/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr class="grp"><td colspan="5">1.3 Datos y modelo predictivo</td></tr><tr><td>EDT-1.3.01</td><td>Registro operacional Excel normalizado</td><td>07/12/2026</td><td>11/12/2026</td><td>2 d</td></tr><tr><td>EDT-1.3.02</td><td>Dataset depurado y calidad de datos</td><td>14/12/2026</td><td>21/12/2026</td><td>3 d</td></tr><tr><td>EDT-1.3.03</td><td>Ingeniería de características</td><td>22/12/2026</td><td>31/12/2026</td><td>3 d</td></tr><tr><td>EDT-1.3.04</td><td>Modelo XGBoost entrenado</td><td>04/01/2027</td><td>14/01/2027</td><td>3 d</td></tr><tr><td>EDT-1.3.05</td><td>Evaluación, interpretabilidad y empaquetado</td><td>15/01/2027</td><td>21/01/2027</td><td>3 d</td></tr><tr class="grp"><td colspan="5">1.4 Backend e integración</td></tr><tr><td>EDT-1.4.01</td><td>Base de datos SQLite</td><td>07/12/2026</td><td>15/12/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.4.02</td><td>Lectura y validación del Excel</td><td>16/12/2026</td><td>22/12/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.4.03</td><td>Sincronización automática</td><td>23/12/2026</td><td>31/12/2026</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.4.04</td><td>Predicción y alertas</td><td>22/01/2027</td><td>01/02/2027</td><td>3 d</td></tr><tr><td>EDT-1.4.05</td><td>API REST y autenticación</td><td>04/01/2027</td><td>14/01/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr class="grp"><td colspan="5">1.5 Aplicación web CRM</td></tr><tr><td>EDT-1.5.01</td><td>Inicio de sesión y navegación</td><td>16/12/2026</td><td>22/12/2026</td><td>15 d</td></tr><tr><td>EDT-1.5.02</td><td>Dashboard analítico</td><td>15/01/2027</td><td>26/01/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.5.03</td><td>Clientes y ficha 360°</td><td>27/01/2027</td><td>08/02/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.5.04</td><td>Centro de alertas y vistas del sistema</td><td>09/02/2027</td><td>17/02/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr class="grp"><td colspan="5">1.6 Módulo de retención</td></tr><tr><td>EDT-1.6.01</td><td>Modelo de datos de retención</td><td>15/01/2027</td><td>21/01/2027</td><td>10 d</td></tr><tr><td>EDT-1.6.02</td><td>Motor de casos y recuperación</td><td>02/02/2027</td><td>12/02/2027</td><td>3 d</td></tr><tr><td>EDT-1.6.03</td><td>Centro de Retención</td><td>18/02/2027</td><td>01/03/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.6.04</td><td>Contacto por WhatsApp</td><td>02/03/2027</td><td>08/03/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr class="grp"><td colspan="5">1.7 Pruebas y calidad</td></tr><tr><td>EDT-1.7.01</td><td>Plan y casos de prueba</td><td>26/11/2026</td><td>04/12/2026</td><td>55 d</td></tr><tr><td>EDT-1.7.02</td><td>Pruebas unitarias e integración</td><td>15/01/2027</td><td>11/03/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.7.03</td><td>Pruebas integrales del sistema</td><td>12/03/2027</td><td>22/03/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.7.04</td><td>Pruebas de aceptación (UAT)</td><td>23/03/2027</td><td>31/03/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr class="grp"><td colspan="5">1.8 Despliegue y transición</td></tr><tr><td>EDT-1.8.01</td><td>Entorno de producción y respaldo</td><td>23/03/2027</td><td>31/03/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.8.02</td><td>Documentación y manuales</td><td>09/03/2027</td><td>16/03/2027</td><td>9 d</td></tr><tr><td>EDT-1.8.03</td><td>Capacitación por rol</td><td>01/04/2027</td><td>06/04/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.8.04</td><td>Go-live y estabilización</td><td>07/04/2027</td><td>22/04/2027</td><td><span class="crit-tag">Crítica</span></td></tr><tr><td>EDT-1.8.05</td><td>Transferencia a la operación</td><td>23/04/2027</td><td>26/04/2027</td><td><span class="crit-tag">Crítica</span></td></tr>
+</tbody></table></div>
+<h4>Calendario del proyecto</h4>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Fecha</th><th>Feriado no laborable</th></tr></thead>
+<tbody>
+<tr><td>08/12/2026</td><td>Inmaculada Concepción</td></tr>
+<tr><td>09/12/2026</td><td>Batalla de Ayacucho</td></tr>
+<tr><td>25/12/2026</td><td>Navidad</td></tr>
+<tr><td>01/01/2027</td><td>Año Nuevo</td></tr>
+<tr><td>25/03/2027</td><td>Jueves Santo</td></tr>
+<tr><td>26/03/2027</td><td>Viernes Santo</td></tr>
+</tbody></table></div>
+<p class="small">Jornada de 8 horas (08:00 a 17:00), de lunes a viernes. Recursos: director del proyecto, analista funcional, científico de datos, desarrolladores backend y frontend, QA y capacitación, más la administradora y la dueña en las actividades de validación.</p>
 </section>
 <footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>
 </div>
@@ -1106,7 +1343,7 @@ const AREAS={ej:'Ejecución',mc:'Monitoreo y Control',ci:'Cierre'};
 const P={
 'E-EJE':{n:'Gestionar la ejecución del proyecto',en:'Manage Project Execution',d:'Gobernanza',a:'ej',
 p:'Dirigir y realizar el trabajo definido en el plan e implementar los cambios aprobados para lograr los objetivos del proyecto.',
-x:'Conducir la construcción por incrementos: datos y modelo, backend y sincronización, aplicación web y Centro de Retención; luego la instalación en la PC de recepción y la puesta en producción del 12/03/2027.',
+x:'Conducir la construcción por incrementos: datos y modelo, backend y sincronización, aplicación web y Centro de Retención; luego la instalación en la PC de recepción y la puesta en producción del 07/04/2027.',
 i:['Plan para la dirección del proyecto','Requisitos y diseño aprobados','Cambios aprobados','Registro de riesgos'],
 o:['Incrementos del CRM (modelo, API, aplicación web, retención)','Datos de desempeño del trabajo','Registro de incidentes','Solicitudes de cambio'],
 t:['Tablero Kanban del equipo','Reuniones diarias de 15 min','Repositorio y control de versiones (Git)']},
