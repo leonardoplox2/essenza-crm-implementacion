@@ -390,8 +390,12 @@ h3{font-size:22px}
 <a href="#lineabase/evm">Valor ganado (EVM)</a>
 <a href="#lineabase/viabilidad">Viabilidad</a>
 </div>
+<a href="#entregables" data-p="entregables"><span class="n">07</span>Entregables</a>
+<div class="sub">
+<a href="#entregables/estado">Estado por hito</a>
+<a href="#entregables/h2">H2 · Modelo predictivo validado</a>
+</div>
 <div class="nav-t" style="margin-top:14px">Próximas entregas</div>
-<div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">07</span>Ejecución del proyecto</div>
 <div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">08</span>Monitoreo y control</div>
 <div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">09</span>Cierre</div>
 </nav>
@@ -1557,6 +1561,58 @@ h3{font-size:22px}
 </tbody></table></div>
 <p class="small">Lectura: valorizado a precios de mercado, la inversión se recupera en unos 2,1 años y el VAN ya es positivo a 3 años. Para Essenza SPA, el desembolso real en efectivo es pequeño y se recupera en unos 4,0 meses, dentro del primer año como estima el caso de negocio del acta de constitución. Los supuestos de beneficio se validarán con el indicador de recuperación de clientes después del cierre.</p>
 </section>
+<section class="page" id="p-entregables">
+<div class="eyebrow">07 · Entregables</div>
+<h2 class="sec">Entregables del proyecto</h2>
+<p class="lead">Los entregables que se van completando según el cronograma, con su evidencia de verificación y su acta de aceptación para descargar. Cada uno cierra un hito de control de la línea base.</p>
+
+<h3 id="entregables/estado"><span class="num">7.1</span>Estado por hito</h3>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Hito</th><th>Fecha</th><th>Entregable que lo cierra</th><th>Estado</th><th>Descarga</th></tr></thead>
+<tbody>
+<tr><td><strong>H0</strong> · Inicio del proyecto</td><td>17/09/2026</td><td>Acta de constitución firmada</td><td>Aceptado</td><td><a href="#acta">Ver acta</a></td></tr>
+<tr><td><strong>H1</strong> · Requisitos y diseño aprobados</td><td>05/10/2026</td><td>Requisitos, arquitectura y prototipo (1.2)</td><td>—</td><td>—</td></tr>
+<tr><td><strong>H2</strong> · Modelo predictivo validado</td><td>06/11/2026</td><td>EDT-1.3.05 · Evaluación, interpretabilidad y empaquetado</td><td><strong>Cumple la meta</strong> · pendiente de firma</td><td><a href="#entregables/h2">Ver y descargar</a></td></tr>
+<tr><td><strong>H3</strong> · Sistema integrado</td><td>03/12/2026</td><td>CRM completo listo para pruebas (1.4–1.6, 1.7.02)</td><td>Programado</td><td>—</td></tr>
+<tr><td><strong>H4</strong> · Puesta en producción</td><td>24/12/2026</td><td>CRM instalado y usuarias capacitadas (1.8)</td><td>Programado</td><td>—</td></tr>
+<tr><td><strong>H5</strong> · Aceptación y cierre</td><td>15/01/2027</td><td>Acta de aceptación y cierre (1.1.04)</td><td>Programado</td><td>—</td></tr>
+</tbody></table></div>
+
+<h3 id="entregables/h2"><span class="num">7.2</span>H2 · EDT-1.3.05 Evaluación, interpretabilidad y empaquetado del modelo</h3>
+<p>Verifica que el modelo de riesgo de abandono cumple la meta de calidad del acta, explica qué factores usa para estimar el riesgo, define los niveles que verá el personal en el CRM y deja el modelo versionado para que el backend lo integre en EDT-1.4.04 (desde el 09/11/2026). Responsable: científico de datos. Aprueba: la patrocinadora.</p>
+<div class="facts">
+<div class="fact"><div class="k">ROC-AUC (meta ≥ 0,80)</div><div class="v">0,874 ✓</div></div>
+<div class="fact"><div class="k">Recall (meta ≥ 0,60)</div><div class="v">0,76 ✓</div></div>
+<div class="fact"><div class="k">Abandonos detectados</div><div class="v">19 de 25</div></div>
+<div class="fact"><div class="k">Modelo</div><div class="v">XGBoost v1.0</div></div>
+</div>
+<div class="btns" style="margin-top:20px">
+<a class="btn pri" href="docs/entregables/EDT-1.3.05/Informe_EDT-1.3.05_Evaluacion_Modelo.docx" download>Informe (Word)</a>
+<a class="btn" href="docs/entregables/EDT-1.3.05/Informe_EDT-1.3.05_Evaluacion_Modelo.pdf" target="_blank" rel="noopener">Informe (PDF)</a>
+<a class="btn pri" href="docs/entregables/EDT-1.3.05/Acta_Aceptacion_EDT-1.3.05.docx" download>Acta de aceptación (Word)</a>
+<a class="btn" href="docs/entregables/EDT-1.3.05/Acta_Aceptacion_EDT-1.3.05.pdf" target="_blank" rel="noopener">Acta de aceptación (PDF)</a>
+<a class="btn" href="docs/entregables/EDT-1.3.05/EDT-1.3.05_Entregable_H2.zip" download>Paquete completo (.zip)</a>
+</div>
+<p class="small">El paquete incluye el modelo versionado (<code>modelo_abandono_v1.0</code>) con sus metadatos y huella SHA-256, los gráficos y el script <code>evaluar_modelo.py</code> para reproducir todas las cifras.</p>
+<div class="grid2" style="margin-top:18px">
+<figure class="card" style="margin:0"><img src="docs/entregables/EDT-1.3.05/img/G3_metricas_vs_meta.png" alt="Métricas del modelo frente a la meta del acta" style="width:100%;height:auto" loading="lazy"><figcaption class="small">Métricas en 84 clientes de prueba frente a la meta del acta.</figcaption></figure>
+<figure class="card" style="margin:0"><img src="docs/entregables/EDT-1.3.05/img/G1_matriz_confusion.png" alt="Matriz de confusión" style="width:100%;height:auto" loading="lazy"><figcaption class="small">Matriz de confusión con el umbral de alerta del CRM (0,30).</figcaption></figure>
+<figure class="card" style="margin:0"><img src="docs/entregables/EDT-1.3.05/img/G4_shap_importancia.png" alt="Importancia de variables SHAP" style="width:100%;height:auto" loading="lazy"><figcaption class="small">Variables que más influyen en el riesgo: días sin visita, puntaje RFM y distrito.</figcaption></figure>
+<figure class="card" style="margin:0"><img src="docs/entregables/EDT-1.3.05/img/G6_niveles_riesgo.png" alt="Clientes por nivel de riesgo" style="width:100%;height:auto" loading="lazy"><figcaption class="small">Cartera por nivel de riesgo: 270 bajo, 73 medio y 77 alto.</figcaption></figure>
+</div>
+<h4 style="margin-top:22px">Criterios de aceptación</h4>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Criterio</th><th>Resultado</th><th>Estado</th></tr></thead>
+<tbody>
+<tr><td>ROC-AUC en datos de prueba ≥ 0,80</td><td>0,874</td><td>Cumple</td></tr>
+<tr><td>Recall en datos de prueba ≥ 0,60</td><td>0,76</td><td>Cumple</td></tr>
+<tr><td>Variables explicadas con SHAP en lenguaje comprensible</td><td>Secciones 7 y 8 del informe</td><td>Cumple</td></tr>
+<tr><td>Modelo versionado con metadatos</td><td>Versión 1.0</td><td>Cumple</td></tr>
+<tr><td>Validación de la dueña con clientes conocidos (≥ 6 de 8)</td><td>Tabla de la sección 9</td><td>Pendiente</td></tr>
+</tbody></table></div>
+<div class="callout warn"><p><strong>Hallazgos para el control del proyecto.</strong> El modelo ubica a 150 clientes en riesgo medio o alto, frente a los 216 que suponía el caso de negocio de la <a href="#lineabase/viabilidad">viabilidad</a>; se recomienda actualizar ese supuesto mediante control de cambios. Además, la dueña debe confirmar la definición de abandono (114 clientes con más de 120 días sin visita figuran como activos) y el registro de prueba CLI-TEST-001 debe excluirse antes del go-live.</p></div>
+</section>
+
 <footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>
 </div>
 </div>
