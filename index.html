@@ -394,6 +394,7 @@ h3{font-size:22px}
 <div class="sub">
 <a href="#entregables/estado">Estado por hito</a>
 <a href="#entregables/h2">H2 · Modelo predictivo validado</a>
+<a href="#entregables/dashboard">EDT-1.5.02 · Dashboard analítico</a>
 </div>
 <div class="nav-t" style="margin-top:14px">Próximas entregas</div>
 <div class="soon"><span class="n" style="font-family:var(--mono);font-size:11px">08</span>Monitoreo y control</div>
@@ -1564,7 +1565,7 @@ h3{font-size:22px}
 <section class="page" id="p-entregables">
 <div class="eyebrow">07 · Entregables</div>
 <h2 class="sec">Entregables del proyecto</h2>
-<p class="lead">Los entregables que se van completando según el cronograma, con su evidencia de verificación y su acta de aceptación para descargar. Cada uno cierra un hito de control de la línea base.</p>
+<p class="lead">Los entregables que se van completando según el cronograma, con su evidencia de verificación y su acta de aceptación para descargar. Algunos cierran un hito de control de la línea base y otros son paquetes de trabajo que avanzan hacia el siguiente hito.</p>
 
 <h3 id="entregables/estado"><span class="num">7.1</span>Estado por hito</h3>
 <div class="tblwrap"><table class="tbl">
@@ -1612,6 +1613,39 @@ h3{font-size:22px}
 <tr><td>Validación de la dueña con clientes conocidos (≥ 6 de 8)</td><td>8 de 8</td><td>Cumple</td></tr>
 </tbody></table></div>
 <div class="callout warn"><p><strong>Hallazgos para el control del proyecto.</strong> El modelo ubica a 150 clientes en riesgo medio o alto, frente a los 216 que suponía el caso de negocio de la <a href="#lineabase/viabilidad">viabilidad</a>; se recomienda actualizar ese supuesto mediante control de cambios. Además, la dueña debe confirmar la definición de abandono (114 clientes con más de 120 días sin visita figuran como activos) y el registro de prueba CLI-TEST-001 debe excluirse antes del go-live.</p></div>
+
+<h3 id="entregables/dashboard"><span class="num">7.3</span>EDT-1.5.02 Dashboard analítico</h3>
+<p>Primera pantalla del CRM: muestra en pocos segundos cómo está la cartera de clientes. Paquete del entregable 1.5 Aplicación web CRM, programado del 28/10 al 03/11/2026 y en camino al hito H3 (Sistema integrado). Responsable: desarrollador frontend. Requisito: RQ-03. Criterio de aceptación: las cifras coinciden con la base de datos.</p>
+<div class="facts">
+<div class="fact"><div class="k">Clientes en riesgo</div><div class="v">150 de 420</div></div>
+<div class="fact"><div class="k">Umbral superado</div><div class="v">213</div></div>
+<div class="fact"><div class="k">Cifras verificadas</div><div class="v">20 de 20 ✓</div></div>
+<div class="fact"><div class="k">Estado</div><div class="v">Entregado</div></div>
+</div>
+<div class="btns" style="margin-top:20px">
+<a class="btn pri" href="docs/entregables/EDT-1.5.02/dashboard/index.html" target="_blank" rel="noopener">Abrir el dashboard en vivo ↗</a>
+<a class="btn" href="docs/entregables/EDT-1.5.02/Informe_EDT-1.5.02_Dashboard_Analitico.docx" download>Informe (Word)</a>
+<a class="btn" href="docs/entregables/EDT-1.5.02/Informe_EDT-1.5.02_Dashboard_Analitico.pdf" target="_blank" rel="noopener">Informe (PDF)</a>
+<a class="btn" href="docs/entregables/EDT-1.5.02/Acta_Aceptacion_EDT-1.5.02.docx" download>Acta de aceptación (Word)</a>
+<a class="btn" href="docs/entregables/EDT-1.5.02/EDT-1.5.02_Dashboard_Analitico.zip" download>Paquete completo (.zip)</a>
+</div>
+<p class="small">El paquete incluye la pantalla, la base de datos con la que se generó (<code>crm_essenza.db</code>), las capturas y los programas <code>build_db.py</code> (carga y cálculo con SQL) y <code>verificar_cifras.py</code> (recálculo independiente desde los Excel).</p>
+<div class="grid2" style="margin-top:18px">
+<figure class="card" style="margin:0"><img src="docs/entregables/EDT-1.5.02/img/C2_riesgo_estado.png" alt="Nivel de riesgo, estado temporal y cruce" style="width:100%;height:auto" loading="lazy"><figcaption class="small">Nivel de riesgo (270 bajo, 73 medio, 77 alto), estado temporal y cruce entre ambos.</figcaption></figure>
+<figure class="card" style="margin:0"><img src="docs/entregables/EDT-1.5.02/img/C3_evolucion_12m.png" alt="Evolución de alertas" style="width:100%;height:auto" loading="lazy"><figcaption class="small">Alertas nuevas por mes: clientes que pasan a prealerta o superan los 120 días.</figcaption></figure>
+</div>
+<h4 style="margin-top:22px">Criterios de aceptación</h4>
+<div class="tblwrap"><table class="tbl">
+<thead><tr><th>Criterio</th><th>Resultado</th><th>Estado</th></tr></thead>
+<tbody>
+<tr><td>Indicadores de clientes y riesgo</td><td>Seis indicadores</td><td>Cumple</td></tr>
+<tr><td>Distribución por nivel de riesgo y estado temporal</td><td>Anillo, barras y tabla cruzada</td><td>Cumple</td></tr>
+<tr><td>Evolución de alertas en el tiempo</td><td>Gráfico mensual con selector de periodo</td><td>Cumple</td></tr>
+<tr><td>Las cifras coinciden con la base de datos</td><td>20 de 20 cifras</td><td>Cumple</td></tr>
+<tr><td>Uso en computadora y en celular</td><td>Pruebas conformes</td><td>Cumple</td></tr>
+<tr><td>Aceptación de la patrocinadora</td><td>Acta de aceptación</td><td>Pendiente de firma</td></tr>
+</tbody></table></div>
+<div class="callout warn"><p><strong>Observaciones.</strong> 85 clientes superan los 120 días sin venir pero tienen riesgo bajo según el modelo, lo que confirma que la dueña debe definir qué cuenta como abandono antes del go-live. Además, entre 50 y 77 alertas nuevas por mes son muchas para recepción: se propone que el Centro de Alertas (EDT-1.5.04) priorice los clientes de riesgo medio o alto en prealerta, que son los más recuperables.</p></div>
 </section>
 
 <footer><span>Implementación del CRM Predictivo y Retención Postventa · Essenza SPA</span><span>Gestión de Proyectos TI · UNTELS 2026</span></footer>

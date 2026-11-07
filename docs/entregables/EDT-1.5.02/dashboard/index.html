@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard · CRM Spa ESSENZA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="chart.umd.min.js"></script>
+<style>
+:root{--bg:#f5f4f9;--card:#fff;--ink:#1d1830;--mut:#6b6780;--rule:#e7e4ef;--side:#1c1630;--side2:#2a2245;--acc:#7c3aed;--acc2:#ede7fd;
+--bajo:#10b981;--medio:#f59e0b;--alto:#ef4444;--pre:#f59e0b;--umb:#ef4444;--nor:#10b981}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;-webkit-font-smoothing:antialiased}
+.shell{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
+aside{background:var(--side);color:#cfc9e6;padding:22px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column}
+.logo h1{font-size:17px;color:#fff;margin:0 8px;font-weight:700;letter-spacing:.2px}.logo span{display:block;margin:2px 8px 0;font-size:12px;color:#9d95bf}
+.navl{font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:#7f77a3;margin:22px 10px 6px}
+.ni{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;color:#cfc9e6;font-size:13.5px;text-decoration:none;cursor:default}
+.ni svg{width:16px;height:16px;flex:none}.ni.on{background:var(--acc);color:#fff;font-weight:600}.ni.off{opacity:.55}
+.side-foot{margin-top:auto;font-size:11.5px;color:#8c84ad;padding:10px;border-top:1px solid #322a50;line-height:1.5}
+main{padding:26px 30px 40px;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.top h2{font-size:24px;margin:0;font-weight:700}.top p{margin:4px 0 0;color:var(--mut);font-size:13px}
+.sync{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--mut)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bajo);box-shadow:0 0 0 3px #d1fae5}
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-bottom:16px}
+.k{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:15px 16px}
+.k .l{font-size:12px;color:var(--mut);font-weight:500}.k .v{font-size:26px;font-weight:700;margin-top:6px;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.k .s{font-size:12px;color:var(--mut);margin-top:4px}.k.r .v{color:var(--alto)}.k.a .v{color:var(--acc)}
+.grid{display:grid;gap:16px;margin-bottom:16px}.g3{grid-template-columns:1fr 1fr 1.15fr}.g1{grid-template-columns:1fr}
+.c{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px 20px;min-width:0}
+.c h3{font-size:14.5px;margin:0;font-weight:600}.c .sub{font-size:12px;color:var(--mut);margin:3px 0 12px}
+.ch{position:relative;height:230px}.ch.tall{height:290px}
+.hd{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.seg{display:inline-flex;background:var(--bg);border:1px solid var(--rule);border-radius:9px;padding:3px}
+.seg button{border:0;background:none;font:inherit;font-size:12.5px;padding:5px 11px;border-radius:7px;color:var(--mut);cursor:pointer}
+.seg button.on{background:var(--card);color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:10px}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.heat{width:100%;border-collapse:separate;border-spacing:4px;font-size:12.5px;margin-top:6px}
+.heat th{font-weight:500;color:var(--mut);font-size:11.5px;text-align:center;padding:2px}.heat th.row{text-align:left}
+.heat td{text-align:center;border-radius:8px;padding:12px 4px;font-weight:600;font-variant-numeric:tabular-nums}
+table.top10{width:100%;border-collapse:collapse;font-size:13px}
+.top10 th{text-align:left;font-size:11.5px;color:var(--mut);font-weight:500;padding:8px 10px;border-bottom:1px solid var(--rule)}
+.top10 td{padding:9px 10px;border-bottom:1px solid var(--rule);white-space:nowrap;font-variant-numeric:tabular-nums}.top10 td.n{text-align:right}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:600}
+.p-Alto{background:#fee2e2;color:#b91c1c}.p-Medio{background:#fef3c7;color:#92400e}.p-Bajo{background:#d1fae5;color:#065f46}
+.p-U{background:#fee2e2;color:#b91c1c}.p-P{background:#fef3c7;color:#92400e}.p-N{background:#d1fae5;color:#065f46}
+.bar{height:6px;border-radius:3px;background:var(--rule);width:90px;display:inline-block;vertical-align:middle;margin-right:8px;overflow:hidden}.bar b{display:block;height:100%;background:var(--alto)}
+.scroll{overflow-x:auto}
+.foot{font-size:11.5px;color:var(--mut);margin-top:6px}
+.mtop{display:none}
+@media (max-width:1180px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.g3{grid-template-columns:1fr 1fr}.g3 .c:last-child{grid-column:1/-1}}
+@media (max-width:760px){.shell{grid-template-columns:1fr}aside{display:none}.mtop{display:flex;align-items:center;gap:10px;background:var(--side);color:#fff;padding:12px 16px;font-weight:700}
+.mtop span{font-weight:400;font-size:12px;color:#9d95bf}main{padding:18px 16px 30px}.kpis{grid-template-columns:1fr 1fr;gap:10px}.k .v{font-size:22px}.g3{grid-template-columns:1fr}.top h2{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="mtop">✦ Spa ESSENZA <span>CRM Predictivo · Dashboard</span></div>
+<div class="shell">
+<aside>
+<div class="logo"><h1>✦ Spa ESSENZA</h1><span>CRM Predictivo</span></div>
+<div class="navl">Principal</div>
+<a class="ni on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+<a class="ni off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Clientes</a>
+<a class="ni off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Centro de Alertas</a>
+<div class="navl">Postventa</div>
+<a class="ni off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8L4 10.7l5 3.6L7.1 20 12 16.5 16.9 20 15 14.3l5-3.6-6.1-1.9z"/></svg>Retención y Acción</a>
+<div class="navl">Sistema</div>
+<a class="ni off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>Sincronización</a>
+<a class="ni off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>Rendimiento del Modelo</a>
+<div class="side-foot">Entrega EDT-1.5.02<br>Los demás módulos se entregan en sus propios paquetes.</div>
+</aside>
+<main>
+<div class="top">
+<div><h2>Dashboard</h2><p>Vista general de la cartera de clientes · corte al <b id="corte"></b> · modelo v<span id="ver"></span></p></div>
+<div class="sync"><span class="dot"></span>Sincronizado con el registro operacional</div>
+</div>
+
+<section class="kpis" id="kpis"></section>
+
+<div class="grid g3">
+<div class="c"><h3>Clientes por nivel de riesgo</h3><p class="sub">Probabilidad de abandono del modelo</p><div class="ch"><canvas id="cRiesgo"></canvas></div><div class="legend" id="lgR"></div></div>
+<div class="c"><h3>Estado temporal</h3><p class="sub">Días desde la última visita</p><div class="ch"><canvas id="cTemp"></canvas></div><div class="legend"><span><i style="background:var(--nor)"></i>Normal: menos de 90</span><span><i style="background:var(--pre)"></i>Prealerta: 90 a 120</span><span><i style="background:var(--umb)"></i>Umbral superado: más de 120</span></div></div>
+<div class="c"><h3>Riesgo vs. estado temporal</h3><p class="sub">Clientes en cada combinación</p><table class="heat" id="heat"></table><p class="foot">Los casos en rojo y ámbar a la vez son la prioridad del Centro de Retención.</p></div>
+</div>
+
+<div class="grid g1">
+<div class="c">
+<div class="hd"><div><h3>Evolución de alertas</h3><p class="sub">Alertas nuevas por mes: clientes que pasan a prealerta o superan el umbral en cada sincronización mensual</p></div>
+<div class="seg" id="seg"><button data-n="12" class="on">12 meses</button><button data-n="24">24 meses</button><button data-n="999">Todo</button></div></div>
+<div class="ch tall"><canvas id="cEvol"></canvas></div>
+</div>
+</div>
+
+<div class="grid g1">
+<div class="c"><h3>Clientes con mayor riesgo de abandono</h3><p class="sub">Los 10 clientes con mayor probabilidad según el modelo</p>
+<div class="scroll"><table class="top10"><thead><tr><th>Cliente</th><th>Nombre</th><th>Probabilidad</th><th>Nivel</th><th>Estado temporal</th><th class="n">Días sin venir</th><th class="n">Visitas</th><th class="n">Gasto total</th><th>Última visita</th></tr></thead><tbody id="top"></tbody></table></div>
+</div>
+</div>
+<p class="foot">Fuente: base de datos del CRM (crm_essenza.db) cargada desde spa_registro_operacional.xlsx y predicciones del modelo de abandono v1.0. Umbrales de config.py: riesgo bajo &lt; 0,30 ≤ medio &lt; 0,60 ≤ alto; prealerta desde 90 días y umbral superado desde 121.</p>
+</main>
+</div>
+<script>
+const D={"corte": "2026-06-30", "version_modelo": "1.0", "generado": "2026-11-07 14:09", "kpi": {"clientes": 420, "en_riesgo": 150, "riesgo_alto": 77, "prob_media": 0.2861, "umbral_superado": 213, "prealerta": 38, "atenciones": 2500, "atenciones_30d": 108, "ingresos_30d": 18142.61, "activos_30d": 91, "ticket_promedio": 126.0, "calificacion": 4.36}, "riesgo": {"Alto": 77, "Bajo": 270, "Medio": 73}, "temporal": {"Normal": 169, "Prealerta": 38, "Umbral superado": 213}, "cruce": {"Alto|Normal": 4, "Alto|Prealerta": 1, "Alto|Umbral superado": 72, "Bajo|Normal": 153, "Bajo|Prealerta": 32, "Bajo|Umbral superado": 85, "Medio|Normal": 12, "Medio|Prealerta": 5, "Medio|Umbral superado": 56}, "top": [{"id": "CLI0004", "nombre": "Carmen Paredes Campos", "prob": 0.9266999959945679, "nivel": "Alto", "estado": "Umbral superado", "dias": 899, "visitas": 1, "gasto": 45.0, "ultima": "2024-01-13"}, {"id": "CLI0132", "nombre": "Ruth Medina Martínez", "prob": 0.9229999780654907, "nivel": "Alto", "estado": "Umbral superado", "dias": 788, "visitas": 1, "gasto": 118.75, "ultima": "2024-05-03"}, {"id": "CLI0135", "nombre": "Marisol Cruz Delgado", "prob": 0.9146999716758728, "nivel": "Alto", "estado": "Umbral superado", "dias": 836, "visitas": 1, "gasto": 120.0, "ultima": "2024-03-16"}, {"id": "CLI0382", "nombre": "Raúl Guerrero Ríos", "prob": 0.913100004196167, "nivel": "Alto", "estado": "Umbral superado", "dias": 440, "visitas": 2, "gasto": 232.75, "ultima": "2025-04-16"}, {"id": "CLI0168", "nombre": "Andrés Guerrero Ponce", "prob": 0.9085000157356262, "nivel": "Alto", "estado": "Umbral superado", "dias": 909, "visitas": 1, "gasto": 104.5, "ultima": "2024-01-03"}, {"id": "CLI0260", "nombre": "Jazmín Morales Gonzáles", "prob": 0.902400016784668, "nivel": "Alto", "estado": "Umbral superado", "dias": 755, "visitas": 2, "gasto": 198.08, "ultima": "2024-06-05"}, {"id": "CLI0311", "nombre": "Lucía Medina Fernández", "prob": 0.899399995803833, "nivel": "Alto", "estado": "Umbral superado", "dias": 536, "visitas": 1, "gasto": 220.0, "ultima": "2025-01-10"}, {"id": "CLI0261", "nombre": "Ricardo Gómez Huamán", "prob": 0.897599995136261, "nivel": "Alto", "estado": "Umbral superado", "dias": 664, "visitas": 1, "gasto": 205.0, "ultima": "2024-09-04"}, {"id": "CLI0003", "nombre": "Fernando Salazar Huamán", "prob": 0.8968999981880188, "nivel": "Alto", "estado": "Umbral superado", "dias": 795, "visitas": 2, "gasto": 311.25, "ultima": "2024-04-26"}, {"id": "CLI0022", "nombre": "Yolanda Aguilar Pérez", "prob": 0.8899000287055969, "nivel": "Alto", "estado": "Umbral superado", "dias": 520, "visitas": 1, "gasto": 185.0, "ultima": "2025-01-26"}], "categorias_alto": {"Masaje": 50, "Belleza": 33, "Facial": 30, "Corporal": 7}, "evolucion": [{"mes": "2024-01", "clientes": 91, "normal": 91, "prealerta": 0, "umbral": 0, "alertas_nuevas": 0, "nuevas_prealerta": 0, "nuevas_umbral": 0, "atenciones": 100}, {"mes": "2024-02", "clientes": 143, "normal": 143, "prealerta": 0, "umbral": 0, "alertas_nuevas": 0, "nuevas_prealerta": 0, "nuevas_umbral": 0, "atenciones": 80}, {"mes": "2024-03", "clientes": 191, "normal": 187, "prealerta": 4, "umbral": 0, "alertas_nuevas": 4, "nuevas_prealerta": 4, "nuevas_umbral": 0, "atenciones": 83}, {"mes": "2024-04", "clientes": 227, "normal": 181, "prealerta": 46, "umbral": 0, "alertas_nuevas": 43, "nuevas_prealerta": 43, "nuevas_umbral": 0, "atenciones": 93}, {"mes": "2024-05", "clientes": 259, "normal": 184, "prealerta": 37, "umbral": 38, "alertas_nuevas": 75, "nuevas_prealerta": 37, "nuevas_umbral": 38, "atenciones": 79}, {"mes": "2024-06", "clientes": 277, "normal": 178, "prealerta": 39, "umbral": 60, "alertas_nuevas": 64, "nuevas_prealerta": 37, "nuevas_umbral": 27, "atenciones": 75}, {"mes": "2024-07", "clientes": 298, "normal": 173, "prealerta": 47, "umbral": 78, "alertas_nuevas": 78, "nuevas_prealerta": 47, "nuevas_umbral": 31, "atenciones": 83}, {"mes": "2024-08", "clientes": 313, "normal": 171, "prealerta": 38, "umbral": 104, "alertas_nuevas": 75, "nuevas_prealerta": 38, "nuevas_umbral": 37, "atenciones": 83}, {"mes": "2024-09", "clientes": 325, "normal": 170, "prealerta": 34, "umbral": 121, "alertas_nuevas": 66, "nuevas_prealerta": 33, "nuevas_umbral": 33, "atenciones": 71}, {"mes": "2024-10", "clientes": 333, "normal": 162, "prealerta": 47, "umbral": 124, "alertas_nuevas": 76, "nuevas_prealerta": 47, "nuevas_umbral": 29, "atenciones": 82}, {"mes": "2024-11", "clientes": 346, "normal": 171, "prealerta": 33, "umbral": 142, "alertas_nuevas": 66, "nuevas_prealerta": 31, "nuevas_umbral": 35, "atenciones": 94}, {"mes": "2024-12", "clientes": 355, "normal": 173, "prealerta": 41, "umbral": 141, "alertas_nuevas": 69, "nuevas_prealerta": 41, "nuevas_umbral": 28, "atenciones": 87}, {"mes": "2025-01", "clientes": 364, "normal": 173, "prealerta": 36, "umbral": 155, "alertas_nuevas": 72, "nuevas_prealerta": 36, "nuevas_umbral": 36, "atenciones": 76}, {"mes": "2025-02", "clientes": 369, "normal": 173, "prealerta": 35, "umbral": 161, "alertas_nuevas": 62, "nuevas_prealerta": 33, "nuevas_umbral": 29, "atenciones": 82}, {"mes": "2025-03", "clientes": 375, "normal": 162, "prealerta": 45, "umbral": 168, "alertas_nuevas": 75, "nuevas_prealerta": 45, "nuevas_umbral": 30, "atenciones": 72}, {"mes": "2025-04", "clientes": 381, "normal": 170, "prealerta": 35, "umbral": 176, "alertas_nuevas": 71, "nuevas_prealerta": 34, "nuevas_umbral": 37, "atenciones": 87}, {"mes": "2025-05", "clientes": 384, "normal": 166, "prealerta": 39, "umbral": 179, "alertas_nuevas": 68, "nuevas_prealerta": 39, "nuevas_umbral": 29, "atenciones": 80}, {"mes": "2025-06", "clientes": 387, "normal": 166, "prealerta": 34, "umbral": 187, "alertas_nuevas": 68, "nuevas_prealerta": 34, "nuevas_umbral": 34, "atenciones": 78}, {"mes": "2025-07", "clientes": 389, "normal": 166, "prealerta": 34, "umbral": 189, "alertas_nuevas": 61, "nuevas_prealerta": 34, "nuevas_umbral": 27, "atenciones": 87}, {"mes": "2025-08", "clientes": 392, "normal": 169, "prealerta": 29, "umbral": 194, "alertas_nuevas": 60, "nuevas_prealerta": 29, "nuevas_umbral": 31, "atenciones": 76}, {"mes": "2025-09", "clientes": 397, "normal": 173, "prealerta": 23, "umbral": 201, "alertas_nuevas": 50, "nuevas_prealerta": 23, "nuevas_umbral": 27, "atenciones": 74}, {"mes": "2025-10", "clientes": 403, "normal": 184, "prealerta": 43, "umbral": 176, "alertas_nuevas": 58, "nuevas_prealerta": 43, "nuevas_umbral": 15, "atenciones": 102}, {"mes": "2025-11", "clientes": 404, "normal": 186, "prealerta": 33, "umbral": 185, "alertas_nuevas": 63, "nuevas_prealerta": 32, "nuevas_umbral": 31, "atenciones": 93}, {"mes": "2025-12", "clientes": 407, "normal": 177, "prealerta": 37, "umbral": 193, "alertas_nuevas": 65, "nuevas_prealerta": 37, "nuevas_umbral": 28, "atenciones": 70}, {"mes": "2026-01", "clientes": 410, "normal": 179, "prealerta": 41, "umbral": 190, "alertas_nuevas": 72, "nuevas_prealerta": 41, "nuevas_umbral": 31, "atenciones": 94}, {"mes": "2026-02", "clientes": 414, "normal": 175, "prealerta": 45, "umbral": 194, "alertas_nuevas": 68, "nuevas_prealerta": 39, "nuevas_umbral": 29, "atenciones": 77}, {"mes": "2026-03", "clientes": 415, "normal": 183, "prealerta": 28, "umbral": 204, "alertas_nuevas": 61, "nuevas_prealerta": 28, "nuevas_umbral": 33, "atenciones": 85}, {"mes": "2026-04", "clientes": 417, "normal": 165, "prealerta": 48, "umbral": 204, "alertas_nuevas": 69, "nuevas_prealerta": 46, "nuevas_umbral": 23, "atenciones": 71}, {"mes": "2026-05", "clientes": 418, "normal": 164, "prealerta": 39, "umbral": 215, "alertas_nuevas": 77, "nuevas_prealerta": 39, "nuevas_umbral": 38, "atenciones": 78}, {"mes": "2026-06", "clientes": 420, "normal": 169, "prealerta": 38, "umbral": 213, "alertas_nuevas": 66, "nuevas_prealerta": 36, "nuevas_umbral": 30, "atenciones": 108}], "umbrales": {"riesgo_bajo": 0.3, "riesgo_alto": 0.6, "prealerta": 90, "umbral": 120}};
+const grp=s=>s.replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f');
+const nf={format:v=>grp(String(Math.round(v)))};
+const pf=v=>{const x=(Math.round(v*1000)/10).toFixed(1).replace('.',',');return x.replace(/,0$/,'')+' %'};
+const money=(v,d=2)=>{const [i,f]=v.toFixed(d).split('.');return 'S/ '+grp(i)+(f?','+f:'')};
+const fd=s=>s.split('-').reverse().join('/');
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+document.getElementById('corte').textContent=fd(D.corte);document.getElementById('ver').textContent=D.version_modelo;
+const K=D.kpi;
+const kp=[['Clientes totales',nf.format(K.clientes),'en la base de datos',''],
+['Clientes en riesgo',nf.format(K.en_riesgo),pf(K.en_riesgo/K.clientes)+' de la cartera (medio + alto)','a'],
+['Riesgo alto',nf.format(K.riesgo_alto),'probabilidad ≥ 60 %','r'],
+['Umbral superado',nf.format(K.umbral_superado),'más de 120 días sin venir','r'],
+['Atenciones (30 días)',nf.format(K.atenciones_30d),nf.format(K.activos_30d)+' clientes atendidos',''],
+['Ingresos (30 días)',money(K.ingresos_30d,0),'ticket promedio '+money(K.ticket_promedio),'']];
+document.getElementById('kpis').innerHTML=kp.map(([l,v,s,c])=>`<div class="k ${c}"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`).join('');
+Chart.defaults.font.family='Inter,system-ui,sans-serif';Chart.defaults.color=css('--mut');Chart.defaults.font.size=12;
+const RN=['Bajo','Medio','Alto'],RC=[css('--bajo'),css('--medio'),css('--alto')];
+new Chart(cRiesgo,{type:'doughnut',data:{labels:RN,datasets:[{data:RN.map(n=>D.riesgo[n]||0),backgroundColor:RC,borderWidth:2,borderColor:'#fff'}]},
+options:{maintainAspectRatio:false,cutout:'66%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.label}: ${nf.format(c.raw)} clientes (${pf(c.raw/K.clientes)})`}}}},
+plugins:[{id:'c',afterDraw(ch){const{ctx,chartArea:a}=ch;ctx.save();ctx.textAlign='center';ctx.fillStyle=css('--ink');ctx.font='700 26px Inter';ctx.fillText(nf.format(K.clientes),(a.left+a.right)/2,(a.top+a.bottom)/2+4);ctx.font='12px Inter';ctx.fillStyle=css('--mut');ctx.fillText('clientes',(a.left+a.right)/2,(a.top+a.bottom)/2+22);ctx.restore()}}]});
+document.getElementById('lgR').innerHTML=RN.map((n,i)=>`<span><i style="background:${RC[i]}"></i>${n}: <b style="color:${css('--ink')}">${nf.format(D.riesgo[n]||0)}</b> (${pf((D.riesgo[n]||0)/K.clientes)})</span>`).join('');
+const TN=['Normal','Prealerta','Umbral superado'],TL=['Normal','Prealerta',['Umbral','superado']],TC=[css('--nor'),css('--pre'),css('--umb')];
+new Chart(cTemp,{type:'bar',data:{labels:TL,datasets:[{data:TN.map(n=>D.temporal[n]||0),backgroundColor:TC,borderRadius:6,maxBarThickness:58}]},
+options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${nf.format(c.raw)} clientes (${pf(c.raw/K.clientes)})`}}},
+scales:{y:{beginAtZero:true,grace:'8%',grid:{color:css('--rule')},border:{display:false}},x:{grid:{display:false},ticks:{maxRotation:0}}}},
+plugins:[{id:'v',afterDatasetsDraw(ch){const{ctx}=ch;ctx.save();ctx.font='600 12px Inter';ctx.fillStyle=css('--ink');ctx.textAlign='center';ch.getDatasetMeta(0).data.forEach((b,i)=>ctx.fillText(nf.format(ch.data.datasets[0].data[i]),b.x,b.y-6));ctx.restore()}}]});
+const mx=Math.max(...Object.values(D.cruce));
+const shade=(v,base)=>{const a=.12+.78*(v/mx);return `background:rgba(${base},${a.toFixed(2)});color:${a>.5?'#fff':css('--ink')}`};
+const base={Bajo:'16,185,129',Medio:'245,158,11',Alto:'239,68,68'};
+document.getElementById('heat').innerHTML='<tr><th class="row"></th>'+TN.map(t=>`<th>${t}</th>`).join('')+'</tr>'+
+RN.slice().reverse().map(r=>`<tr><th class="row">${r}</th>`+TN.map(t=>{const v=D.cruce[r+'|'+t]||0;return `<td style="${shade(v,base[r])}" title="${r} · ${t}: ${v} clientes">${v}</td>`}).join('')+'</tr>').join('');
+const MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const lab=m=>{const[y,mm]=m.split('-');return MES[+mm-1]+' '+y.slice(2)};
+let evo;function drawEvol(n){const E=D.evolucion.slice(1).slice(-n);
+const data={labels:E.map(e=>lab(e.mes)),datasets:[
+{type:'bar',label:'Nuevas prealertas',data:E.map(e=>e.nuevas_prealerta),backgroundColor:css('--pre'),stack:'a',borderRadius:3,order:2},
+{type:'bar',label:'Nuevos umbrales superados',data:E.map(e=>e.nuevas_umbral),backgroundColor:css('--umb'),stack:'a',borderRadius:3,order:2},
+{type:'line',label:'Clientes con umbral superado (acumulado)',data:E.map(e=>e.umbral),borderColor:css('--acc'),backgroundColor:css('--acc'),yAxisID:'y2',tension:.3,pointRadius:2,borderWidth:2,order:1}]};
+if(evo){evo.data=data;evo.update();return}
+evo=new Chart(cEvol,{data,options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+plugins:{legend:{position:'bottom',labels:{boxWidth:10,boxHeight:10,useBorderRadius:true,borderRadius:2}},tooltip:{callbacks:{footer:it=>{const i=it[0].dataIndex;const e=D.evolucion.slice(1).slice(-n)[i];return 'Alertas nuevas: '+e.alertas_nuevas+' · Atenciones del mes: '+e.atenciones}}}},
+scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,beginAtZero:true,title:{display:true,text:'Alertas nuevas'},grid:{color:css('--rule')},border:{display:false}},
+y2:{position:'right',beginAtZero:true,title:{display:true,text:'Clientes con umbral superado'},grid:{display:false},border:{display:false}}}}})}
+drawEvol(12);
+document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#seg button').forEach(x=>x.classList.toggle('on',x===b));drawEvol(+b.dataset.n)});
+const ab={'Umbral superado':'U','Prealerta':'P','Normal':'N'};
+document.getElementById('top').innerHTML=D.top.map(t=>`<tr><td><b>${t.id}</b></td><td>${t.nombre}</td><td><span class="bar"><b style="width:${t.prob*100}%"></b></span>${pf(t.prob)}</td><td><span class="pill p-${t.nivel}">${t.nivel}</span></td><td><span class="pill p-${ab[t.estado]}">${t.estado}</span></td><td class="n">${nf.format(t.dias)}</td><td class="n">${t.visitas}</td><td class="n">${money(t.gasto)}</td><td>${fd(t.ultima)}</td></tr>`).join('');
+</script>
+</body>
+</html>
